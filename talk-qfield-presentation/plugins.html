@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Qfield Presentation</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./_assets/stylesheets/main-style.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="--v--">
+          <textarea data-template>
+            
+
+<!-- .slide: class="stack" -->
+
+<link rel="stylesheet" href="./stylesheets/main-style.css">
+
+<style>
+.reveal .slides::after {
+  content: "";
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background-image: url('assets/logo-bg-cut-l.png');
+  background-size: 200px;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  width: 140px;
+  height: 140px;
+  pointer-events: none;
+  z-index: 1;
+}
+</style>
+
+# QFIELD<br><span class="green">PLUGIN FRAMEWORK</span> 🚀
+
+### Exploring the possibilities 
+
+<img src="assets/logo_opengisch_open-source-geoninjas.png" class="styled-logo">
+
+---
+
+<!-- .slide: class="stack" -->
+
+## THE <span class="green">ISSUE</span> 🤔
+
+- QField has nearly 400,000 active devices on Android alone, not every functionality justifies rolling out to all users
+- QField’s commitment to delivering a lean UI also means certain UXs are not a good fit by default
+
+---
+
+<!-- .slide: class="stack" -->
+
+## THE <span class="green">ANSWER</span>: PLUGINS 🧩
+
+- A plugin framework to fulfill those niche needs by the growing number of QField users 
+- Aligns with a core value promoted by OPENGIS.ch and the QField project: freedom
+- Plugin development and release not bound to cadence of QField releases
+
+<!-- .slide: class="stack" -->
+
+## <span class="green">TYPES</span> OF QFIELD PLUGINS 🔠
+
+- The QField framework offers two types of plugins:
+    - <b>App-wide plugins</b>, activated upon app launch until exit provided the user gave permission
+    - <b>Project plugins</b>, enabled while a given project is being consumed
+
+<!-- .slide: class="stack" -->
+
+## QFIELD <span class="green">VS.</span> QGIS PLUGINS 🔍
+
+- Python powers QGIS’s plugins with Qt widgets for the GUI
+- QML & Javascript powers QField’s plugins with QtQuick items for the GUI
+- QField's project plugins can be understood as QGIS project macros
+
+<!-- .slide: class="stack" -->
+
+## <span class="green">APP-WIDE</span> PLUGINS ✨
+
+- Installed via the plugin manager by providing a URL pointing to a zipped plugin content
+- The plugin manager provides a quick way to enable/disable/configure plugins
+- Permission will be asked prior to activating a plugin
+
+<!-- .slide: class="stack" -->
+
+## <span class="green">PROJECT</span> PLUGINS 🗃️
+
+- Served as a sidecar file to the QGIS project file
+- Often the easiest way to deploy plugins to users as they are bundled with projects and do not require additional steps to obtain (pro-tip: rely on QFieldCloud to conduct remote distribution and update of project plugins to a fleet of QField devices)
+- Permission will also be asked prior to activating a plugin
+
+<!-- .slide: class="stack" -->
+
+## <span class="green">WEATHER</span> PLUGIN ☀️
+
+- Leveraging <b>positioning context</b> to provide relevant information
+- <b>XMLHttpRequest support</b> unlocks a wide range of web services
+- https://github.com/opengisch/qfield-weather-forecast/blob/main/main.qml 
+
+<!-- .slide: class="stack" -->
+
+## OSRM <span class="green">ROUTING</span> PLUGIN 🚗
+
+- Rely on QField items to <b>overlay georeferenced geometries</b. on top of the map canvas
+- Did we mention XMLHttpRequest yet?
+- https://github.com/opengisch/qfield-osrm 
+
+<!-- .slide: class="stack" -->
+
+## <span class="green">SEARCH BAR</span> PLUGINS 🧐
+
+- QField’s plugin framework enables integration with the top search bar
+- https://github.com/opengisch/qfield-nominatim-locator 
+- https://github.com/opengisch/qfield-geomapfish-locator  
+
+---
+
+<!-- .slide: class="stack" -->
+
+## <span class="green">VOCAL</span> POINT PLUGIN 🗣️
+
+- <b>Leverage smartphone capabilities</b> into exciting new UX to digitize features
+- Fantastic way to do <b>quick prototyping</b>
+- https://github.com/SeqLaz/vocalpoint-qfield-plugin 
+
+---
+
+<!-- .slide: class="stack" -->
+
+## <span class="green">TIPS</span< FOR DEVELOPERS ⚡
+
+- Qt documentation: https://doc.qt.io/qt-6/qml-tutorial.html 
+- QField documentation: https://docs.qfield.org/reference/plugins/
+- Developing on Windows/Linux using QField by adding/changing files in the plugins directory
+
+<!-- .slide: class="stack" -->
+
+## WARNING ⚠️
+
+- Documentation remains a work in progress, and at the moment developers will need to go through less than ideal means to identify available items, objects, properties and invokable functions
+
+---
+
+<!-- .slide: class="stack" -->
+
+# AVAILABLE <span class="green">QML MODULES</span> 📦
+
+- WebSocket
+- Quick3D
+- Charts
+- Sensors
+
+---
+
+<!-- .slide: class="stack" -->
+
+## LAST WORDS & THANKS 🙏
+
+- For now, GitHub’s topics page offers an overview of most available plugins: https://github.com/topics/qfield-plugin
+- If you are developing a plugin of your own, use the #qfield-plugin topic and let us know!
+- What to know more? Contact us: info@opengis.ch
+
+          </textarea>
+        </section>
+      </div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"transition":"none","slideNumber":false,"overview":true,"autoPlayMedia":true,"_":["slides/"],"static":"web","static-dirs":"slides/assets","staticDirs":"slides/assets","listing-template":"../globals/index/index.html","listingTemplate":"../globals/index/index.html","title":"Qfield Presentation"}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) {
+        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+      }
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
+    </script>
+  </body>
+</html>
