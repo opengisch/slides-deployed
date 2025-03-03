@@ -38,11 +38,20 @@
   pointer-events: none;
   z-index: 1;
 }
+
+section.present ul li {
+  font-size:22pt;
+  line-height:2.5rem;
+}
+
+li > ul {
+  margin-top:20px;
+}
 </style>
 
 # QFIELD<br><span class="green">PLUGIN FRAMEWORK</span> 🚀
 
-### Exploring the possibilities 
+## Exploring the possibilities 
 
 <img src="assets/logo_opengisch_open-source-geoninjas.png" class="styled-logo">
 
@@ -50,7 +59,7 @@
 
 <!-- .slide: class="stack" -->
 
-## THE <span class="green">ISSUE</span> 🤔
+# THE <span class="green">ISSUE</span> 🤔
 
 - QField has nearly 400,000 active devices on Android alone, not every functionality justifies rolling out to all users
 - QField’s commitment to delivering a lean UI also means certain UXs are not a good fit by default
@@ -59,63 +68,77 @@
 
 <!-- .slide: class="stack" -->
 
-## THE <span class="green">ANSWER</span>: PLUGINS 🧩
+# THE <span class="green">ANSWER</span>: PLUGINS 🧩
 
 - A plugin framework to fulfill those niche needs by the growing number of QField users 
-- Aligns with a core value promoted by OPENGIS.ch and the QField project: freedom
+- Aligns with a core value promoted by OPENGIS.ch and the QField project: <b>freedom</b>
 - Plugin development and release not bound to cadence of QField releases
+
+---
 
 <!-- .slide: class="stack" -->
 
-## <span class="green">TYPES</span> OF QFIELD PLUGINS 🔠
+# <span class="green">TYPES</span> OF QFIELD PLUGINS 🔠
 
 - The QField framework offers two types of plugins:
     - <b>App-wide plugins</b>, activated upon app launch until exit provided the user gave permission
     - <b>Project plugins</b>, enabled while a given project is being consumed
 
+---
+
 <!-- .slide: class="stack" -->
 
-## QFIELD <span class="green">VS.</span> QGIS PLUGINS 🔍
+# QFIELD <span class="green">VS.</span> QGIS PLUGINS 🔍
 
 - Python powers QGIS’s plugins with Qt widgets for the GUI
 - QML & Javascript powers QField’s plugins with QtQuick items for the GUI
 - QField's project plugins can be understood as QGIS project macros
 
+---
+
 <!-- .slide: class="stack" -->
 
-## <span class="green">APP-WIDE</span> PLUGINS ✨
+# <span class="green">APP-WIDE</span> PLUGINS ✨
 
 - Installed via the plugin manager by providing a URL pointing to a zipped plugin content
 - The plugin manager provides a quick way to enable/disable/configure plugins
 - Permission will be asked prior to activating a plugin
 
+---
+
 <!-- .slide: class="stack" -->
 
-## <span class="green">PROJECT</span> PLUGINS 🗃️
+# <span class="green">PROJECT</span> PLUGINS 🗃️
 
 - Served as a sidecar file to the QGIS project file
 - Often the easiest way to deploy plugins to users as they are bundled with projects and do not require additional steps to obtain (pro-tip: rely on QFieldCloud to conduct remote distribution and update of project plugins to a fleet of QField devices)
 - Permission will also be asked prior to activating a plugin
 
+---
+
 <!-- .slide: class="stack" -->
 
-## <span class="green">WEATHER</span> PLUGIN ☀️
+# <span class="green">WEATHER</span> PLUGIN ☀️
 
 - Leveraging <b>positioning context</b> to provide relevant information
 - <b>XMLHttpRequest support</b> unlocks a wide range of web services
 - https://github.com/opengisch/qfield-weather-forecast/blob/main/main.qml 
 
+---
+
 <!-- .slide: class="stack" -->
 
-## OSRM <span class="green">ROUTING</span> PLUGIN 🚗
+# OSRM <span class="green">ROUTING</span> PLUGIN 🚗
 
 - Rely on QField items to <b>overlay georeferenced geometries</b. on top of the map canvas
 - Did we mention XMLHttpRequest yet?
 - https://github.com/opengisch/qfield-osrm 
 
+---
+
 <!-- .slide: class="stack" -->
 
-## <span class="green">SEARCH BAR</span> PLUGINS 🧐
+# <span class="green">SEARCH BAR</span> PLUGINS 🧐
 
 - QField’s plugin framework enables integration with the top search bar
 - https://github.com/opengisch/qfield-nominatim-locator 
@@ -125,7 +148,7 @@
 
 <!-- .slide: class="stack" -->
 
-## <span class="green">VOCAL</span> POINT PLUGIN 🗣️
+# <span class="green">VOCAL</span> POINT PLUGIN 🗣️
 
 - <b>Leverage smartphone capabilities</b> into exciting new UX to digitize features
 - Fantastic way to do <b>quick prototyping</b>
@@ -135,15 +158,17 @@
 
 <!-- .slide: class="stack" -->
 
-## <span class="green">TIPS</span< FOR DEVELOPERS ⚡
+# <span class="green">TIPS</span> FOR DEVELOPERS ⚡
 
 - Qt documentation: https://doc.qt.io/qt-6/qml-tutorial.html 
 - QField documentation: https://docs.qfield.org/reference/plugins/
 - Developing on Windows/Linux using QField by adding/changing files in the plugins directory
 
+---
+
 <!-- .slide: class="stack" -->
 
-## WARNING ⚠️
+# WARNING ⚠️
 
 - Documentation remains a work in progress, and at the moment developers will need to go through less than ideal means to identify available items, objects, properties and invokable functions
 
@@ -162,7 +187,7 @@
 
 <!-- .slide: class="stack" -->
 
-## LAST WORDS & THANKS 🙏
+# LAST WORDS & THANKS 🙏
 
 - For now, GitHub’s topics page offers an overview of most available plugins: https://github.com/topics/qfield-plugin
 - If you are developing a plugin of your own, use the #qfield-plugin topic and let us know!
