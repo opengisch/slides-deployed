@@ -40,12 +40,16 @@
 }
 
 section.present ul li {
-  font-size:22pt;
-  line-height:2.5rem;
+  font-size: 22pt;
+  line-height: 2.5rem;
 }
 
 li > ul {
-  margin-top:20px;
+  margin-top: 20px;
+}
+
+b {
+  font-weight: 450;
 }
 </style>
 
@@ -81,7 +85,7 @@ li > ul {
 # <span class="green">TYPES</span> OF QFIELD PLUGINS 🔠
 
 - The QField framework offers two types of plugins:
-    - <b>App-wide plugins</b>, activated upon app launch until exit provided the user gave permission
+    - <b>App-wide plugins</b>, activated upon app launch until exit
     - <b>Project plugins</b>, enabled while a given project is being consumed
 
 ---
@@ -90,8 +94,8 @@ li > ul {
 
 # QFIELD <span class="green">VS.</span> QGIS PLUGINS 🔍
 
-- Python powers QGIS’s plugins with Qt widgets for the GUI
-- QML & Javascript powers QField’s plugins with QtQuick items for the GUI
+- <b>Python powers</b> QGIS’s plugins with <b>Qt widgets</b> for the GUI
+- <b>QML & Javascript</b> powers QField’s plugins with <b>QtQuick items</b> for the GUI
 - QField's project plugins can be understood as QGIS project macros
 
 ---
@@ -111,8 +115,9 @@ li > ul {
 # <span class="green">PROJECT</span> PLUGINS 🗃️
 
 - Served as a sidecar file to the QGIS project file
-- Often the easiest way to deploy plugins to users as they are bundled with projects and do not require additional steps to obtain (pro-tip: rely on QFieldCloud to conduct remote distribution and update of project plugins to a fleet of QField devices)
+- Often the easiest way to deploy plugins to users as they are bundled with projects and do not require additional steps to obtain
 - Permission will also be asked prior to activating a plugin
+- <i>Pro-tip: rely on QFieldCloud to conduct remote distribution and update of project plugins to a fleet of QField devices</i>
 
 ---
 
@@ -140,7 +145,8 @@ li > ul {
 
 # <span class="green">SEARCH BAR</span> PLUGINS 🧐
 
-- QField’s plugin framework enables integration with the top search bar
+- The plugin framework enables <b>integration with QField's search bar</b>
+- Under the hood, QGIS' locator classes power the functionality
 - https://github.com/opengisch/qfield-nominatim-locator 
 - https://github.com/opengisch/qfield-geomapfish-locator  
 
@@ -190,7 +196,7 @@ li > ul {
 # LAST WORDS & THANKS 🙏
 
 - For now, GitHub’s topics page offers an overview of most available plugins: https://github.com/topics/qfield-plugin
-- If you are developing a plugin of your own, use the #qfield-plugin topic and let us know!
+- If you are developing a plugin of your own, use the <b>#qfield-plugin</b> topic and let us know!
 - What to know more? Contact us: info@opengis.ch
 
           </textarea>
