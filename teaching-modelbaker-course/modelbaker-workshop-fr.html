@@ -760,10 +760,10 @@ END MultiGebaeudeinventar_V1.
 
 ### Stratégies de mapping d'héritage
 
-- Nouvelle classe
+- New Class
 - Super classe
-- Sous-classe
-- Nouvelle + Sous-classe
+- Super Class
+- Nouvelle + Super Class
 
 --v--
 
@@ -773,7 +773,7 @@ END MultiGebaeudeinventar_V1.
 
 --v--
 
-#### Nouvelle classe
+#### New Class
 
 <div class="container">
 <div class="col">
@@ -786,12 +786,16 @@ Gebaeude.t_type : (
    Gewerbegebaeude
 )
 ```
-- Moins de tables et de relations (facile à utiliser)
-- La condition NOT NULL **n'est pas** respectée
+- Les extensions sont mappées avec des relations.
+- La condition NON NUL est respectée.
+- Plusieurs importations sont nécessaires par objet.
 
 </div>
 <div class="col" style="min-width: 400px">
-![super-class.png](./assets/inherit-super-class.png)
+<!-- not so nice to use pixel here - but I don't know currently a better sollution -->
+
+![new-class-model](./assets/inherit-new-class.png)
+<!--Siehe https://excalidraw.com/#json=HxHdS7H0r9l_PYLpkI9AD,IcoI6zePdRml20qWR25LWA -->
 
 </div>
 </div>
@@ -804,7 +808,7 @@ Gebaeude.t_type : (
 
 --v--
 
-#### Sous-classe
+#### Super Class
 
 <div class="container">
 <div class="col">
@@ -818,14 +822,16 @@ Gewerbegebaeude.t_type: (
 )
 ```
 
---v--
-
+- Moins de tables et de relations (facile à utiliser)
 - La condition NOT NULL **n'est pas** respectée
 
 </div>
 <div class="col" style="min-width: 400px">
+<!-- not so nice to use pixel here - but I don't know currently a better sollution -->
 
-![sub-class.png](./assets/inherit-sub-class.png)
+![super-class.png](./assets/inherit-super-class.png)
+
+<!-- https://excalidraw.com/#json=7rPQ5AqAXGwbhCBN7IgVM,PmQqY2DcXxxEq2xTxBO8rg -->
 
 </div>
 </div>
@@ -838,7 +844,42 @@ Gewerbegebaeude.t_type: (
 
 --v--
 
-#### Nouvelle + Sous-classe
+#### Sub Class
+
+<div class="container">
+<div class="col">
+
+```none
+Oeffentliches_
+Gewerbegebaeude.t_type: (
+    Gewerbegebaeude,
+    Oeffentliches_
+    Gewerbegebaeude
+)
+```
+
+- La condition NON NUL **n'est pas** respectée.
+
+</div>
+<div class="col" style="min-width: 400px">
+<!-- not so nice to use pixel here - but I don't know currently a better sollution -->
+
+![sub-class.png](./assets/inherit-sub-class.png)
+
+<!-- https://excalidraw.com/#json=v9MmA9GwnqKVTcVeU5GPt,YdmkYmnelEJWrE9WV6-Y-g -->
+
+</div>
+</div>
+
+--v--
+
+#### Beispielmodell
+
+![sample-model](./assets/inherit-erm-sample-model.png)
+
+--v--
+
+#### Nouvelle + Super Class
 
 <div class="container">
 <div class="col">
@@ -863,7 +904,7 @@ Gewerbegebaeude.t_type: (
 
 #### noSmartMapping
 
-- Toutes les classes sont mappées avec la stratégie *Nouvelle classe*.
+- Toutes les classes sont mappées avec la stratégie *New Class*.
 
 --v--
 
@@ -872,7 +913,7 @@ Gewerbegebaeude.t_type: (
 <div class="container">
 <div class="col">
 
-Résulte en ce que nous voyons dans le graphique *Nouvelle classe*.
+Résulte en ce que nous voyons dans le graphique *New Class*.
 
 </div>
 <div class="col" style="min-width: 200px">
@@ -886,9 +927,9 @@ Résulte en ce que nous voyons dans le graphique *Nouvelle classe*.
 
 #### smart1Inheritance
 
-- Classes abstraites sans relations -> stratégie *Sous-classe*
-- Classes abstraites avec relations et sans super classe concrète -> stratégie *Nouvelle classe*
-- Classes concrètes sans super classe concrète -> stratégie *Nouvelle classe*
+- Classes abstraites sans relations -> stratégie *Super Class*
+- Classes abstraites avec relations et sans super classe concrète -> stratégie *New Class*
+- Classes concrètes sans super classe concrète -> stratégie *New Class*
 - Toutes les autres classes -> stratégie *Super classe*
 
 --v--
@@ -898,7 +939,7 @@ Résulte en ce que nous voyons dans le graphique *Nouvelle classe*.
 <div class="container">
 <div class="col">
 
-Signifie donc que `Gebaeude` utilise la stratégie *Nouvelle classe* et toutes les autres la stratégie *Super classe*.
+Signifie donc que `Gebaeude` utilise la stratégie *New Class* et toutes les autres la stratégie *Super classe*.
 
 Résulte en ce que nous voyons dans le graphique *Super classe*.
 
@@ -913,8 +954,8 @@ Résulte en ce que nous voyons dans le graphique *Super classe*.
 --v--
 
 #### smart2Inheritance
-- Classes abstraites -> stratégie *Sous-classe*
-- Toutes les classes concrètes -> stratégie *Nouvelle + Sous-classe*
+- Classes abstraites -> stratégie *Super Class*
+- Toutes les classes concrètes -> stratégie *Nouvelle + Super Class*
 
 --v--
 
@@ -923,9 +964,9 @@ Résulte en ce que nous voyons dans le graphique *Super classe*.
 <div class="container">
 <div class="col">
 
-Signifie donc que toutes utilisent la stratégie *Nouvelle + Sous-classe*.
+Signifie donc que toutes utilisent la stratégie *Nouvelle + Super Class*.
 
-Résulte en ce que nous voyons dans le graphique *Nouvelle + Sous-classe*.
+Résulte en ce que nous voyons dans le graphique *Nouvelle + Super Class*.
 
 </div>
 <div class="col" style="min-width: 200px">
