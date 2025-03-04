@@ -19,10 +19,12 @@
           <textarea data-template>
             
 
-<h1 style="color: var(--opengisch-dark) !important; font-size:1.5em !important; text-align: center !important;">Atelier Zurich - 14 mars 2025</h1>
+<!-- .slide: data-background="./assets/title.png" -->
+<h1 style="color: var(--opengisch-dark) !important; font-size:1.5em !important; text-align: center !important;">Atelier Lausanne - 20 mars 2025</h1>
 
 ![](./assets/modelbaker-logo-long.png)
 <br><br><br><br><br><br>
+<!-- .slide: data-background="assets/title.png" -->
 ---
 
 Commençons ...
@@ -30,19 +32,16 @@ Commençons ...
 
 --v--
 
-<h1 style="-webkit-text-stroke: 2px var(--opengisch-light) !important; color: steelblue !important;">Dave Signer</h1>
+<h1 style="-webkit-text-stroke: 2px var(--opengisch-light) !important; color: steelblue !important;">Lucie Nicolier et Damiano Lombardi</h1>
 
-## BSc en IT(SE) @ ZHAW
-### Ingénieur logiciel, Consultant
-<h3 style=" color: lightgrey !important;">Enseignant et Conteur d'histoires</h1>
+## BSc en Géomatique à l'HEIG-VD
+### Spécialiste SIG
+<h3 style=" color: lightgrey !important;">Enseignante et Conteur d'histoires</h1>
 
 <aside class="notes">
 
-- Développeur senior / Développeur QGIS Core et Plugins
-
-- Consultant également dans le domaine INTERLIS
-
-- Responsable technique (pas C mais TO)
+- Enseignante pour OPENGIS.ch
+- Spécialiste SIG pour un bureau de géomètre
 
 </aside>
 
@@ -76,7 +75,7 @@ Commençons ...
 |10.30| Méta-attributs 🧑‍🏫 💻 |
 |11.00| Pause |
 |11.15| Héritages et cartographie 🧑‍🏫 💻 |
-|12.00| Déjeuner |
+|12.00| Dîner |
 
 --v--
 
@@ -154,14 +153,14 @@ https://github.com/opengisch/QgisModelBakerLibrary
 
 --v--
 
-## Rapports de bogues et demandes de fonctionnalités
+## Report de bugs et demandes de fonctionnalités
 
 https://github.com/opengisch/QgisModelBaker/issues
 
 - Vérifier
 - Saisir
- - Description du problème
- - Infos supplémentaires
+    - Description du problème
+    - Infos supplémentaires
 - Attendre ou financer 😉
 
 --v--
@@ -181,6 +180,7 @@ De quoi avons-nous besoin...
 --v--
 
 ## INTERNET ?
+A compléter
 
 #### Nom :
 
@@ -191,7 +191,7 @@ De quoi avons-nous besoin...
 --v--
 
 ## QGIS et bases de données
-- QGIS 3.34 ou supérieur
+- QGIS 3.40 ou supérieur
 - PostgreSQL + PostGIS
 - Geopackage possible
 
@@ -323,13 +323,13 @@ Commençons...
 
 ---
 
-# Excursus
+# Intermède
 
 ... laissons-nous divaguer
 
 --v--
 
-## Excursus 1 : Méta-attributs
+## Intermède 1 : Méta-attributs
 
 --v--
 
@@ -337,7 +337,7 @@ Commençons...
 
 Les méta-attributs permettent de compléter les modèles INTERLIS avec des **informations supplémentaires** qui ne sont **pas prévues** dans la spécification actuelle d'INTERLIS.
 
-*Voir [eCH-0117 Méta-attributs pour les modèles INTERLIS](https://ech.ch/de/ech/ech-0117/1.0)*
+*Voir [eCH-0117 Méta-attributs pour les modèles INTERLIS](https://ech.ch/fr/ech/ech-0117/1.0)*
 
 --v--
 
@@ -412,7 +412,7 @@ Mais nous ne pouvons pas simplement bricoler le modèle !
 
 ### Fichier de méta-attributs supplémentaire
 
-... a.k.a. "fichier de configuration", "fichier de méta-attributs", "fichier INI", "fichier TOML"...
+... connu comme "fichier de configuration", "fichier de méta-attributs", "fichier INI", "fichier TOML"...
 
 --v--
 
@@ -498,7 +498,7 @@ ili2db.mapping = "Multilingual"
 
 --v--
 
-## Excursus 2.1 : Héritages dans INTERLIS
+## Intermède 2.1 : Héritages dans INTERLIS
 
 --v--
 
@@ -740,7 +740,7 @@ END MultiGebaeudeinventar_V1.
 
 --v--
 
-## Excursus 2.2 : Représentation physique des héritages
+## Intermède 2.2 : Représentation physique des héritages
 
 --v--
 
@@ -941,7 +941,7 @@ Résulte en ce que nous voyons dans le graphique *Nouvelle + Sous-classe*.
 
 --v--
 
-## Excursus 2.3 : Optimisation de projet avec Smart2
+## Intermède 2.3 : Optimisation de projet avec Smart2
 
 --v--
 
@@ -989,7 +989,7 @@ Si un modèle ou un topic contient des classes étendues, celles-ci sont implém
 
 --v--
 
-## Excursus 3 : Conteneurs et ensembles de données
+## Intermède 3 : Conteneurs et ensembles de données
 
 --v--
 
@@ -1037,7 +1037,7 @@ Si un modèle ou un topic contient des classes étendues, celles-ci sont implém
 
 --v--
 
-## Excursus 4 : Que sont les OID ?
+## Intermède 4 : Que sont les OID ?
 
 --v--
 
@@ -1206,7 +1206,7 @@ Les règles du **type XML-ID** (www.w3.org/TR/REC-xml) s'appliquent
 
 --v--
 
-## Excursus 5 : UsabILIty Hub
+## Intermède 5 : UsabILIty Hub
 
 --v--
 
@@ -1285,7 +1285,7 @@ Ou la [documentation de Model Baker](https://opengisch.github.io/QgisModelBaker/
 
 --v--
 
-## Excursus 6 : Modèles de traduction
+## Intermède 6 : Modèles de traduction
 
 --v--
 
