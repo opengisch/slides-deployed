@@ -112,6 +112,8 @@ Les modèles définis dans INTERLIS fournissent des **méta-informations supplé
 
 Celles-ci peuvent être utilisées pour optimiser davantage la configuration du projet.
 
+<!-- Model Baker peut utiliser les méta-informations pour configurer l'arbre de couches, les widgets de champs avec conditions, les mises en page de formulaires, les relations et bien plus encore.-->
+
 --v--
 
 ## Une station de contrôle ili2db
@@ -124,11 +126,17 @@ java -jar /home/dave/dev/opengisch/QgisModelBaker/QgisModelBaker/libili2db/bin/i
 --models Wildruhezonen_LV95_V2_1
 ```
 
+<!-- Il ne fournit à l'utilisateur que les paramètres nécessaires pour passer des paramètres à ili2db.
+Génère la commande pour ili2db.
+-->
+
 --v--
 
 ## Et c'est une bibliothèque
 
 Peut être utilisé comme un cadre. Comme le fait [Asistente LADM-COL](https://github.com/SwissTierrasColombia/Asistente-LADM-COL).
+
+<!--créé pour la [mise en œuvre colombienne du Land Administration Domain Model (LADM)](https://www.proadmintierra.info/) -->
 
 ... et est également disponible en tant que package Python :
 
@@ -204,6 +212,8 @@ A compléter
 
 ![extensions](./assets/pg-extensions.png)
 
+<!-- + Créer une base de données -->
+
 --v--
 
 ### Extensions avec le client PSQL
@@ -244,6 +254,8 @@ sudo apt install postgis
 --v--
 
 ## OPENGIS.ch PostgreSQL
+
+<!-- Si aucune instance PostgreSQL n'est disponible localement, il est possible de se connecter en ligne à une base de données de test (active uniquement aujourd'hui)-->.
 
 |||
 |-----| ------------------------------- |
@@ -338,6 +350,8 @@ Commençons...
 Les méta-attributs permettent de compléter les modèles INTERLIS avec des **informations supplémentaires** qui ne sont **pas prévues** dans la spécification actuelle d'INTERLIS.
 
 *Voir [eCH-0117 Méta-attributs pour les modèles INTERLIS](https://ech.ch/fr/ech/ech-0117/1.0)*
+
+<!-- Il s'agit d'une forme spéciale de commentaire de ligne qui, placé à des endroits précis du modèle de données, fournit des méta-informations supplémentaires sur le modèle.-->
 
 --v--
 
@@ -469,6 +483,8 @@ msg = "Mind. eine Untersuchungsmassnahme erfassen."
 - Sur l'attribut
  
  *Les attributs de structure (`BAG OF`/`LIST OF`) sont mappés avec un type de données au lieu de relations.*
+
+<!-- Montre ce que nous avons. -->
 
 --v--
 
@@ -612,7 +628,26 @@ Une classe étendue (dérivation) a **toutes les propriétés** de la classe de 
 
 ### De `Gebaeude` devient un meilleur `Gebaeude`
 
+<!-- Darstellung kacke:
+```mermaid
+%%{init: {'theme': 'dark' } }%%
+
+erDiagram
+  Gebaeude{
+    number EGID
+    geom Geometry
+  }
+  "Gebaeude "{
+    number EGID
+    geom Geometry
+    bool EntsprichtStandard
+  }  
+```
+-->
+
 ![inherit-base](assets/inherit-base-class.png)
+
+<!-- Siehe https://excalidraw.com/#json=MqzGNX2n1TRK8hONq2eF0,yitcCXCkDaRX6eMINxU_xw-->
 
 --v--
 
@@ -684,6 +719,8 @@ END Gewerbegebaeude;
 
 ### Exemple de modèle `MultiGebaeudeinventar_V1`
 
+<!-- https://excalidraw.com/#json=ICaNWw5qf7qzFMfPxvYZU,ooU5hP8itSR2aPfzPiOoZQ -->
+
 <img src="./assets/inherit-erm-sample-model.png" height="100%">
 
 --v--
@@ -748,6 +785,8 @@ END MultiGebaeudeinventar_V1.
 
 ## Intermède 2.2 : Représentation physique des héritages
 
+<!-- Comment les héritages peuvent-ils être physiquement mis en œuvre pour que l'intégrité référentielle soit toujours respectée ? -->
+
 --v--
 
 ### D'abord
@@ -756,18 +795,50 @@ END MultiGebaeudeinventar_V1.
 >
 > ***Citation : Romedi Filli - 2022***
 
+<!-- et tous ceux qui traînent dans les prochaines minutes, rappelez-vous cette citation.-->
+
 --v--
 
 ### Stratégies de mapping d'héritage
 
 - New Class
-- Super classe
 - Super Class
-- Nouvelle + Super Class
+- Sub Class
+- New+Sub Class
 
 --v--
 
 #### Exemple de modèle
+
+<!-- Darstellung kacke:
+```mermaid
+%%{init: {'theme': 'dark' } }%%
+classDiagram
+  Gebaeude "1" - -> "1..*" Adresse
+  Gebaeude <|-- Wohngebaeude
+  Gebaeude <|-- Gewerbegebaeude
+  Gewerbegebaeude <|-- Oeffentliches_GewerbeGebaude
+
+  class Gebaeude{
+    number EGID
+    geom Geometry
+  }
+  class Adresse{
+    number EGID
+    geom Geometry
+    bool EntsprichtStandard
+  }
+  class Wohngebaeude{
+    number Anzahl_Wohnungen
+  }
+  class Gewerbegebaeude{
+    number Anzahl_Firmen
+  }
+  class Oeffentliches_GewerbeGebaude{
+    text Zweck
+  }
+```
+-->
 
 ![sample-model](./assets/inherit-erm-sample-model.png)
 
@@ -873,13 +944,13 @@ Gewerbegebaeude.t_type: (
 
 --v--
 
-#### Beispielmodell
+#### Exemple de modèle
 
 ![sample-model](./assets/inherit-erm-sample-model.png)
 
 --v--
 
-#### Nouvelle + Super Class
+#### New+Sub Class
 
 <div class="container">
 <div class="col">
@@ -890,8 +961,11 @@ Gewerbegebaeude.t_type: (
 
 </div>
 <div class="col" style="min-width: 400px">
+<!-- not so nice to use pixel here - but I don't know currently a better sollution -->
 
 ![new-sub-class.png](./assets/inherit-new-sub-class.png)
+
+<!-- https://excalidraw.com/#json=TftYYPKxn6tWr96QllZlw,xySVQa_rQa1RPWioTaCiSw -->
 
 </div>
 </div>
@@ -930,7 +1004,7 @@ Résulte en ce que nous voyons dans le graphique *New Class*.
 - Classes abstraites sans relations -> stratégie *Super Class*
 - Classes abstraites avec relations et sans super classe concrète -> stratégie *New Class*
 - Classes concrètes sans super classe concrète -> stratégie *New Class*
-- Toutes les autres classes -> stratégie *Super classe*
+- Toutes les autres classes -> stratégie *Super class*
 
 --v--
 
@@ -939,12 +1013,13 @@ Résulte en ce que nous voyons dans le graphique *New Class*.
 <div class="container">
 <div class="col">
 
-Signifie donc que `Gebaeude` utilise la stratégie *New Class* et toutes les autres la stratégie *Super classe*.
+Signifie donc que `Gebaeude` utilise la stratégie *New Class* et toutes les autres la stratégie *Super class*.
 
-Résulte en ce que nous voyons dans le graphique *Super classe*.
+Résulte en ce que nous voyons dans le graphique *Super class*.
 
 </div>
 <div class="col" style="min-width: 200px">
+<!-- not so nice to use pixel here - but I don't know currently a better sollution -->
 
 ![super-class](./assets/inherit-super-class.png)
 
@@ -955,7 +1030,7 @@ Résulte en ce que nous voyons dans le graphique *Super classe*.
 
 #### smart2Inheritance
 - Classes abstraites -> stratégie *Super Class*
-- Toutes les classes concrètes -> stratégie *Nouvelle + Super Class*
+- Toutes les classes concrètes -> stratégie *New+Sub Class*
 
 --v--
 
@@ -964,12 +1039,13 @@ Résulte en ce que nous voyons dans le graphique *Super classe*.
 <div class="container">
 <div class="col">
 
-Signifie donc que toutes utilisent la stratégie *Nouvelle + Super Class*.
+Signifie donc que toutes utilisent la stratégie *New+Sub Class*.
 
-Résulte en ce que nous voyons dans le graphique *Nouvelle + Super Class*.
+Résulte en ce que nous voyons dans le graphique *New+Sub Class*.
 
 </div>
 <div class="col" style="min-width: 200px">
+<!-- not so nice to use pixel here - but I don't know currently a better sollution -->
 
 ![new-sub-class](./assets/inherit-new-sub-class.png)
 
@@ -1009,14 +1085,18 @@ Si un modèle ou un topic contient des classes étendues, celles-ci sont implém
 --v--
 
 ### Pouvons-nous simplement ignorer les classes de base ?
+<!-- Non. Il y en a qu'on veut voir...-->
 
 --v--
 
 ### Mais quelles couches voulons-nous voir ?
 
 - Les classes de base avec des extensions du même nom sont ***non pertinentes***
+<!-- car sinon tu les renommerais...-->
 - Les classes de base avec plusieurs extensions sont ***non pertinentes***
+<!-- car tu veux les remplacer...-->
 - Sauf si l'extension est dans le même modèle, elles ne sont pas ***non pertinentes***
+<!-- car sinon tu aurais fait la classe de base ABSTRACT -->
 
 --v--
 
@@ -1032,7 +1112,7 @@ Si un modèle ou un topic contient des classes étendues, celles-ci sont implém
 
 --v--
 
-## Prêt pour le déjeuner 🍲
+## Prêt pour le dîner 🍲
 
 --v--
 
@@ -1106,6 +1186,8 @@ Dans le fichier de transfert, l'OID est visible sous TID.
 </City_V1.Constructions.Buildings>
 ```
 
+<!-- Vérifie ton fichier de transfert -->
+
 --v--
 
 ### Pourquoi TID et pas OID ?
@@ -1117,11 +1199,15 @@ Dans le fichier de transfert, l'OID est visible sous TID.
  
  Si vous n'utilisez pas d'OID, les TID sont simplement des nombres ou des caractères quelconques (pas de stabilité à travers les systèmes garantie !)
 
+ <!--Le fichier XTF utilise alors des identifiants qui, bien que cohérents au sein du fichier, ne garantissent pas la stabilité inter-systèmes.-->
+
 --v--
 
 ### Et dans le schéma de base de données physique ?
 
 ![phyiscal](assets/oid-physicaltable.png)
+
+<!-- Check a record-->
 
 --v--
 
@@ -1130,16 +1216,23 @@ Dans le fichier de transfert, l'OID est visible sous TID.
 - Le `t_ili_tid` correspond au **TID** dans le XTF et donc à l'OID (si des OID sont utilisés)
 - Le `t_id` n'est qu'un numéro de séquence **interne au système**
 
+<!-- Il commence à 1 et est incrémenté pour tous les objets dans le schéma spécifique. Ce t_id est également utilisé comme clé étrangère. -->
+
 --v--
 
 #### Quand le t_id devient-il TID et le TID devient-il t_ili_tid ?
 
+<!-- Si aucun OID n'est utilisé, et donc lors de la saisie...-->
+
 - Si le `t_ili_tid` reste vide, alors lors d'une **exportation**, le `t_id` est écrit dans le TID.
 - Lors de l'**importation**, le TID est alors écrit dans le `t_ili_tid`.
+
+<!-- ainsi, en l'absence d'un t_ili_tid, c'est le t_id qui sera utilisé comme TID à partir de là.-->
 
 --v--
 
 ![tid-to-tilitid](assets/tid-to-tilitid.png)
+<!-- https://excalidraw.com/#json=fviwNAn-5hOgFpDiz9Uwu,vQl1ONi8BgihfCA1FvMu3g -->
 
 --v--
 
@@ -1203,6 +1296,8 @@ t_id
  
  Identifiant du pays + une partie d'identification *globale*.
  
+<!--Le volet d'identification globale peut être commandé auprès de l'autorité officielle.--> 
+
 - **Postfix (8 caractères)**
 
  Séquence (numérique ou alphanumérique) du système comme partie d'identification *locale*.
@@ -1219,15 +1314,19 @@ t_id
 
 #### ANYOID
 
-Ne définit pas de format pour l'OID, mais seulement qu'un OID doit être défini dans tous les modèles étendus.
+Ne définit pas de format pour l'OID, mais seulement qu'un OID doit être défini dans tous les modèles Symbolisationsétendus.
 
 --v--
 
 #### OID non définis
 
+<!-- S'il n'y a pas de définition avec OID AS, ili2db part du texte-->
+
 Les règles du **type XML-ID** (www.w3.org/TR/REC-xml) s'appliquent
-- le **premier** caractère doit être une **lettre ou un tiret bas**
-- suivi de **lettres, chiffres, points, tirets, tirets bas** - rien d'autre.
+- le **premier** caractère doit être une **lettre ou un souligné**
+- suivi de **lettres, chiffres, points, tirets, soulignés** - rien d'autre.
+
+<!-- pas de deux points ( !) -->
 
 &nbsp;
 
@@ -1238,6 +1337,13 @@ Les règles du **type XML-ID** (www.w3.org/TR/REC-xml) s'appliquent
 ```
 
 ***La même chose s'applique aux OID définis par l'utilisateur.***
+
+<!-- Puisque Model Baker ne peut pas déterminer la structure et qu'elle doit être définie par l'utilisateur.
+
+C'est pourquoi et surtout à cause du préfixe dans l'OID standard :
+Les utilisateurs doivent pouvoir adapter les valeurs par défaut.
+
+-->
 
 --v--
 
@@ -1263,6 +1369,8 @@ Les règles du **type XML-ID** (www.w3.org/TR/REC-xml) s'appliquent
 
 - Configurations supplémentaires faites **une seule fois** et utilisées plusieurs fois.
 
+<!-- Symbolisation, cartes de base des obstacles etc...-->
+
 --v--
 
 ### Comment fonctionne UsabILIty Hub ?
@@ -1274,6 +1382,8 @@ Les règles du **type XML-ID** (www.w3.org/TR/REC-xml) s'appliquent
 - Recherche inter-référentiels de **fichiers de méta-configuration**.
 
 - Trouver les **fichiers de méta-configuration** dans les `ilidata.xml` sur UsabILItyHub (https://models.opengis.ch) ou les référentiels propres.
+
+<!-- Genauso wie wir INTERLIS Modelle über ein ilimodels.xml anhand von http://models.interlis.ch emfangen können.-->
 
 --v--
 
@@ -1299,7 +1409,7 @@ Les **configurations** pour ili2db, Model Baker et d'autres outils y sont défin
 - Recherche inter-référentiels des **catalogues, fichier de méta-attributs supplémentaire et fichiers de surcouche**
 
  Les **fichiers de surcouche** contiennent des informations sur :
- - Symbolisations et configurations de formulaires
+ - Symbologies et configurations de formulaires
  - Disposition des légendes et ordre des couches
  - Thèmes de carte, mises en page d'impression
  - etc.
@@ -1385,6 +1495,8 @@ https://models.geo.admin.ch/ARE/Nutzungsplanung_V1_2.ili
 Ne pas utiliser d'optimisation :
 ![no-opt](assets/no-optimization.png)
 
+<!-- Quelle est la différence?-->
+
 --v--
 
 ## Exercice 2.1 : Optimisation du projet
@@ -1394,6 +1506,8 @@ Ne pas utiliser d'optimisation :
 
 Ne pas utiliser d'optimisation :
 ![no-opt](assets/no-optimization.png)
+
+<!-- Quel est le problème?-->
 
 --v--
 
@@ -1427,6 +1541,8 @@ Ne pas utiliser d'optimisation :
 ---
 
 <h1 style="-webkit-text-stroke: 2px var(--opengisch-dark) !important; color: lightgray !important; font-size:4.5em !important">PAUSE</h1>
+
+<!-- .slide: data-background="./assets/break-de.jpg" -->
 
 ---
 
@@ -1468,6 +1584,8 @@ Un groupe de différents intéressés...
 ---
 
 <h1 style="-webkit-text-stroke: 2px var(--opengisch-dark) !important; color: lightgray !important; font-size:4.5em !important">Des questions ?</h1>
+
+<!-- .slide: data-background="./assets/questions-de.png" -->
 
 ---
 
