@@ -25,6 +25,7 @@
 ![](./assets/modelbaker-logo-long.png)
 <br><br><br><br><br><br>
 <!-- .slide: data-background="assets/title.png" -->
+
 ---
 
 Commençons ...
@@ -520,14 +521,14 @@ ili2db.mapping = "Multilingual"
 ```mermaid
 %%{init: {'theme': 'dark' } }%%
 sequenceDiagram
-    participant A as Bund
-    participant E as Kanton
-    Note left of A: Definiert ein <br>Minimales Geo-Daten Modell<br/>KbS_V1_5
-    A ->>+E: gibt Modell vor
-    Note right of E: Sammelt Daten im Format von<br/>KbS_V1_5
-    Note right of E: Validiert Daten im Format von<br/>KbS_V1_5
-    E ->>-A: Liefert Daten im Format von<br/>KbS_V1_5
-    Note left of A: Validiert Daten im Format von<br/>KbS_V1_5
+    participant A as Confédération
+    participant E as Canton
+    Note left of A: Definit un <br>Modèle de Geo-Données Minimal<br/>MGDM_V1
+    A ->>+E: impose le modèle
+    Note right of E: Collecte les données dans le format<br/>MGDM_V1
+    Note right of E: Valide les données dans le format<br/>MGDM_V1
+    E ->>-A: Fournit les données dans le format<br/>MGDM_V1
+    Note left of A: Valide les données dans le format<br/>MGDM_V1
 ```
 
 --v--
@@ -537,15 +538,15 @@ sequenceDiagram
 ```mermaid
 %%{init: {'theme': 'dark' } }%%
 sequenceDiagram
-    participant A as Bund
-    participant E as Kanton
-    Note left of A: Definiert ein <br>Minimales Geo-Daten Modell<br/>KbS_V1_5
-    A ->>+E: gibt Modell vor
-    Note right of E: Definiert Modell mit zusätzlichen Informationen<br/>KT_KbS_V1_5
-    Note right of E: Sammelt Daten im Format von<br/>KT_KbS_V1_5
-    Note right of E: Validiert Daten im Format von<br/>KT_KbS_V1_5
-    E ->>-A: Liefert Daten im Format von<br/>KbS_V1_5
-    Note left of A: Validiert Daten im Format von<br/>KbS_V1_5
+    participant A as Confédération
+    participant E as Canton
+    Note left of A: Definit un <br>Modèle de Geo-Données Minimal<br/>MGDM_V1
+    A ->>+E: impose le modèle
+    Note right of E: Definit un modèle avec<br/>informations supplémentaire<br/>CT_MGDM_V1
+    Note right of E: Collecte les données dans le format<br/>CT_MGDM_V1
+    Note right of E: Valide les données dans le format<br/>CT_MGDM_V1
+    E ->>-A: Fournit les données dans le format<br/>MGDM_V1
+    Note left of A: Valide les données dans le format<br/>MGDM_V1
 ```
 
 --v--
@@ -594,15 +595,15 @@ Mais nous souhaitons toujours renvoyer les données sous forme de `Gebaeudeinven
 ```mermaid
 %%{init: {'theme': 'dark' } }%%
 sequenceDiagram
-    participant A as Initialprojekt
-    participant E as Öko-Projekt
-    Note left of A: Gegebenes Modell<br/>Gebauedeinventar_V1
-    A ->>+E: nutzen Basismodell
-    Note right of E: Definieren Modell mit zusätzlichem Attribut<br/>OekoGebaeudeinventar_V1
-    Note right of E: Sammeln Daten im Format von<br/>OekoGebaeudeinventar_V1
-    Note right of E: Validieren Daten im Format von<br/>OekoGebaeudeinventar_V1
-    E ->>-A: Exportieren Daten im <br/>Gebauedeinventar_V1
-    Note left of A: Validiert Daten im Format von<br/>Gebauedeinventar_V1
+    participant A as Projet initial
+    participant E as Projet écologique
+    Note left of A: Modèle donné<br/>Gebauedeinventar_V1
+    A ->>+E: Utilisation du modèle de base
+    Note right of E: Definition du modèle avec attribut supplémentaire<br/>OekoGebaeudeinventar_V1
+    Note right of E: Collecte les données dans le format<br/>OekoGebaeudeinventar_V1
+    Note right of E: Valide les données dans le format<br/>OekoGebaeudeinventar_V1
+    E ->>-A: Exportation des données dans le format <br/>Gebauedeinventar_V1
+    Note left of A: Valide les données dans le format <br/>Gebauedeinventar_V1
 ```
 
 --v--
@@ -663,15 +664,15 @@ END Gebaeude;
 ```mermaid
 %%{init: {'theme': 'dark' } }%%
 sequenceDiagram
-    participant A as Initialprojekt
-    participant E as Öko-Projekt
-    Note left of A: Gegebenes Modell<br/>Gebauedeinventar_V1
-    A ->>+E: nutzen Basismodell
-    Note right of E: Definieren Modell mit zusätzlichem Attribut<br/>OekoGebaeudeinventar_V1
-    Note right of E: Sammeln Daten im Format von<br/>OekoGebaeudeinventar_V1
-    Note right of E: Validieren Daten im Format von<br/>OekoGebaeudeinventar_V1
-    E ->>-A: Exportieren Daten im <br/>Gebauedeinventar_V1
-    Note left of A: Validiert Daten im Format von<br/>Gebauedeinventar_V1
+    participant A as Projet initial
+    participant E as Projet écologique
+    Note left of A: Modèle donné<br/>Gebauedeinventar_V1
+    A ->>+E: Utilisation du modèle de base
+    Note right of E: Definition du modèle avec attribut supplémentaire<br/>OekoGebaeudeinventar_V1
+    Note right of E: Collecte les données dans le format<br/>OekoGebaeudeinventar_V1
+    Note right of E: Valide les données dans le format<br/>OekoGebaeudeinventar_V1
+    E ->>-A: Exportation des données dans le format <br/>Gebauedeinventar_V1
+    Note left of A: Valide les données dans le format <br/>Gebauedeinventar_V1
 ```
 
 --v--
