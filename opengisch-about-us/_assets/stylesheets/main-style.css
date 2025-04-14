@@ -211,10 +211,11 @@ section.present.custom-right-pic img {
   z-index: -1;
 }
 
+/* UNDERLINE ANIMATION */
+
 .highlight-animate {
   position: relative;
   display: inline-block;
-  color: nav--{opengisch-gray};
 }
 
 .highlight-animate::before {
@@ -225,7 +226,7 @@ section.present.custom-right-pic img {
   width: 0%; /* Start with no width */
   height: 2px; /* Thin underline effect */
   background-color: #80cc28;
-  animation: slide-highlight 1.5s ease-out forwards;
+  animation: slide-highlight 3s ease-out forwards;
   z-index: -1;
 }
 
