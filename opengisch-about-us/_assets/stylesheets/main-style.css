@@ -210,3 +210,27 @@ section.present.custom-right-pic img {
   opacity: 0.2;
   z-index: -1;
 }
+
+.highlight-animate {
+  position: relative;
+  display: inline-block;
+  color: nav--{opengisch-gray};
+}
+
+.highlight-animate::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%; /* Start with no width */
+  height: 2px; /* Thin underline effect */
+  background-color: #80cc28;
+  animation: slide-highlight 1.5s ease-out forwards;
+  z-index: -1;
+}
+
+@keyframes slide-highlight {
+  to {
+    width: 100%; /* Expand to full width of the text */
+  }
+}
