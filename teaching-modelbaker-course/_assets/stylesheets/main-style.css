@@ -4,22 +4,24 @@
   --r-background-color: var(--opengisch-white);
 }
 
-/* hr {
-  margin-top: 20px;
-  padding: 0;
+#qf-logo { /* left corner qfield logo*/
+  position: fixed;
+  top: 500px;
+  z-index: 1000;
 }
 
-.v-separator {
-  margin-top: 20px;
-  padding: 0;
-} */
+#qf-logo img { /* left corner qfield logo*/
+  width: 120px;
+  opacity: 0.5;
+}
 
 h1 { /* main titles */
   color: var(--opengisch-dark);
   font-weight: bold;
   font-size: 50pt;
   line-height: 48pt;
-  text-align: left;
+  text-align: left;x
+  font-family: "bio-sans", sans-serif;
 }
 
 h1:nth-child(2) {
@@ -35,7 +37,15 @@ h2 { /* smaller main titles */
   font-size: 30pt;
   font-weight: bold;
   text-align: left;
-  margin-bottom: 20px;
+  font-family: "bio-sans", sans-serif;
+}
+
+h2:nth-child(2) {
+  color: var(--opengisch-green);
+}
+
+h2:last-of-type {
+  margin-bottom: 60px;
 }
 
 h3 { /* secondary titles */
@@ -43,7 +53,15 @@ h3 { /* secondary titles */
   text-align: left;
   font-weight: bolder;
   font-size: 20pt;
-  margin-bottom: 50px;
+  font-family: "bio-sans", sans-serif;
+}
+
+h3:nth-child(2) {
+  color: var(--opengisch-green);
+}
+
+h3:last-of-type {
+  margin-bottom: 35px;
 }
 
 h4 { /*text*/
@@ -52,12 +70,16 @@ h4 { /*text*/
   font-size: 15pt;
   font-weight: lighter;
   margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: "bio-sans", sans-serif;
+  line-height: 18pt;
 }
 
 h5 { /*text*/
   color: var(--opengisch-dark);
   text-align: left;
-  font-size: 10pt;
+  font-size: 12pt;
+  font-family: "bio-sans", sans-serif;
 }
 
 /* for lists (ul, li) */
@@ -102,8 +124,8 @@ section.present video {
 section.present img {
   border-radius: 7px;
   border: 0.5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
+  box-shadow: none;
+  max-width: 900px;
 }
 
 /* LOGO */
@@ -115,7 +137,7 @@ section.present.styled-logo img {
   box-shadow: none;
 }
 
-/* IMG / PNG (NOT LOGO) */
+/* IMG / PNG (TRANSPARENT – NO LOGO) */
 section.present.custom-center-pic img {
   max-width: 100%;
   margin-top: 40px;
@@ -140,6 +162,7 @@ section.present.custom-right-pic img {
   border: none;
   box-shadow: none;
 }
+
 
 
 /* –– OTHER –– */
@@ -186,9 +209,9 @@ section.present.custom-right-pic img {
   border-radius: 0 !important;
   box-shadow: none !important;
   position: absolute;
-  top: 17px;
-  right: -10px;
-  width: 20px;
+  top: 12px;
+  right: -9px;
+  width: 13px;
   height: auto;
 }
 
@@ -200,5 +223,30 @@ section.present.custom-right-pic img {
   height: 100vh;
   margin-top: 100px;
   opacity: 0.2;
+  z-index: -1
+}
+
+/* UNDERLINE ANIMATION */
+
+.highlight-animate {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-animate::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%; /* Start with no width */
+  height: 2px; /* Thin underline effect */
+  background-color: #80cc28;
+  animation: slide-highlight 3s ease-out forwards;
   z-index: -1;
+}
+
+@keyframes slide-highlight {
+  to {
+    width: 100%; /* Expand to full width of the text */
+  }
 }
