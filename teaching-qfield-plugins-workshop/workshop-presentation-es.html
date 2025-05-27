@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Qfield Plugins Workshop</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./_assets/stylesheets/main-style.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="--v--">
+          <textarea data-template>
+            
+
+# Introducción al desarrollo de Plugins para QField
+
+<img src="assets/qfield_logo.png" style="width:150px">
+
+---
+
+## ¿Quiénes somos?
+
+--v--
+
+<!-- .slide: data-background="./assets/opengis.jpg"-->
+
+--v--
+
+## ¿Quiénes son ustedes?
+
+---
+
+## AGENDA
+
+1. ¿Por qué plugins para QField?
+2. Plugins para QField (generalidades) 🧑‍💻
+3. Introducción a QML 🧑‍💻
+4. Desarrollando plugins para QField 🧑‍💻
+5. Plugin para pronóstico del tiempo (Weather Forecast) 🧑‍💻
+6. Exhibición de plugins
+7. Recursos
+
+-----------
+
+<small>🧑‍💻: Práctica!</small>
+
+---
+
+## AGENDA
+
+<span style="color:orange">1. ¿Por qué plugins para QField?</span>
+
+2. Plugins para QField (generalidades) 🧑‍💻
+3. Introducción a QML 🧑‍💻
+4. Desarrollando plugins para QField 🧑‍💻
+5. Plugin para pronóstico del tiempo (Weather Forecast) 🧑‍💻
+6. Exhibición de plugins
+7. Recursos
+
+-----------
+
+<small>🧑‍💻: Práctica!</small>
+
+--v--
+
+
+## ¿Por qué plugins para QField?
+
+---
+
+## AGENDA
+
+1. ¿Por qué plugins para QField?
+
+<span style="color:orange">2. Plugins para QField (generalidades) 🧑‍💻</span>
+
+3. Introducción a QML 🧑‍💻
+4. Desarrollando plugins para QField 🧑‍💻
+5. Plugin para pronóstico del tiempo (Weather Forecast) 🧑‍💻
+6. Exhibición de plugins
+7. Recursos
+
+-----------
+
+<small>🧑‍💻: Práctica!</small>
+
+--v--
+
+## PLUGINS PARA QFIELD (Generalidades)
+
+<img src="assets/qfield_plugins_architecture.png" style="width:800px">
+
+--v--
+
+## PLUGINS PARA QFIELD (Generalidades)
+
+<img style="float: left; width:180px; margin-right:50px;" src="assets/qml_creator_icon.png"> 
+
+<br>
+
+Declarativo
+
+Orientado al diseño de interfaces
+
+<br><br>
+
+<img style="float: left; width:180px; margin-left:5px; margin-right:50px;" src="assets/javascript_logo.png"> 
+
+<br>
+
+Imperativo
+
+Lógica de la aplicación
+
+--v--
+
+## PLUGINS PARA QFIELD (Generalidades)
+
+PLUGINS DE PROYECTO | PLUGINS DE APLICACIÓN
+----------------|--------------------
+Se comparten junto al proyecto de QField | Se comparten vía URL (archivo ZIP)
+Plugin único | Múltiples plugins
+Instalación no requerida | Installation requerida
+Disponible en la sesión del proyecto | Disponible en la sesión de QField
+
+--v--
+
+## PLUGINS PARA QFIELD (Generalidades) 🧑‍💻
+
+¡Demo / Práctica!
+
+1. Plugin de proyecto
+
+2. Plugin de aplicación
+
+--v--
+
+## PLUGINS PARA QFIELD (Generalidades)
+
+_Revisitando..._
+
+PLUGINS DE PROYECTO | PLUGINS DE APLICACIÓN
+----------------|--------------------
+Se comparten junto al proyecto de QField | Se comparten vía URL (archivo ZIP)
+Plugin único | Múltiples plugins
+Instalación no requerida | Installation requerida
+Disponible en la sesión del proyecto | Disponible en la sesión de QField
+
+--v--
+
+## PLUGINS PARA QFIELD (Generalidades)
+
+¿Para qué?
+
+* **Hacer más eficiente** la captura de datos en campo.
+
+  <small>*(Ejemplo: plugin Snap)*</small>
+
+--v--
+
+### Plugin SNAP
+
+Snap!
+
+![](assets/showcase_snap.gif)
+
+--v--
+
+## PLUGINS PARA QFIELD (Generalidades)
+
+¿Para qué?
+
+* **Hacer más eficiente** la captura de datos en campo.
+
+  <small>*(Ejemplo: plugin Snap)*</small>
+
+* Obtener información útil calculada por un **Servicio Web**.
+
+  <small>*(Ejemplo: ruteo con OSRM).*</small>
+
+--v--
+
+### Ruteo con OSRM
+
+<center>
+<img src="assets/osrm_routing_plugin.gif" style="height:700px;">
+</center>
+
+--v--
+
+## PLUGINS PARA QFIELD (Generalidades)
+
+¿Para qué?
+
+* **Hacer más eficiente** la captura de datos en campo.
+
+  <small>*(Ejemplo: plugin Snap)*</small>
+
+* Obtener información útil calculada por un **Servicio Web**.
+
+  <small>*(Ejemplo: ruteo con OSRM).*</small>
+
+* Obtener información de internet **basada en mi localización**.
+
+  <small>*(Ejemplo: plugin de pronóstico del tiempo)*</small>
+
+<small>*Nota: ¡Antes de crear un plugin, revisa si la funcionalidad ya está en QField!*</small>
+
+--v--
+
+### Pronóstico del tiempo
+
+<center>
+<img src="assets/weather_forecast.png" style="height:600px;">
+</center>
+
+--v--
+
+## PLUGINS PARA QFIELD (Generalidades)
+
+¿Dónde encontrar otros plugins?
+
+https://github.com/topics/qfield-plugin
+
+
+---
+
+## AGENDA
+
+1. ¿Por qué plugins para QField?
+2. Plugins para QField (generalidades) 🧑‍💻
+
+<span style="color:orange">3. Introducción a QML 🧑‍💻 </span>
+
+4. Desarrollando plugins para QField 🧑‍💻
+5. Plugin para pronóstico del tiempo (Weather Forecast) 🧑‍💻
+6. Exhibición de plugins
+7. Recursos
+
+-----------
+
+<small>🧑‍💻: Práctica!</small>
+
+--v--
+
+## INTRODUCCIÓN A QML 🧑‍💻
+
+ + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarativo, orientado al diseño
+
+--v--
+
+## INTRODUCCIÓN A QML 🧑‍💻
+
+ + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarativo, orientado al diseño
+
+ + **Tipos de Objetos**
+
+--v--
+
+### \.\./Tipos de Objetos
+
+```Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...```
+
+----
+
+``` qml
+Text {
+  ...
+}
+```
+
+<small>_Ver [QML Object Types](https://doc.qt.io/qt-6/qtquick-qmlmodule.html#object-types) para más detalles._</small>
+
+--v--
+
+### \.\./Tipos de Objetos
+
+```Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...```
+
+----
+
+``` qml
+Rectangle {
+  ...
+  Text {
+    ...
+  }
+}
+```
+
+--v--
+
+### \.\./Tipos de Objetos
+
+```Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...```
+
+----
+
+``` qml
+Item {
+  ...
+  Text {
+    ...
+  }
+}
+```
+
+--v--
+
+## INTRODUCCIÓN A QML 🧑‍💻
+
+ + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarativo, orientado al diseño
+
+ + Tipos de Objetos
+
+ + **Atributos: Propiedades, señales, manejadores y métodos**
+
+--v--
+
+### \.\./Atributos: Propiedades, señales, manejadores y métodos
+
+<span style="font-size:0.85em;">
+
+``` qml
+Rectangle {
+  ...
+  MouseArea {
+    id: myArea
+
+    ...
+
+  }
+}
+```
+</span>
+
+--v--
+
+### \.\./Atributos: Propiedades, señales, manejadores y métodos
+
+<span style="font-size:0.85em;">
+
+``` qml
+Rectangle {
+  ...
+  MouseArea {
+    id: myArea
+
+    enabled: true
+    anchors.fill: parent
+  }
+}
+```
+</span>
+
+--v--
+
+### \.\./Atributos: Propiedades, señales, manejadores y métodos
+
+<span style="font-size:0.85em;">
+
+``` qml
+Rectangle {
+  ...
+  MouseArea {
+    id: myArea
+
+    enabled: true
+    anchors.fill: parent
+
+    onClicked: ...
+  }
+}
+```
+</span>
+
+--v--
+
+### \.\./Atributos: Propiedades, señales, manejadores y métodos
+
+<span style="font-size:0.85em;">
+
+``` qml
+Rectangle {
+  ...
+  MouseArea {
+    id: myArea
+
+    enabled: true
+    anchors.fill: parent
+
+    onClicked: ...
+
+    function myCustomMethod() {
+      ...
+      return ...;
+    }
+  }
+}
+```
+</span>
+
+--v--
+
+### \.\./Atributos: Propiedades, señales, manejadores y métodos
+
+<span style="font-size:0.85em;">
+
+``` qml
+Rectangle {
+  ...
+  MouseArea {
+    id: myArea
+
+    enabled: true
+    anchors.fill: parent  // Property binding!
+
+    onClicked: ...
+
+    function myCustomMethod() {
+      ...
+      return ...;
+    }
+  }
+}
+```
+</span>
+
+--v--
+
+## INTRODUCCIÓN A QML 🧑‍💻
+
+ + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarativo, orientado al diseño
+
+ + Tipos de Objetos
+
+ + Atributos: Propiedades, señales, manejadores y métodos
+
+ + **Hola mundo (QML)!** 👋
+
+--v--
+
+### \.\./Hola mundo (QML) 👋
+
+``` qml
+import QtQuick 2.0
+
+Text {
+  text: "Hola mundo!"
+}
+```
+
+--v--
+
+## INTRODUCCIÓN A QML 🧑‍💻
+
+ + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarativo, orientado al diseño
+
+ + Tipos de Objetos
+
+ + Atributos: Propiedades, señales, manejadores y métodos
+
+ + Hola mundo (QML)! 👋
+
+ + **Recursos de QML**
+
+--v--
+
+### \.\./Recursos de QML
+
+<br/>
+
+Introducción a Qt/QML, por KDAB: [YouTube Playlist](https://www.youtube.com/watch?v=JxyTkXLbcV4&list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc&index=2)
+
+Referencia QML: https://doc.qt.io/qt-6/qmlreference.html
+
+Tutorial QML: https://doc.qt.io/qt-6/qml-tutorial.html
+
+--v--
+
+
+## INTRODUCCIÓN A QML 🧑‍💻
+
+ + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarativo, orientado al diseño
+
+ + Tipos de Objetos
+
+ + Atributos: Propiedades, señales, manejadores y métodos
+
+ + Hola mundo (QML)! 👋
+
+ + Recursos de QML
+
+ + **Ejercicio online!** 🧑‍💻
+
+--v--
+
+## \.\./Ejercicio online! 🧑‍💻
+
+<br/>
+Ir a:
+
+https://qmlweb.github.io
+
+---
+
+## AGENDA
+
+1. ¿Por qué plugins para QField?
+2. Plugins para QField (generalidades) 🧑‍💻
+3. Introducción a QML 🧑‍💻
+
+<span style="color:orange">4. Desarrollando plugins para QField 🧑‍💻 </span>
+
+5. Plugin para pronóstico del tiempo (Weather Forecast) 🧑‍💻
+6. Exhibición de plugins
+7. Recursos
+
+-----------
+
+<small>🧑‍💻: Práctica!</small>
+
+--v--
+
+## Desarrollando plugins para QField 🧑‍💻
+
++ **QField GUI**
+
+--v--
+
+## \.\./QField GUI
+
+<span style="font-size:0.8em;"><span style="color:orange">Dashboard</span> | Main menu | Search bar | Plugins toolbar | Positioning | Canvas actions</span>
+![alt text](assets/gui_1.png)
+
+--v--
+
+## \.\./QField GUI
+
+<span style="font-size:0.8em;">Dashboard | <span style="color:orange">Main menu</span> | Search bar | Plugins toolbar | Positioning | Canvas actions</span>
+![alt text](assets/gui_2.png)
+
+--v--
+
+## \.\./QField GUI
+
+<span style="font-size:0.8em;">Dashboard | Main menu | <span style="color:orange">Search bar</span> | Plugins toolbar | Positioning | Canvas actions</span>
+![alt text](assets/gui_3.png)
+
+--v--
+
+## \.\./QField GUI
+
+<span style="font-size:0.8em;">Dashboard | Main menu | Search bar | <span style="color:orange">Plugins toolbar</span> | Positioning | Canvas actions</span>
+![alt text](assets/gui_4.png)
+
+--v--
+
+## \.\./QField GUI
+
+<span style="font-size:0.8em;">Dashboard | Main menu | Search bar | Plugins toolbar | <span style="color:orange">Positioning</span> | Canvas actions</span>
+![alt text](assets/gui_5.png)
+
+--v--
+
+## \.\./QField GUI
+
+<span style="font-size:0.8em;">Dashboard | Main menu | Search bar | Plugins toolbar | Positioning | <span style="color:orange">Canvas actions</span></span>
+![alt text](assets/gui_6.png)
+
+--v--
+
+## Desarrollando plugins para QField 🧑‍💻
+
++ QField GUI
++ **QField API** 📗
+
+--v--
+
+## \.\./QField API 📗
+
+#### <span style="font-size:0.8em;"><span style="color:orange">Root objects</span> | iface | Theme | QField GUI types | Utils</span>
+
+--------
+
+```iface```
+
+```qgisProject```
+
+```settings```
+
+```clipboardManager```
+
+```...```
+
+--------
+
+<small>_Ver [qgismobileapp.cpp](https://github.com/opengisch/QField/blob/c8f776d864346609e4ae97a12a36898cb43cd0ac/src/core/qgismobileapp.cpp#L579-L596) para más detalles._</small>
+
+--v--
+
+## \.\./QField API 📗
+
+#### <span style="font-size:0.8em;">Root objects | <span style="color:orange">iface</span> | Theme | QField GUI types | Utils</span>
+
+--------
+
+```iface.mainWindow()```
+
+```iface.mapCanvas()```
+
+```iface.findItemByObjectName("...")```
+
+```iface.logMessage("...")```
+
+--------
+
+```iface.addItemToPluginsToolbar()```
+
+```iface.addItemToDashboardActionsToolbar()```
+
+```iface.addItemToCanvasActionsToolbar()```
+
+--------
+
+<small>_Ver [appinterface.h](https://github.com/opengisch/QField/blob/master/src/core/appinterface.h) para más detalles._</small>
+
+--v--
+
+## \.\./QField API 📗
+
+#### <span style="font-size:0.8em;">Root objects | iface | <span style="color:orange">Theme</span> | QField GUI types | Utils</span>
+
+--------
+``` qml
+Theme.mainColor  // #80cc28
+
+Theme.mainTextColor
+
+Theme.mainBackgroundColor
+
+Theme.darkGray
+
+Theme.defaultFont
+
+Theme.getThemeVectorIcon("...")
+```
+--------
+
+<small>_Ver [Theme.qml](https://github.com/opengisch/QField/blob/master/src/qml/imports/Theme/Theme.qml) para más detalles._</small>
+
+--v--
+
+## \.\./QField API 📗
+
+#### <span style="font-size:0.8em;">Root objects | iface | Theme | <span style="color:orange">QField GUI types</span> | Utils</span>
+
+--------
+```QfButton```
+
+```QfToolButton```
+
+```QfTextField```
+
+```QfSwitch```
+
+```QfComboBox```
+
+```...```
+
+--------
+
+<small>_Ver [src/qml/imports/Theme/*](https://github.com/opengisch/QField/blob/master/src/qml/imports/Theme/) para más detalles._</small>
+
+--v--
+
+## \.\./QField API 📗
+
+#### <span style="font-size:0.8em;">Root objects | iface | Theme | QField GUI types | <span style="color:orange">Utils</span></span>
+
+--------
+```LayerUtils```
+
+```GeometryUtils```
+
+```FeatureUtils```
+
+```CoordinateReferenceSystemUtils```
+
+```SnappingUtils```
+
+```...```
+
+--------
+
+<small>_Ver [src/core/utils/*](https://github.com/opengisch/QField/tree/master/src/core/utils) para más detalles._</small>
+
+--v--
+
+## Desarrollando plugins para QField 🧑‍💻
+
+  + QField GUI
+  + QField API
+  + **¿Cómo escribir un plugin?**
+
+--v--
+
+## Desarrollando plugins para QField 🧑‍💻
+
+  + QField GUI
+  + QField API
+  + ¿Cómo escribir un plugin?
+  + **"Hola mundo"** 👋
+
+&nbsp; <!-- add some vertical space -->
+
+``` qml
+import QtQuick
+
+Item {
+  Component.onCompleted: {
+    iface.mainWindow().displayToast('Hola mundo!')
+  }
+}
+```
+
+--v--
+
+## Desarrollando plugins para QField 🧑‍💻
+
++ QField GUI
++ QField API
++ ¿Cómo escribir un plugin?
++ "Hola mundo"
++ **Depurando** 🐞
+
+  ```iface.logMessage("")```
+
+  ```mainWindow.displayToast("")```
+
+  ```console.log("")``` ?
+
+<small>*Consejo: Inicia la aplicación desde la terminal de comandos para obtener un registro (log) más detallado.*</small>
+
+--v--
+
+## Desarrollando plugins para QField 🧑‍💻
+
++ QField GUI
++ QField API
++ ¿Cómo escribir un plugin?
++ "Hola mundo"
++ Depurando
++ **Plantilla de plugins para QField** 🧑‍💻
+
+  https://github.com/opengisch/qfield-template-plugin
+
+---
+
+## AGENDA
+
+1. ¿Por qué plugins para QField?
+2. Plugins para QField (generalidades) 🧑‍💻
+3. Introducción a QML 🧑‍💻
+4. Desarrollando plugins para QField 🧑‍💻 
+
+<span style="color:orange">5. Plugin para pronóstico del tiempo (Weather Forecast) 🧑‍💻 </span>
+
+6. Exhibición de plugins
+7. Recursos
+
+-----------
+
+<small>🧑‍💻: Práctica!</small>
+
+--v--
+
+## Plugin para pronóstico del tiempo (Weather Forecast) 🧑‍💻
+
+<img src="assets/custom_weather_forecast.png" style="float: left;height:500px">
+
+</br></br></br></br></br>
+¡Recreemos este plugin!
+
+--v--
+
+## Plugin para pronóstico del tiempo (Weather Forecast) 🧑‍💻
+
+¿Qué necesitamos?
+
+ + [ ] 1) API call (open-meteo.com)
+    + [ ] Build a URL (to call the API) from the web site
+    + [ ] Call the API via XMLHttpRequest
+    + [ ] Translate API response into image / description
+ 
+ + [ ] 2) Plugin
+    + [ ] Get location via button (from previous exercises)
+    + [ ] Call the API from the plugin
+
+---
+
+## AGENDA
+
+1. ¿Por qué plugins para QField?
+2. Plugins para QField (generalidades) 🧑‍💻
+3. Introducción a QML 🧑‍💻
+4. Desarrollando plugins para QField 🧑‍💻 
+5. Plugin para pronóstico del tiempo (Weather Forecast) 🧑‍💻 
+
+<span style="color:orange">6. Exhibición de plugins</span>
+
+7. Recursos
+
+-----------
+
+<small>🧑‍💻: Práctica!</small>
+
+--v--
+
+## Exhibición de plugins
+
+Geometryless Addition
+
+https://github.com/opengisch/qfield-geometryless-addition
+
+--v--
+
+## Exhibición de plugins
+
+VocalPoint plugin
+
+https://github.com/SeqLaz/vocalpoint-qfield-plugin
+
+<video controls="controls" style="height:500px">
+<source src="assets/showcase_vocalpoint.mp4" type="video/mp4">
+</video>
+
+--v--
+
+## Exhibición de plugins
+
+Nominatim locator plugin
+
+https://github.com/opengisch/qfield-nominatim-locator
+
+<video controls="controls" style="height:450px">
+<source src="assets/showcase_nominatim.webm" type="video/mp4">
+</video>
+
+--v--
+
+## Exhibición de plugins
+
+LiveField plugin
+
+<video controls="controls">
+<source src="assets/showcase_livefield.mp4" type="video/mp4">
+</video>
+
+--v--
+
+## Exhibición de plugins
+
+QField plugin reloader
+
+https://github.com/gacarrillor/qfield-plugin-reloader/
+
+---
+
+## AGENDA
+
+1. ¿Por qué plugins para QField?
+2. Plugins para QField (generalidades) 🧑‍💻
+3. Introducción a QML 🧑‍💻
+4. Desarrollando plugins para QField 🧑‍💻 
+5. Plugin para pronóstico del tiempo (Weather Forecast) 🧑‍💻 
+6. Exhibición de plugins
+
+<span style="color:orange">7. Recursos</span>
+
+-----------
+
+<small>🧑‍💻: Práctica!</small>
+
+--v--
+
+## Recursos
+
+Referencia del lenguaje QML: https://doc.qt.io/qt-6/qmlreference.html
+
+Introducción a Qt/QML, por KDAB ([YouTube Playlist](https://www.youtube.com/watch?v=JxyTkXLbcV4&list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc&index=2))
+
+Editor online de QML: https://qmlweb.github.io
+
+Editor online avanzado de QML: https://patrickelectric.work/qmlonline/
+
+Tutorial QML: https://doc.qt.io/qt-6/qml-tutorial.html
+
+Listado de plugins para QField: https://github.com/topics/qfield-plugin
+
+Íconos para plugins: https://fonts.google.com/icons
+
+---
+
+![os_love](assets/love-os.png)
+
+¡Gracias, y que se diviertan!
+
+          </textarea>
+        </section>
+      </div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"transition":"none","slideNumber":false,"overview":true,"autoPlayMedia":true,"_":["slides/"],"static":"web","static-dirs":"slides/assets","staticDirs":"slides/assets","listing-template":"../globals/index/index.html","listingTemplate":"../globals/index/index.html","title":"Qfield Plugins Workshop"}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) {
+        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+      }
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
+    </script>
+  </body>
+</html>
