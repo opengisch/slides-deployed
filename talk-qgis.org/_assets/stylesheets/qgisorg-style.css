@@ -17,7 +17,7 @@
 
 body {
   background-color: var(--r-background-color) !important;
-  background-image: url(../assets/header.png), url(../assets/footer.png);
+  background-image: url(../../assets/header.png), url(../../assets/footer.png);
   background-position: top right, bottom left;
   background-size: contain, contain;
   background-repeat: no-repeat;
