@@ -100,3 +100,7 @@ p{
 ul {
   margin-top: 20px;
 }
+
+section img {
+  max-height: 475px;
+}
