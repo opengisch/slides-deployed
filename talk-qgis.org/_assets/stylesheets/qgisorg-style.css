@@ -1,0 +1,102 @@
+@import 'main-style.css';
+
+:root {
+    --r-background-color:#363636;
+    --opengisch-green: #689d23;
+    --opengisch-blue: #ee7913;
+    --opengisch-dark: #c2c2c2; 
+    --opengisch-light: #c2c2c2;
+    --opengisch-white: #ffffff;
+    --r-main-font: "futura-pt", Helvetica, Arial, sans-serif;
+    --r-heading-font: "futura-pt", Helvetica, Arial, sans-serif;
+}
+
+.reveal .slides::after {
+  background-image: none;
+}
+
+body {
+  background-color: var(--r-background-color) !important;
+  background-image: url(../assets/header.png), url(../assets/footer.png);
+  background-position: top right, bottom left;
+  background-size: contain, contain;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: var(--opengisch-green);
+}
+
+h1:nth-child(2) {
+  color: var(--opengisch-green);
+}
+
+h2 {
+  color: var(--opengisch-dark);
+}
+
+h2:nth-child(2) {
+  color: var(--opengisch-green);
+}
+
+h3 {
+  color: var(--opengisch-dark);
+}
+
+h3:nth-child(2) {
+  color: var(--opengisch-green);
+}
+
+h4 {
+  color: var(--opengisch-dark);
+}
+
+h5 {
+  color: var(--opengisch-dark);
+}
+
+section.present ul li {
+  color: var(--opengisch-dark);
+}
+
+p,
+ul,
+tr,
+td,
+div {
+  color: var(--opengisch-dark);
+}
+
+.blue {
+  color: var(--opengisch-blue);
+}
+
+.green {
+  color: var(--opengisch-green);
+}
+
+.light {
+  color: var(--opengisch-light);
+}
+
+.dark {
+  color: var(--opengisch-dark);
+}
+
+.styled-link {
+  color: var(--opengisch-green);
+  border-color: var(--opengisch-green);
+}
+
+
+.highlight-animate::before {
+  background-color: var(--opengisch-green);
+}
+
+p{
+  font-size: 15pt;
+}
+
+ul {
+  margin-top: 20px;
+}
