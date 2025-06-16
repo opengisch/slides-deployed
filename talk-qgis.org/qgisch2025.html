@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
-    <link rel="stylesheet" href="./_assets/stylesheets/qgisorg-style.css" id="theme" />
+    <link rel="stylesheet" href="./_assets/stylesheets/main-style.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
   </head>
@@ -26,24 +26,24 @@
 <!-- .slide: data-background="./assets/intro.jpg"-->
 note:
 My name is Marco Bernasocchi. I’m the Chair of the QGIS.org Association and CEO of OPENGIS.ch.
-The last time I was in Sweden was exactly 20 years ago. I was living and studying in Uppsala, just two hours north of here. Luckily, my university in Zurich had just upgraded to a brand-new Windows server, and in trying to fix a user profile issue, they irrecoverably deleted my account. No backup. The work was due in 16 days, so I had to rewrite my entire bachelor’s thesis from scratch. 
+The last time I was in Sweden was exactly 20 years ago. I was living and studying in Uppsala, just two hours north of here. Luckily, my university in Zurich had just upgraded to a brand-new Windows server, and in trying to fix a user profile issue, they irrecoverably deleted my account. No backup. The work was due in 16 days, so I had to rewrite my entire bachelor’s thesis from scratch.
 lots has changed since then — I was young, I had long hair, I was very, very fit... but most of all, I was writing my bachelor thesis using ArcInfo.
 That day I became a bit more skeptical of proprietary systems… and maybe, just maybe, it planted the seed for this moment.
 
 ---
 
-# QGIS at a Glance
+### <span style="color: var(--opengisch-green)">QGIS</span> AT A GLANCE
 
 - 🌍 Used by millions worldwide — across cities, forests, disaster zones, farms, ...
 - 💻 Runs on Linux, Windows, macOS — and Android, iOS via apps
 - 🗣️ Available in 100+ languages thanks to our global community
 - 🔁 Updated every 4 months with regular releases
-- 
+-
 ![fte](assets/users.jpg)
 
 ---
 
-# QGIS is a Digital Public Good
+### QGIS IS A <span style="color: var(--opengisch-green);"> DIGITAL PUBLIC GOOD</span>
 - ✅ Officially recognized by the Digital Public Goods Alliance in 2025
 - 🎯 Meets DPG standards: open-source, privacy-respecting, inclusive, and aligned with the UN Sustainable Development Goals (SDGs)
 - 🌱 Supports global causes: climate action, urban planning, disaster response, public health
@@ -55,10 +55,9 @@ This recognition opens doors for collaboration and funding. It shows that QGIS i
 
 ---
 
-# Community First
+### COMMUNITY <span style="color: var(--opengisch-green);">FIRST</span>
 
-![alt text](assets/team.jpg)
-
+<img src="assets/team.jpg" style="width: 70%; display: block; margin-left: 0;">
 
 note:
 Now, if there’s one thing I want to be absolutely clear about today, it’s this:
@@ -68,14 +67,14 @@ And that’s the secret: our strength is not just our code — it’s our commun
 
 ---
 
-# Professional usage
+### PROFESSIONAL <span style="color: var(--opengisch-green);">USAGE</span>
 
 
-![alt text](assets/week.jpg)
+<img src="assets/week.jpg" style="width: 100%; margin-top: 100px; display: block; margin-left: 0;">
 
 ---
 
-# How is QGIS sustained?
+### HOW IS <span style="color: var(--opengisch-green);">QGIS</span> SUSTAINED?
 
 ![alt text](assets/finance.jpg)
 
@@ -86,29 +85,28 @@ And in **2025**, we’re planning to exceed **€475,000**
 
 ---
 
-# Who sustains?
+### WHO <span style="color: var(--opengisch-green);">SUSTAINS?</span>
 
-![alt text](assets/sponsors.jpg)
+<img src="assets/sponsors.jpg" style="width: 45%; display: block; margin-left: 0;">
 
 ---
 
-# Financial Growth & Transparency
-
-But it’s not just about growth — it’s about how we use it.
+### FINANCIAL GROWTH <span style="color: var(--opengisch-green);">& TRANSPARENCY</span>
+##### But it’s not just about growth — it’s about <span style="font-weight: bold;" class="highlight-animate">how we use it.</span>
 
 - **Bug fixing** is our largest single allocation — this keeps QGIS stable and production-ready
 - **Infrastructure** (build systems, servers, packaging) ensures we scale reliably
 - **Documentation** gets a dedicated budget and full-time writer
 - And then there’s the **Grant Programme**, supporting community-driven innovation
 
-All of it is published publicly in our financial reports.
+##### All of it is published publicly in our financial reports.
 
 note:
 Celebrate the financial maturity of the project. This is community-powered sustainability.
 
 ---
 
-# Grant Programme 2024–2025
+### GRANT PROGRAM <span style="color: var(--opengisch-green);">2024-2025</span>
 
 - 💡 Direct investment in our community
 - 🛠️ 2024 grants focused on usability, performance, and real user needs
@@ -122,9 +120,9 @@ Use this slide to underscore that investment in community pays back tenfold.
 
 ---
 
-# Qt6
+### QT6
 
-Transitions to **Qt6**, the modern application framework that QGIS is built on.
+##### Transitions to <span style="color: var(--opengisch-green); font-weight: bold;">Qt6</span>, the modern application framework that QGIS is <span style="font-weight:bold;">built on.</span>
 
 - Security improvements
 - Modern codebase with simplified maintenance
@@ -132,27 +130,28 @@ Transitions to **Qt6**, the modern application framework that QGIS is built on.
 
 ---
 
-# QGIS 4.0
+### QGIS <span style="color: var(--opengisch-green);">4.0</span>
 
 - QGIS 4.0 will be Qt6-only
 - It won’t be an LTR, but will keep deprecated APIs to ease plugin transitions
 - The LTR will follow in QGIS 4.2, scheduled for early 2026
 
-The goal: make the transition as smooth and low-risk as possible
+##### <span style="font-weight: bold;" class="highlight-animate">The goal:</span> make the transition as smooth and low-risk as possible.
 
 note:
 This is a massive change — but we’re ready for it. And we’re making it as developer-friendly as possible.
 
 ---
 
-# MacOS Package Improvements
+### MACOS PACKAGE <span style="color: var(--opengisch-green)">IMPROVEMENTS</span>
 
 - Builds now use **vcpkg** for better maintainability
 - This allows us to finally support **notarised builds** — a requirement for modern macOS versions
 - It’s already proven to work — Already done for QField
 - First notarised builds of QGIS for macOS are expected **for QGIS 4.0**
 
-This brings us closer to a seamless, professional user experience across all major platforms.
+##### This brings us closer to a<span style="font-weight: bold;"> seamless, professional user experience</span> across all major platforms.
+
 
 note:
 macOS users — we hear you! This is a big step forward for credibility and ease of use.
@@ -160,11 +159,9 @@ macOS users — we hear you! This is a big step forward for credibility and ease
 
 ---
 
-# Harmonised QGIS Websites
+### HARMONISED <span style="color: var(--opengisch-green)">QGIS WEBSITES</span>
 
-We’ve also made huge progress on the QGIS web ecosystem.
-
-Multiple QGIS sites have been updated to reflect a unified design and experience:
+##### We’ve also made huge progress on the QGIS web ecosystem. <br> Multiple QGIS sites have been updated to reflect a <span style="font-weight: bold;">unified design and experience:</span>
 
 - hub.qgis\.org
 - plugins.qgis\.org
@@ -173,89 +170,100 @@ Multiple QGIS sites have been updated to reflect a unified design and experience
 - certification.qgis\.org
 - uc2025.qgis\.org
 
-This harmonisation means better UX, seamless transitions across platforms, and easier navigation for all users.
-
-**Huge thanks** to **Lova**, who is here with us today, and to **Tim**, who sends his greetings and hopes to join next year.
+##### This harmonisation means better UX, seamless transitions across platforms, and easier navigation <span style="font-weight: bold; color: var(--opengisch-green)">for all users.</span><br><span style="font-weight: bold;"> Huge thanks</span> to <span style="font-weight: bold;"> Lova</span>, who is here with us today, and to <span style="font-weight: bold;"> Tim</span>, who sends his greetings and hopes to join next year.
 
 
----
-
-# Harmonised QGIS Websites
-
-![hub](assets/hub.jpg)
 
 ---
 
-# Documentation Websites
+### HARMONISED <span style="color: var(--opengisch-green)">QGIS WEBSITES</span>
 
-Next year
+<img src="assets/qgis-hub.png" style="width: 75%; display: block; margin-top: 28px">
+
+---
+
+### DOCUMENTATION <span style="color: var(--opengisch-green)">WEBSITES</span>
+
+##### Next year:
 - user manual
 - training materials
 - developer docs (?)
 
 ---
 
-# Plugin Ecosystem Health
-
-The plugin ecosystem in QGIS is thriving.
-
+### PLUGIN <span style="color: var(--opengisch-green)">ECOSYSTEM HEALTH</span>
+##### The plugin ecosystem in QGIS is <span style="font-weight:bolder;">thriving.</span>
 - The Plugin Repository now provides Qt6 compatibility info
 - A migration guide for developers will be available
 - Code migration tools are in the making
-  
+
 note:
 This is what happens when developers and users work together. It’s not just a toolbox — it’s an ecosystem.
 
 ---
 
-# Plugin Ecosystem Health
-
+### PLUGIN <span style="color: var(--opengisch-green)">ECOSYSTEM HEALTH</span>
 ![hub](assets/plugins.jpg)
 
 ---
 
-# QGIS Feed Strategy
+### <span style="color: var(--opengisch-green)">QGIS</span> FEED STRATEGY
 
-![hub](assets/feed.jpg)
+<img src="assets/qgis-feed.png" style="width: 75%; display: block; margin-top: 28px">
 
 ---
 
-# QGIS Feed Strategy
-Allows us to:
+### <span style="color: var(--opengisch-green)">QGIS</span> FEED STRATEGY
+##### Allows us to:
 
 - Push out **short-lived, high-value news**
 - Stay in sync with releases, updates, events
 - Give you fresh content every few days
 
-We’re aiming for frequent posts — with most having a **validity of 10 days or less**. It’s quick, timely, and always relevant.
+##### We’re aiming for frequent posts — with most having a <span style="font-weight:bolder">validity of 10 days or less</span>. It’s quick, timely, and always relevant.
 
 note:
 Keep an eye on it — and consider contributing your own updates!
 
 ---
 
-# Current Initiatives
+### CURRENT <span style="color: var(--opengisch-green)">INITIATIVES</span>
 
-- **Circular Arcs**: A crowdfunded initiative led by OPENGIS\.ch to bring better support for circular geometries to QGIS
-- **Digital Twin Support**: Lutra is pushing forward a crowdfunding campaign to improve digital twin functionality in QGIS
-- **Security Initiative**: Led by Oslandia and OPENGIS\.ch, focusing on hardening the platform and improving secure development practices
+- <span style="font-weight: bolder;">Circular Arcs:</span> A crowdfunded initiative led by OPENGIS\.ch to bring better support for circular geometries to QGIS
+- <span style="font-weight: bolder;">Digital Twin Support</span>: Lutra is pushing forward a crowdfunding campaign to improve digital twin functionality in QGIS
+- <span style="font-weight: bolder;">Security Initiative</span>: Led by Oslandia and OPENGIS\.ch, focusing on hardening the platform and improving secure development practices
 
 note:
 These projects are great examples of how focused contributions, backed by the community, continue to push QGIS into new domains.
 
 ---
 
-# Looking Ahead
+### LOOKING AHEAD
 
-So what’s next?
+#### So what’s <span style="font-weight: bolder;" class="highlight-animate">next?</span>
 
-We’re not just thinking about patches and features — we’re thinking **long-term strategy**:
+##### We’re not just thinking about patches and features — we’re thinking <span style="font-weight: bolder;">long-term strategy:</span>
 
-- A more **cohesive documentation experience**
+- A more <span style="font-weight: bolder;">cohesive documentation experience</span>
 - A language that can speak to big organisations decision makers
 - Secure, modern packages for every platform
 - Smarter build pipelines (trying to reduce energy consumption if possible)
 - And a community that stays open, welcoming, and global
+
+---
+
+### CROWDFUNDING
+### <span style="font-weight: 10 !important;">EXTENDED SUPPORT FOR CIRCULAR ARCS IN QGIS</span>
+##### The crowdfunding campaign for the improvement of circular arc support in QGIS runs until <span style="font-weight: bold;">June 30.</span> 📅 <br><span style="font-weight: bold;">Our current status:</span> CHF 95,000.– of CHF 125,000.– 💪
+##### A huge <span style="font-weight: bold" class="highlight-animate">thank you</span> to everyone who has donated or shared the project so far! 💚
+
+
+<img src="assets/crowdfunding.png" style="width: 45%; display: block; margin-left: -15px;">
+
+
+<a href="https://www.opengis.ch/de/crowdfunding-erweiterte-unterstutzung-fur-kreisbogen-in-qgis/" class="styled-link" style="font-size: 12pt; margin-top: 30px; margin-bottom: 12px;">Help us reach our crowdfunding goal!<img src="assets/cursor.png" alt="cursor" class="cursor"></a>
+
+##### <span style="font-weight: bold;">Every contribution</span> counts.
 
 ---
 
