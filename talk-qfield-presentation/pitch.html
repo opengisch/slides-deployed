@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Qfield Presentation</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./_assets/stylesheets/qf-style.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="--v--">
+          <textarea data-template>
+            
+
+## QFIELD
+## THE APP THAT MAPS YOUR WORLD
+<img src="https://qfield.org/images/qf_carousel/qf-phones-plugin1.png" style="width: 50%;">
+
+---
+
+<img src="assets/qfield-empowers.png" style="width: 80%;">
+
+---
+
+### CONVENIENCE, CONVENIENCE, <span style="color: var(--opengisch-green)">CONVINIENCE</span>
+#### <span style= "font-weight: lighter"> Easily migrate your XLSForms into QField projects with our new QGIS plugin </span>
+
+<img src="assets/qf-convenience.png" style="width: 100%; margin-right: 70px;">
+
+---
+
+<img src="assets/qfield-matters.png" style="width: 80%;">
+
+---
+
+<!-- .slide: data-background="./assets/2025/kulturretter.png"-->
+
+### KULTURRETTER,
+### DAI
+#### – Workflow to collect and manage data for the emergency rescue of cultural heritage
+#### – Camera that includes geotagging (inc. compass), and details stamping 
+<img src="https://qfield.org/images/customer/dainst_img.jpg">
+
+
+---
+
+### NATIONAL LAND SURVEY
+### FINLAND
+<img src="assets/2025/nls1.png">
+
+---
+
+### WASTE
+### MANAGEMENT
+#### MILANO
+<img src="./assets/2025/milano-waste1.png">
+
+---
+
+### WASTE
+### MANAGEMENT
+#### MILANO
+
+#### - Plugin framework to customize UX
+#### - Near field communication (NFC)/QR Code
+#### - Powerful feature form configuration
+<img src="./assets/2025/milano-waste2.png">
+
+---
+
+### FUTURA
+### SISTEMI
+#### - Integration with 3rd party WebGIS management system through QFC API
+#### - Leveraging QField/QFC offline work capability
+<img src="./assets/2025/futura-sistemi.png">
+
+---
+
+### NATIONAL WATER
+### WASTE MANAGEMENT
+
+#### COSTA RICA | custom forms
+<img src="./assets/2025/cr1.png">
+
+---
+
+### NATIONAL WATER
+### WASTE MANAGEMENT
+
+#### COSTA RICA | On-premise QFC
+<img src="./assets/2025/cr2.png">
+
+          </textarea>
+        </section>
+      </div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"transition":"none","slideNumber":false,"overview":true,"autoPlayMedia":true,"_":["slides/"],"static":"web","static-dirs":"slides/assets","staticDirs":"slides/assets","listing-template":"../globals/index/index.html","listingTemplate":"../globals/index/index.html","title":"Qfield Presentation"}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) {
+        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+      }
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
+    </script>
+  </body>
+</html>
