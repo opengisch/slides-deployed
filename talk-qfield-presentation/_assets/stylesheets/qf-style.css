@@ -26,3 +26,7 @@ body {
 .custom-center-pic img{
   max-width: 90% !important;
 }
+
+li{
+  background:none !important;
+}

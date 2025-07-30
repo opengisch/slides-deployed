@@ -54,6 +54,7 @@ h3 { /* titles */
   font-weight: bolder;
   font-size: 20pt;
   font-family: "bio-sans", sans-serif;
+  text-transform: uppercase;
 }
 
 h3:nth-child(2) {
