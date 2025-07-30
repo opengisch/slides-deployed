@@ -268,3 +268,35 @@ section.present.custom-right-pic img {
     width: 100%; /* Expand to full width of the text */
   }
 }
+
+a{
+  color: var(--opengisch-green);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--opengisch-green);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.center-p p{
+  text-align: center;
+}
+
+img.space-top {
+  margin-top: 20px;
+}
