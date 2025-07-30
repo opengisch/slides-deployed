@@ -23,8 +23,11 @@ body {
   font-family: "bio-sans", sans-serif !important;
 }
 
-.custom-center-pic img{
+img.vertical{
   max-width: 90% !important;
+  position: absolute;
+  right: 40px;
+  top: 100px;
 }
 
 li{

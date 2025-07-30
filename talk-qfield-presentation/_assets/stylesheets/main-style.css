@@ -124,6 +124,19 @@ section.present video {
   margin-right: auto;
 }
 
+section.present video.nobox.vertical {
+  position: absolute;
+  top: 0px;
+  right: 100px;
+  height: 600px;
+  width: unset;
+}
+
+section.present video.nobox {
+  width:unset;
+  max-width: 650px;
+}
+
 /* IMG / JPG */
 section.present img {
   border-radius: 7px;
