@@ -33,3 +33,9 @@ img.vertical{
 li{
   background:none !important;
 }
+
+p {
+  line-height: 1.5rem;
+  font-size: 15pt;
+  font-weight: lighter;
+}
