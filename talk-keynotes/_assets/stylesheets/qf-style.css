@@ -12,7 +12,7 @@
 }
 
 .slide-background-content{
-  background-image: url(https://qfield.org/images/qf_carousel/qf-bg-sync.jpg) !important;
+  background-image: url(../assets/qf-bg-sync.jpg  ) !important;
 }
 
 .reveal .slides::after {
@@ -28,10 +28,23 @@ img.vertical{
   position: absolute;
   right: 40px;
   top: 100px;
+  max-height: 600px;
+}
+
+img{
+  max-height: 500px;
 }
 
 li{
   background:none !important;
+}
+
+section.present ul {
+   list-style: square inside !important;
+}
+
+section.present li::marker {
+   color: var(--opengisch-green) !important;
 }
 
 .small-list li{
@@ -43,4 +56,10 @@ p {
   line-height: 1.5rem;
   font-size: 15pt;
   font-weight: lighter;
+}
+
+em {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--opengisch-green);
 }
