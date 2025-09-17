@@ -12,7 +12,7 @@
 }
 
 .slide-background-content{
-  background-image: url(../assets/qf-bg-sync.jpg  ) !important;
+  background-image: url(https://qfield.org/images/qf_carousel/qf-bg-sync.jpg) !important;
 }
 
 .reveal .slides::after {
