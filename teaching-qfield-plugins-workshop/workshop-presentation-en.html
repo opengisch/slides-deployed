@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
-    <link rel="stylesheet" href="./_assets/stylesheets/main-style.css" id="theme" />
+    <link rel="stylesheet" href="./_assets/stylesheets/softteaching-theme.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
   </head>
@@ -21,47 +21,44 @@
 
 # QField Plugins workshop
 
-### FOSS4G 2024 - Belém, Brasil
+### QGIS User Conference 2025 - Norrköping, Sweden
 <img src="assets/qfield_logo.png" style="width:150px">
 
 ---
 
-## Who we are
+### Who we are
+
+![alt text](assets/opengis.jpg)
 
 --v--
 
-<!-- .slide: data-background="./assets/opengis.jpg"-->
+### Who you are
+
+![alt text](assets/norrkoeping.png)
 
 --v--
 
-## Who you are
-
-<img src="assets/foss4g_logo_white.png" style="width:365px">
-
---v--
-
-## AGENDA
+### AGENDA
 
 1. Why plugins for QField?
 2. Types of QField plugins
-3. Intro to QML 🧑‍💻
-4. Developing QField plugins 🧑‍💻
-5. Plugin demo: OSRM routing
-6. Recreating the Weather Forecast plugin! 🧑‍💻
-7. Plugin showcase
-8. Resources
-
------------
-
-<small>🧑‍💻: Practice!</small>
+3. Intro to QML 
+4. Developing QField plugins 
+5. Implementing the Weather Forecast plugin! 
+6. Plugin showcase
+7. Resources
 
 ---
 
-## Why plugins for QField?
+### Why plugins for QField?
+
++ Address clients specific needs
++ Keeping the UX simple
++ QField is *your* tool
 
 ---
 
-## TYPES OF QFIELD PLUGINS
+### Types of QField Plugins
 
 PROJECT PLUGINS | APPLICATION PLUGINS
 ----------------|--------------------
@@ -70,23 +67,30 @@ Single plugin | Multiple plugins
 Installation not required | Required installation
 Lasts project session | Lasts QField session
 
+<aside class="notes">
+
+Project plugins don't need any knowhow to load and can be distributet over the cloud.
+
+</aside>
+
 ---
 
-## INTRO TO QML 🧑‍💻
-
- + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarative, design-oriented
+## Intro to QML
 
 --v--
 
-## INTRO TO QML 🧑‍💻
+### Why QML
 
  + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarative, design-oriented
-
- + **Elements (aka types)**
+   + Elements (aka types)
+   + Attributes: Properties, Signals, Handlers and Methods
+<aside class="notes">
+We thought about what language? Python? But QField is delivering a great experience through QML.
+</aside>
 
 --v--
 
-### \.\./Elements (aka types)
+### \.\./Elements (aka value types)
 
 ```Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...```
 
@@ -94,13 +98,16 @@ Lasts project session | Lasts QField session
 
 ``` qml
 Text {
-  ...
+
+  [...]
+
+
 }
 ```
 
 --v--
 
-### \.\./Elements (aka types)
+### \.\./Elements (aka value types)
 
 ```Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...```
 
@@ -108,16 +115,16 @@ Text {
 
 ``` qml
 Rectangle {
-  ...
+  [...]
   Text {
-    ...
+    [...]
   }
 }
 ```
 
 --v--
 
-### \.\./Elements (aka types)
+### \.\./Elements (aka value types)
 
 ```Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...```
 
@@ -125,32 +132,31 @@ Rectangle {
 
 ``` qml
 Item {
-  ...
+  [...]
   Text {
-    ...
+    [...]
   }
 }
 ```
 
---v--
-
-## INTRO TO QML 🧑‍💻
-
- + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarative, design-oriented
-
- + Elements (aka types)
-
- + **Attributes: Properties, Signals, Handlers and Methods**
+<aside class="notes">
+An item is a non-visual element. It's the base class of the other elements. Often used as the main element.
+</aside>
 
 --v--
 
-### \.\./Attributes: Properties, Signals, Handlers and Methods
+### \.\./Attributes
+
+```Properties, Signals, Handlers and Methods```
+
+----
 
 <span style="font-size:0.85em;">
 
 ``` qml
 Rectangle {
   ...
+
   MouseArea {
     id: myArea
 
@@ -158,69 +164,170 @@ Rectangle {
 
   }
 }
+
+
+
+
+
 ```
 </span>
 
+<aside class="notes">
+MouseArea is a non-visual element as well. Talk about the id.
+</aside>
+
 --v--
 
-### \.\./Attributes: Properties, Signals, Handlers and Methods
+### \.\./Attributes
+
+```Properties, Signals, Handlers and Methods```
+
+----
 
 <span style="font-size:0.85em;">
 
 ``` qml
 Rectangle {
-  ...
-  MouseArea {
-    id: myArea
+  color: "green"
 
-    color: "green"
+  MouseArea {
+
     anchors.fill: parent
+
   }
 }
+
+
+
+
+
+
 ```
 </span>
 
+<aside class="notes">
+Id removde for simplicity. And tell them that rectangle has other (invisible) properties, just with default values.
+And that if they are testing it, they would need `width: ...; height: ...` and best would be to put into an Item.
+</aside>
+
 --v--
 
-### \.\./Attributes: Properties, Signals, Handlers and Methods
+### \.\./Attributes
+
+```Properties, Signals, Handlers and Methods```
+
+----
 
 <span style="font-size:0.85em;">
 
 ``` qml
 Rectangle {
-  ...
-  MouseArea {
-    id: myArea
+  color: "green"
 
-    color: "green"
+  MouseArea {
+
     anchors.fill: parent
 
     onClicked: ...
   }
 }
+
+
+
+
+
 ```
 </span>
 
+<aside class="notes">
+There is an event called `clicked` in MouseArea. To handle this event, we have the handler `onClicked`.
+</aside>
+
 --v--
 
-### \.\./Attributes: Properties, Signals, Handlers and Methods
+### \.\./Attributes
+
+```Properties, Signals, Handlers and Methods```
+
+----
 
 <span style="font-size:0.85em;">
 
 ``` qml
 Rectangle {
-  ...
-  MouseArea {
-    id: myArea
+  color: "green"
 
-    color: "green"
+  MouseArea {
+
     anchors.fill: parent
 
-    onClicked: ...
+    onClicked: parent.color = "red"
+  }
+}
 
+
+
+
+
+```
+</span>
+
+<aside class="notes">
+Show it...
+</aside>
+--v--
+
+### \.\./Attributes
+
+```Properties, Signals, Handlers and Methods```
+
+----
+
+<span style="font-size:0.85em;">
+
+``` qml
+Rectangle {
+  color: "green"
+
+  MouseArea {
+
+    anchors.fill: parent
+
+    onClicked: { parent.color = "red" }
+  }
+}
+
+
+
+
+
+```
+</span>
+
+--v--
+
+### \.\./Attributes
+
+```Properties, Signals, Handlers and Methods```
+
+----
+
+<span style="font-size:0.85em;">
+
+``` qml
+Rectangle {
+  color: "green"
+
+  MouseArea {
+
+    anchors.fill: parent
+
+    onClicked: myCustomMethod()
+    
     function myCustomMethod() {
-      ...
-      return ...;
+
+      parent.color = "red"
+
     }
   }
 }
@@ -229,25 +336,167 @@ Rectangle {
 
 --v--
 
-### \.\./Attributes: Properties, Signals, Handlers and Methods
+### \.\./Attributes
+
+```Properties, Signals, Handlers and Methods```
+
+----
+
+<span style="font-size:0.85em;">
+
+``` qml
+Rectangle {    
+  color: theColor
+  property var theColor: "green"
+
+  MouseArea {
+    
+    anchors.fill: parent
+
+    onClicked: {
+
+      parent.theColor = "red"
+
+    }
+  }
+}
+```
+</span>
+
+
+<aside class="notes">
+Example for a property binding. color is connected over theColor. When theColor changes, color changes as well.
+Of course here the result will be the same like before and it makes not much sense to implement this. But...
+</aside>
+
+--v--
+
+### \.\./Attributes
+
+```Properties, Signals, Handlers and Methods```
+
+----
+
+<span style="font-size:0.85em;">
+
+``` qml
+Rectangle {    
+  color: theColor
+  property var theColor: "green"
+
+  MouseArea {
+    
+    anchors.fill: parent
+
+    onClicked: {
+      if (theColor == "green") {
+          theColor = "red"
+      } else {
+          theColor = "green"
+      }
+    }
+  }
+}
+```
+</span>
+
+<aside class="notes">
+Show it... We can not make `if(parent.color == "green")` because color is not a string but a color property.
+</aside>
+
+--v--
+
+### \.\./Attributes
+
+```Properties, Signals, Handlers and Methods```
+
+----
+
+<span style="font-size:0.85em;">
+
+``` qml
+Rectangle {    
+  color: isGreen ? "red" : "green"
+  property bool isGreen: true
+
+  MouseArea {
+    
+    anchors.fill: parent
+
+    onClicked: {
+      isGreen = !isGreen
+    }
+  }
+}
+```
+</span>
+
+<aside class="notes">
+Or an alternative way to show this behavior to explain the power of bindings.
+</aside>
+
+--v--
+
+### \.\./Attributes
+
+```Properties, Signals, Handlers and Methods```
+
+----
 
 <span style="font-size:0.85em;">
 
 ``` qml
 Rectangle {
-  ...
+  color: "green"
+
   MouseArea {
-    id: myArea
 
-    color: "green"
-    anchors.fill: parent  // Property binding!
+    anchors.fill: parent
 
-    onClicked: ...
+    onClicked: { parent.color = "red" }
+  }
+}
 
-    function myCustomMethod() {
-      ...
-      return ...;
+
+
+
+
+```
+</span>
+
+<aside class="notes">
+Again is an event called `clicked` in MouseArea. To handle this event, we have the handler `onClicked`.
+Those follow the signal-slot technic. But we can do signal-slots also ourself.
+</aside>
+
+--v--
+
+### \.\./Attributes
+
+```Properties, Signals, Handlers and Methods```
+
+----
+
+<span style="font-size:0.85em;">
+
+``` qml
+Rectangle {
+  color: "green"
+      
+  signal colorChanged(info: string)
+
+  MouseArea {
+
+    anchors.fill: parent
+
+    onClicked: {
+      parent.color = "red"
+      parent.colorChanged("by in the mouse area")
     }
+  }
+
+  onColorChanged: {
+    console.log("Color changed to:", parent.color, " info:", info)
   }
 }
 ```
@@ -255,45 +504,20 @@ Rectangle {
 
 --v--
 
-## INTRO TO QML 🧑‍💻
+## Resources
 
- + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarative, design-oriented
-
- + Elements (aka types)
-
- + Attributes: Properties, Signals, Handlers and Methods
-
- + **QML Resources**
+- QML Docu https://doc.qt.io/qt-6/qtquick-index.html
+- QML Reference: https://doc.qt.io/qt-6/qmlreference.html
+- QML Tutorial: https://doc.qt.io/qt-6/qml-tutorial.html
+- Introduction to Qt/QML, by KDAB: [YouTube Playlist](https://www.youtube.com/watch?v=JxyTkXLbcV4&list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc&index=2)
 
 --v--
 
-### \.\./QML Resources
-
-<br/>
-
-Introduction to Qt/QML, by KDAB: [YouTube Playlist](https://www.youtube.com/watch?v=JxyTkXLbcV4&list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc&index=2)
-
-QML Reference: https://doc.qt.io/qt-5/qmlreference.html
-
-QML Tutorial: https://doc.qt.io/qt-5/qml-tutorial.html
+## Hello world (QML)
 
 --v--
 
-## INTRO TO QML 🧑‍💻
-
- + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarative, design-oriented
-
- + Elements (aka types)
-
- + Attributes: Properties, Signals, Handlers and Methods
-
- + Resources
-
- + **Hello world (QML)!** 👋
-
---v--
-
-### \.\./Hello world (QML) 👋
+### \.\./Check it out
 
 ``` qml
 import QtQuick 2.0
@@ -303,103 +527,88 @@ Text {
 }
 ```
 
---v--
-
-## INTRO TO QML 🧑‍💻
-
- + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarative, design-oriented
-
- + Elements (aka types)
-
- + Attributes: Properties, Signals, Handlers and Methods
-
- + Resources
-
- + Hello world (QML)! 👋
-
- + **Exercise online!** 🧑‍💻
+or here https://qmlweb.github.io
 
 --v--
 
-## \.\./Exercise online! 🧑‍💻
+### \.\./Exercise online
 
-<br/>
-Go to:
+- Go to: https://qmlweb.github.io
 
-https://qmlweb.github.io
+- Modify it to change the **text color** on clicking on it.
+- ... and *optionally* to change the color back with another click
+
+--v--
+
+## Break ☕
 
 ---
 
-## Developing QField plugins 🧑‍💻
+## Developing QField plugins
 
-+ **QField GUI**
+---
 
---v--
-
-## \.\./QField GUI
+### \.\./QField GUI
 
 <span style="font-size:0.8em;"><span style="color:orange">Dashboard</span> | Main menu | Search bar | Plugins toolbar | Positioning | Canvas actions</span>
 ![alt text](assets/gui_1.png)
 
 --v--
 
-## \.\./QField GUI
+### \.\./QField GUI
 
 <span style="font-size:0.8em;">Dashboard | <span style="color:orange">Main menu</span> | Search bar | Plugins toolbar | Positioning | Canvas actions</span>
 ![alt text](assets/gui_2.png)
 
 --v--
 
-## \.\./QField GUI
+### \.\./QField GUI
 
 <span style="font-size:0.8em;">Dashboard | Main menu | <span style="color:orange">Search bar</span> | Plugins toolbar | Positioning | Canvas actions</span>
 ![alt text](assets/gui_3.png)
 
 --v--
 
-## \.\./QField GUI
+### \.\./QField GUI
 
 <span style="font-size:0.8em;">Dashboard | Main menu | Search bar | <span style="color:orange">Plugins toolbar</span> | Positioning | Canvas actions</span>
 ![alt text](assets/gui_4.png)
 
 --v--
 
-## \.\./QField GUI
+### \.\./QField GUI
 
 <span style="font-size:0.8em;">Dashboard | Main menu | Search bar | Plugins toolbar | <span style="color:orange">Positioning</span> | Canvas actions</span>
 ![alt text](assets/gui_5.png)
 
 --v--
 
-## \.\./QField GUI
+### \.\./QField GUI
 
 <span style="font-size:0.8em;">Dashboard | Main menu | Search bar | Plugins toolbar | Positioning | <span style="color:orange">Canvas actions</span></span>
 ![alt text](assets/gui_6.png)
 
 --v--
 
-## Developing QField plugins 🧑‍💻
+### \.\./QField API 
 
-+ QField GUI
-+ **QField API** 📗
-
---v--
-
-## \.\./QField API 📗
-
-#### <span style="font-size:0.8em;"><span style="color:orange">Root objects</span> | iface | Theme | QField GUI types | Utils</span>
+#### <span style="font-size:0.8em;"><span style="color:orange">Root objects</span> | iface | Theme | QField GUI types | QGIS | Utils</span>
 
 --------
+```
+iface
 
-```iface```
+qgisProject
 
-```qgisProject```
+settings
 
-```settings```
+clipboardManager
 
-```clipboardManager```
+...
 
-```...```
+
+
+```
 
 --------
 
@@ -407,37 +616,34 @@ https://qmlweb.github.io
 
 --v--
 
-## \.\./QField API 📗
+### \.\./QField API 
 
-#### <span style="font-size:0.8em;">Root objects | <span style="color:orange">iface</span> | Theme | QField GUI types | Utils</span>
-
---------
-
-```iface.mainWindow()```
-
-```iface.mapCanvas()```
-
-```iface.findItemByObjectName("...")```
-
-```iface.logMessage("...")```
+#### <span style="font-size:0.8em;">Root objects | <span style="color:orange">iface</span> | Theme | QField GUI types | QGIS | Utils</span>
 
 --------
+```
+iface.mainWindow()
 
-```iface.addItemToPluginsToolbar()```
+iface.mapCanvas()
 
-```iface.addItemToMainMenuActionsToolbar()```
+iface.findItemByObjectName("...")
 
-```iface.addItemToCanvasActionsToolbar()```
+iface.logMessage("...")
 
+iface.addItemToPluginsToolbar()
+iface.addItemToMainMenuActionsToolbar()
+iface.addItemToCanvasActionsToolbar()
+
+```
 --------
 
 <small>_See [appinterface.h](https://github.com/opengisch/QField/blob/master/src/core/appinterface.h) for details._</small>
 
 --v--
 
-## \.\./QField API 📗
+### \.\./QField API 
 
-#### <span style="font-size:0.8em;">Root objects | iface | <span style="color:orange">Theme</span> | QField GUI types | Utils</span>
+#### <span style="font-size:0.8em;">Root objects | iface | <span style="color:orange">Theme</span> | QField GUI types | QGIS | Utils</span>
 
 --------
 ``` qml
@@ -452,6 +658,7 @@ Theme.darkGray
 Theme.defaultFont
 
 Theme.getThemeVectorIcon("...")
+
 ```
 --------
 
@@ -459,22 +666,26 @@ Theme.getThemeVectorIcon("...")
 
 --v--
 
-## \.\./QField API 📗
+### \.\./QField API 
 
-#### <span style="font-size:0.8em;">Root objects | iface | Theme | <span style="color:orange">QField GUI types</span> | Utils</span>
+#### <span style="font-size:0.8em;">Root objects | iface | Theme | <span style="color:orange">QField GUI types</span> | QGIS | Utils</span>
 
 --------
-```QfButton```
 
-```QfToolButton```
+```
+QfButton
 
-```QfTextField```
+QfToolButton
 
-```QfSwitch```
+QfTextField
 
-```QfComboBox```
+QfSwitch
 
-```...```
+QfComboBox
+
+...
+
+```
 
 --------
 
@@ -482,22 +693,52 @@ Theme.getThemeVectorIcon("...")
 
 --v--
 
-## \.\./QField API 📗
+### \.\./QField API 
+
+#### <span style="font-size:0.8em;">Root objects | iface |  Theme | QField GUI types | <span style="color:orange">QGIS</span> | QGIS | Utils</span>
+
+--------
+```
+QgsFeature
+
+QgsGeometry
+
+QgsAttributes
+
+QgsPointXY
+
+QgsField
+
+...
+
+```
+
+--------
+
+
+<small>_See [qgismobileapp.cpp::initDeclarative](https://github.com/opengisch/QField/blob/master/src/core/qgismobileapp.cpp#L381-L407) for details._</small>
+
+--v--
+
+### \.\./QField API 
 
 #### <span style="font-size:0.8em;">Root objects | iface | Theme | QField GUI types | <span style="color:orange">Utils</span></span>
 
 --------
-```LayerUtils```
+```
+LayerUtils
 
-```GeometryUtils```
+GeometryUtils
 
-```FeatureUtils```
+FeatureUtils
 
-```CoordinateReferenceSystemUtils```
+CoordinateReferenceSystemUtils
 
-```SnappingUtils```
+SnappingUtils
 
-```...```
+...
+
+```
 
 --------
 
@@ -505,77 +746,176 @@ Theme.getThemeVectorIcon("...")
 
 --v--
 
-## Developing QField plugins 🧑‍💻
+### \.\./Plugin Location
+#### Application Plugins
 
-  + QField GUI
-  + QField API
-  + **"Hello world"** 👋
+- Install Plugins via *QField Settings > Manage Plugins*
+![alt text](assets/plugin-loc0.png)
 
-&nbsp; <!-- add some vertical space -->
+--v--
+
+### \.\./Plugin Location
+#### Application Plugins
+
+- Find location in "About QField"
+![alt text](assets/plugin-loc1.png)
+- Folder structure
+![alt text](assets/plugin-loc2.png)
+
+--v--
+
+### \.\./Plugin Location
+#### Project Plugins
+
+- Copy to project folder
+- Name the main-file like the project qgz
+![alt text](assets/plugin-loc3.png)
+
+--v--
+
+### \.\./Install "First Demo"
+
+- Get the link on the Schedule...
+- Install  "First Demo" via *QField Settings > Manage Plugins*
+![alt text](assets/plugin-loc0.png)
+
+--v--
+
+### \.\./Install "First Demo"
+
+Check out the `main.qml` in the plugin directory.
 
 ``` qml
 import QtQuick
 
 Item {
   Component.onCompleted: {
-    iface.mainWindow().displayToast('Hello world!')
+    iface.mainWindow().displayToast('First demo!')
   }
 }
 ```
 
 --v--
 
-## Developing QField plugins 🧑‍💻
+### \.\./Debugging
 
-+ QField GUI
-+ QField API
-+ "Hello world"
-+ **Debugging** 🐞
-
-  ```iface.logMessage("")```
+- Popup on application display
 
   ```mainWindow.displayToast("")```
 
-  ```console.log("")``` ?
+- Log message in the log panel
+
+  ```iface.logMessage("")```
+
+- Console output (not visible in QField)
+
+  ```console.log("")```
 
 --v--
 
-## Developing QField plugins 🧑‍💻
+### \.\./Let's play
+#### All the world is green
 
-+ QField GUI
-+ QField API
-+ "Hello world"
-+ Debugging
-+ **QField template plugin** 🧑‍💻
+```qml
+  Rectangle{
+    id: myRectangle
+    parent: iface.mapCanvas()
+    anchors.fill: parent
+    color: '#5000ff00'
+  }
+```
 
-  https://github.com/opengisch/qfield-template-plugin
+--v--
+
+### \.\./Let's play
+#### Template Plugin
+
+https://github.com/opengisch/qfield-template-plugin
+
+--v--
+
+## Break ☕
 
 ---
 
-## OSRM routing plugin demo
+### Weather Forecast plugin
+
+Let's create a forecast plugin!
+
+--v--
+
+### \.\./What we need
+
+ + Button to fetch a weather forecast *(reuse the edited template plugin)*
+ + Show an info dialog *(reuse the edited template plugin)*
+ + Our location *(reuse the edited template plugin)*
+ + API call
+   + `XmlHttpRequest` to do an API call and fetch the forecast from open-meteo.com
+ + Whatever we want
+
+--v--
+
+### \.\./What we do
+
+ + Check out open-meteo.com
+ + Get snippets at pad.opengis.ch (or the slides below)
+ + We test the Java Script at https://runjs.app/play
+ + We map the weather code to description and image
+ + We integrate it into our template plugin
+
+--v--
+
+### \.\./API Request snippet
+
+The Java Script for using `XmlHttpRequest`
+
+``` JavaScript
+//Norrköping
+lat = 58.5833;
+lon = 16.1833;
+
+let request = new XMLHttpRequest();
+
+request.onreadystatechange = function() {
+  if (request.readyState === XMLHttpRequest.DONE) {
+    console.log(request.response)
+  }
+}
+
+request.open("GET", "https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + lon + "&daily=weather_code,temperature_2m_max&timezone=auto");
+
+request.send();
+
+```
+
+--v--
+
+### \.\./Code Mapping
+
+```JSON
+{
+  "0": {
+    "description": "Sunny", 
+    "image": "http: //openweathermap.org/img/wn/01d@2x.png"
+  }, 
+  "1": {
+    "description": "Mainly Sunny", 
+    "image": "http://openweathermap.org/img/wn/01d@2x.png"
+  }, 
+  [...]
+};
+
+---
+
+### Plugin showcase
 
 <center>
 <img src="assets/osrm_routing_plugin.gif" style="height:700px;">
 </center>
 
----
+--v--
 
-## Weather Forecast plugin 🧑‍💻
-
-Let's recreate this plugin!
-
-What we need:
-
- + Button to fetch a weather forecast and show an info dialog
- + Our location
- + API call:
-   + _XmlHttpRequest_ to do an API call and fetch the forecast
-   + Parse the request's response
-   + Set description (and temperature) QML properties
-
----
-
-## Plugin showcase
+### Plugin showcase
 
 Snap!
 
@@ -583,15 +923,15 @@ Snap!
 
 --v--
 
-## Plugin showcase
+### Plugin showcase
 
 Nominatim locator plugin
 
-https://github.com/opengisch/qfield-nominatim-locator
+![](assets/showcase_nominatim.gif)
 
 --v--
 
-## Plugin showcase
+### Plugin showcase
 
 LiveField plugin
 
@@ -599,13 +939,15 @@ LiveField plugin
 <source src="assets/showcase_livefield.mp4" type="video/mp4">
 </video>
 
-
-
 ---
 
-## Resources
+### Resources
 
-QML Reference: https://doc.qt.io/qt-5/qmlreference.html
+QML Docu https://doc.qt.io/qt-6/qtquick-index.html
+
+QML Reference: https://doc.qt.io/qt-6/qmlreference.html
+
+QML Tutorial: https://doc.qt.io/qt-6/qml-tutorial.html
 
 Introduction to Qt/QML, by KDAB ([YouTube Playlist](https://www.youtube.com/watch?v=JxyTkXLbcV4&list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc&index=2))
 
@@ -613,11 +955,11 @@ QML online editor: https://qmlweb.github.io
 
 QML advanced online editor: https://patrickelectric.work/qmlonline/
 
-QML Tutorial: https://doc.qt.io/qt-5/qml-tutorial.html
-
 QField plugins: https://github.com/topics/qfield-plugin
 
 Plugin icons: https://fonts.google.com/icons
+
+JavaScript online editor: https://runjs.app/play
 
 ---
 
@@ -676,7 +1018,7 @@ Thanks, and happy coding!
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"transition":"none","slideNumber":false,"overview":true,"autoPlayMedia":true,"_":["slides/"],"static":"web","static-dirs":"slides/assets","staticDirs":"slides/assets","listing-template":"../globals/index/index.html","listingTemplate":"../globals/index/index.html","title":"Qfield Plugins Workshop"}, queryOptions);
+      var options = extend(defaultOptions, {"transition":"slide","slideNumber":true,"overview":true,"autoPlayMedia":true,"_":["slides/"],"static":"web","static-dirs":"slides/assets","staticDirs":"slides/assets","listing-template":"../globals/index/index.html","listingTemplate":"../globals/index/index.html","title":"Qfield Plugins Workshop"}, queryOptions);
     </script>
 
 

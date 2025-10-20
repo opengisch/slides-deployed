@@ -1,7 +1,7 @@
 /* opengisch-bright.css */
 /* @theme opengisch-bright*/
 
-@import 'base-theme.css';
+@import 'legacy-base-theme.css';
 
 section {
   /* Override default background */

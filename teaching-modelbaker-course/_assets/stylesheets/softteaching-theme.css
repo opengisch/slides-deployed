@@ -1,6 +1,6 @@
 /* teaching-theme.css */
 
-@import 'base-theme.css';
+@import 'legacy-base-theme.css';
 
 :root {
   --r-background-color: var(--opengisch-dark);

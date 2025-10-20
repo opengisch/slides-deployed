@@ -1,7 +1,7 @@
 /* opengisch-dark.css */
 /* @theme opengisch-dark */
 
-@import 'base-theme.css';
+@import 'legacy-base-theme.css';
 
 section {
   /* Override default background */
