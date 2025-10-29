@@ -24,6 +24,10 @@ h1 { /* main titles */
   font-family: "bio-sans", sans-serif;
 }
 
+.mainslide h1 {
+  color: #f0f0f0
+}
+
 h1:nth-child(2) {
   color: var(--opengisch-green);
 }
