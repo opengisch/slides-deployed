@@ -56,3 +56,7 @@ code {
   font-family: "Fira Code", monospace;
   background-color: lightgray;
 }
+
+pre {
+  text-align: left;
+}
