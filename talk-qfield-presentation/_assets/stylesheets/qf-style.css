@@ -39,3 +39,17 @@ p {
   font-size: 15pt;
   font-weight: lighter;
 }
+
+strong {
+  font-weight: bold;
+  color: var(--opengisch-green);
+}
+
+code {
+  font-family: "Fira Code", monospace;
+  background-color: lightgray;
+}
+
+pre {
+  text-align: left;
+}
