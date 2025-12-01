@@ -389,449 +389,6 @@ erDiagram
 
 ---
 
-# Importation de modèle Traduit
-
-Un import est:
-
- 1. Générer un schema
- 2. Importer des données
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Intermède
-
-... laissons-nous divaguer
-
---v--
-
-## Intermède 1 : Méta-attributs
-
---v--
-
-### Que sont les méta-attributs ?
-
-Les méta-attributs permettent de compléter les modèles INTERLIS avec des **informations supplémentaires** qui ne sont **pas prévues** dans la spécification actuelle d'INTERLIS.
-
-*Voir [eCH-0117 Méta-attributs pour les modèles INTERLIS](https://ech.ch/fr/ech/ech-0117/1.0)*
-
-<!-- Il s'agit d'une forme spéciale de commentaire de ligne qui, placé à des endroits précis du modèle de données, fournit des méta-informations supplémentaires sur le modèle.-->
-
---v--
-
-### Exemple avec Model Baker (1)
-
-Expression d'affichage spécifique pour la table de la classe `ZustaendigkeitsKataster`.
-
-![metaattr-dispexp](./assets/metaattr-dispexp.png)
-
---v--
-
-### Syntaxe dans le modèle INTERLIS
-
-```none
-!!@<name>=<value>
-```
-
-Suivi de l'élément référencé (MODEL, TOPIC, CLASS, etc.)
-
---v--
-
-### Méta-attributs vs Commentaire
-
-Un commentaire commence par `!!` et se termine par une fin de ligne.
-
-Un méta-attribut commence également par `!!` mais suivi de `@`
-
---v--
-
-### Exemple avec Model Baker (2)
-
-Méta-attribut spécifique de Model Baker :
-```none
-!!@qgis.modelbaker.dispExpression='<QGIS Expression>'
-```
---v--
-
-
-### Exemple avec Model Baker (3)
-
-Définition dans le modèle **KbS_V1_5**
-<pre><code class="plaintext" data-line-numbers="5|5,6">MODEL KbS_V1_5 (de) =
-
- TOPIC Belastete_Standorte =
-
-  !!@qgis.modelbaker.dispExpression = "'Nr: '|| uid ||' / '|| katastername"
-  CLASS ZustaendigkeitKataster =
-   [...]
-</pre></code>
-
-![metaattr-dispexp](./assets/metaattr-dispexp.png)
-
---v--
-
-### Listes de méta-attributs
-
-- [Compilateur INTERLIS (ili2c) ](https://github.com/claeis/ili2c/blob/master/doc/ili2c.rst#interlis-metaattribute)
-- [ili2db ](https://github.com/claeis/ili2db/blob/master/docs/ili2db.rst#interlis-metaattribute)
-- [Validateur INTERLIS (ilivalidator) ](https://github.com/claeis/ilivalidator/blob/master/docs/ilivalidator.rst#interlis-metaattribute)
-- [Gestionnaire INTERLIS (ilimanager) ](https://github.com/claeis/ilimanager/blob/main/docs/ilimanager.rst#interlis-metaattribute)
-- [QGIS Model Baker ](https://opengisch.github.io/QgisModelBaker/background_info/meta_attributes/)
-
-*(incomplet) Voir aussi https://interlis.discourse.group/t/uebersicht-interlis-meta-attribute/70*
-
---v--
-
-### Les méta-attributs dans le modèle sont formidables
-
-Mais nous ne pouvons pas simplement bricoler le modèle !
-
---v--
-
-### Fichier de méta-attributs supplémentaire
-
-... connu comme "fichier de configuration", "fichier de méta-attributs", "fichier INI", "fichier TOML"...
-
-<!-- Généralement, il n'est pas possible d'adapter le modèle directement. -->
-
-***En réalité au format INI, mais généralement enregistré sous `.toml`.***
-
-À ne pas confondre avec le ***fichier de méta-configuration*** pour "contrôler" ili2db (également en relation avec UsabILIty Hub).
-
---v--
-
-#### Exemple avec Model Baker
-
-Définition dans le fichier de configuration pour **KbS_V1_5**
-
-```INI
-["KbS_V1_5.Belastete_Standorte.ZustaendigkeitKataster"]
-
-qgis.modelbaker.dispExpression = "'Nr: '|| uid ||' / '||katastername"
-```
-
-![metaattr_dispexp](./assets/metaattr-dispexp.png)
-
---v--
-### Contrôler les validations avec des méta-attributs
-
-Juste pour information...
-
-```ini
-["KbS_V1_5.Standorte.Belasteter_Standort.Nr"]
-# disable mandatory constraint of Katasternummer
-multiplicity="off"
-
-["KbS_V1_5.Standorte.Belasteter_Standort.Constraint1"]
-msg = "Mind. eine Untersuchungsmassnahme erfassen."
-```
-
---v--
-
-### De quoi avons-nous besoin pour KbS_V1_5 ?
-
-- Multi-géométrie construite à partir de `STRUCTURE MultiPolygon`
-
-- "Multilinguisme aplati" sur `STRUCTURE MultilingualUri`
-
---v--
-
-#### L'attribut de mapping
-
-`ili2db.mapping`
-
-- Sur la classe ou la structure
- 
- *Les structures sont mappées avec des colonnes au lieu de relations (par exemple, la multi-géométrie).*
-
-- Sur l'attribut
- 
- *Les attributs de structure (`BAG OF`/`LIST OF`) sont mappés avec un type de données au lieu de relations.*
-
-<!-- Montre ce que nous avons. -->
-
---v--
-
-#### Définition dans le modèle INTERLIS
-
-<pre><code class="plaintext" data-line-numbers="1-4|6-10">!!@ili2db.mapping=MultiSurface
-STRUCTURE MultiPolygon =
- Polygones: BAG {1..*} OF PolygonStructure;
-END MultiPolygon;
-
-!!@ili2db.mapping=Multilingual
-STRUCTURE MultilingualUri =
- LocalisedText : BAG {1..*} OF LocalisedUri;
- UNIQUE (LOCAL) LocalisedText: Language;
-  END MultilingualUri;
-</pre></code>
-
---v--
-
-#### Définition dans le fichier de méta-attributs supplémentaire
-
-```INI
-[KbS_V1_5.Belastete_Standorte.MultiPolygon]
-ili2db.mapping = "MultiSurface"
-
-[KbS_V1_5.Belastete_Standorte.MultilingualUri]
-ili2db.mapping = "Multilingual"
-```
-
---v--
-
-## Prêt pour l'exercice 1 🚀
-
---v--
-
-## Intermède 2.1 : Héritages dans INTERLIS
-
---v--
-
-### Cas d'utilisation : Travailler avec KbS_V1_5
-
-```mermaid
-%%{init: {'theme': 'dark' } }%%
-sequenceDiagram
-    participant A as Confédération
-    participant E as Canton
-    Note left of A: Definit un <br>Modèle de Geo-Données Minimal<br/>MGDM_V1
-    A ->>+E: impose le modèle
-    Note right of E: Collecte les données dans le format<br/>MGDM_V1
-    Note right of E: Valide les données dans le format<br/>MGDM_V1
-    E ->>-A: Fournit les données dans le format<br/>MGDM_V1
-    Note left of A: Valide les données dans le format<br/>MGDM_V1
-```
-
---v--
-
-### Cas d'utilisation : Travailler avec une extension
-
-```mermaid
-%%{init: {'theme': 'dark' } }%%
-sequenceDiagram
-    participant A as Confédération
-    participant E as Canton
-    Note left of A: Definit un <br>Modèle de Geo-Données Minimal<br/>MGDM_V1
-    A ->>+E: impose le modèle
-    Note right of E: Definit un modèle avec<br/>informations supplémentaire<br/>CT_MGDM_V1
-    Note right of E: Collecte les données dans le format<br/>CT_MGDM_V1
-    Note right of E: Valide les données dans le format<br/>CT_MGDM_V1
-    E ->>-A: Fournit les données dans le format<br/>MGDM_V1
-    Note left of A: Valide les données dans le format<br/>MGDM_V1
-```
-
---v--
-
-### Exemple plus simple `Gebaeudeinventar_V1`
-
-<pre><code class="plaintext" data-line-numbers="1-25|1|6|8-11|13-21|8-11">MODEL Gebaeudeinventar_V1 (de)
-AT "mailto:signedav@localhost"
-VERSION "2023-01-19" =
- IMPORTS GeometryCHLV95_V1;
-
- TOPIC Gebaeude = 
-
-  CLASS Gebaeude =
-   EGID : MANDATORY TEXT*16;
-   Koordinaten : MANDATORY GeometryCHLV95_V1.Coord2;
-  END Gebaeude;
-
-  CLASS Adresse =
-   Strasse : TEXT*200;
-   Ort : MANDATORY TEXT*200;
-  END Adresse;
-
-  ASSOCIATION AdresseGebaeude =
-   GebaeudeAdresse -- {1..*} Adresse;
-   Gebaeude -- {1} Gebaeude;
-  END AdresseGebaeude;
-
- END Gebaeude;
-
-END Gebaeudeinventar_V1.
-</code></pre>
-
---v--
-
-### Nous avons besoin de "plus"
-
-Nous devons utiliser un attribut supplémentaire pour un projet écologique : `EntsprichtStandard`
-
-Mais nous souhaitons toujours renvoyer les données sous forme de `Gebaeudeinventar_V1`.
-
---v--
-
-### Cas d'utilisation : Projet écologique
-
-```mermaid
-%%{init: {'theme': 'dark' } }%%
-sequenceDiagram
-    participant A as Projet initial
-    participant E as Projet écologique
-    Note left of A: Modèle donné<br/>Gebauedeinventar_V1
-    A ->>+E: Utilisation du modèle de base
-    Note right of E: Definition du modèle avec attribut supplémentaire<br/>OekoGebaeudeinventar_V1
-    Note right of E: Collecte les données dans le format<br/>OekoGebaeudeinventar_V1
-    Note right of E: Valide les données dans le format<br/>OekoGebaeudeinventar_V1
-    E ->>-A: Exportation des données dans le format <br/>Gebauedeinventar_V1
-    Note left of A: Valide les données dans le format <br/>Gebauedeinventar_V1
-```
-
---v--
-
---v--
-
-#### La dérivation en INTERLIS (1)
-... avec `EXTENDED`
-
-<pre><code class="plaintext" data-line-numbers="1-4">CLASS Gebaeude =
- EGID : MANDATORY TEXT*16;
- Koordinaten : MANDATORY GeometryCHLV95_V1.Coord2;
-END Gebaeude;
-</code></pre>
-&nbsp;
-<pre><code class="plaintext" data-line-numbers="1,3|2">CLASS Gebaeude (EXTENDED) =
- EntsprichtStandard: BOOLEAN;
-END Gebaeude;
-</code></pre>
-
---v--
-
-### Et voilà, nous l'avons !
-
-```mermaid
-%%{init: {'theme': 'dark' } }%%
-sequenceDiagram
-    participant A as Projet initial
-    participant E as Projet écologique
-    Note left of A: Modèle donné<br/>Gebauedeinventar_V1
-    A ->>+E: Utilisation du modèle de base
-    Note right of E: Definition du modèle avec attribut supplémentaire<br/>OekoGebaeudeinventar_V1
-    Note right of E: Collecte les données dans le format<br/>OekoGebaeudeinventar_V1
-    Note right of E: Valide les données dans le format<br/>OekoGebaeudeinventar_V1
-    E ->>-A: Exportation des données dans le format <br/>Gebauedeinventar_V1
-    Note left of A: Valide les données dans le format <br/>Gebauedeinventar_V1
-```
-
---v--
-
-### Vérifiez !
-
---v--
-
-### Mais il y a encore plus
-
-Nous voulons maintenant saisir plusieurs types de bâtiments :
-- Bâtiments résidentiels (avec `Anzahl_Wohnungen`)
-- Bâtiments commerciaux (avec `Anzahl_Firmen`)
-- Bâtiments commerciaux publics (avec `Anzahl_Firmen` et `Zweck`)
-
-... et tout renvoyer finalement comme `Gebaeude`.
-
---v--
-
-#### La dérivation en INTERLIS (partie 2)
-... avec `EXTENDS`
-
-<pre><code class="plaintext" data-line-numbers="1-4">CLASS Gebaeude =
-  EGID : MANDATORY TEXT*16;
-  Koordinaten : MANDATORY GeometryCHLV95_V1.Coord2;
-END Gebaeude;
-</code></pre>
-<br>
-<pre><code class="plaintext" data-line-numbers="1-4">CLASS Gewerbegebaeude
-EXTENDS Gebaeude =
-  Anzahl_Firmen : MANDATORY 1 .. 100;
-END Gewerbegebaeude;
-</code></pre>
-
---v--
-
-### Exemple de modèle `MultiGebaeudeinventar_V1`
-
-<!-- https://excalidraw.com/#json=ICaNWw5qf7qzFMfPxvYZU,ooU5hP8itSR2aPfzPiOoZQ -->
-
-<img src="./assets/inherit-erm-sample-model.png" height="100%">
-
---v--
-
-#### Les classes en INTERLIS
-
-<pre><code class="plaintext" data-line-numbers="1|5-8|10-18|24|29-33|35-39|41-45">MODEL Gebaeudeinventar_V1 (de) =
-
-  TOPIC Gebaeude = 
-
-   CLASS Gebaeude =
-    EGID : MANDATORY TEXT*16;
-    Koordinaten : MANDATORY GeometryCHLV95_V1.Coord2;
-   END Gebaeude;
-
-   CLASS Adresse =
-    Strasse : TEXT*200;
-    Ort : MANDATORY TEXT*200;
-   END Adresse;
-
-   ASSOCIATION AdresseGebaeude =
-    GebaeudeAdresse -- {1..*} Adresse;
-    Gebaeude -- {1} Gebaeude;
-   END AdresseGebaeude;
-
-  END Gebaeude;
-
-END Gebaeudeinventar_V1.
-
-MODEL MultiGebaeudeinventar_V1 (de) =
-  IMPORTS Gebaeudeinventar_V1;
-
-  TOPIC Gebaeude EXTENDS Gebaeudeinventar_V1.Gebaeude= 
-
-   !! First inheritance
-   CLASS Wohngebaeude
-   EXTENDS Gebaeude =
-    Anzahl_Wohnungen : MANDATORY 1 .. 1000;
-   END Wohngebaeude;
-
-   !! Second inheritance
-   CLASS Gewerbegebaeude
-   EXTENDS Gebaeude =
-    Anzahl_Firmen : MANDATORY 1 .. 100;
-   END Gewerbegebaeude;
-
-   !! Inheritance of first inheritance
-   CLASS Oeffentliches_GewerbeGebaude
-   EXTENDS Gewerbegebaeude =
-    Zweck : MANDATORY TEXT*255;
-   END Oeffentliches_GewerbeGebaude;
-  END Gebaeude;
-
-END MultiGebaeudeinventar_V1.
-</code></pre>
-
---v--
-
-## Prêt pour l'exercice 2 🚀
-
---v--
-
-## Intermède 2.2 : Représentation physique des héritages
-
-<!-- Comment les héritages peuvent-ils être physiquement mis en œuvre pour que l'intégrité référentielle soit toujours respectée ? -->
-
 --v--
 
 ### D'abord
@@ -1103,67 +660,226 @@ Résulte en ce que nous voyons dans le graphique *New+Sub Class*.
 - smart 1 ↗️
 - smart 2 ↘️
 
---v--
+---
 
-## Il est temps de faire l'exercice 2.1 ? 🚀
+# Export de données
 
---v--
+Exportons les données d'une base de données
 
-## Intermède 2.3 : Optimisation de projet avec Smart2
+---
 
---v--
+# Validation
 
-### Créons un projet sans optimisation
-
-![no-opt](assets/no-optimization.png)
-
-... essayons avec `OekoGebaeudeinventar_V1` (ou aussi `ZG_Nutzungsplanung_V1_1`)
+- La base de données déjà garantit une certaine qualité.
+  - Constraints `NOT NULL`, `FOREIGN KEY`, ...
+- INTERLIS offre des contraintes plus complèxes en addition
 
 --v--
 
-### Problématique
+# Desactiver le système de sécurité base de données...
 
-Si un modèle ou un topic contient des classes étendues, celles-ci sont implémentées dans la base de données physique, y compris les classes de base...
-
-... et par conséquent, des couches sont créées dans QGIS.
+... pour permettre de quand même importer des données
 
 --v--
 
-### Pouvons-nous simplement ignorer les classes de base ?
-<!-- Non. Il y en a qu'on veut voir...-->
+# Desactiver le système de sécurité base de données...
+
+... où pour jouer avec
 
 --v--
 
-### Mais quelles couches voulons-nous voir ?
+Quel type de problème avez vous souvent?
 
-- Les classes de base avec des extensions du même nom sont ***non pertinentes***
-<!-- car sinon tu les renommerais...-->
-- Les classes de base avec plusieurs extensions sont ***non pertinentes***
-<!-- car tu veux les remplacer...-->
-- Sauf si l'extension est dans le même modèle, elles ne sont pas ***non pertinentes***
-<!-- car sinon tu aurais fait la classe de base ABSTRACT -->
+Essayons de reproduire et valider avec QGIS Model Baker
 
---v--
+---
 
-### Stratégies
+# Intermède
 
-- Masquer les classes de base non pertinentes
-- Grouper les classes de base non pertinentes
-- Aucune : les couches sont renommées pour être uniques
+... laissons-nous divaguer
 
 --v--
 
-### Vérifiez !
+## Intermède 1 : Méta-attributs
 
 --v--
 
-## Prêt pour le dîner 🍲
+### Que sont les méta-attributs ?
+
+Les méta-attributs permettent de compléter les modèles INTERLIS avec des **informations supplémentaires** qui ne sont **pas prévues** dans la spécification actuelle d'INTERLIS.
+
+*Voir [eCH-0117 Méta-attributs pour les modèles INTERLIS](https://ech.ch/fr/ech/ech-0117/1.0)*
+
+<!-- Il s'agit d'une forme spéciale de commentaire de ligne qui, placé à des endroits précis du modèle de données, fournit des méta-informations supplémentaires sur le modèle.-->
 
 --v--
 
-## Intermède 3 : Conteneurs et ensembles de données
+### Exemple avec Model Baker (1)
+
+Expression d'affichage spécifique pour la table de la classe `ZustaendigkeitsKataster`.
+
+![metaattr-dispexp](./assets/metaattr-dispexp.png)
 
 --v--
+
+### Syntaxe dans le modèle INTERLIS
+
+```none
+!!@<name>=<value>
+```
+
+Suivi de l'élément référencé (MODEL, TOPIC, CLASS, etc.)
+
+--v--
+
+### Méta-attributs vs Commentaire
+
+Un commentaire commence par `!!` et se termine par une fin de ligne.
+
+Un méta-attribut commence également par `!!` mais suivi de `@`
+
+--v--
+
+### Exemple avec Model Baker (2)
+
+Méta-attribut spécifique de Model Baker :
+```none
+!!@qgis.modelbaker.dispExpression='<QGIS Expression>'
+```
+--v--
+
+
+### Exemple avec Model Baker (3)
+
+Définition dans le modèle **KbS_V1_5**
+<pre><code class="plaintext" data-line-numbers="5|5,6">MODEL KbS_V1_5 (de) =
+
+ TOPIC Belastete_Standorte =
+
+  !!@qgis.modelbaker.dispExpression = "'Nr: '|| uid ||' / '|| katastername"
+  CLASS ZustaendigkeitKataster =
+   [...]
+</pre></code>
+
+![metaattr-dispexp](./assets/metaattr-dispexp.png)
+
+--v--
+
+### Listes de méta-attributs
+
+- [Compilateur INTERLIS (ili2c) ](https://github.com/claeis/ili2c/blob/master/doc/ili2c.rst#interlis-metaattribute)
+- [ili2db ](https://github.com/claeis/ili2db/blob/master/docs/ili2db.rst#interlis-metaattribute)
+- [Validateur INTERLIS (ilivalidator) ](https://github.com/claeis/ilivalidator/blob/master/docs/ilivalidator.rst#interlis-metaattribute)
+- [Gestionnaire INTERLIS (ilimanager) ](https://github.com/claeis/ilimanager/blob/main/docs/ilimanager.rst#interlis-metaattribute)
+- [QGIS Model Baker ](https://opengisch.github.io/QgisModelBaker/background_info/meta_attributes/)
+
+*(incomplet) Voir aussi https://interlis.discourse.group/t/uebersicht-interlis-meta-attribute/70*
+
+--v--
+
+### Les méta-attributs dans le modèle sont formidables
+
+Mais nous ne pouvons pas simplement bricoler le modèle !
+
+--v--
+
+### Fichier de méta-attributs supplémentaire
+
+... connu comme "fichier de configuration", "fichier de méta-attributs", "fichier INI", "fichier TOML"...
+
+<!-- Généralement, il n'est pas possible d'adapter le modèle directement. -->
+
+***En réalité au format INI, mais généralement enregistré sous `.toml`.***
+
+À ne pas confondre avec le ***fichier de méta-configuration*** pour "contrôler" ili2db (également en relation avec UsabILIty Hub).
+
+--v--
+
+#### Exemple avec Model Baker
+
+Définition dans le fichier de configuration pour **KbS_V1_5**
+
+```INI
+["KbS_V1_5.Belastete_Standorte.ZustaendigkeitKataster"]
+
+qgis.modelbaker.dispExpression = "'Nr: '|| uid ||' / '||katastername"
+```
+
+![metaattr_dispexp](./assets/metaattr-dispexp.png)
+
+--v--
+### Contrôler les validations avec des méta-attributs
+
+Juste pour information...
+
+```ini
+["KbS_V1_5.Standorte.Belasteter_Standort.Nr"]
+# disable mandatory constraint of Katasternummer
+multiplicity="off"
+
+["KbS_V1_5.Standorte.Belasteter_Standort.Constraint1"]
+msg = "Mind. eine Untersuchungsmassnahme erfassen."
+```
+
+--v--
+
+### De quoi avons-nous besoin pour KbS_V1_5 ?
+
+- Multi-géométrie construite à partir de `STRUCTURE MultiPolygon`
+
+- "Multilinguisme aplati" sur `STRUCTURE MultilingualUri`
+
+--v--
+
+#### L'attribut de mapping
+
+`ili2db.mapping`
+
+- Sur la classe ou la structure
+ 
+ *Les structures sont mappées avec des colonnes au lieu de relations (par exemple, la multi-géométrie).*
+
+- Sur l'attribut
+ 
+ *Les attributs de structure (`BAG OF`/`LIST OF`) sont mappés avec un type de données au lieu de relations.*
+
+<!-- Montre ce que nous avons. -->
+
+--v--
+
+#### Définition dans le modèle INTERLIS
+
+<pre><code class="plaintext" data-line-numbers="1-4|6-10">!!@ili2db.mapping=MultiSurface
+STRUCTURE MultiPolygon =
+ Polygones: BAG {1..*} OF PolygonStructure;
+END MultiPolygon;
+
+!!@ili2db.mapping=Multilingual
+STRUCTURE MultilingualUri =
+ LocalisedText : BAG {1..*} OF LocalisedUri;
+ UNIQUE (LOCAL) LocalisedText: Language;
+  END MultilingualUri;
+</pre></code>
+
+--v--
+
+#### Définition dans le fichier de méta-attributs supplémentaire
+
+```INI
+[KbS_V1_5.Belastete_Standorte.MultiPolygon]
+ili2db.mapping = "MultiSurface"
+
+[KbS_V1_5.Belastete_Standorte.MultilingualUri]
+ili2db.mapping = "Multilingual"
+```
+
+--v--
+
+## Prêt pour l'exercice 1 🚀
+
+Quels identfiants faut-il redéfinir?
+
+---
 
 ### Ensembles de données (datasets)
 
