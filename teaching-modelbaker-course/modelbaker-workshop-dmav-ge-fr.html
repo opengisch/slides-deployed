@@ -51,8 +51,8 @@ Commençons ...
 
 ### Objectifs de l'atelier
 
-- Représenter des modèles INTERLIS dans la base de données et importer / exporter / valider des données
-- Être capable de travailler avec des conteneurs et des OID dans QGIS
+- Représenter le modèle DMAV en Français dans la base de données et importer / exporter / valider des données
+- Être capable de visualiser les données dans QGIS
 - Savoir ce que sont les méta-attributs et les stratégies d'héritage, etc.
 
 --v--
@@ -65,7 +65,7 @@ Commençons ...
 |09.30| QGIS 🧑‍🏫 💻 |
 |10.30| Importation de modèles 👪 |
 |11.00| Pause |
-|11.15| Multilinguisme 🧑‍🏫 💻 |
+|11.15| Multilinguisme et import de données de test 🧑‍🏫 💻 |
 |12.00| Dîner |
 
 --v--
@@ -74,10 +74,11 @@ Commençons ...
 
 |Temps| Contenu |
 |-----| ------------------------------ |
-|13.00| Exportation de données 🧑‍🏫 💻 |
+|13.30| Exportation de données 🧑‍🏫 💻 |
 |13.45| Saisie et validation 👪 💻 |
 |15.15| Pause |
 |15.30| UsabILIty Hub  et divers 🧑‍🏫 👪 💻 |
+|16.00| Questions 🧑‍🏫 👪 💻 |
 
 --v--
 
@@ -333,16 +334,67 @@ On peut commencer avec un nom de modèle, un fichier ili ou un fichier xtf
 
 --v--
 
-# Importation de modèle en Français
+Importons le modèle `DMAVTYM_Alles_V1_0`
+
+--v--
+
+Importons les données "Testdaten"
+
+--v--
+
+Importons le modèle `DMAVTYM_Tous_V1_0`
+
+--v--
+
+Importons les données "Testdaten"
+
+--v--
+
+Analysons les 
+
+---
+
+### Comment "héritons-nous" ?
+
+**Étendre** une classe (classe de base) en une dérivation "améliorée".
+
+Une classe étendue (dérivation) a **toutes les propriétés** de la classe de base **+ "plus"**.
+
+**"plus"** signifie des **attributs** ou des **restrictions** supplémentaires.
+
+--v--
+
+### De `Gebaeude` devient un meilleur `Gebaeude`
+
+<!-- Darstellung kacke:
+```mermaid
+%%{init: {'theme': 'dark' } }%%
+
+erDiagram
+  Gebaeude{
+    number EGID
+    geom Geometry
+  }
+  "Gebaeude "{
+    number EGID
+    geom Geometry
+    bool EntsprichtStandard
+  }  
+```
+-->
+
+![inherit-base](assets/inherit-base-class.png)
+
+<!-- Siehe https://excalidraw.com/#json=MqzGNX2n1TRK8hONq2eF0,yitcCXCkDaRX6eMINxU_xw-->
+
+---
+
+# Importation de modèle Traduit
 
 Un import est:
 
  1. Générer un schema
  2. Importer des données
-
----
-
-# 
 
 
 
@@ -641,39 +693,6 @@ sequenceDiagram
 ```
 
 --v--
-
-### Comment "héritons-nous" ?
-
-**Étendre** une classe (classe de base) en une dérivation "améliorée".
-
-Une classe étendue (dérivation) a **toutes les propriétés** de la classe de base **+ "plus"**.
-
-**"plus"** signifie des **attributs** ou des **restrictions** supplémentaires.
-
---v--
-
-### De `Gebaeude` devient un meilleur `Gebaeude`
-
-<!-- Darstellung kacke:
-```mermaid
-%%{init: {'theme': 'dark' } }%%
-
-erDiagram
-  Gebaeude{
-    number EGID
-    geom Geometry
-  }
-  "Gebaeude "{
-    number EGID
-    geom Geometry
-    bool EntsprichtStandard
-  }  
-```
--->
-
-![inherit-base](assets/inherit-base-class.png)
-
-<!-- Siehe https://excalidraw.com/#json=MqzGNX2n1TRK8hONq2eF0,yitcCXCkDaRX6eMINxU_xw-->
 
 --v--
 
