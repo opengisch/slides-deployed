@@ -1,160 +1,223 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>Qfield Plugins Workshop</title>
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="./dist/reset.css" />
-    <link rel="stylesheet" href="./dist/reveal.css" />
-    <link rel="stylesheet" href="./_assets/stylesheets/softteaching-theme.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+<head>
+  <meta charset="utf-8">
 
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="--v--">
-          <textarea data-template>
+  <title>QField Plugins Workshop</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- highlight Theme -->
+  
+  <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/monokai.min.css">
+  
+	
+		
+	<link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
+	
+	
+	
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/customcontrols/style.css">
+  
+	
+
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/stylesheets/softteaching-theme.css.css" id="theme">
+  
+  
+
+  <link rel="stylesheet" href="libs/styles/tasklist.css">
+	<link rel="stylesheet" href="libs/styles/iota.css">
+	<link rel="stylesheet" href="libs/styles/layout.css">
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="stylesheets/softteaching-theme.css">
+  
+
+   <!-- css list -->
+	
+
+   
+
+</head>
+
+<body>
+
+   
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      
+
+
+    
+        <section >
             
-
-# QField Plugins workshop
-
-### QGIS User Conference 2025 - Norrköping, Sweden
+            <h1>QField Plugins workshop</h1>
+<h3>QGIS User Conference 2025 - Norrköping, Sweden</h3>
 <img src="assets/qfield_logo.png" style="width:150px">
+            </section>
+    
 
----
 
-### Who we are
 
-![alt text](assets/opengis.jpg)
+    
+        <section >
+            
+            <h3>Who we are</h3>
+<p><img src="assets/opengis.jpg" alt="alt text"></p>
+<p>–v–</p>
+<h3>Who you are</h3>
+<p><img src="assets/norrkoeping.png" alt="alt text"></p>
+<p>–v–</p>
+<h3>AGENDA</h3>
+<ol>
+<li>Why plugins for QField?</li>
+<li>Types of QField plugins</li>
+<li>Intro to QML</li>
+<li>Developing QField plugins</li>
+<li>Implementing the Weather Forecast plugin!</li>
+<li>Plugin showcase</li>
+<li>Resources</li>
+</ol>
 
---v--
+            </section>
+    
 
-### Who you are
 
-![alt text](assets/norrkoeping.png)
 
---v--
+    
+        <section >
+            
+            <h3>Why plugins for QField?</h3>
+<ul>
+<li>Address clients specific needs</li>
+<li>Keeping the UX simple</li>
+<li>QField is <em>your</em> tool</li>
+</ul>
 
-### AGENDA
+            </section>
+    
 
-1. Why plugins for QField?
-2. Types of QField plugins
-3. Intro to QML 
-4. Developing QField plugins 
-5. Implementing the Weather Forecast plugin! 
-6. Plugin showcase
-7. Resources
 
----
 
-### Why plugins for QField?
-
-+ Address clients specific needs
-+ Keeping the UX simple
-+ QField is *your* tool
-
----
-
-### Types of QField Plugins
-
-PROJECT PLUGINS | APPLICATION PLUGINS
-----------------|--------------------
-Shared alongside QField project | Shared via URL (ZIP file)
-Single plugin | Multiple plugins
-Installation not required | Required installation
-Lasts project session | Lasts QField session
-
+    
+        <section >
+            
+            <h3>Types of QField Plugins</h3>
+<table>
+<thead>
+<tr>
+<th>PROJECT PLUGINS</th>
+<th>APPLICATION PLUGINS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shared alongside QField project</td>
+<td>Shared via URL (ZIP file)</td>
+</tr>
+<tr>
+<td>Single plugin</td>
+<td>Multiple plugins</td>
+</tr>
+<tr>
+<td>Installation not required</td>
+<td>Required installation</td>
+</tr>
+<tr>
+<td>Lasts project session</td>
+<td>Lasts QField session</td>
+</tr>
+</tbody>
+</table>
 <aside class="notes">
-
-Project plugins don't need any knowhow to load and can be distributet over the cloud.
-
+<p>Project plugins don’t need any knowhow to load and can be distributet over the cloud.</p>
 </aside>
+            </section>
+    
 
----
 
-## Intro to QML
 
---v--
-
-### Why QML
-
- + <span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarative, design-oriented
-   + Elements (aka types)
-   + Attributes: Properties, Signals, Handlers and Methods
+    
+        <section >
+            
+            <h2>Intro to QML</h2>
+<p>–v–</p>
+<h3>Why QML</h3>
+<ul>
+<li><span style="color:#b2e07e;font-weight:bold">Q</span>t <span style="color:#b2e07e;font-weight:bold">M</span>odeling <span style="color:#b2e07e;font-weight:bold">L</span>anguage, declarative, design-oriented
+<ul>
+<li>Elements (aka types)</li>
+<li>Attributes: Properties, Signals, Handlers and Methods</li>
+</ul>
+</li>
+</ul>
 <aside class="notes">
 We thought about what language? Python? But QField is delivering a great experience through QML.
 </aside>
-
---v--
-
-### \.\./Elements (aka value types)
-
-```Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...```
-
-----
-
-``` qml
-Text {
+<p>–v–</p>
+<h3>../Elements (aka value types)</h3>
+<p><code>Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...</code></p>
+<hr>
+<pre><code class="language-qml">Text {
 
   [...]
 
 
 }
-```
-
---v--
-
-### \.\./Elements (aka value types)
-
-```Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...```
-
-----
-
-``` qml
-Rectangle {
+</code></pre>
+<p>–v–</p>
+<h3>../Elements (aka value types)</h3>
+<p><code>Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...</code></p>
+<hr>
+<pre><code class="language-qml">Rectangle {
   [...]
   Text {
     [...]
   }
 }
-```
-
---v--
-
-### \.\./Elements (aka value types)
-
-```Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...```
-
-----
-
-``` qml
-Item {
+</code></pre>
+<p>–v–</p>
+<h3>../Elements (aka value types)</h3>
+<p><code>Item, Rectangle, Text, TextInput, MouseArea, Dialog, ...</code></p>
+<hr>
+<pre><code class="language-qml">Item {
   [...]
   Text {
     [...]
   }
 }
-```
-
+</code></pre>
 <aside class="notes">
 An item is a non-visual element. It's the base class of the other elements. Often used as the main element.
 </aside>
-
---v--
-
-### \.\./Attributes
-
-```Properties, Signals, Handlers and Methods```
-
-----
-
+<p>–v–</p>
+<h3>../Attributes</h3>
+<p><code>Properties, Signals, Handlers and Methods</code></p>
+<hr>
 <span style="font-size:0.85em;">
-
-``` qml
-Rectangle {
+<pre><code class="language-qml">Rectangle {
   ...
 
   MouseArea {
@@ -169,26 +232,18 @@ Rectangle {
 
 
 
-```
+</code></pre>
 </span>
-
 <aside class="notes">
 MouseArea is a non-visual element as well. Talk about the id.
 </aside>
-
---v--
-
-### \.\./Attributes
-
-```Properties, Signals, Handlers and Methods```
-
-----
-
+<p>–v–</p>
+<h3>../Attributes</h3>
+<p><code>Properties, Signals, Handlers and Methods</code></p>
+<hr>
 <span style="font-size:0.85em;">
-
-``` qml
-Rectangle {
-  color: "green"
+<pre><code class="language-qml">Rectangle {
+  color: &quot;green&quot;
 
   MouseArea {
 
@@ -202,27 +257,19 @@ Rectangle {
 
 
 
-```
+</code></pre>
 </span>
-
 <aside class="notes">
 Id removde for simplicity. And tell them that rectangle has other (invisible) properties, just with default values.
 And that if they are testing it, they would need `width: ...; height: ...` and best would be to put into an Item.
 </aside>
-
---v--
-
-### \.\./Attributes
-
-```Properties, Signals, Handlers and Methods```
-
-----
-
+<p>–v–</p>
+<h3>../Attributes</h3>
+<p><code>Properties, Signals, Handlers and Methods</code></p>
+<hr>
 <span style="font-size:0.85em;">
-
-``` qml
-Rectangle {
-  color: "green"
+<pre><code class="language-qml">Rectangle {
+  color: &quot;green&quot;
 
   MouseArea {
 
@@ -236,32 +283,24 @@ Rectangle {
 
 
 
-```
+</code></pre>
 </span>
-
 <aside class="notes">
 There is an event called `clicked` in MouseArea. To handle this event, we have the handler `onClicked`.
 </aside>
-
---v--
-
-### \.\./Attributes
-
-```Properties, Signals, Handlers and Methods```
-
-----
-
+<p>–v–</p>
+<h3>../Attributes</h3>
+<p><code>Properties, Signals, Handlers and Methods</code></p>
+<hr>
 <span style="font-size:0.85em;">
-
-``` qml
-Rectangle {
-  color: "green"
+<pre><code class="language-qml">Rectangle {
+  color: &quot;green&quot;
 
   MouseArea {
 
     anchors.fill: parent
 
-    onClicked: parent.color = "red"
+    onClicked: parent.color = &quot;red&quot;
   }
 }
 
@@ -269,31 +308,24 @@ Rectangle {
 
 
 
-```
+</code></pre>
 </span>
-
 <aside class="notes">
 Show it...
 </aside>
 --v--
-
-### \.\./Attributes
-
-```Properties, Signals, Handlers and Methods```
-
-----
-
+<h3>../Attributes</h3>
+<p><code>Properties, Signals, Handlers and Methods</code></p>
+<hr>
 <span style="font-size:0.85em;">
-
-``` qml
-Rectangle {
-  color: "green"
+<pre><code class="language-qml">Rectangle {
+  color: &quot;green&quot;
 
   MouseArea {
 
     anchors.fill: parent
 
-    onClicked: { parent.color = "red" }
+    onClicked: { parent.color = &quot;red&quot; }
   }
 }
 
@@ -301,22 +333,15 @@ Rectangle {
 
 
 
-```
+</code></pre>
 </span>
-
---v--
-
-### \.\./Attributes
-
-```Properties, Signals, Handlers and Methods```
-
-----
-
+<p>–v–</p>
+<h3>../Attributes</h3>
+<p><code>Properties, Signals, Handlers and Methods</code></p>
+<hr>
 <span style="font-size:0.85em;">
-
-``` qml
-Rectangle {
-  color: "green"
+<pre><code class="language-qml">Rectangle {
+  color: &quot;green&quot;
 
   MouseArea {
 
@@ -326,28 +351,21 @@ Rectangle {
     
     function myCustomMethod() {
 
-      parent.color = "red"
+      parent.color = &quot;red&quot;
 
     }
   }
 }
-```
+</code></pre>
 </span>
-
---v--
-
-### \.\./Attributes
-
-```Properties, Signals, Handlers and Methods```
-
-----
-
+<p>–v–</p>
+<h3>../Attributes</h3>
+<p><code>Properties, Signals, Handlers and Methods</code></p>
+<hr>
 <span style="font-size:0.85em;">
-
-``` qml
-Rectangle {    
+<pre><code class="language-qml">Rectangle {    
   color: theColor
-  property var theColor: "green"
+  property var theColor: &quot;green&quot;
 
   MouseArea {
     
@@ -355,68 +373,51 @@ Rectangle {
 
     onClicked: {
 
-      parent.theColor = "red"
+      parent.theColor = &quot;red&quot;
 
     }
   }
 }
-```
+</code></pre>
 </span>
-
-
 <aside class="notes">
 Example for a property binding. color is connected over theColor. When theColor changes, color changes as well.
 Of course here the result will be the same like before and it makes not much sense to implement this. But...
 </aside>
-
---v--
-
-### \.\./Attributes
-
-```Properties, Signals, Handlers and Methods```
-
-----
-
+<p>–v–</p>
+<h3>../Attributes</h3>
+<p><code>Properties, Signals, Handlers and Methods</code></p>
+<hr>
 <span style="font-size:0.85em;">
-
-``` qml
-Rectangle {    
+<pre><code class="language-qml">Rectangle {    
   color: theColor
-  property var theColor: "green"
+  property var theColor: &quot;green&quot;
 
   MouseArea {
     
     anchors.fill: parent
 
     onClicked: {
-      if (theColor == "green") {
-          theColor = "red"
+      if (theColor == &quot;green&quot;) {
+          theColor = &quot;red&quot;
       } else {
-          theColor = "green"
+          theColor = &quot;green&quot;
       }
     }
   }
 }
-```
+</code></pre>
 </span>
-
 <aside class="notes">
 Show it... We can not make `if(parent.color == "green")` because color is not a string but a color property.
 </aside>
-
---v--
-
-### \.\./Attributes
-
-```Properties, Signals, Handlers and Methods```
-
-----
-
+<p>–v–</p>
+<h3>../Attributes</h3>
+<p><code>Properties, Signals, Handlers and Methods</code></p>
+<hr>
 <span style="font-size:0.85em;">
-
-``` qml
-Rectangle {    
-  color: isGreen ? "red" : "green"
+<pre><code class="language-qml">Rectangle {    
+  color: isGreen ? &quot;red&quot; : &quot;green&quot;
   property bool isGreen: true
 
   MouseArea {
@@ -428,32 +429,24 @@ Rectangle {
     }
   }
 }
-```
+</code></pre>
 </span>
-
 <aside class="notes">
 Or an alternative way to show this behavior to explain the power of bindings.
 </aside>
-
---v--
-
-### \.\./Attributes
-
-```Properties, Signals, Handlers and Methods```
-
-----
-
+<p>–v–</p>
+<h3>../Attributes</h3>
+<p><code>Properties, Signals, Handlers and Methods</code></p>
+<hr>
 <span style="font-size:0.85em;">
-
-``` qml
-Rectangle {
-  color: "green"
+<pre><code class="language-qml">Rectangle {
+  color: &quot;green&quot;
 
   MouseArea {
 
     anchors.fill: parent
 
-    onClicked: { parent.color = "red" }
+    onClicked: { parent.color = &quot;red&quot; }
   }
 }
 
@@ -461,27 +454,19 @@ Rectangle {
 
 
 
-```
+</code></pre>
 </span>
-
 <aside class="notes">
 Again is an event called `clicked` in MouseArea. To handle this event, we have the handler `onClicked`.
 Those follow the signal-slot technic. But we can do signal-slots also ourself.
 </aside>
-
---v--
-
-### \.\./Attributes
-
-```Properties, Signals, Handlers and Methods```
-
-----
-
+<p>–v–</p>
+<h3>../Attributes</h3>
+<p><code>Properties, Signals, Handlers and Methods</code></p>
+<hr>
 <span style="font-size:0.85em;">
-
-``` qml
-Rectangle {
-  color: "green"
+<pre><code class="language-qml">Rectangle {
+  color: &quot;green&quot;
       
   signal colorChanged(info: string)
 
@@ -490,113 +475,98 @@ Rectangle {
     anchors.fill: parent
 
     onClicked: {
-      parent.color = "red"
-      parent.colorChanged("by in the mouse area")
+      parent.color = &quot;red&quot;
+      parent.colorChanged(&quot;by in the mouse area&quot;)
     }
   }
 
   onColorChanged: {
-    console.log("Color changed to:", parent.color, " info:", info)
+    console.log(&quot;Color changed to:&quot;, parent.color, &quot; info:&quot;, info)
   }
 }
-```
+</code></pre>
 </span>
-
---v--
-
-## Resources
-
-- QML Docu https://doc.qt.io/qt-6/qtquick-index.html
-- QML Reference: https://doc.qt.io/qt-6/qmlreference.html
-- QML Tutorial: https://doc.qt.io/qt-6/qml-tutorial.html
-- Introduction to Qt/QML, by KDAB: [YouTube Playlist](https://www.youtube.com/watch?v=JxyTkXLbcV4&list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc&index=2)
-
---v--
-
-## Hello world (QML)
-
---v--
-
-### \.\./Check it out
-
-``` qml
-import QtQuick 2.0
+<p>–v–</p>
+<h2>Resources</h2>
+<ul>
+<li>QML Docu <a href="https://doc.qt.io/qt-6/qtquick-index.html">https://doc.qt.io/qt-6/qtquick-index.html</a></li>
+<li>QML Reference: <a href="https://doc.qt.io/qt-6/qmlreference.html">https://doc.qt.io/qt-6/qmlreference.html</a></li>
+<li>QML Tutorial: <a href="https://doc.qt.io/qt-6/qml-tutorial.html">https://doc.qt.io/qt-6/qml-tutorial.html</a></li>
+<li>Introduction to Qt/QML, by KDAB: <a href="https://www.youtube.com/watch?v=JxyTkXLbcV4&amp;list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc&amp;index=2">YouTube Playlist</a></li>
+</ul>
+<p>–v–</p>
+<h2>Hello world (QML)</h2>
+<p>–v–</p>
+<h3>../Check it out</h3>
+<pre><code class="language-qml">import QtQuick 2.0
 
 Text {
-  text: "Hello world!"
+  text: &quot;Hello world!&quot;
 }
-```
+</code></pre>
+<p>or here <a href="https://qmlweb.github.io">https://qmlweb.github.io</a></p>
+<p>–v–</p>
+<h3>../Exercise online</h3>
+<ul>
+<li>
+<p>Go to: <a href="https://qmlweb.github.io">https://qmlweb.github.io</a></p>
+</li>
+<li>
+<p>Modify it to change the <strong>text color</strong> on clicking on it.</p>
+</li>
+<li>
+<p>… and <em>optionally</em> to change the color back with another click</p>
+</li>
+</ul>
+<p>–v–</p>
+<h2>Break ☕</h2>
 
-or here https://qmlweb.github.io
+            </section>
+    
 
---v--
 
-### \.\./Exercise online
 
-- Go to: https://qmlweb.github.io
+    
+        <section >
+            
+            <h2>Developing QField plugins</h2>
 
-- Modify it to change the **text color** on clicking on it.
-- ... and *optionally* to change the color back with another click
+            </section>
+    
 
---v--
 
-## Break ☕
 
----
-
-## Developing QField plugins
-
----
-
-### \.\./QField GUI
-
-<span style="font-size:0.8em;"><span style="color:orange">Dashboard</span> | Main menu | Search bar | Plugins toolbar | Positioning | Canvas actions</span>
-![alt text](assets/gui_1.png)
-
---v--
-
-### \.\./QField GUI
-
-<span style="font-size:0.8em;">Dashboard | <span style="color:orange">Main menu</span> | Search bar | Plugins toolbar | Positioning | Canvas actions</span>
-![alt text](assets/gui_2.png)
-
---v--
-
-### \.\./QField GUI
-
-<span style="font-size:0.8em;">Dashboard | Main menu | <span style="color:orange">Search bar</span> | Plugins toolbar | Positioning | Canvas actions</span>
-![alt text](assets/gui_3.png)
-
---v--
-
-### \.\./QField GUI
-
-<span style="font-size:0.8em;">Dashboard | Main menu | Search bar | <span style="color:orange">Plugins toolbar</span> | Positioning | Canvas actions</span>
-![alt text](assets/gui_4.png)
-
---v--
-
-### \.\./QField GUI
-
-<span style="font-size:0.8em;">Dashboard | Main menu | Search bar | Plugins toolbar | <span style="color:orange">Positioning</span> | Canvas actions</span>
-![alt text](assets/gui_5.png)
-
---v--
-
-### \.\./QField GUI
-
-<span style="font-size:0.8em;">Dashboard | Main menu | Search bar | Plugins toolbar | Positioning | <span style="color:orange">Canvas actions</span></span>
-![alt text](assets/gui_6.png)
-
---v--
-
-### \.\./QField API 
-
-#### <span style="font-size:0.8em;"><span style="color:orange">Root objects</span> | iface | Theme | QField GUI types | QGIS | Utils</span>
-
---------
-```
-iface
+    
+        <section >
+            
+            <h3>../QField GUI</h3>
+<p><span style="font-size:0.8em;"><span style="color:orange">Dashboard</span> | Main menu | Search bar | Plugins toolbar | Positioning | Canvas actions</span>
+<img src="assets/gui_1.png" alt="alt text"></p>
+<p>–v–</p>
+<h3>../QField GUI</h3>
+<p><span style="font-size:0.8em;">Dashboard | <span style="color:orange">Main menu</span> | Search bar | Plugins toolbar | Positioning | Canvas actions</span>
+<img src="assets/gui_2.png" alt="alt text"></p>
+<p>–v–</p>
+<h3>../QField GUI</h3>
+<p><span style="font-size:0.8em;">Dashboard | Main menu | <span style="color:orange">Search bar</span> | Plugins toolbar | Positioning | Canvas actions</span>
+<img src="assets/gui_3.png" alt="alt text"></p>
+<p>–v–</p>
+<h3>../QField GUI</h3>
+<p><span style="font-size:0.8em;">Dashboard | Main menu | Search bar | <span style="color:orange">Plugins toolbar</span> | Positioning | Canvas actions</span>
+<img src="assets/gui_4.png" alt="alt text"></p>
+<p>–v–</p>
+<h3>../QField GUI</h3>
+<p><span style="font-size:0.8em;">Dashboard | Main menu | Search bar | Plugins toolbar | <span style="color:orange">Positioning</span> | Canvas actions</span>
+<img src="assets/gui_5.png" alt="alt text"></p>
+<p>–v–</p>
+<h3>../QField GUI</h3>
+<p><span style="font-size:0.8em;">Dashboard | Main menu | Search bar | Plugins toolbar | Positioning | <span style="color:orange">Canvas actions</span></span>
+<img src="assets/gui_6.png" alt="alt text"></p>
+<p>–v–</p>
+<h3>../QField API</h3>
+<h4><span style="font-size:0.8em;"><span style="color:orange">Root objects</span> | iface | Theme | QField GUI types | QGIS | Utils</span></h4>
+<hr>
+<pre><code>iface
 
 qgisProject
 
@@ -608,46 +578,33 @@ clipboardManager
 
 
 
-```
-
---------
-
-<small>_See [qgismobileapp.cpp](https://github.com/opengisch/QField/blob/master/src/core/qgismobileapp.cpp#L574-L591) for details._</small>
-
---v--
-
-### \.\./QField API 
-
-#### <span style="font-size:0.8em;">Root objects | <span style="color:orange">iface</span> | Theme | QField GUI types | QGIS | Utils</span>
-
---------
-```
-iface.mainWindow()
+</code></pre>
+<hr>
+<p><small><em>See <a href="https://github.com/opengisch/QField/blob/master/src/core/qgismobileapp.cpp#L574-L591">qgismobileapp.cpp</a> for details.</em></small></p>
+<p>–v–</p>
+<h3>../QField API</h3>
+<h4><span style="font-size:0.8em;">Root objects | <span style="color:orange">iface</span> | Theme | QField GUI types | QGIS | Utils</span></h4>
+<hr>
+<pre><code>iface.mainWindow()
 
 iface.mapCanvas()
 
-iface.findItemByObjectName("...")
+iface.findItemByObjectName(&quot;...&quot;)
 
-iface.logMessage("...")
+iface.logMessage(&quot;...&quot;)
 
 iface.addItemToPluginsToolbar()
 iface.addItemToMainMenuActionsToolbar()
 iface.addItemToCanvasActionsToolbar()
 
-```
---------
-
-<small>_See [appinterface.h](https://github.com/opengisch/QField/blob/master/src/core/appinterface.h) for details._</small>
-
---v--
-
-### \.\./QField API 
-
-#### <span style="font-size:0.8em;">Root objects | iface | <span style="color:orange">Theme</span> | QField GUI types | QGIS | Utils</span>
-
---------
-``` qml
-Theme.mainColor  // #80cc28
+</code></pre>
+<hr>
+<p><small><em>See <a href="https://github.com/opengisch/QField/blob/master/src/core/appinterface.h">appinterface.h</a> for details.</em></small></p>
+<p>–v–</p>
+<h3>../QField API</h3>
+<h4><span style="font-size:0.8em;">Root objects | iface | <span style="color:orange">Theme</span> | QField GUI types | QGIS | Utils</span></h4>
+<hr>
+<pre><code class="language-qml">Theme.mainColor  // #80cc28
 
 Theme.mainTextColor
 
@@ -657,23 +614,16 @@ Theme.darkGray
 
 Theme.defaultFont
 
-Theme.getThemeVectorIcon("...")
+Theme.getThemeVectorIcon(&quot;...&quot;)
 
-```
---------
-
-<small>_See [Theme.qml](https://github.com/opengisch/QField/blob/master/src/qml/imports/Theme/Theme.qml) for details._</small>
-
---v--
-
-### \.\./QField API 
-
-#### <span style="font-size:0.8em;">Root objects | iface | Theme | <span style="color:orange">QField GUI types</span> | QGIS | Utils</span>
-
---------
-
-```
-QfButton
+</code></pre>
+<hr>
+<p><small><em>See <a href="https://github.com/opengisch/QField/blob/master/src/qml/imports/Theme/Theme.qml">Theme.qml</a> for details.</em></small></p>
+<p>–v–</p>
+<h3>../QField API</h3>
+<h4><span style="font-size:0.8em;">Root objects | iface | Theme | <span style="color:orange">QField GUI types</span> | QGIS | Utils</span></h4>
+<hr>
+<pre><code>QfButton
 
 QfToolButton
 
@@ -685,21 +635,14 @@ QfComboBox
 
 ...
 
-```
-
---------
-
-<small>_See [src/qml/imports/Theme/*](https://github.com/opengisch/QField/blob/master/src/qml/imports/Theme/Theme.qml) for details._</small>
-
---v--
-
-### \.\./QField API 
-
-#### <span style="font-size:0.8em;">Root objects | iface |  Theme | QField GUI types | <span style="color:orange">QGIS</span> | QGIS | Utils</span>
-
---------
-```
-QgsFeature
+</code></pre>
+<hr>
+<p><small><em>See <a href="https://github.com/opengisch/QField/blob/master/src/qml/imports/Theme/Theme.qml">src/qml/imports/Theme/*</a> for details.</em></small></p>
+<p>–v–</p>
+<h3>../QField API</h3>
+<h4><span style="font-size:0.8em;">Root objects | iface |  Theme | QField GUI types | <span style="color:orange">QGIS</span> | QGIS | Utils</span></h4>
+<hr>
+<pre><code>QgsFeature
 
 QgsGeometry
 
@@ -711,22 +654,14 @@ QgsField
 
 ...
 
-```
-
---------
-
-
-<small>_See [qgismobileapp.cpp::initDeclarative](https://github.com/opengisch/QField/blob/master/src/core/qgismobileapp.cpp#L381-L407) for details._</small>
-
---v--
-
-### \.\./QField API 
-
-#### <span style="font-size:0.8em;">Root objects | iface | Theme | QField GUI types | <span style="color:orange">Utils</span></span>
-
---------
-```
-LayerUtils
+</code></pre>
+<hr>
+<p><small><em>See <a href="https://github.com/opengisch/QField/blob/master/src/core/qgismobileapp.cpp#L381-L407">qgismobileapp.cpp::initDeclarative</a> for details.</em></small></p>
+<p>–v–</p>
+<h3>../QField API</h3>
+<h4><span style="font-size:0.8em;">Root objects | iface | Theme | QField GUI types | <span style="color:orange">Utils</span></span></h4>
+<hr>
+<pre><code>LayerUtils
 
 GeometryUtils
 
@@ -738,139 +673,120 @@ SnappingUtils
 
 ...
 
-```
-
---------
-
-<small>_See [src/core/utils/*](https://github.com/opengisch/QField/tree/master/src/core/utils) for details._</small>
-
---v--
-
-### \.\./Plugin Location
-#### Application Plugins
-
-- Install Plugins via *QField Settings > Manage Plugins*
-![alt text](assets/plugin-loc0.png)
-
---v--
-
-### \.\./Plugin Location
-#### Application Plugins
-
-- Find location in "About QField"
-![alt text](assets/plugin-loc1.png)
-- Folder structure
-![alt text](assets/plugin-loc2.png)
-
---v--
-
-### \.\./Plugin Location
-#### Project Plugins
-
-- Copy to project folder
-- Name the main-file like the project qgz
-![alt text](assets/plugin-loc3.png)
-
---v--
-
-### \.\./Install "First Demo"
-
-- Get the link on the Schedule...
-- Install  "First Demo" via *QField Settings > Manage Plugins*
-![alt text](assets/plugin-loc0.png)
-
---v--
-
-### \.\./Install "First Demo"
-
-Check out the `main.qml` in the plugin directory.
-
-``` qml
-import QtQuick
+</code></pre>
+<hr>
+<p><small><em>See <a href="https://github.com/opengisch/QField/tree/master/src/core/utils">src/core/utils/*</a> for details.</em></small></p>
+<p>–v–</p>
+<h3>../Plugin Location</h3>
+<h4>Application Plugins</h4>
+<ul>
+<li>Install Plugins via <em>QField Settings &gt; Manage Plugins</em>
+<img src="assets/plugin-loc0.png" alt="alt text"></li>
+</ul>
+<p>–v–</p>
+<h3>../Plugin Location</h3>
+<h4>Application Plugins</h4>
+<ul>
+<li>Find location in “About QField”
+<img src="assets/plugin-loc1.png" alt="alt text"></li>
+<li>Folder structure
+<img src="assets/plugin-loc2.png" alt="alt text"></li>
+</ul>
+<p>–v–</p>
+<h3>../Plugin Location</h3>
+<h4>Project Plugins</h4>
+<ul>
+<li>Copy to project folder</li>
+<li>Name the main-file like the project qgz
+<img src="assets/plugin-loc3.png" alt="alt text"></li>
+</ul>
+<p>–v–</p>
+<h3>../Install “First Demo”</h3>
+<ul>
+<li>Get the link on the Schedule…</li>
+<li>Install  “First Demo” via <em>QField Settings &gt; Manage Plugins</em>
+<img src="assets/plugin-loc0.png" alt="alt text"></li>
+</ul>
+<p>–v–</p>
+<h3>../Install “First Demo”</h3>
+<p>Check out the <code>main.qml</code> in the plugin directory.</p>
+<pre><code class="language-qml">import QtQuick
 
 Item {
   Component.onCompleted: {
     iface.mainWindow().displayToast('First demo!')
   }
 }
-```
-
---v--
-
-### \.\./Debugging
-
-- Popup on application display
-
-  ```mainWindow.displayToast("")```
-
-- Log message in the log panel
-
-  ```iface.logMessage("")```
-
-- Console output (not visible in QField)
-
-  ```console.log("")```
-
---v--
-
-### \.\./Let's play
-#### All the world is green
-
-```qml
-  Rectangle{
+</code></pre>
+<p>–v–</p>
+<h3>../Debugging</h3>
+<ul>
+<li>
+<p>Popup on application display</p>
+<p><code>mainWindow.displayToast(&quot;&quot;)</code></p>
+</li>
+<li>
+<p>Log message in the log panel</p>
+<p><code>iface.logMessage(&quot;&quot;)</code></p>
+</li>
+<li>
+<p>Console output (not visible in QField)</p>
+<p><code>console.log(&quot;&quot;)</code></p>
+</li>
+</ul>
+<p>–v–</p>
+<h3>../Let’s play</h3>
+<h4>All the world is green</h4>
+<pre><code class="language-qml">  Rectangle{
     id: myRectangle
     parent: iface.mapCanvas()
     anchors.fill: parent
     color: '#5000ff00'
   }
-```
+</code></pre>
+<p>–v–</p>
+<h3>../Let’s play</h3>
+<h4>Template Plugin</h4>
+<p><a href="https://github.com/opengisch/qfield-template-plugin">https://github.com/opengisch/qfield-template-plugin</a></p>
+<p>–v–</p>
+<h2>Break ☕</h2>
 
---v--
+            </section>
+    
 
-### \.\./Let's play
-#### Template Plugin
 
-https://github.com/opengisch/qfield-template-plugin
 
---v--
-
-## Break ☕
-
----
-
-### Weather Forecast plugin
-
-Let's create a forecast plugin!
-
---v--
-
-### \.\./What we need
-
- + Button to fetch a weather forecast *(reuse the edited template plugin)*
- + Show an info dialog *(reuse the edited template plugin)*
- + Our location *(reuse the edited template plugin)*
- + API call
-   + `XmlHttpRequest` to do an API call and fetch the forecast from open-meteo.com
- + Whatever we want
-
---v--
-
-### \.\./What we do
-
- + Check out open-meteo.com
- + Get snippets at pad.opengis.ch (or the slides below)
- + We test the Java Script at https://runjs.app/play
- + We map the weather code to description and image
- + We integrate it into our template plugin
-
---v--
-
-### \.\./API Request snippet
-
-The Java Script for using `XmlHttpRequest`
-
-``` JavaScript
-//Norrköping
+    
+        <section >
+            
+            <h3>Weather Forecast plugin</h3>
+<p>Let’s create a forecast plugin!</p>
+<p>–v–</p>
+<h3>../What we need</h3>
+<ul>
+<li>Button to fetch a weather forecast <em>(reuse the edited template plugin)</em></li>
+<li>Show an info dialog <em>(reuse the edited template plugin)</em></li>
+<li>Our location <em>(reuse the edited template plugin)</em></li>
+<li>API call
+<ul>
+<li><code>XmlHttpRequest</code> to do an API call and fetch the forecast from <a href="http://open-meteo.com">open-meteo.com</a></li>
+</ul>
+</li>
+<li>Whatever we want</li>
+</ul>
+<p>–v–</p>
+<h3>../What we do</h3>
+<ul>
+<li>Check out <a href="http://open-meteo.com">open-meteo.com</a></li>
+<li>Get snippets at <a href="http://pad.opengis.ch">pad.opengis.ch</a> (or the slides below)</li>
+<li>We test the Java Script at <a href="https://runjs.app/play">https://runjs.app/play</a></li>
+<li>We map the weather code to description and image</li>
+<li>We integrate it into our template plugin</li>
+</ul>
+<p>–v–</p>
+<h3>../API Request snippet</h3>
+<p>The Java Script for using <code>XmlHttpRequest</code></p>
+<pre><code class="language-JavaScript">//Norrköping
 lat = 58.5833;
 lon = 16.1833;
 
@@ -882,165 +798,336 @@ request.onreadystatechange = function() {
   }
 }
 
-request.open("GET", "https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + lon + "&daily=weather_code,temperature_2m_max&timezone=auto");
+request.open(&quot;GET&quot;, &quot;https://api.open-meteo.com/v1/forecast?latitude=&quot; + lat + &quot;&amp;longitude=&quot; + lon + &quot;&amp;daily=weather_code,temperature_2m_max&amp;timezone=auto&quot;);
 
 request.send();
 
-```
-
---v--
-
-### \.\./Code Mapping
-
-```JSON
-{
-  "0": {
-    "description": "Sunny", 
-    "image": "http: //openweathermap.org/img/wn/01d@2x.png"
+</code></pre>
+<p>–v–</p>
+<h3>../Code Mapping</h3>
+<pre><code class="language-JSON">{
+  &quot;0&quot;: {
+    &quot;description&quot;: &quot;Sunny&quot;, 
+    &quot;image&quot;: &quot;http: //openweathermap.org/img/wn/01d@2x.png&quot;
   }, 
-  "1": {
-    "description": "Mainly Sunny", 
-    "image": "http://openweathermap.org/img/wn/01d@2x.png"
+  &quot;1&quot;: {
+    &quot;description&quot;: &quot;Mainly Sunny&quot;, 
+    &quot;image&quot;: &quot;http://openweathermap.org/img/wn/01d@2x.png&quot;
   }, 
   [...]
-};
+};</code></pre>
 
----
+            </section>
+    
 
-### Plugin showcase
 
+
+    
+        <section >
+            
+            <h3>Plugin showcase</h3>
 <center>
 <img src="assets/osrm_routing_plugin.gif" style="height:700px;">
 </center>
-
---v--
-
-### Plugin showcase
-
-Snap!
-
-![](assets/showcase_snap.gif)
-
---v--
-
-### Plugin showcase
-
-Nominatim locator plugin
-
-![](assets/showcase_nominatim.gif)
-
---v--
-
-### Plugin showcase
-
-LiveField plugin
-
+<p>–v–</p>
+<h3>Plugin showcase</h3>
+<p>Snap!</p>
+<p><img src="assets/showcase_snap.gif" alt=""></p>
+<p>–v–</p>
+<h3>Plugin showcase</h3>
+<p>Nominatim locator plugin</p>
+<p><img src="assets/showcase_nominatim.gif" alt=""></p>
+<p>–v–</p>
+<h3>Plugin showcase</h3>
+<p>LiveField plugin</p>
 <video controls="controls">
 <source src="assets/showcase_livefield.mp4" type="video/mp4">
 </video>
+            </section>
+    
 
----
 
-### Resources
 
-QML Docu https://doc.qt.io/qt-6/qtquick-index.html
+    
+        <section >
+            
+            <h3>Resources</h3>
+<p>QML Docu <a href="https://doc.qt.io/qt-6/qtquick-index.html">https://doc.qt.io/qt-6/qtquick-index.html</a></p>
+<p>QML Reference: <a href="https://doc.qt.io/qt-6/qmlreference.html">https://doc.qt.io/qt-6/qmlreference.html</a></p>
+<p>QML Tutorial: <a href="https://doc.qt.io/qt-6/qml-tutorial.html">https://doc.qt.io/qt-6/qml-tutorial.html</a></p>
+<p>Introduction to Qt/QML, by KDAB (<a href="https://www.youtube.com/watch?v=JxyTkXLbcV4&amp;list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc&amp;index=2">YouTube Playlist</a>)</p>
+<p>QML online editor: <a href="https://qmlweb.github.io">https://qmlweb.github.io</a></p>
+<p>QML advanced online editor: <a href="https://patrickelectric.work/qmlonline/">https://patrickelectric.work/qmlonline/</a></p>
+<p>QField plugins: <a href="https://github.com/topics/qfield-plugin">https://github.com/topics/qfield-plugin</a></p>
+<p>Plugin icons: <a href="https://fonts.google.com/icons">https://fonts.google.com/icons</a></p>
+<p>JavaScript online editor: <a href="https://runjs.app/play">https://runjs.app/play</a></p>
 
-QML Reference: https://doc.qt.io/qt-6/qmlreference.html
+            </section>
+    
 
-QML Tutorial: https://doc.qt.io/qt-6/qml-tutorial.html
 
-Introduction to Qt/QML, by KDAB ([YouTube Playlist](https://www.youtube.com/watch?v=JxyTkXLbcV4&list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc&index=2))
 
-QML online editor: https://qmlweb.github.io
+    
+        <section >
+            
+            <p><img src="assets/love-os.png" alt="os_love"></p>
+<p>Thanks, and happy coding!</p>
 
-QML advanced online editor: https://patrickelectric.work/qmlonline/
+            </section>
+    
 
-QField plugins: https://github.com/topics/qfield-plugin
 
-Plugin icons: https://fonts.google.com/icons
-
-JavaScript online editor: https://runjs.app/play
-
----
-
-![os_love](assets/love-os.png)
-
-Thanks, and happy coding!
-
-          </textarea>
-        </section>
-      </div>
     </div>
 
-    <script src="./dist/reveal.js"></script>
 
-    <script src="./mermaid/dist/mermaid.min.js"></script>
+  </div>
 
-    <script src="./plugin/markdown/markdown.js"></script>
-    <script src="./plugin/highlight/highlight.js"></script>
-    <script src="./plugin/zoom/zoom.js"></script>
-    <script src="./plugin/notes/notes.js"></script>
-    <script src="./plugin/math/math.js"></script>
-    <script>
-      function extend() {
-        var target = {};
-        for (var i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-              target[key] = source[key];
-            }
-          }
-        }
-        return target;
+  <div class="line top"></div>
+  <div class="line bottom"></div>
+  <div class="line left"></div>
+  <div class="line right"></div>
+
+  <script src="libs/reveal.js/4.3.1/reveal.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/fullscreen/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/svg.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/Chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/d3.v3.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3.patch.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/queue.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/topojson.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/function-plot.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/customcontrols/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/embed-tweet/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/verticator/verticator.js"></script>
+
+<script src="libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/search/search.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/menu/menu.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chalkboard/plugin.js"></script>
+
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/plugin.js"></script>  -->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/recorder.js"></script>-->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/RecordRTC.js"></script>-->
+
+  
+
+<script>
+  const printPlugins = [
+      RevealNotes,
+      RevealHighlight,
+      RevealMath.MathJax3,
+      RevealAnimate,
+      RevealChalkboard, 
+			RevealEmbedTweet,
+			RevealChart,
+		];
+
+		const plugins =  [...printPlugins,
+		RevealZoom, 
+		RevealSearch, 
+				RevealMarkdown, 
+				RevealMenu, 
+				RevealFullscreen,
+				RevealAnything,
+				//RevealAudioSlideshow,
+				//RevealAudioRecorder,
+				RevealCustomControls, 
+				// poll
+				// question
+				// seminar
+				Verticator 
+				 ]
+
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+      controlsTutorial: true,
+      controlsLayout: 'bottom-right',
+      controlsBackArrows: 'faded',
+      progress: true,
+      slideNumber: false,
+      //#showSlideNumber "all" "print" "speaker"
+      hash: true, //# hash: false,
+      //# respondToHashChanges: true,
+      //# history: false,
+      keyboard: true,
+      //#keyboardCondition: null,
+      overview: true,
+      center: true,
+      touch: true,
+      loop: false,
+      rtl: false,
+      //#navigationMode: 'default', linear grid
+      shuffle: false,
+      fragments: true,
+      fragmentInURL: false,
+      embedded: false,
+      help: true,
+      //#pause: true
+      showNotes: false,
+      autoPlayMedia: false, // TODO fix this to a nullable value
+      //#preloadIframes: null. true false
+      //#autoAnimate: true
+      //#autoAnimateMatcher: null,
+      //#autoAnimateEasing: 'ease',
+      //autoAnimateDuration: 1.0,
+      //#autoAnimateUnmatched: true
+      //#autoAnimateStyles: []
+      autoSlide: 0, // TODO fix this to a falseable value
+      autoSlideStoppable: true,
+      autoSlideMethod: '0',
+      defaultTiming: 120,
+      mouseWheel: false,
+      //#previewLinks: false
+      //#postMessage: true, // TODO : this can cause issues with the vscode api ???
+      //#postMessageEvents: false,
+      //#focusBodyOnPageVisibilityChange: true,
+      transition: 'none',
+      transitionSpeed: 'default',
+      backgroundTransition: 'default',
+      //#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+      //#pdfSeparateFragments: true,
+      //#pdfPageHeightOffset: -1,
+      viewDistance: 3,
+      //#mobileViewDistance: 2,
+      display: 'block',
+      //#hideInactiveCursor: true,
+      //#hideCursorTime: 5000
+
+      // Parallax Background
+      parallaxBackgroundImage: '',
+      parallaxBackgroundSize: '',
+      parallaxBackgroundHorizontal: 0,
+      parallaxBackgroundVertical: 0,
+
+      //Presentation Size
+      width: 960,
+			height: 700,
+			margin: 0.04,
+      minScale: 0.2,
+      maxScale: 2,
+      disableLayout: false,
+
+      audio: {
+        prefix: 'audio/', // audio files are stored in the "audio" folder
+        suffix: '.ogg', // audio files have the ".ogg" ending
+        textToSpeechURL: null, // the URL to the text to speech converter
+        defaultNotes: false, // use slide notes as default for the text to speech converter
+        defaultText: false, // use slide text as default for the text to speech converter
+        advance: 0, // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+        autoplay: false, // automatically start slideshow
+        defaultDuration: 5, // default duration in seconds if no audio is available
+        defaultAudios: true, // try to play audios with names such as audio/1.2.ogg
+        playerOpacity: 0.05, // opacity value of audio player if unfocused
+        playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+        startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+      },
+      
+      chalkboard: { // font-awesome.min.css must be available
+        //src: "chalkboard/chalkboard.json",
+        storage: "chalkboard-demo",
+      },
+      
+			customcontrols: {
+					controls: [
+      						{
+						  id: 'toggle-overview',
+						  title: 'Toggle overview (O)',
+						  icon: '<i class="fa fa-th"></i>',
+						  action: 'Reveal.toggleOverview();'
+						}
+						,
+      {
+        icon: '<i class="fa fa-pen-square"></i>',
+        title: 'Toggle chalkboard (B)',
+        action: 'RevealChalkboard.toggleChalkboard();'
+      },
+      {
+        icon: '<i class="fa fa-pen"></i>',
+        title: 'Toggle notes canvas (C)',
+        action: 'RevealChalkboard.toggleNotesCanvas();'
       }
+      
+				]
+			},
+			chart: {
+					defaults: { 
+						color: 'lightgray', // color of labels
+						scale: { 
+							beginAtZero: true, 
+							ticks: { stepSize: 1 },
+							grid: { color: "lightgray" } , // color of grid lines
+						},
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+			},
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				anything: [ 
+				{
+		className: "plot",
+		defaults: {width:500, height: 500, grid:true},
+		initialize: (function(container, options){ options.target = "#"+container.id; functionPlot(options) })
+	 },
+	 {
+		className: "chart",  
+		initialize: (function(container, options){ container.chart = new Chart(container.getContext("2d"), options);  })
+	 },
+	 {
+		className: "anything",
+		initialize: (function(container, options){ if (options && options.initialize) { options.initialize(container)} })
+	 },
+					],
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins ) 
+		});
+			
 
-      // default options to init reveal.js
-      var defaultOptions = {
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        slideNumber: true,
-        highlight: {
-          highlightOnLoad: false
-        },
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealZoom,
-          RevealNotes,
-          RevealMath
-        ]
-      };
 
-      // options from URL query string
-      var queryOptions = Reveal().getQueryHash() || {};
+	    // Change chalkboard theme : 
+		function changeTheme(input) {
+			var config = {};
+			config.theme = input.value;
+			Reveal.getPlugin("RevealChalkboard").configure(config);
+			input.blur();
+		}
 
-      var options = extend(defaultOptions, {"transition":"slide","slideNumber":true,"overview":true,"autoPlayMedia":true,"_":["slides/"],"static":"web","static-dirs":"slides/assets","staticDirs":"slides/assets","listing-template":"../globals/index/index.html","listingTemplate":"../globals/index/index.html","title":"Qfield Plugins Workshop"}, queryOptions);
-    </script>
+		// // Handle the message inside the webview
+        // window.addEventListener('message', event => {
 
+        //     const message = event.data; // The JSON data our extension sent
 
-    <script>
-      Reveal.initialize(options);
-      Reveal.addEventListener('ready', function (event) {
-        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
-        const hlp = Reveal.getPlugin('highlight');
-        blocks.forEach(hlp.highlightBlock);
-      });
-    </script>
+        //     switch (message.command) {
+        //         case 'refactor':
+        //             Reveal.toggleHelp();
+        //     }
+        // });
 
-    <script>
-      const mermaidOptions = extend({ startOnLoad: false }, {});
-      mermaid.startOnLoad = false;
-      mermaid.initialize(mermaidOptions);
-      const cb = function (event) {
-        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
-        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
-      }
-      Reveal.addEventListener('ready', cb);
-      Reveal.addEventListener('slidetransitionend', cb);
-    </script>
-  </body>
+		if (window.location.search.match(/print-pdf-now/gi)) {
+      		setTimeout(() => {
+				window.print();
+			  }, 2500);
+			
+    }
+</script>
+
+</body>
+
 </html>

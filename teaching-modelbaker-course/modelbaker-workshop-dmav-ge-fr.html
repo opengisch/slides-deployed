@@ -1,206 +1,272 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>Modelbaker Course</title>
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="./dist/reset.css" />
-    <link rel="stylesheet" href="./dist/reveal.css" />
-    <link rel="stylesheet" href="./_assets/stylesheets/softteaching-theme.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+<head>
+  <meta charset="utf-8">
 
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="--v--">
-          <textarea data-template>
+  <title>MODELBAKER Workshop DMAV GE FR</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- highlight Theme -->
+  
+  <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/monokai.min.css">
+  
+	
+		
+	<link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
+	
+	
+	
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/customcontrols/style.css">
+  
+	
+
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/stylesheets/softteaching-theme.css.css" id="theme">
+  
+  
+
+  <link rel="stylesheet" href="libs/styles/tasklist.css">
+	<link rel="stylesheet" href="libs/styles/iota.css">
+	<link rel="stylesheet" href="libs/styles/layout.css">
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="stylesheets/softteaching-theme.css">
+  
+
+   <!-- css list -->
+	
+
+   
+
+</head>
+
+<body>
+
+   
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      
+
+
+    
+        <section data-background="./assets/title.png">
             
-
-<!-- .slide: data-background="./assets/title.png" -->
+            <!-- .slide: data-background="./assets/title.png" -->
 <h1 style="color: var(--opengisch-dark) !important; font-size:1.5em !important; text-align: center !important;">Atelier Genève - 1.12.2025</h1>
-
-![](./assets/modelbaker-logo-long.png)
-<br><br><br><br><br><br>
+<p><img src="./assets/modelbaker-logo-long.png" alt="">
+<br><br><br><br><br><br></p>
 <!-- .slide: data-background="assets/title.png" -->
+            </section>
+    
 
----
 
-Commençons ...
-# Que faisons-nous aujourd'hui ?
 
---v--
-
+    
+        <section >
+            
+            <p>Commençons …</p>
+<h1>Que faisons-nous aujourd’hui ?</h1>
+<p>–v–</p>
 <h1 style="-webkit-text-stroke: 2px var(--opengisch-light) !important; color: steelblue !important;">Matthias Kuhn et Denis Rouzaud</h1>
-
-
---v--
-
+<p>–v–</p>
 <h1 style="-webkit-text-stroke: 2px var(--opengisch-light) !important; color: steelblue !important;">Qui êtes-vous ?</h1>
-
-- D'où viens-je ?
-- Quel est mon travail principal ?
-- Je suis **Model Baker ...** :
- - A. **... Zéro**: Qu'est-ce que Model Baker ?
- - B. **... Utilisateur**: Ai-je déjà créé des projets ?
- - C. **... Héros**: Ai-je déjà travaillé avec des conteneurs / validation, etc. ?
-
---v--
-
-### Objectifs de l'atelier
-
-- Représenter le modèle DMAV en Français dans la base de données et importer / exporter / valider des données
-- Être capable de visualiser les données dans QGIS
-- Savoir ce que sont les méta-attributs et les stratégies d'héritage, etc.
-
---v--
-
-### Programme (1)
-
-|Temps| Contenu |
-|-----| ------------------------------- |
-|09.00| Introduction et environnement 🧑‍🏫 |
-|09.30| QGIS 🧑‍🏫 💻 |
-|10.30| Importation de modèles 👪 |
-|11.00| Pause |
-|11.15| Multilinguisme et import de données de test 🧑‍🏫 💻 |
-|12.00| Dîner |
-
---v--
-
-### Programme (2)
-
-|Temps| Contenu |
-|-----| ------------------------------ |
-|13.30| Exportation de données 🧑‍🏫 💻 |
-|13.45| Saisie et validation 👪 💻 |
-|15.15| Pause |
-|15.30| UsabILIty Hub  et divers 🧑‍🏫 👪 💻 |
-|16.00| Questions 🧑‍🏫 👪 💻 |
-
---v--
-
-Courte introduction...
-
-# Qu'est-ce que Model Baker ?
-
---v--
-
-## Un générateur de projets QGIS
-
-Création rapide d'un **projet QGIS** à partir d'un modèle de données physique.
-
-Analyse la structure existante et configure un projet QGIS avec toutes les informations disponibles.
-
---v--
-
-## Un générateur de projets QGIS optimisé pour *INTERLIS*
-
-Les modèles définis dans INTERLIS fournissent des **méta-informations supplémentaires** telles que les domaines, les unités d'attributs ou les définitions orientées objet des tables.
-
-Celles-ci peuvent être utilisées pour optimiser davantage la configuration du projet.
-
+<ul>
+<li>D’où viens-je ?</li>
+<li>Quel est mon travail principal ?</li>
+<li>Je suis <strong>Model Baker …</strong> :</li>
+<li>A. <strong>… Zéro</strong>: Qu’est-ce que Model Baker ?</li>
+<li>B. <strong>… Utilisateur</strong>: Ai-je déjà créé des projets ?</li>
+<li>C. <strong>… Héros</strong>: Ai-je déjà travaillé avec des conteneurs / validation, etc. ?</li>
+</ul>
+<p>–v–</p>
+<h3>Objectifs de l’atelier</h3>
+<ul>
+<li>Représenter le modèle DMAV en Français dans la base de données et importer / exporter / valider des données</li>
+<li>Être capable de visualiser les données dans QGIS</li>
+<li>Savoir ce que sont les méta-attributs et les stratégies d’héritage, etc.</li>
+</ul>
+<p>–v–</p>
+<h3>Programme (1)</h3>
+<table>
+<thead>
+<tr>
+<th>Temps</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>09.00</td>
+<td>Introduction et environnement 🧑‍🏫</td>
+</tr>
+<tr>
+<td>09.30</td>
+<td>QGIS 🧑‍🏫 💻</td>
+</tr>
+<tr>
+<td>10.30</td>
+<td>Importation de modèles 👪</td>
+</tr>
+<tr>
+<td>11.00</td>
+<td>Pause</td>
+</tr>
+<tr>
+<td>11.15</td>
+<td>Multilinguisme et import de données de test 🧑‍🏫 💻</td>
+</tr>
+<tr>
+<td>12.00</td>
+<td>Dîner</td>
+</tr>
+</tbody>
+</table>
+<p>–v–</p>
+<h3>Programme (2)</h3>
+<table>
+<thead>
+<tr>
+<th>Temps</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13.30</td>
+<td>Exportation de données 🧑‍🏫 💻</td>
+</tr>
+<tr>
+<td>13.45</td>
+<td>Saisie et validation 👪 💻</td>
+</tr>
+<tr>
+<td>15.15</td>
+<td>Pause</td>
+</tr>
+<tr>
+<td>15.30</td>
+<td>UsabILIty Hub  et divers 🧑‍🏫 👪 💻</td>
+</tr>
+<tr>
+<td>16.00</td>
+<td>Questions 🧑‍🏫 👪 💻</td>
+</tr>
+</tbody>
+</table>
+<p>–v–</p>
+<p>Courte introduction…</p>
+<h1>Qu’est-ce que Model Baker ?</h1>
+<p>–v–</p>
+<h2>Un générateur de projets QGIS</h2>
+<p>Création rapide d’un <strong>projet QGIS</strong> à partir d’un modèle de données physique.</p>
+<p>Analyse la structure existante et configure un projet QGIS avec toutes les informations disponibles.</p>
+<p>–v–</p>
+<h2>Un générateur de projets QGIS optimisé pour <em>INTERLIS</em></h2>
+<p>Les modèles définis dans INTERLIS fournissent des <strong>méta-informations supplémentaires</strong> telles que les domaines, les unités d’attributs ou les définitions orientées objet des tables.</p>
+<p>Celles-ci peuvent être utilisées pour optimiser davantage la configuration du projet.</p>
 <!-- Model Baker peut utiliser les méta-informations pour configurer l'arbre de couches, les widgets de champs avec conditions, les mises en page de formulaires, les relations et bien plus encore.-->
-
---v--
-
-## Une station de contrôle ili2db
-
-```
-java -jar /home/dave/dev/opengisch/QgisModelBaker/QgisModelBaker/libili2db/bin/ili2pg-4.6.1/ili2pg-4.6.1.jar --schemaimport --dbhost localhost --dbport 5432 
+<p>–v–</p>
+<h2>Une station de contrôle ili2db</h2>
+<pre><code>java -jar /home/dave/dev/opengisch/QgisModelBaker/QgisModelBaker/libili2db/bin/ili2pg-4.6.1/ili2pg-4.6.1.jar --schemaimport --dbhost localhost --dbport 5432 
 --dbusr postgres --dbpwd ****** --dbdatabase bakery --dbschema adsfdsaf2 --setupPgExt --coalesceCatalogueRef --createEnumTabs --createNumChecks --createUnique 
 --createFk --createFkIdx --coalesceMultiSurface --coalesceMultiLine --coalesceMultiPoint --coalesceArray --beautifyEnumDispName --createGeomIdx --createMetaInfo 
 --expandMultilingual --createTypeConstraint --createEnumTabsWithId --createTidCol --importTid --smart2Inheritance --strokeArcs --defaultSrsCode 2056 
 --models Wildruhezonen_LV95_V2_1
-```
-
+</code></pre>
 <!-- Il ne fournit à l'utilisateur que les paramètres nécessaires pour passer des paramètres à ili2db.
 Génère la commande pour ili2db.
 -->
-
---v--
-
-## Et c'est une bibliothèque
-
-Peut être utilisé comme un cadre. Comme le fait [Asistente LADM-COL](https://github.com/SwissTierrasColombia/Asistente-LADM-COL).
-
+<p>–v–</p>
+<h2>Et c’est une bibliothèque</h2>
+<p>Peut être utilisé comme un cadre. Comme le fait <a href="https://github.com/SwissTierrasColombia/Asistente-LADM-COL">Asistente LADM-COL</a>.</p>
 <!--créé pour la [mise en œuvre colombienne du Land Administration Domain Model (LADM)](https://www.proadmintierra.info/) -->
+<p>Ou TEKSI <a href="https://github.com/teksi/wastewater/blob/main/plugin/scripts/package-pip-packages.sh">Script TEKSI wastewater</a></p>
+<p>… et est également disponible en tant que package Python :</p>
+<pre><code class="language-none">pip install modelbaker
+</code></pre>
 
-Ou TEKSI [Script TEKSI wastewater](https://github.com/teksi/wastewater/blob/main/plugin/scripts/package-pip-packages.sh)
+            </section>
+    
 
-... et est également disponible en tant que package Python :
 
-```none
-pip install modelbaker
-```
 
----
+    
+        <section >
+            
+            <h1>Où trouver quoi ?</h1>
+<p>–v–</p>
+<h2>Dépôts de code</h2>
+<p><strong>Plugin QGIS</strong></p>
+<p><a href="https://github.com/opengisch/QgisModelBaker">https://github.com/opengisch/QgisModelBaker</a></p>
+<p><strong>Dépôt de code Bibliothèque Backend</strong></p>
+<p><a href="https://github.com/opengisch/QgisModelBakerLibrary">https://github.com/opengisch/QgisModelBakerLibrary</a></p>
+<p>–v–</p>
+<h2>Report de bugs et demandes de fonctionnalités</h2>
+<p><a href="https://github.com/opengisch/QgisModelBaker/issues">https://github.com/opengisch/QgisModelBaker/issues</a></p>
+<ul>
+<li>Vérifier</li>
+<li>Saisir
+<ul>
+<li>Description du problème</li>
+<li>Infos supplémentaires</li>
+</ul>
+</li>
+<li>Attendre ou financer 😉</li>
+</ul>
+<p>–v–</p>
+<h2>Documentation</h2>
+<p><img src="./assets/qr-docu.png" alt="qr-docu"></p>
+<h4><a href="https://modelbaker.ch">modelbaker.ch</a></h4>
+<h4><a href="https://opengisch.github.io/QgisModelBaker/fr/">https://opengisch.github.io/QgisModelBaker/fr/</a></h4>
 
-# Où trouver quoi ?
+            </section>
+    
 
---v--
 
-## Dépôts de code
-**Plugin QGIS**
 
-https://github.com/opengisch/QgisModelBaker
-
-**Dépôt de code Bibliothèque Backend**
-
-https://github.com/opengisch/QgisModelBakerLibrary
-
---v--
-
-## Report de bugs et demandes de fonctionnalités
-
-https://github.com/opengisch/QgisModelBaker/issues
-
-- Vérifier
-- Saisir
-    - Description du problème
-    - Infos supplémentaires
-- Attendre ou financer 😉
-
---v--
-
-## Documentation
-
-![qr-docu](./assets/qr-docu.png)
-
-#### [modelbaker.ch](https://modelbaker.ch)
-#### [https://opengisch.github.io/QgisModelBaker/fr/](https://opengisch.github.io/QgisModelBaker/fr/)
-
----
-
-De quoi avons-nous besoin...
-# Environnement
-
---v--
-
-## INTERNET ?
-A compléter
-
-#### Nom :
-
-#### Code : SDS1570
-
-#### Pad : https://pad.opengis.ch
-
---v--
-
-## QGIS et bases de données
-- QGIS 3.40 ou supérieur
-- PostgreSQL + PostGIS
-- Geopackage possible
-
---v--
-
-### Extensions avec le client PSQL
-
-```none
-$ psql -Upostgres -hlocalhost -dbakery
+    
+        <section >
+            
+            <p>De quoi avons-nous besoin…</p>
+<h1>Environnement</h1>
+<p>–v–</p>
+<h2>INTERNET ?</h2>
+<p>A compléter</p>
+<h4>Nom :</h4>
+<h4>Code : SDS1570</h4>
+<h4>Pad : <a href="https://pad.opengis.ch">https://pad.opengis.ch</a></h4>
+<p>–v–</p>
+<h2>QGIS et bases de données</h2>
+<ul>
+<li>QGIS 3.40 ou supérieur</li>
+<li>PostgreSQL + PostGIS</li>
+<li>Geopackage possible</li>
+</ul>
+<p>–v–</p>
+<h3>Extensions avec le client PSQL</h3>
+<pre><code class="language-none">$ psql -Upostgres -hlocalhost -dbakery
 
 postgres=# CREATE DATABASE databasename;
  
@@ -208,164 +274,143 @@ postgres=# \connect databasename;
 
 databasename=# CREATE EXTENSION postgis;
 databasename=# CREATE EXTENSION uuid-ossp;
-```
-
---v--
-
-Si ce n'est pas déjà installé...
-
-### Installation de PostGIS
-
-#### Windows
-
-https://postgis.net/install/
-
-Là, selon la version de PostgreSQL, trouver `postgis-bundle-pg14x64-setup-3.3.2-2.exe`, le télécharger et l'installer.
-
-#### Mac
-
-Utiliser de préférence **posgres.app** (PostGIS y est déjà inclus) https://postgresapp.com/de/downloads.html
-
-#### Linux
-
-```none
-sudo apt install postgis
-```
-
---v--
-
-## OPENGIS.ch PostgreSQL
-
+</code></pre>
+<p>–v–</p>
+<p>Si ce n’est pas déjà installé…</p>
+<h3>Installation de PostGIS</h3>
+<h4>Windows</h4>
+<p><a href="https://postgis.net/install/">https://postgis.net/install/</a></p>
+<p>Là, selon la version de PostgreSQL, trouver <code>postgis-bundle-pg14x64-setup-3.3.2-2.exe</code>, le télécharger et l’installer.</p>
+<h4>Mac</h4>
+<p>Utiliser de préférence <strong>posgres.app</strong> (PostGIS y est déjà inclus) <a href="https://postgresapp.com/de/downloads.html">https://postgresapp.com/de/downloads.html</a></p>
+<h4>Linux</h4>
+<pre><code class="language-none">sudo apt install postgis
+</code></pre>
+<p>–v–</p>
+<h2><a href="http://OPENGIS.ch">OPENGIS.ch</a> PostgreSQL</h2>
 <!-- Si aucune instance PostgreSQL n'est disponible localement, il est possible de se connecter en ligne à une base de données de test (active uniquement aujourd'hui)-->.
+<table>
+<thead>
+<tr></tr>
+</thead>
+<tbody>
+<tr>
+<td>Hôte</td>
+<td><a href="http://demopg.opengis.ch">demopg.opengis.ch</a></td>
+</tr>
+<tr>
+<td>Port</td>
+<td>21699</td>
+</tr>
+<tr>
+<td>Utilisateur</td>
+<td>course_participant</td>
+</tr>
+<tr>
+<td>Mot de passe</td>
+<td>qgis!</td>
+</tr>
+<tr>
+<td>BD</td>
+<td>dmav_ge</td>
+</tr>
+<tr>
+<td>Mode SSL</td>
+<td>requiert</td>
+</tr>
+</tbody>
+</table>
+<p>(actif uniquement aujourd’hui)</p>
+<p>Utilisez toujours votre abréviation de nom comme préfixe pour les schémas :</p>
+<pre><code>mkuhn_ (pour Matthias Kuhn)
+</code></pre>
+<p>–v–</p>
+<h2>Java</h2>
+<p>Avez-vous Java installé?</p>
+<pre><code class="language-none">java --version
+</code></pre>
+<p>… il y a une réponse, alors c’est bien 🙂</p>
+<h6>Téléchargement pour Windows / Mac</h6>
+<p>Ici <a href="https://adoptium.net/fr">https://adoptium.net/fr</a>
+ </p>
+<h5>Ou sous Linux (openJDK)</h5>
+<pre><code class="language-none">sudo apt-get install openjdk-18-jre 
+</code></pre>
+<p>ou</p>
+<pre><code>sudo apt install default-jre
+</code></pre>
+<p>–v–</p>
+<h2>Téléchargement des données de démonstration</h2>
+<p>–v–</p>
+<h2>Données utilisateur</h2>
+<h3><a href="https://www.cadastre-manual.admin.ch/fr/documentation-modele-dmav">https://www.cadastre-manual.admin.ch/fr/documentation-modele-dmav</a></h3>
+<ul>
+<li><strong>Jeu de données test</strong></li>
+<li>Jeu de données test DMAV Version 1.0</li>
+</ul>
+<p>–v–</p>
+<h2>Prêt à démarrer 🚀</h2>
+<p>Commençons…</p>
 
-|||
-|-----| ------------------------------- |
-|Hôte| demopg.opengis.ch |
-|Port| 21699 |
-|Utilisateur| course_participant |
-|Mot de passe| qgis! |
-|BD| dmav_ge |
-|Mode SSL| requiert |
-
-(actif uniquement aujourd'hui)
-
-Utilisez toujours votre abréviation de nom comme préfixe pour les schémas :
-
-```
-mkuhn_ (pour Matthias Kuhn)
-```
-
---v--
-
-## Java
-
-Avez-vous Java installé?
-
-```none
-java --version
-```
-
-... il y a une réponse, alors c'est bien 🙂
-
-###### Téléchargement pour Windows / Mac
-
-Ici https://adoptium.net/fr
-&nbsp;
-
-##### Ou sous Linux (openJDK)
-
-```none
-sudo apt-get install openjdk-18-jre 
-```
-
-ou
-
-```
-sudo apt install default-jre
-```
-
---v--
-
-## Téléchargement des données de démonstration
+            </section>
+    
 
 
---v--
 
-## Données utilisateur
+    
+        <section >
+            
+            <h1>QGIS</h1>
+<h2>Plugins</h2>
+<ul>
+<li>Installer Model Baker</li>
+<li>Installer Swiss Locator</li>
+</ul>
+<p>–v–</p>
+<h2>Interface …</h2>
+<p>Live Demo</p>
 
-### https://www.cadastre-manual.admin.ch/fr/documentation-modele-dmav
+            </section>
+    
 
-- **Jeu de données test**
-- Jeu de données test DMAV Version 1.0
 
---v--
 
-## Prêt à démarrer 🚀
+    
+        <section >
+            
+            <h1>Importation de modèle</h1>
+<p>Un import est:</p>
+<ol>
+<li>Générer un schema</li>
+<li>Importer des données</li>
+</ol>
+<p>On peut commencer avec un nom de modèle, un fichier ili ou un fichier xtf</p>
+<p>… et importer vers un gpkg ou une base de données postgresql (ou mssql)</p>
+<p>–v–</p>
+<p>Importons le modèle <code>DMAVTYM_Alles_V1_0</code></p>
+<p>–v–</p>
+<p>Importons les données “Testdaten”</p>
+<p>–v–</p>
+<p>Importons le modèle <code>DMAVTYM_Tous_V1_0</code></p>
+<p>–v–</p>
+<p>Importons les données “Testdaten”</p>
+<p>–v–</p>
+<p>Analysons les</p>
 
-Commençons...
+            </section>
+    
 
----
 
-# QGIS
 
-## Plugins
-
-- Installer Model Baker
-- Installer Swiss Locator
-
---v--
-
-## Interface ...
-
-Live Demo
-
----
-
-# Importation de modèle
-
-Un import est:
-
- 1. Générer un schema
- 2. Importer des données
-
-On peut commencer avec un nom de modèle, un fichier ili ou un fichier xtf
-
-.. et importer vers un gpkg ou une base de données postgresql (ou mssql)
-
---v--
-
-Importons le modèle `DMAVTYM_Alles_V1_0`
-
---v--
-
-Importons les données "Testdaten"
-
---v--
-
-Importons le modèle `DMAVTYM_Tous_V1_0`
-
---v--
-
-Importons les données "Testdaten"
-
---v--
-
-Analysons les 
-
----
-
-### Comment "héritons-nous" ?
-
-**Étendre** une classe (classe de base) en une dérivation "améliorée".
-
-Une classe étendue (dérivation) a **toutes les propriétés** de la classe de base **+ "plus"**.
-
-**"plus"** signifie des **attributs** ou des **restrictions** supplémentaires.
-
---v--
-
-### De `Gebaeude` devient un meilleur `Gebaeude`
-
+    
+        <section >
+            
+            <h3>Comment “héritons-nous” ?</h3>
+<p><strong>Étendre</strong> une classe (classe de base) en une dérivation “améliorée”.</p>
+<p>Une classe étendue (dérivation) a <strong>toutes les propriétés</strong> de la classe de base <strong>+ “plus”</strong>.</p>
+<p><strong>“plus”</strong> signifie des <strong>attributs</strong> ou des <strong>restrictions</strong> supplémentaires.</p>
+<p>–v–</p>
+<h3>De <code>Gebaeude</code> devient un meilleur <code>Gebaeude</code></h3>
 <!-- Darstellung kacke:
 ```mermaid
 %%{init: {'theme': 'dark' } }%%
@@ -382,36 +427,33 @@ erDiagram
   }  
 ```
 -->
-
-![inherit-base](assets/inherit-base-class.png)
-
+<p><img src="assets/inherit-base-class.png" alt="inherit-base"></p>
 <!-- Siehe https://excalidraw.com/#json=MqzGNX2n1TRK8hONq2eF0,yitcCXCkDaRX6eMINxU_xw-->
+            </section>
+    
 
----
 
---v--
 
-### D'abord
-
-> Essayez avec Smart2 et si ça ne va pas, essayez avec Smart1.
->
-> ***Citation : Romedi Filli - 2022***
-
+    
+        <section >
+            
+            <p>–v–</p>
+<h3>D’abord</h3>
+<blockquote>
+<p>Essayez avec Smart2 et si ça ne va pas, essayez avec Smart1.</p>
+<p><em><strong>Citation : Romedi Filli - 2022</strong></em></p>
+</blockquote>
 <!-- et tous ceux qui traînent dans les prochaines minutes, rappelez-vous cette citation.-->
-
---v--
-
-### Stratégies de mapping d'héritage
-
-- New Class
-- Super Class
-- Sub Class
-- New+Sub Class
-
---v--
-
-#### Exemple de modèle
-
+<p>–v–</p>
+<h3>Stratégies de mapping d’héritage</h3>
+<ul>
+<li>New Class</li>
+<li>Super Class</li>
+<li>Sub Class</li>
+<li>New+Sub Class</li>
+</ul>
+<p>–v–</p>
+<h4>Exemple de modèle</h4>
 <!-- Darstellung kacke:
 ```mermaid
 %%{init: {'theme': 'dark' } }%%
@@ -441,317 +483,236 @@ classDiagram
   }
 ```
 -->
-
-![sample-model](./assets/inherit-erm-sample-model.png)
-
---v--
-
-#### New Class
-
+<p><img src="./assets/inherit-erm-sample-model.png" alt="sample-model"></p>
+<p>–v–</p>
+<h4>New Class</h4>
 <div class="container">
 <div class="col">
-
-```none
-Gebaeude.t_type : (
+<pre><code class="language-none">Gebaeude.t_type : (
    Wohngebaeude,
    Gewerbegebaeude,
    Oeffentliches_
    Gewerbegebaeude
 )
-```
-- Les extensions sont mappées avec des relations.
-- La condition NON NUL est respectée.
-- Plusieurs importations sont nécessaires par objet.
-
+</code></pre>
+<ul>
+<li>Les extensions sont mappées avec des relations.</li>
+<li>La condition NON NUL est respectée.</li>
+<li>Plusieurs importations sont nécessaires par objet.</li>
+</ul>
 </div>
 <div class="col" style="min-width: 400px">
 <!-- not so nice to use pixel here - but I don't know currently a better sollution -->
-
-![new-class-model](./assets/inherit-new-class.png)
+<p><img src="./assets/inherit-new-class.png" alt="new-class-model"></p>
 <!--Siehe https://excalidraw.com/#json=HxHdS7H0r9l_PYLpkI9AD,IcoI6zePdRml20qWR25LWA -->
-
 </div>
 </div>
-
---v--
-
-#### Exemple de modèle
-
-![sample-model](./assets/inherit-erm-sample-model.png)
-
---v--
-
-#### Super Class
-
+<p>–v–</p>
+<h4>Exemple de modèle</h4>
+<p><img src="./assets/inherit-erm-sample-model.png" alt="sample-model"></p>
+<p>–v–</p>
+<h4>Super Class</h4>
 <div class="container">
 <div class="col">
-
-```none
-Oeffentliches_
+<pre><code class="language-none">Oeffentliches_
 Gewerbegebaeude.t_type: (
     Gewerbegebaeude,
     Oeffentliches_
     Gewerbegebaeude
 )
-```
-
-- Moins de tables et de relations (facile à utiliser)
-- La condition NOT NULL **n'est pas** respectée
-
+</code></pre>
+<ul>
+<li>Moins de tables et de relations (facile à utiliser)</li>
+<li>La condition NOT NULL <strong>n’est pas</strong> respectée</li>
+</ul>
 </div>
 <div class="col" style="min-width: 400px">
 <!-- not so nice to use pixel here - but I don't know currently a better sollution -->
-
-![super-class.png](./assets/inherit-super-class.png)
-
+<p><img src="./assets/inherit-super-class.png" alt="super-class.png"></p>
 <!-- https://excalidraw.com/#json=7rPQ5AqAXGwbhCBN7IgVM,PmQqY2DcXxxEq2xTxBO8rg -->
-
 </div>
 </div>
-
---v--
-
-#### Exemple de modèle
-
-![sample-model](./assets/inherit-erm-sample-model.png)
-
---v--
-
-#### Sub Class
-
+<p>–v–</p>
+<h4>Exemple de modèle</h4>
+<p><img src="./assets/inherit-erm-sample-model.png" alt="sample-model"></p>
+<p>–v–</p>
+<h4>Sub Class</h4>
 <div class="container">
 <div class="col">
-
-```none
-Oeffentliches_
+<pre><code class="language-none">Oeffentliches_
 Gewerbegebaeude.t_type: (
     Gewerbegebaeude,
     Oeffentliches_
     Gewerbegebaeude
 )
-```
-
-- La condition NON NUL **n'est pas** respectée.
-
+</code></pre>
+<ul>
+<li>La condition NON NUL <strong>n’est pas</strong> respectée.</li>
+</ul>
 </div>
 <div class="col" style="min-width: 400px">
 <!-- not so nice to use pixel here - but I don't know currently a better sollution -->
-
-![sub-class.png](./assets/inherit-sub-class.png)
-
+<p><img src="./assets/inherit-sub-class.png" alt="sub-class.png"></p>
 <!-- https://excalidraw.com/#json=v9MmA9GwnqKVTcVeU5GPt,YdmkYmnelEJWrE9WV6-Y-g -->
-
 </div>
 </div>
-
---v--
-
-#### Exemple de modèle
-
-![sample-model](./assets/inherit-erm-sample-model.png)
-
---v--
-
-#### New+Sub Class
-
+<p>–v–</p>
+<h4>Exemple de modèle</h4>
+<p><img src="./assets/inherit-erm-sample-model.png" alt="sample-model"></p>
+<p>–v–</p>
+<h4>New+Sub Class</h4>
 <div class="container">
 <div class="col">
-
-- Pas de types
-- À mon avis, la procédure attendue
-- La condition NOT NULL est respectée
-
+<ul>
+<li>Pas de types</li>
+<li>À mon avis, la procédure attendue</li>
+<li>La condition NOT NULL est respectée</li>
+</ul>
 </div>
 <div class="col" style="min-width: 400px">
 <!-- not so nice to use pixel here - but I don't know currently a better sollution -->
-
-![new-sub-class.png](./assets/inherit-new-sub-class.png)
-
+<p><img src="./assets/inherit-new-sub-class.png" alt="new-sub-class.png"></p>
 <!-- https://excalidraw.com/#json=TftYYPKxn6tWr96QllZlw,xySVQa_rQa1RPWioTaCiSw -->
-
 </div>
 </div>
-
---v--
-
-### Smart Mapping dans ili2db
-
---v--
-
-#### noSmartMapping
-
-- Toutes les classes sont mappées avec la stratégie *New Class*.
-
---v--
-
-#### noSmartMapping
-
+<p>–v–</p>
+<h3>Smart Mapping dans ili2db</h3>
+<p>–v–</p>
+<h4>noSmartMapping</h4>
+<ul>
+<li>Toutes les classes sont mappées avec la stratégie <em>New Class</em>.</li>
+</ul>
+<p>–v–</p>
+<h4>noSmartMapping</h4>
 <div class="container">
 <div class="col">
-
-Résulte en ce que nous voyons dans le graphique *New Class*.
-
+<p>Résulte en ce que nous voyons dans le graphique <em>New Class</em>.</p>
 </div>
 <div class="col" style="min-width: 200px">
-
-![new-class-model](./assets/inherit-new-class.png)
-
+<p><img src="./assets/inherit-new-class.png" alt="new-class-model"></p>
 </div>
 </div>
-
---v--
-
-#### smart1Inheritance
-
-- Classes abstraites sans relations -> stratégie *Super Class*
-- Classes abstraites avec relations et sans super classe concrète -> stratégie *New Class*
-- Classes concrètes sans super classe concrète -> stratégie *New Class*
-- Toutes les autres classes -> stratégie *Super class*
-
---v--
-
-#### smart1Inheritance
-
+<p>–v–</p>
+<h4>smart1Inheritance</h4>
+<ul>
+<li>Classes abstraites sans relations -&gt; stratégie <em>Super Class</em></li>
+<li>Classes abstraites avec relations et sans super classe concrète -&gt; stratégie <em>New Class</em></li>
+<li>Classes concrètes sans super classe concrète -&gt; stratégie <em>New Class</em></li>
+<li>Toutes les autres classes -&gt; stratégie <em>Super class</em></li>
+</ul>
+<p>–v–</p>
+<h4>smart1Inheritance</h4>
 <div class="container">
 <div class="col">
-
-Signifie donc que `Gebaeude` utilise la stratégie *New Class* et toutes les autres la stratégie *Super class*.
-
-Résulte en ce que nous voyons dans le graphique *Super class*.
-
+<p>Signifie donc que <code>Gebaeude</code> utilise la stratégie <em>New Class</em> et toutes les autres la stratégie <em>Super class</em>.</p>
+<p>Résulte en ce que nous voyons dans le graphique <em>Super class</em>.</p>
 </div>
 <div class="col" style="min-width: 200px">
 <!-- not so nice to use pixel here - but I don't know currently a better sollution -->
-
-![super-class](./assets/inherit-super-class.png)
-
+<p><img src="./assets/inherit-super-class.png" alt="super-class"></p>
 </div>
 </div>
-
---v--
-
-#### smart2Inheritance
-- Classes abstraites -> stratégie *Super Class*
-- Toutes les classes concrètes -> stratégie *New+Sub Class*
-
---v--
-
-#### smart2Inheritance
-
+<p>–v–</p>
+<h4>smart2Inheritance</h4>
+<ul>
+<li>Classes abstraites -&gt; stratégie <em>Super Class</em></li>
+<li>Toutes les classes concrètes -&gt; stratégie <em>New+Sub Class</em></li>
+</ul>
+<p>–v–</p>
+<h4>smart2Inheritance</h4>
 <div class="container">
 <div class="col">
-
-Signifie donc que toutes utilisent la stratégie *New+Sub Class*.
-
-Résulte en ce que nous voyons dans le graphique *New+Sub Class*.
-
+<p>Signifie donc que toutes utilisent la stratégie <em>New+Sub Class</em>.</p>
+<p>Résulte en ce que nous voyons dans le graphique <em>New+Sub Class</em>.</p>
 </div>
 <div class="col" style="min-width: 200px">
 <!-- not so nice to use pixel here - but I don't know currently a better sollution -->
-
-![new-sub-class](./assets/inherit-new-sub-class.png)
-
+<p><img src="./assets/inherit-new-sub-class.png" alt="new-sub-class"></p>
 </div>
 </div>
+<p>–v–</p>
+<h4>En résumé</h4>
+<ul>
+<li>smart 1 ↗️</li>
+<li>smart 2 ↘️</li>
+</ul>
 
---v--
+            </section>
+    
 
-#### En résumé
-- smart 1 ↗️
-- smart 2 ↘️
 
----
 
-# Export de données
+    
+        <section >
+            
+            <h1>Export de données</h1>
+<p>Exportons les données d’une base de données</p>
 
-Exportons les données d'une base de données
+            </section>
+    
 
----
 
-# Validation
 
-- La base de données déjà garantit une certaine qualité.
-  - Constraints `NOT NULL`, `FOREIGN KEY`, ...
-- INTERLIS offre des contraintes plus complèxes en addition
+    
+        <section >
+            
+            <h1>Validation</h1>
+<ul>
+<li>La base de données déjà garantit une certaine qualité.
+<ul>
+<li>Constraints <code>NOT NULL</code>, <code>FOREIGN KEY</code>, …</li>
+</ul>
+</li>
+<li>INTERLIS offre des contraintes plus complèxes en addition</li>
+</ul>
+<p>–v–</p>
+<h1>Desactiver le système de sécurité base de données…</h1>
+<p>… pour permettre de quand même importer des données</p>
+<p>–v–</p>
+<h1>Desactiver le système de sécurité base de données…</h1>
+<p>… où pour jouer avec</p>
+<p>–v–</p>
+<p>Quel type de problème avez vous souvent?</p>
+<p>Essayons de reproduire et valider avec QGIS Model Baker</p>
 
---v--
+            </section>
+    
 
-# Desactiver le système de sécurité base de données...
 
-... pour permettre de quand même importer des données
 
---v--
-
-# Desactiver le système de sécurité base de données...
-
-... où pour jouer avec
-
---v--
-
-Quel type de problème avez vous souvent?
-
-Essayons de reproduire et valider avec QGIS Model Baker
-
----
-
-# Intermède
-
-... laissons-nous divaguer
-
---v--
-
-## Intermède 1 : Méta-attributs
-
---v--
-
-### Que sont les méta-attributs ?
-
-Les méta-attributs permettent de compléter les modèles INTERLIS avec des **informations supplémentaires** qui ne sont **pas prévues** dans la spécification actuelle d'INTERLIS.
-
-*Voir [eCH-0117 Méta-attributs pour les modèles INTERLIS](https://ech.ch/fr/ech/ech-0117/1.0)*
-
+    
+        <section >
+            
+            <h1>Intermède</h1>
+<p>… laissons-nous divaguer</p>
+<p>–v–</p>
+<h2>Intermède 1 : Méta-attributs</h2>
+<p>–v–</p>
+<h3>Que sont les méta-attributs ?</h3>
+<p>Les méta-attributs permettent de compléter les modèles INTERLIS avec des <strong>informations supplémentaires</strong> qui ne sont <strong>pas prévues</strong> dans la spécification actuelle d’INTERLIS.</p>
+<p><em>Voir <a href="https://ech.ch/fr/ech/ech-0117/1.0">eCH-0117 Méta-attributs pour les modèles INTERLIS</a></em></p>
 <!-- Il s'agit d'une forme spéciale de commentaire de ligne qui, placé à des endroits précis du modèle de données, fournit des méta-informations supplémentaires sur le modèle.-->
-
---v--
-
-### Exemple avec Model Baker (1)
-
-Expression d'affichage spécifique pour la table de la classe `ZustaendigkeitsKataster`.
-
-![metaattr-dispexp](./assets/metaattr-dispexp.png)
-
---v--
-
-### Syntaxe dans le modèle INTERLIS
-
-```none
-!!@<name>=<value>
-```
-
-Suivi de l'élément référencé (MODEL, TOPIC, CLASS, etc.)
-
---v--
-
-### Méta-attributs vs Commentaire
-
-Un commentaire commence par `!!` et se termine par une fin de ligne.
-
-Un méta-attribut commence également par `!!` mais suivi de `@`
-
---v--
-
-### Exemple avec Model Baker (2)
-
-Méta-attribut spécifique de Model Baker :
-```none
-!!@qgis.modelbaker.dispExpression='<QGIS Expression>'
-```
---v--
-
-
-### Exemple avec Model Baker (3)
-
-Définition dans le modèle **KbS_V1_5**
+<p>–v–</p>
+<h3>Exemple avec Model Baker (1)</h3>
+<p>Expression d’affichage spécifique pour la table de la classe <code>ZustaendigkeitsKataster</code>.</p>
+<p><img src="./assets/metaattr-dispexp.png" alt="metaattr-dispexp"></p>
+<p>–v–</p>
+<h3>Syntaxe dans le modèle INTERLIS</h3>
+<pre><code class="language-none">!!@&lt;name&gt;=&lt;value&gt;
+</code></pre>
+<p>Suivi de l’élément référencé (MODEL, TOPIC, CLASS, etc.)</p>
+<p>–v–</p>
+<h3>Méta-attributs vs Commentaire</h3>
+<p>Un commentaire commence par <code>!!</code> et se termine par une fin de ligne.</p>
+<p>Un méta-attribut commence également par <code>!!</code> mais suivi de <code>@</code></p>
+<p>–v–</p>
+<h3>Exemple avec Model Baker (2)</h3>
+<p>Méta-attribut spécifique de Model Baker :</p>
+<pre><code class="language-none">!!@qgis.modelbaker.dispExpression='&lt;QGIS Expression&gt;'
+</code></pre>
+<p>–v–</p>
+<h3>Exemple avec Model Baker (3)</h3>
+<p>Définition dans le modèle <strong>KbS_V1_5</strong></p>
 <pre><code class="plaintext" data-line-numbers="5|5,6">MODEL KbS_V1_5 (de) =
 
  TOPIC Belastete_Standorte =
@@ -760,95 +721,68 @@ Définition dans le modèle **KbS_V1_5**
   CLASS ZustaendigkeitKataster =
    [...]
 </pre></code>
-
-![metaattr-dispexp](./assets/metaattr-dispexp.png)
-
---v--
-
-### Listes de méta-attributs
-
-- [Compilateur INTERLIS (ili2c) ](https://github.com/claeis/ili2c/blob/master/doc/ili2c.rst#interlis-metaattribute)
-- [ili2db ](https://github.com/claeis/ili2db/blob/master/docs/ili2db.rst#interlis-metaattribute)
-- [Validateur INTERLIS (ilivalidator) ](https://github.com/claeis/ilivalidator/blob/master/docs/ilivalidator.rst#interlis-metaattribute)
-- [Gestionnaire INTERLIS (ilimanager) ](https://github.com/claeis/ilimanager/blob/main/docs/ilimanager.rst#interlis-metaattribute)
-- [QGIS Model Baker ](https://opengisch.github.io/QgisModelBaker/background_info/meta_attributes/)
-
-*(incomplet) Voir aussi https://interlis.discourse.group/t/uebersicht-interlis-meta-attribute/70*
-
---v--
-
-### Les méta-attributs dans le modèle sont formidables
-
-Mais nous ne pouvons pas simplement bricoler le modèle !
-
---v--
-
-### Fichier de méta-attributs supplémentaire
-
-... connu comme "fichier de configuration", "fichier de méta-attributs", "fichier INI", "fichier TOML"...
-
+<p><img src="./assets/metaattr-dispexp.png" alt="metaattr-dispexp"></p>
+<p>–v–</p>
+<h3>Listes de méta-attributs</h3>
+<ul>
+<li><a href="https://github.com/claeis/ili2c/blob/master/doc/ili2c.rst#interlis-metaattribute">Compilateur INTERLIS (ili2c) </a></li>
+<li><a href="https://github.com/claeis/ili2db/blob/master/docs/ili2db.rst#interlis-metaattribute">ili2db </a></li>
+<li><a href="https://github.com/claeis/ilivalidator/blob/master/docs/ilivalidator.rst#interlis-metaattribute">Validateur INTERLIS (ilivalidator) </a></li>
+<li><a href="https://github.com/claeis/ilimanager/blob/main/docs/ilimanager.rst#interlis-metaattribute">Gestionnaire INTERLIS (ilimanager) </a></li>
+<li><a href="https://opengisch.github.io/QgisModelBaker/background_info/meta_attributes/">QGIS Model Baker </a></li>
+</ul>
+<p><em>(incomplet) Voir aussi <a href="https://interlis.discourse.group/t/uebersicht-interlis-meta-attribute/70">https://interlis.discourse.group/t/uebersicht-interlis-meta-attribute/70</a></em></p>
+<p>–v–</p>
+<h3>Les méta-attributs dans le modèle sont formidables</h3>
+<p>Mais nous ne pouvons pas simplement bricoler le modèle !</p>
+<p>–v–</p>
+<h3>Fichier de méta-attributs supplémentaire</h3>
+<p>… connu comme “fichier de configuration”, “fichier de méta-attributs”, “fichier INI”, “fichier TOML”…</p>
 <!-- Généralement, il n'est pas possible d'adapter le modèle directement. -->
+<p><em><strong>En réalité au format INI, mais généralement enregistré sous <code>.toml</code>.</strong></em></p>
+<p>À ne pas confondre avec le <em><strong>fichier de méta-configuration</strong></em> pour “contrôler” ili2db (également en relation avec UsabILIty Hub).</p>
+<p>–v–</p>
+<h4>Exemple avec Model Baker</h4>
+<p>Définition dans le fichier de configuration pour <strong>KbS_V1_5</strong></p>
+<pre><code class="language-INI">[&quot;KbS_V1_5.Belastete_Standorte.ZustaendigkeitKataster&quot;]
 
-***En réalité au format INI, mais généralement enregistré sous `.toml`.***
-
-À ne pas confondre avec le ***fichier de méta-configuration*** pour "contrôler" ili2db (également en relation avec UsabILIty Hub).
-
---v--
-
-#### Exemple avec Model Baker
-
-Définition dans le fichier de configuration pour **KbS_V1_5**
-
-```INI
-["KbS_V1_5.Belastete_Standorte.ZustaendigkeitKataster"]
-
-qgis.modelbaker.dispExpression = "'Nr: '|| uid ||' / '||katastername"
-```
-
-![metaattr_dispexp](./assets/metaattr-dispexp.png)
-
---v--
-### Contrôler les validations avec des méta-attributs
-
-Juste pour information...
-
-```ini
-["KbS_V1_5.Standorte.Belasteter_Standort.Nr"]
+qgis.modelbaker.dispExpression = &quot;'Nr: '|| uid ||' / '||katastername&quot;
+</code></pre>
+<p><img src="./assets/metaattr-dispexp.png" alt="metaattr_dispexp"></p>
+<p>–v–</p>
+<h3>Contrôler les validations avec des méta-attributs</h3>
+<p>Juste pour information…</p>
+<pre><code class="language-ini">[&quot;KbS_V1_5.Standorte.Belasteter_Standort.Nr&quot;]
 # disable mandatory constraint of Katasternummer
-multiplicity="off"
+multiplicity=&quot;off&quot;
 
-["KbS_V1_5.Standorte.Belasteter_Standort.Constraint1"]
-msg = "Mind. eine Untersuchungsmassnahme erfassen."
-```
-
---v--
-
-### De quoi avons-nous besoin pour KbS_V1_5 ?
-
-- Multi-géométrie construite à partir de `STRUCTURE MultiPolygon`
-
-- "Multilinguisme aplati" sur `STRUCTURE MultilingualUri`
-
---v--
-
-#### L'attribut de mapping
-
-`ili2db.mapping`
-
-- Sur la classe ou la structure
- 
- *Les structures sont mappées avec des colonnes au lieu de relations (par exemple, la multi-géométrie).*
-
-- Sur l'attribut
- 
- *Les attributs de structure (`BAG OF`/`LIST OF`) sont mappés avec un type de données au lieu de relations.*
-
+[&quot;KbS_V1_5.Standorte.Belasteter_Standort.Constraint1&quot;]
+msg = &quot;Mind. eine Untersuchungsmassnahme erfassen.&quot;
+</code></pre>
+<p>–v–</p>
+<h3>De quoi avons-nous besoin pour KbS_V1_5 ?</h3>
+<ul>
+<li>
+<p>Multi-géométrie construite à partir de <code>STRUCTURE MultiPolygon</code></p>
+</li>
+<li>
+<p>“Multilinguisme aplati” sur <code>STRUCTURE MultilingualUri</code></p>
+</li>
+</ul>
+<p>–v–</p>
+<h4>L’attribut de mapping</h4>
+<p><code>ili2db.mapping</code></p>
+<ul>
+<li>Sur la classe ou la structure</li>
+</ul>
+<p><em>Les structures sont mappées avec des colonnes au lieu de relations (par exemple, la multi-géométrie).</em></p>
+<ul>
+<li>Sur l’attribut</li>
+</ul>
+<p><em>Les attributs de structure (<code>BAG OF</code>/<code>LIST OF</code>) sont mappés avec un type de données au lieu de relations.</em></p>
 <!-- Montre ce que nous avons. -->
-
---v--
-
-#### Définition dans le modèle INTERLIS
-
+<p>–v–</p>
+<h4>Définition dans le modèle INTERLIS</h4>
 <pre><code class="plaintext" data-line-numbers="1-4|6-10">!!@ili2db.mapping=MultiSurface
 STRUCTURE MultiPolygon =
  Polygones: BAG {1..*} OF PolygonStructure;
@@ -860,575 +794,659 @@ STRUCTURE MultilingualUri =
  UNIQUE (LOCAL) LocalisedText: Language;
   END MultilingualUri;
 </pre></code>
-
---v--
-
-#### Définition dans le fichier de méta-attributs supplémentaire
-
-```INI
-[KbS_V1_5.Belastete_Standorte.MultiPolygon]
-ili2db.mapping = "MultiSurface"
+<p>–v–</p>
+<h4>Définition dans le fichier de méta-attributs supplémentaire</h4>
+<pre><code class="language-INI">[KbS_V1_5.Belastete_Standorte.MultiPolygon]
+ili2db.mapping = &quot;MultiSurface&quot;
 
 [KbS_V1_5.Belastete_Standorte.MultilingualUri]
-ili2db.mapping = "Multilingual"
-```
+ili2db.mapping = &quot;Multilingual&quot;
+</code></pre>
+<p>–v–</p>
+<h2>Prêt pour l’exercice 1 🚀</h2>
+<p>Quels identfiants faut-il redéfinir?</p>
 
---v--
+            </section>
+    
 
-## Prêt pour l'exercice 1 🚀
 
-Quels identfiants faut-il redéfinir?
 
----
-
-### Ensembles de données (datasets)
-
-- Ensembles de données d'un domaine **spatial ou thématique** spécifique
-- **Indépendant** du modèle (contrairement au topic)
-- Les données d'un ensemble de données peuvent être **gérées, validées et exportées** indépendamment des autres données.
-
---v--
-
-### conteneurs (baskets)
-
-- Une instance plus petite
-- Alors que les ensembles de données couvrent généralement l'ensemble du modèle, les conteneurs font généralement partie d'un topic
-- Le plus souvent, ils sont l'intersection du topic et de l'ensemble de données
-
---v--
-
-![baskets-datasets-nodatasets](./assets/baskets-datasets-nodatasets.png)
-
---v--
-
-![baskets-datasets](./assets/baskets-datasets-sh.png)
-
---v--
-
-![baskets-datasets](./assets/baskets-datasets-tg.png)
-
---v--
-
-![baskets-datasets](./assets/baskets-datasets-cat.png)
-
---v--
-
-![baskets-datasets](./assets/baskets-datasets-baskets.png)
-
---v--
-
-![baskets-datasets](./assets/baskets-datasets-final.png)
-
---v--
-
-## Prêt à démarrer 🚀
-
---v--
-
-## Intermède 4 : Que sont les OID ?
-
---v--
-
-### OID
-
-Les identifiants d'objet (OID) sont des chaînes de caractères **uniques à travers les systèmes** qui identifient un objet INTERLIS.
-
-Pour **échanger** et **mettre à jour** des objets **sans conflit** à travers différents endroits.
-
---v--
-
-### TID
-
-Dans le fichier de transfert, l'OID est visible sous TID.
-
-```xml
-<City_V1.Constructions.Buildings TID="chMBAKER00000100">
- <Street>Rue des Fleures</Street><Number>1</Number>
-</City_V1.Constructions.Buildings>
-```
-
+    
+        <section >
+            
+            <h3>Ensembles de données (datasets)</h3>
+<ul>
+<li>Ensembles de données d’un domaine <strong>spatial ou thématique</strong> spécifique</li>
+<li><strong>Indépendant</strong> du modèle (contrairement au topic)</li>
+<li>Les données d’un ensemble de données peuvent être <strong>gérées, validées et exportées</strong> indépendamment des autres données.</li>
+</ul>
+<p>–v–</p>
+<h3>conteneurs (baskets)</h3>
+<ul>
+<li>Une instance plus petite</li>
+<li>Alors que les ensembles de données couvrent généralement l’ensemble du modèle, les conteneurs font généralement partie d’un topic</li>
+<li>Le plus souvent, ils sont l’intersection du topic et de l’ensemble de données</li>
+</ul>
+<p>–v–</p>
+<p><img src="./assets/baskets-datasets-nodatasets.png" alt="baskets-datasets-nodatasets"></p>
+<p>–v–</p>
+<p><img src="./assets/baskets-datasets-sh.png" alt="baskets-datasets"></p>
+<p>–v–</p>
+<p><img src="./assets/baskets-datasets-tg.png" alt="baskets-datasets"></p>
+<p>–v–</p>
+<p><img src="./assets/baskets-datasets-cat.png" alt="baskets-datasets"></p>
+<p>–v–</p>
+<p><img src="./assets/baskets-datasets-baskets.png" alt="baskets-datasets"></p>
+<p>–v–</p>
+<p><img src="./assets/baskets-datasets-final.png" alt="baskets-datasets"></p>
+<p>–v–</p>
+<h2>Prêt à démarrer 🚀</h2>
+<p>–v–</p>
+<h2>Intermède 4 : Que sont les OID ?</h2>
+<p>–v–</p>
+<h3>OID</h3>
+<p>Les identifiants d’objet (OID) sont des chaînes de caractères <strong>uniques à travers les systèmes</strong> qui identifient un objet INTERLIS.</p>
+<p>Pour <strong>échanger</strong> et <strong>mettre à jour</strong> des objets <strong>sans conflit</strong> à travers différents endroits.</p>
+<p>–v–</p>
+<h3>TID</h3>
+<p>Dans le fichier de transfert, l’OID est visible sous TID.</p>
+<pre><code class="language-xml">&lt;City_V1.Constructions.Buildings TID=&quot;chMBAKER00000100&quot;&gt;
+ &lt;Street&gt;Rue des Fleures&lt;/Street&gt;&lt;Number&gt;1&lt;/Number&gt;
+&lt;/City_V1.Constructions.Buildings&gt;
+</code></pre>
 <!-- Vérifie ton fichier de transfert -->
-
---v--
-
-### Pourquoi TID et pas OID ?
-
-- Un OID dans un XTF est un TID
-- Un TID dans un XTF n'est *pas toujours* un OID
-
- Car il n'est pas obligatoire de travailler avec des OID. Un fichier XTF a besoin de TID pour les références, etc. 
- 
- Si vous n'utilisez pas d'OID, les TID sont simplement des nombres ou des caractères quelconques (pas de stabilité à travers les systèmes garantie !)
-
+<p>–v–</p>
+<h3>Pourquoi TID et pas OID ?</h3>
+<ul>
+<li>Un OID dans un XTF est un TID</li>
+<li>Un TID dans un XTF n’est <em>pas toujours</em> un OID</li>
+</ul>
+<p>Car il n’est pas obligatoire de travailler avec des OID. Un fichier XTF a besoin de TID pour les références, etc.</p>
+<p>Si vous n’utilisez pas d’OID, les TID sont simplement des nombres ou des caractères quelconques (pas de stabilité à travers les systèmes garantie !)</p>
  <!--Le fichier XTF utilise alors des identifiants qui, bien que cohérents au sein du fichier, ne garantissent pas la stabilité inter-systèmes.-->
-
---v--
-
-### Et dans le schéma de base de données physique ?
-
-![phyiscal](assets/oid-physicaltable.png)
-
+<p>–v–</p>
+<h3>Et dans le schéma de base de données physique ?</h3>
+<p><img src="assets/oid-physicaltable.png" alt="phyiscal"></p>
 <!-- Check a record-->
-
---v--
-
-#### t_id vs. t_ili_tid
-
-- Le `t_ili_tid` correspond au **TID** dans le XTF et donc à l'OID (si des OID sont utilisés)
-- Le `t_id` n'est qu'un numéro de séquence **interne au système**
-
+<p>–v–</p>
+<h4>t_id vs. t_ili_tid</h4>
+<ul>
+<li>Le <code>t_ili_tid</code> correspond au <strong>TID</strong> dans le XTF et donc à l’OID (si des OID sont utilisés)</li>
+<li>Le <code>t_id</code> n’est qu’un numéro de séquence <strong>interne au système</strong></li>
+</ul>
 <!-- Il commence à 1 et est incrémenté pour tous les objets dans le schéma spécifique. Ce t_id est également utilisé comme clé étrangère. -->
-
---v--
-
-#### Quand le t_id devient-il TID et le TID devient-il t_ili_tid ?
-
+<p>–v–</p>
+<h4>Quand le t_id devient-il TID et le TID devient-il t_ili_tid ?</h4>
 <!-- Si aucun OID n'est utilisé, et donc lors de la saisie...-->
-
-- Si le `t_ili_tid` reste vide, alors lors d'une **exportation**, le `t_id` est écrit dans le TID.
-- Lors de l'**importation**, le TID est alors écrit dans le `t_ili_tid`.
-
+<ul>
+<li>Si le <code>t_ili_tid</code> reste vide, alors lors d’une <strong>exportation</strong>, le <code>t_id</code> est écrit dans le TID.</li>
+<li>Lors de l’<strong>importation</strong>, le TID est alors écrit dans le <code>t_ili_tid</code>.</li>
+</ul>
 <!-- ainsi, en l'absence d'un t_ili_tid, c'est le t_id qui sera utilisé comme TID à partir de là.-->
-
---v--
-
-![tid-to-tilitid](assets/tid-to-tilitid.png)
+<p>–v–</p>
+<p><img src="assets/tid-to-tilitid.png" alt="tid-to-tilitid"></p>
 <!-- https://excalidraw.com/#json=fviwNAn-5hOgFpDiz9Uwu,vQl1ONi8BgihfCA1FvMu3g -->
-
---v--
-
-### Quand dois-je utiliser des OID ?
-
-- Dès que plusieurs endroits collectent et gèrent des données
-- Si le modèle le requiert :
-  ```
-  [...]
-  TOPIC Constructions =
-    BASKET OID AS INTERLIS.UUIDOID;
-    OID AS INTERLIS.STANDARDOID;
-  [...]
-  ```
-
---v--
-
-### Types d'OID
-
-- UUIDOID
-- I32OID
-- STANDARDOID
-- ANYOID
-- OID défini par l'utilisateur
-
---v--
-
-#### UUIDOID
-
-- `OID TEXT*36`
-- Identificateur Unique Universellement
-
-&nbsp;
-
-##### Valeur par défaut Model Baker
-
-```
-uuid('WithoutBraces')
-```
-
---v--
-
-#### I32OID
-
-- `OID 0 ... 2147483647`
-
-&nbsp;
-
-##### Valeur par défaut Model Baker
-
-```
-t_id
-```
-
---v--
-
-#### STANDARDOID
-
-- `OID TEXT*16`
-- **Préfixe (2 + 6 caractères)**
- 
- Identifiant du pays + une partie d'identifications *globale*.
- 
+<p>–v–</p>
+<h3>Quand dois-je utiliser des OID ?</h3>
+<ul>
+<li>Dès que plusieurs endroits collectent et gèrent des données</li>
+<li>Si le modèle le requiert :<pre><code>[...]
+TOPIC Constructions =
+  BASKET OID AS INTERLIS.UUIDOID;
+  OID AS INTERLIS.STANDARDOID;
+[...]
+</code></pre>
+</li>
+</ul>
+<p>–v–</p>
+<h3>Types d’OID</h3>
+<ul>
+<li>UUIDOID</li>
+<li>I32OID</li>
+<li>STANDARDOID</li>
+<li>ANYOID</li>
+<li>OID défini par l’utilisateur</li>
+</ul>
+<p>–v–</p>
+<h4>UUIDOID</h4>
+<ul>
+<li><code>OID TEXT*36</code></li>
+<li>Identificateur Unique Universellement</li>
+</ul>
+<p> </p>
+<h5>Valeur par défaut Model Baker</h5>
+<pre><code>uuid('WithoutBraces')
+</code></pre>
+<p>–v–</p>
+<h4>I32OID</h4>
+<ul>
+<li><code>OID 0 ... 2147483647</code></li>
+</ul>
+<p> </p>
+<h5>Valeur par défaut Model Baker</h5>
+<pre><code>t_id
+</code></pre>
+<p>–v–</p>
+<h4>STANDARDOID</h4>
+<ul>
+<li><code>OID TEXT*16</code></li>
+<li><strong>Préfixe (2 + 6 caractères)</strong></li>
+</ul>
+<p>Identifiant du pays + une partie d’identifications <em>globale</em>.</p>
 <!--Le volet d'identifications globale peut être commandé auprès de l'autorité officielle.--> 
-
-- **Postfix (8 caractères)**
-
- Séquence (numérique ou alphanumérique) du système comme partie d'identifications *locale*.
-
-&nbsp;
-
-##### Valeur par défaut Model Baker
-
-```
-'%change%' || lpad( T_Id, 8, 0 )
-```
-
---v--
-
-#### ANYOID
-
-Ne définis pas de format pour l'OID, mais seulement qu'un OID doit être défini dans tous les modèles Symbolisations étendus.
-
---v--
-
-#### OID non définis
-
+<ul>
+<li><strong>Postfix (8 caractères)</strong></li>
+</ul>
+<p>Séquence (numérique ou alphanumérique) du système comme partie d’identifications <em>locale</em>.</p>
+<p> </p>
+<h5>Valeur par défaut Model Baker</h5>
+<pre><code>'%change%' || lpad( T_Id, 8, 0 )
+</code></pre>
+<p>–v–</p>
+<h4>ANYOID</h4>
+<p>Ne définis pas de format pour l’OID, mais seulement qu’un OID doit être défini dans tous les modèles Symbolisations étendus.</p>
+<p>–v–</p>
+<h4>OID non définis</h4>
 <!-- S'il n'y a pas de définition avec OID AS, ili2db part du texte-->
-
-Les règles du **type XML-ID** (www.w3.org/TR/REC-xml) s'appliquent
-- le **premier** caractère doit être une **lettre ou un souligné**
-- suivi de **lettres, chiffres, points, tirets, soulignés** - rien d'autre.
-
+<p>Les règles du <strong>type XML-ID</strong> (<a href="http://www.w3.org/TR/REC-xml">www.w3.org/TR/REC-xml</a>) s’appliquent</p>
+<ul>
+<li>le <strong>premier</strong> caractère doit être une <strong>lettre ou un souligné</strong></li>
+<li>suivi de <strong>lettres, chiffres, points, tirets, soulignés</strong> - rien d’autre.</li>
+</ul>
 <!-- pas de deux points ( !) -->
-
-&nbsp;
-
-##### Valeur par défaut dans Model Baker
-
-```
-'_' || uuid('WithoutBraces')
-```
-
-***La même chose s'applique aux OID définis par l'utilisateur.***
-
+<p> </p>
+<h5>Valeur par défaut dans Model Baker</h5>
+<pre><code>'_' || uuid('WithoutBraces')
+</code></pre>
+<p><em><strong>La même chose s’applique aux OID définis par l’utilisateur.</strong></em></p>
 <!-- Puisque Model Baker ne peut pas déterminer la structure et qu'elle doit être définie par l'utilisateur.
 
 C'est pourquoi et surtout à cause du préfixe dans l'OID standard :
 Les utilisateurs doivent pouvoir adapter les valeurs par défaut.
 
 -->
-
---v--
-
-### Gestionnaire d'OID
-
-*Base de données > Model Baker > Gestionnaire d'OID*
-
-![oidmanager](assets/oid-manager.png)
-
---v--
-
-### Vérifiez !
-
---v--
-
-## Intermède 5 : UsabILIty Hub
-
---v--
-
-### À quoi sert UsabILIty Hub ?
-
-- Obtenir des informations supplémentaires sur les **modèles INTERLIS** et leurs **projets (QGIS)** automatiquement via le web.
-
-- Configurations supplémentaires faites **une seule fois** et utilisées plusieurs fois.
-
+<p>–v–</p>
+<h3>Gestionnaire d’OID</h3>
+<p><em>Base de données &gt; Model Baker &gt; Gestionnaire d’OID</em></p>
+<p><img src="assets/oid-manager.png" alt="oidmanager"></p>
+<p>–v–</p>
+<h3>Vérifiez !</h3>
+<p>–v–</p>
+<h2>Intermède 5 : UsabILIty Hub</h2>
+<p>–v–</p>
+<h3>À quoi sert UsabILIty Hub ?</h3>
+<ul>
+<li>
+<p>Obtenir des informations supplémentaires sur les <strong>modèles INTERLIS</strong> et leurs <strong>projets (QGIS)</strong> automatiquement via le web.</p>
+</li>
+<li>
+<p>Configurations supplémentaires faites <strong>une seule fois</strong> et utilisées plusieurs fois.</p>
+</li>
+</ul>
 <!-- Symbolisation, cartes de base des obstacles etc...-->
-
---v--
-
-### Comment fonctionne UsabILIty Hub ?
-
---v--
-
-#### 1. L'utilisateur sélectionne le **modèle**
-
-- Recherche inter-référentiels de **fichiers de méta-configuration**.
-
-- Trouver les **fichiers de méta-configuration** dans les `ilidata.xml` sur UsabILItyHub (https://models.opengis.ch) ou les référentiels propres.
-
+<p>–v–</p>
+<h3>Comment fonctionne UsabILIty Hub ?</h3>
+<p>–v–</p>
+<h4>1. L’utilisateur sélectionne le <strong>modèle</strong></h4>
+<ul>
+<li>
+<p>Recherche inter-référentiels de <strong>fichiers de méta-configuration</strong>.</p>
+</li>
+<li>
+<p>Trouver les <strong>fichiers de méta-configuration</strong> dans les <code>ilidata.xml</code> sur UsabILItyHub (<a href="https://models.opengis.ch">https://models.opengis.ch</a>) ou les référentiels propres.</p>
+</li>
+</ul>
 <!-- Genauso wie wir INTERLIS Modelle über ein ilimodels.xml anhand von http://models.interlis.ch emfangen können.-->
+<p>–v–</p>
+<h4>2. Le fichier de méta-configuration est analysé</h4>
+<p>Les <strong>configurations</strong> pour ili2db, Model Baker et d’autres outils y sont définies.</p>
+<p>Également des <strong>liens</strong> (Ids) vers :</p>
+<ul>
+<li>Catalogues</li>
+<li>Fichier de méta-attributs supplémentaire</li>
+<li>Fichiers de surcouche</li>
+</ul>
+<p>–v–</p>
+<h4>3. Les configurations sont définies</h4>
+<ul>
+<li>ili2db : Smart-Mapping, gestion des conteneurs, etc.</li>
+</ul>
+<p>–v–</p>
+<h4>4. Les liens sont résolus</h4>
+<ul>
+<li>Recherche inter-référentiels des <strong>catalogues, fichier de méta-attributs supplémentaire et fichiers de surcouche</strong></li>
+</ul>
+<p>Les <strong>fichiers de surcouche</strong> contiennent des informations sur :</p>
+<ul>
+<li>Symbologies et configurations de formulaires</li>
+<li>Disposition des légendes et ordre des couches</li>
+<li>Thèmes de carte, mises en page d’impression</li>
+<li>etc.</li>
+</ul>
+<p>–v–</p>
+<h4>5. Utilisation des informations</h4>
+<ul>
+<li>Exécuter ili2db en utilisant les configurations et le fichier de méta-attributs supplémentaire</li>
+<li>Importer les catalogues trouvés</li>
+<li>Générer le projet en utilisant les fichiers de surcouche</li>
+</ul>
+<p>–v–</p>
+<h3>Déroulement</h3>
+<p><img src="./assets/usabilityhub-model.png" alt="uml"></p>
+<p>–v–</p>
+<h3>Documentation</h3>
+<p>Voir <a href="https://usabilityhub.opengis.ch/">https://usabilityhub.opengis.ch/</a></p>
+<p>Ou la <a href="https://opengisch.github.io/QgisModelBaker/background_info/usabilityhub/modelbaker_integration/">documentation de Model Baker</a></p>
+<p>–v–</p>
+<h2>Prêt à démarrer 🚀</h2>
+<p>–v–</p>
+<h2>Intermède 6 : Modèles de traduction</h2>
+<p>–v–</p>
+<h3>Que sont les modèles de traduction ?</h3>
+<p>Les modèles de traduction sont des <em><strong>modèles traduits</strong></em> qui ne diffèrent <em><strong>pas</strong></em> du modèle original en termes de structure.</p>
+<p>–v–</p>
+<h3>Exemple Gebaeudeinventar_V1</h3>
+<p><img src="assets/translation-compare.png" alt="compare"></p>
+<p>–v–</p>
+<h2>Prêt à démarrer 🚀</h2>
+<h3>Exemple Plans d’affectation</h3>
+<p>Fr :
+<a href="https://models.geo.admin.ch/ARE/PlansDAffectation_V1_2.ili">https://models.geo.admin.ch/ARE/PlansDAffectation_V1_2.ili</a></p>
+<p>De :
+<a href="https://models.geo.admin.ch/ARE/Nutzungsplanung_V1_2.ili">https://models.geo.admin.ch/ARE/Nutzungsplanung_V1_2.ili</a></p>
+<p>–v–</p>
+<h2>Prêt à démarrer 🚀</h2>
 
---v--
+            </section>
+    
 
-#### 2. Le fichier de méta-configuration est analysé
 
-Les **configurations** pour ili2db, Model Baker et d'autres outils y sont définies.
 
-Également des **liens** (Ids) vers :
-- Catalogues
-- Fichier de méta-attributs supplémentaire
-- Fichiers de surcouche
-
---v--
-
-#### 3. Les configurations sont définies
-
-- ili2db : Smart-Mapping, gestion des conteneurs, etc.
-
---v--
-
-#### 4. Les liens sont résolus
-
-- Recherche inter-référentiels des **catalogues, fichier de méta-attributs supplémentaire et fichiers de surcouche**
-
- Les **fichiers de surcouche** contiennent des informations sur :
- - Symbologies et configurations de formulaires
- - Disposition des légendes et ordre des couches
- - Thèmes de carte, mises en page d'impression
- - etc.
-
---v--
-
-#### 5. Utilisation des informations
-
-- Exécuter ili2db en utilisant les configurations et le fichier de méta-attributs supplémentaire
-- Importer les catalogues trouvés
-- Générer le projet en utilisant les fichiers de surcouche
-
---v--
-
-### Déroulement
-
-![uml](./assets/usabilityhub-model.png)
-
---v--
-
-### Documentation
-
-Voir https://usabilityhub.opengis.ch/
-
-Ou la [documentation de Model Baker](https://opengisch.github.io/QgisModelBaker/background_info/usabilityhub/modelbaker_integration/)
-
---v--
-
-## Prêt à démarrer 🚀
-
---v--
-
-## Intermède 6 : Modèles de traduction
-
---v--
-
-### Que sont les modèles de traduction ?
-
-Les modèles de traduction sont des ***modèles traduits*** qui ne diffèrent ***pas*** du modèle original en termes de structure.
-
---v--
-
-### Exemple Gebaeudeinventar_V1
-
-![compare](assets/translation-compare.png)
-
---v--
-
-## Prêt à démarrer 🚀
-
-### Exemple Plans d'affectation
-
-Fr :
-https://models.geo.admin.ch/ARE/PlansDAffectation_V1_2.ili
-
-De :
-https://models.geo.admin.ch/ARE/Nutzungsplanung_V1_2.ili
-
---v--
-
-## Prêt à démarrer 🚀
-
----
-
-# Exercices
-... la pratique rend parfait
-
---v--
-
-## Exercice 1 : Créer un projet utilisable
- - Créer un projet pour `KbS_V1_5` incluant un fichier de méta-attributs supplémentaire
- - Ajouter une carte de fond
- - Enregistrer le projet
-
---v--
-
-## Exercice 2 : Smart Inheritance Mapping
-
-- Importer le modèle `MultiGebaeudeinventar_V1` avec **Smart1Inheritance**
-- Renommer les couches en `<nom de la couche>_Smart1`
-- Importer le modèle `MultiGebaeudeinventar_V1` avec **Smart2Inheritance**
-
-Ne pas utiliser d'optimisation :
-![no-opt](assets/no-optimization.png)
-
+    
+        <section >
+            
+            <h1>Exercices</h1>
+<p>… la pratique rend parfait</p>
+<p>–v–</p>
+<h2>Exercice 1 : Créer un projet utilisable</h2>
+<ul>
+<li>Créer un projet pour <code>KbS_V1_5</code> incluant un fichier de méta-attributs supplémentaire</li>
+<li>Ajouter une carte de fond</li>
+<li>Enregistrer le projet</li>
+</ul>
+<p>–v–</p>
+<h2>Exercice 2 : Smart Inheritance Mapping</h2>
+<ul>
+<li>Importer le modèle <code>MultiGebaeudeinventar_V1</code> avec <strong>Smart1Inheritance</strong></li>
+<li>Renommer les couches en <code>&lt;nom de la couche&gt;_Smart1</code></li>
+<li>Importer le modèle <code>MultiGebaeudeinventar_V1</code> avec <strong>Smart2Inheritance</strong></li>
+</ul>
+<p>Ne pas utiliser d’optimisation :
+<img src="assets/no-optimization.png" alt="no-opt"></p>
 <!-- Quelle est la différence?-->
-
---v--
-
-## Exercice 2.1 : Optimisation du projet
-
-- Importer le modèle `OekoGebaeudeinventar_V1` avec **Smart2Inheritance**
-- Importer le modèle `ZG_Nutzungsplanung_V1_1` avec **Smart2Inheritance**
-
-Ne pas utiliser d'optimisation :
-![no-opt](assets/no-optimization.png)
-
+<p>–v–</p>
+<h2>Exercice 2.1 : Optimisation du projet</h2>
+<ul>
+<li>Importer le modèle <code>OekoGebaeudeinventar_V1</code> avec <strong>Smart2Inheritance</strong></li>
+<li>Importer le modèle <code>ZG_Nutzungsplanung_V1_1</code> avec <strong>Smart2Inheritance</strong></li>
+</ul>
+<p>Ne pas utiliser d’optimisation :
+<img src="assets/no-optimization.png" alt="no-opt"></p>
 <!-- Quel est le problème?-->
+<p>–v–</p>
+<h2>Exercice 3 : Saisie dans les ensembles de données</h2>
+<ul>
+<li>Créer le projet avec des ensembles de données pour TG et SH (si ce n’est pas déjà fait)</li>
+<li>Ajouter une zone à Stein am Rhein TG.</li>
+<li>Saisir une zone dans SH.</li>
+<li>Créer un nouvel ensemble de données pour ZH.</li>
+<li>Saisir une zone dans ZH.</li>
+</ul>
+<p>–v–</p>
+<h2>Exercice 4 : Exportation</h2>
+<ul>
+<li>Exporter toutes les données dans un fichier de transfert (y compris les listes de codes)</li>
+<li>Exporter uniquement les données utilisateur de SH dans un fichier de transfert</li>
+</ul>
+<p> </p>
+<h3>Tâche supplémentaire</h3>
+<ul>
+<li>Créer un projet pour <code>OekoGebaeudeinventar_V1</code> avec Smart2 et l’optimisation de masquage</li>
+<li>Saisir un objet</li>
+<li>Exporter pour <code>OekoGebaeudeinventar_V1</code> et pour <code>Gebaeudeinventar_V1</code></li>
+</ul>
+<p>–v–</p>
+<h2>Exercice 5 : UsabILItyHub</h2>
+<ul>
+<li>Configurer un projet quelconque</li>
+<li>Exporter les surcouches</li>
+<li>Importer le modèle avec les surcouches du référentiel local</li>
+</ul>
 
---v--
+            </section>
+    
 
-## Exercice 3 : Saisie dans les ensembles de données
-- Créer le projet avec des ensembles de données pour TG et SH (si ce n'est pas déjà fait)
-- Ajouter une zone à Stein am Rhein TG.
-- Saisir une zone dans SH.
-- Créer un nouvel ensemble de données pour ZH.
-- Saisir une zone dans ZH.
 
---v--
 
-## Exercice 4 : Exportation
-- Exporter toutes les données dans un fichier de transfert (y compris les listes de codes)
-- Exporter uniquement les données utilisateur de SH dans un fichier de transfert
-
-&nbsp;
-
-### Tâche supplémentaire
-- Créer un projet pour `OekoGebaeudeinventar_V1` avec Smart2 et l'optimisation de masquage
-- Saisir un objet
-- Exporter pour `OekoGebaeudeinventar_V1` et pour `Gebaeudeinventar_V1`
-
---v--
-
-## Exercice 5 : UsabILItyHub
-- Configurer un projet quelconque
-- Exporter les surcouches
-- Importer le modèle avec les surcouches du référentiel local
-
----
-
-<h1 style="-webkit-text-stroke: 2px var(--opengisch-dark) !important; color: lightgray !important; font-size:4.5em !important">PAUSE</h1>
-
+    
+        <section data-background="./assets/break-de.jpg">
+            
+            <h1 style="-webkit-text-stroke: 2px var(--opengisch-dark) !important; color: lightgray !important; font-size:4.5em !important">PAUSE</h1>
 <!-- .slide: data-background="./assets/break-de.jpg" -->
+            </section>
+    
 
----
 
-Un groupe de différents intéressés...
-# Model Baker Group
 
---v--
+    
+        <section >
+            
+            <p>Un groupe de différents intéressés…</p>
+<h1>Model Baker Group</h1>
+<p>–v–</p>
+<h2>Équipe de projet</h2>
+<p><em>par ordre d’apparition</em></p>
+<ul>
+<li>Romedi Filli, Canton SH (direction)</li>
+<li>Manuel Kaufmann, Agroscope</li>
+<li>David Signer, <a href="http://OPENGIS.ch">OPENGIS.ch</a></li>
+<li>Pascal Megert, Canton AI</li>
+<li>Marleen Schulze, Canton SZ</li>
+<li>Adrian Weber, Canton SO</li>
+</ul>
+<p>–v–</p>
+<h2>Financement</h2>
+<p>–v–</p>
+<h2>Contribution annuelle avec des niveaux</h2>
+<p>(à partir du parrain avec heures de support incluses) :</p>
+<ul>
+<li>Visionnaire</li>
+<li>Parrain</li>
+<li>Soutien</li>
+<li>Donateur</li>
+</ul>
+<p>–v–</p>
+<h2>Par projet</h2>
+<p><img src="./assets/projektbezogene-finanzierung.png" alt="projektbezogen"></p>
 
-## Équipe de projet
+            </section>
+    
 
-*par ordre d'apparition*
 
-- Romedi Filli, Canton SH (direction)
-- Manuel Kaufmann, Agroscope
-- David Signer, OPENGIS.ch
-- Pascal Megert, Canton AI
-- Marleen Schulze, Canton SZ
-- Adrian Weber, Canton SO
 
---v--
-
-## Financement
-
---v--
-
-## Contribution annuelle avec des niveaux
-(à partir du parrain avec heures de support incluses) :
-- Visionnaire
-- Parrain
-- Soutien
-- Donateur
-
---v--
-
-## Par projet
-
-![projektbezogen](./assets/projektbezogene-finanzierung.png)
-
----
-
-<h1 style="-webkit-text-stroke: 2px var(--opengisch-dark) !important; color: lightgray !important; font-size:4.5em !important">Des questions ?</h1>
-
+    
+        <section data-background="./assets/questions-de.png">
+            
+            <h1 style="-webkit-text-stroke: 2px var(--opengisch-dark) !important; color: lightgray !important; font-size:4.5em !important">Des questions ?</h1>
 <!-- .slide: data-background="./assets/questions-de.png" -->
+            </section>
+    
 
----
 
-### C'est tout...
-#### Web : www.opengis.ch
-#### Courriel : matthias@opengis.ch denis@opengis.ch
-#### Github : github.com/opengisch
 
-          </textarea>
-        </section>
-      </div>
+    
+        <section >
+            
+            <h3>C’est tout…</h3>
+<h4>Web : <a href="http://www.opengis.ch">www.opengis.ch</a></h4>
+<h4>Courriel : <a href="mailto:matthias@opengis.ch">matthias@opengis.ch</a> <a href="mailto:denis@opengis.ch">denis@opengis.ch</a></h4>
+<h4>Github : <a href="http://github.com/opengisch">github.com/opengisch</a></h4>
+
+            </section>
+    
+
+
     </div>
 
-    <script src="./dist/reveal.js"></script>
 
-    <script src="./mermaid/dist/mermaid.min.js"></script>
+  </div>
 
-    <script src="./plugin/markdown/markdown.js"></script>
-    <script src="./plugin/highlight/highlight.js"></script>
-    <script src="./plugin/zoom/zoom.js"></script>
-    <script src="./plugin/notes/notes.js"></script>
-    <script src="./plugin/math/math.js"></script>
-    <script>
-      function extend() {
-        var target = {};
-        for (var i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-              target[key] = source[key];
-            }
-          }
-        }
-        return target;
+  <div class="line top"></div>
+  <div class="line bottom"></div>
+  <div class="line left"></div>
+  <div class="line right"></div>
+
+  <script src="libs/reveal.js/4.3.1/reveal.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/fullscreen/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/svg.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/Chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/d3.v3.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3.patch.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/queue.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/topojson.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/function-plot.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/customcontrols/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/embed-tweet/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/verticator/verticator.js"></script>
+
+<script src="libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/search/search.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/menu/menu.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chalkboard/plugin.js"></script>
+
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/plugin.js"></script>  -->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/recorder.js"></script>-->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/RecordRTC.js"></script>-->
+
+  
+
+<script>
+  const printPlugins = [
+      RevealNotes,
+      RevealHighlight,
+      RevealMath.MathJax3,
+      RevealAnimate,
+      RevealChalkboard, 
+			RevealEmbedTweet,
+			RevealChart,
+		];
+
+		const plugins =  [...printPlugins,
+		RevealZoom, 
+		RevealSearch, 
+				RevealMarkdown, 
+				RevealMenu, 
+				RevealFullscreen,
+				RevealAnything,
+				//RevealAudioSlideshow,
+				//RevealAudioRecorder,
+				RevealCustomControls, 
+				// poll
+				// question
+				// seminar
+				Verticator 
+				 ]
+
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+      controlsTutorial: true,
+      controlsLayout: 'bottom-right',
+      controlsBackArrows: 'faded',
+      progress: true,
+      slideNumber: false,
+      //#showSlideNumber "all" "print" "speaker"
+      hash: true, //# hash: false,
+      //# respondToHashChanges: true,
+      //# history: false,
+      keyboard: true,
+      //#keyboardCondition: null,
+      overview: true,
+      center: true,
+      touch: true,
+      loop: false,
+      rtl: false,
+      //#navigationMode: 'default', linear grid
+      shuffle: false,
+      fragments: true,
+      fragmentInURL: false,
+      embedded: false,
+      help: true,
+      //#pause: true
+      showNotes: false,
+      autoPlayMedia: false, // TODO fix this to a nullable value
+      //#preloadIframes: null. true false
+      //#autoAnimate: true
+      //#autoAnimateMatcher: null,
+      //#autoAnimateEasing: 'ease',
+      //autoAnimateDuration: 1.0,
+      //#autoAnimateUnmatched: true
+      //#autoAnimateStyles: []
+      autoSlide: 0, // TODO fix this to a falseable value
+      autoSlideStoppable: true,
+      autoSlideMethod: '0',
+      defaultTiming: 120,
+      mouseWheel: false,
+      //#previewLinks: false
+      //#postMessage: true, // TODO : this can cause issues with the vscode api ???
+      //#postMessageEvents: false,
+      //#focusBodyOnPageVisibilityChange: true,
+      transition: 'none',
+      transitionSpeed: 'default',
+      backgroundTransition: 'default',
+      //#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+      //#pdfSeparateFragments: true,
+      //#pdfPageHeightOffset: -1,
+      viewDistance: 3,
+      //#mobileViewDistance: 2,
+      display: 'block',
+      //#hideInactiveCursor: true,
+      //#hideCursorTime: 5000
+
+      // Parallax Background
+      parallaxBackgroundImage: '',
+      parallaxBackgroundSize: '',
+      parallaxBackgroundHorizontal: 0,
+      parallaxBackgroundVertical: 0,
+
+      //Presentation Size
+      width: 960,
+			height: 700,
+			margin: 0.04,
+      minScale: 0.2,
+      maxScale: 2,
+      disableLayout: false,
+
+      audio: {
+        prefix: 'audio/', // audio files are stored in the "audio" folder
+        suffix: '.ogg', // audio files have the ".ogg" ending
+        textToSpeechURL: null, // the URL to the text to speech converter
+        defaultNotes: false, // use slide notes as default for the text to speech converter
+        defaultText: false, // use slide text as default for the text to speech converter
+        advance: 0, // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+        autoplay: false, // automatically start slideshow
+        defaultDuration: 5, // default duration in seconds if no audio is available
+        defaultAudios: true, // try to play audios with names such as audio/1.2.ogg
+        playerOpacity: 0.05, // opacity value of audio player if unfocused
+        playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+        startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+      },
+      
+      chalkboard: { // font-awesome.min.css must be available
+        //src: "chalkboard/chalkboard.json",
+        storage: "chalkboard-demo",
+      },
+      
+			customcontrols: {
+					controls: [
+      						{
+						  id: 'toggle-overview',
+						  title: 'Toggle overview (O)',
+						  icon: '<i class="fa fa-th"></i>',
+						  action: 'Reveal.toggleOverview();'
+						}
+						,
+      {
+        icon: '<i class="fa fa-pen-square"></i>',
+        title: 'Toggle chalkboard (B)',
+        action: 'RevealChalkboard.toggleChalkboard();'
+      },
+      {
+        icon: '<i class="fa fa-pen"></i>',
+        title: 'Toggle notes canvas (C)',
+        action: 'RevealChalkboard.toggleNotesCanvas();'
       }
+      
+				]
+			},
+			chart: {
+					defaults: { 
+						color: 'lightgray', // color of labels
+						scale: { 
+							beginAtZero: true, 
+							ticks: { stepSize: 1 },
+							grid: { color: "lightgray" } , // color of grid lines
+						},
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+			},
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				anything: [ 
+				{
+		className: "plot",
+		defaults: {width:500, height: 500, grid:true},
+		initialize: (function(container, options){ options.target = "#"+container.id; functionPlot(options) })
+	 },
+	 {
+		className: "chart",  
+		initialize: (function(container, options){ container.chart = new Chart(container.getContext("2d"), options);  })
+	 },
+	 {
+		className: "anything",
+		initialize: (function(container, options){ if (options && options.initialize) { options.initialize(container)} })
+	 },
+					],
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins ) 
+		});
+			
 
-      // default options to init reveal.js
-      var defaultOptions = {
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        slideNumber: true,
-        highlight: {
-          highlightOnLoad: false
-        },
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealZoom,
-          RevealNotes,
-          RevealMath
-        ]
-      };
 
-      // options from URL query string
-      var queryOptions = Reveal().getQueryHash() || {};
+	    // Change chalkboard theme : 
+		function changeTheme(input) {
+			var config = {};
+			config.theme = input.value;
+			Reveal.getPlugin("RevealChalkboard").configure(config);
+			input.blur();
+		}
 
-      var options = extend(defaultOptions, {"transition":"none","slideNumber":false,"overview":true,"autoPlayMedia":true,"_":["slides/"],"static":"web","static-dirs":"slides/assets","staticDirs":"slides/assets","listing-template":"../globals/index/index.html","listingTemplate":"../globals/index/index.html","title":"Modelbaker Course"}, queryOptions);
-    </script>
+		// // Handle the message inside the webview
+        // window.addEventListener('message', event => {
 
+        //     const message = event.data; // The JSON data our extension sent
 
-    <script>
-      Reveal.initialize(options);
-      Reveal.addEventListener('ready', function (event) {
-        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
-        const hlp = Reveal.getPlugin('highlight');
-        blocks.forEach(hlp.highlightBlock);
-      });
-    </script>
+        //     switch (message.command) {
+        //         case 'refactor':
+        //             Reveal.toggleHelp();
+        //     }
+        // });
 
-    <script>
-      const mermaidOptions = extend({ startOnLoad: false }, {});
-      mermaid.startOnLoad = false;
-      mermaid.initialize(mermaidOptions);
-      const cb = function (event) {
-        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
-        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
-      }
-      Reveal.addEventListener('ready', cb);
-      Reveal.addEventListener('slidetransitionend', cb);
-    </script>
-  </body>
+		if (window.location.search.match(/print-pdf-now/gi)) {
+      		setTimeout(() => {
+				window.print();
+			  }, 2500);
+			
+    }
+</script>
+
+</body>
+
 </html>

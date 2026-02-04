@@ -1,261 +1,593 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>Qgis Basic Course</title>
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="./dist/reset.css" />
-    <link rel="stylesheet" href="./dist/reveal.css" />
-    <link rel="stylesheet" href="./_assets/stylesheets/main-style.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+<head>
+  <meta charset="utf-8">
 
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="--v--">
-          <textarea data-template>
+  <title>QGIS Einsteigerkurs</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- highlight Theme -->
+  
+  <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/monokai.min.css">
+  
+	
+		
+	<link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
+	
+	
+	
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/customcontrols/style.css">
+  
+	
+
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/stylesheets/main-style.css.css" id="theme">
+  
+  
+
+  <link rel="stylesheet" href="libs/styles/tasklist.css">
+	<link rel="stylesheet" href="libs/styles/iota.css">
+	<link rel="stylesheet" href="libs/styles/layout.css">
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="stylesheets/main-style.css">
+  
+
+   <!-- css list -->
+	
+
+   
+
+</head>
+
+<body>
+
+   
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      
+
+
+    
+        <section class="styled-logo">
             
-
-# OPEN SOURCE
-# GEONINJAS
-# MADE IN
-# SWITZERLAND
-
-### we l[i|o]ve open source.
-
+            <h1>OPEN SOURCE</h1>
+<h1>GEONINJAS</h1>
+<h1>MADE IN</h1>
+<h1>SWITZERLAND</h1>
+<h3>we l[i|o]ve open source.</h3>
 <!-- .slide: class="styled-logo" -->
-![logo](assets/logo_opengisch_open-source-geoninjas.png)
+<p><img src="assets/logo_opengisch_open-source-geoninjas.png" alt="logo"></p>
 
----
+            </section>
+    
 
-# QGIS
-# EINSTEIGERKURS
 
+
+    
+        <section class="styled-logo">
+            
+            <h1>QGIS</h1>
+<h1>EINSTEIGERKURS</h1>
 <!-- .slide: class="styled-logo" -->
-![logo](assets/QGIS_logo.png){style="margin-top: 295px;"}
+<p><img src="assets/QGIS_logo.png" alt="logo" style="margin-top: 295px;"></p>
 
----
+            </section>
+    
 
-### WER <span class="green"> WIR SIND</span>
 
+
+    
+        <section class="styled-img">
+            
+            <h3>WER <span class="green"> WIR SIND</span></h3>
 <!-- .slide: class="styled-img" -->
-![team](assets/team_2025.jpg)
+<p><img src="assets/team_2025.jpg" alt="team"></p>
 
----
+            </section>
+    
 
-<!-- .slide: data-background="assets/about_us.jpg" -->
 
----
 
-### WAS WIR MACHEN <span class="green"> – RUND UM QGIS</span>
+    
+        <section data-background="assets/about_us.jpg">
+            
+            <!-- .slide: data-background="assets/about_us.jpg" -->
+            </section>
+    
 
+
+
+    
+        <section class="custom-center-pic">
+            
+            <h3>WAS WIR MACHEN <span class="green"> – RUND UM QGIS</span></h3>
 <!-- .slide: class="custom-center-pic" -->
-![whatdowedo](assets/waswirmachen_rundumqgis.png){style="width: 70%; margin-top: 110px";}
+<p><img src="assets/waswirmachen_rundumqgis.png" alt="whatdowedo" style="width: 70%; margin-top: 110px;"></p>
 
----
+            </section>
+    
 
-### WAS WIR MACHEN <span class="green"> – IM ALLGEMEINEN</span>
 
+
+    
+        <section class="custom-center-pic">
+            
+            <h3>WAS WIR MACHEN <span class="green"> – IM ALLGEMEINEN</span></h3>
 <!-- .slide: class="custom-center-pic" -->
-![whatdowedo](assets/waswirmachen_imallgemeinen.png){style="width: 90%; margin-top: 110px";}
+<p><img src="assets/waswirmachen_imallgemeinen.png" alt="whatdowedo" style="width: 90%; margin-top: 110px;"></p>
 
----
+            </section>
+    
 
-# WER SEID
-# IHR? 🫵
 
----
 
-### DER HEUTIGE KURS <span class="green"> – KURSINHALT
+    
+        <section >
+            
+            <h1>WER SEID</h1>
+<h1>IHR? 🫵</h1>
 
-- Einführung
-- Über das QGIS Projekt
-- Vorstellung der graphischen Benutzeroberfläche
-- Erweiterungen (v.a. SwissLocator)
-- Datenquellen, Datenformate und Webdienste
-- Daten im Projekt managen
-- Konfiguration Attributformular
-- Symbolisierung und Beschriftung
+            </section>
+    
 
----
 
-### DER HEUTIGE KURS <span class="green"> – KURSINHALT
 
-- Einfache Ausdrücke im Ausdruckseditor
-- Selektieren, Filtern
-- Temporäre Layer
-- Geometrien und Attribute erfassen und bearbeiten
-- Einblick in QField
-- Einführung Verarbeitungswerkzeuge
-- Einfache Analyse von Vektordaten
-- Kartenlayout kreieren
+    
+        <section >
+            
+            <h3>DER HEUTIGE KURS <span class="green"> – KURSINHALT</h3>
+<ul>
+<li>Einführung</li>
+<li>Über das QGIS Projekt</li>
+<li>Vorstellung der graphischen Benutzeroberfläche</li>
+<li>Erweiterungen (v.a. SwissLocator)</li>
+<li>Datenquellen, Datenformate und Webdienste</li>
+<li>Daten im Projekt managen</li>
+<li>Konfiguration Attributformular</li>
+<li>Symbolisierung und Beschriftung</li>
+</ul>
 
----
+            </section>
+    
 
-### UNSER<span class="green"> PROGRAMM </span>
 
-- 9:00 – 👩‍🏫 QGIS
-- 10:50 – ☕ Pause
-- 11:20 – 👩‍🏫 QGIS
-- 12:30 – 🍜 Mittagessen
-- 13:30 – 👩‍🏫 QGIS
-- 15:15 – ☕️ Pause
-- 16:45 – 👩🏻‍💻 Üben
-- 17:00 – 💪🏼 Geschafft!
 
----
+    
+        <section >
+            
+            <h3>DER HEUTIGE KURS <span class="green"> – KURSINHALT</h3>
+<ul>
+<li>Einfache Ausdrücke im Ausdruckseditor</li>
+<li>Selektieren, Filtern</li>
+<li>Temporäre Layer</li>
+<li>Geometrien und Attribute erfassen und bearbeiten</li>
+<li>Einblick in QField</li>
+<li>Einführung Verarbeitungswerkzeuge</li>
+<li>Einfache Analyse von Vektordaten</li>
+<li>Kartenlayout kreieren</li>
+</ul>
 
-### ÜBER<span class="green"> QGIS </span>
+            </section>
+    
 
-- Open source Desktop GIS
-- Läuft auf Linux, Unix, Mac OSX, Windows und Android
-- Unterstützt eine Vielzahl von Vector-, Raster- und Datenbank-Formaten und Funktionen
 
----
 
-### ÜBER<span class="green"> QGIS </span>
+    
+        <section >
+            
+            <h3>UNSER<span class="green"> PROGRAMM </span></h3>
+<ul>
+<li>9:00 – 👩‍🏫 QGIS</li>
+<li>10:50 – ☕ Pause</li>
+<li>11:20 – 👩‍🏫 QGIS</li>
+<li>12:30 – 🍜 Mittagessen</li>
+<li>13:30 – 👩‍🏫 QGIS</li>
+<li>15:15 – ☕️ Pause</li>
+<li>16:45 – 👩🏻‍💻 Üben</li>
+<li>17:00 – 💪🏼 Geschafft!</li>
+</ul>
 
-- QGIS ist eine Free and Open Source Software
-- QGIS darf ohne Einschränkung beliebig oft genutzt werden
-- Produkt wird durch Projekt ersetzt
-- Beliebige Modifikationen dürfen gemacht werden... müssen aber zugänglich gemacht werden, wenn abgeleitete Projekte/Produkte verkauft werden.
+            </section>
+    
 
----
 
-### ÜBER QGIS <span class="green"> – DIE COMMUNITY </span>
 
+    
+        <section >
+            
+            <h3>ÜBER<span class="green"> QGIS </span></h3>
+<ul>
+<li>Open source Desktop GIS</li>
+<li>Läuft auf Linux, Unix, Mac OSX, Windows und Android</li>
+<li>Unterstützt eine Vielzahl von Vector-, Raster- und Datenbank-Formaten und Funktionen</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3>ÜBER<span class="green"> QGIS </span></h3>
+<ul>
+<li>QGIS ist eine Free and Open Source Software</li>
+<li>QGIS darf ohne Einschränkung beliebig oft genutzt werden</li>
+<li>Produkt wird durch Projekt ersetzt</li>
+<li>Beliebige Modifikationen dürfen gemacht werden… müssen aber zugänglich gemacht werden, wenn abgeleitete Projekte/Produkte verkauft werden.</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section class="custom-center-pic">
+            
+            <h3>ÜBER QGIS <span class="green"> – DIE COMMUNITY </span></h3>
 <!-- .slide: class="custom-center-pic" -->
-![ehrenamtlich-basiert](assets/ehrenamtlich-basiert.png){style="max-width: 17%; margin-top: 200px;"}
+<p><img src="assets/ehrenamtlich-basiert.png" alt="ehrenamtlich-basiert" style="max-width: 17%; margin-top: 200px;"></p>
 
----
+            </section>
+    
 
-### ÜBER QGIS <span class="green"> – MITMACHEN</span>
 
-- Programmierung
-- Bugs melden
-- Bugs reparieren
-- Dokumentationen schreiben
-- Finanzielle Unterstützung
-- Mund-zu-Mund Propaganda
-- <a href="https://qgis.org/de/site/getinvolved/index.html" class="styled-link">Get involved! <img src="assets/cursor.png" alt="cursor" class="cursor"></a>
 
----
+    
+        <section >
+            
+            <h3>ÜBER QGIS <span class="green"> – MITMACHEN</span></h3>
+<ul>
+<li>Programmierung</li>
+<li>Bugs melden</li>
+<li>Bugs reparieren</li>
+<li>Dokumentationen schreiben</li>
+<li>Finanzielle Unterstützung</li>
+<li>Mund-zu-Mund Propaganda</li>
+<li><a href="https://qgis.org/de/site/getinvolved/index.html" class="styled-link">Get involved! <img src="assets/cursor.png" alt="cursor" class="cursor"></a></li>
+</ul>
 
-### ÜBER QGIS <span class="green"> – HAUPTFUNKTIONEN</span>
+            </section>
+    
 
-- Datenansicht und -Symbolisierung
-- Erfassen und Editieren von Daten
-- Erstellung von Karten
-- Importieren / Exportieren von Daten
-- Datenanalyse
 
----
 
-### ÜBER QGIS <span class="green"> – HAUPTFUNKTIONEN</span>
+    
+        <section >
+            
+            <h3>ÜBER QGIS <span class="green"> – HAUPTFUNKTIONEN</span></h3>
+<ul>
+<li>Datenansicht und -Symbolisierung</li>
+<li>Erfassen und Editieren von Daten</li>
+<li>Erstellung von Karten</li>
+<li>Importieren / Exportieren von Daten</li>
+<li>Datenanalyse</li>
+</ul>
 
-- Kartendruck und Bereitstellung im Internet
-- Erweiterte QGIS-Funktionalitäten
-- Kernerweiterungen
-- Externe Python-Erweiterungen
-- Python Konsole
+            </section>
+    
 
----
 
-### KOMMERZIELLE <span class="green">UNTERSTÜTZUNG </span>
 
+    
+        <section >
+            
+            <h3>ÜBER QGIS <span class="green"> – HAUPTFUNKTIONEN</span></h3>
+<ul>
+<li>Kartendruck und Bereitstellung im Internet</li>
+<li>Erweiterte QGIS-Funktionalitäten</li>
+<li>Kernerweiterungen</li>
+<li>Externe Python-Erweiterungen</li>
+<li>Python Konsole</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section class="custom-left-pic">
+            
+            <h3>KOMMERZIELLE <span class="green">UNTERSTÜTZUNG </span></h3>
 <!-- .slide: class="custom-left-pic" -->
-![og-logo](assets/logo_opengisch_open-source-geoninjas.png){style="width: 25%; margin-bottom: 50px";}
+<p><img src="assets/logo_opengisch_open-source-geoninjas.png" alt="og-logo" style="width: 25%; margin-bottom: 50px;"></p>
+<h4><span class="bold">Eine von QGIS anerkannte Organisation</span></h4>
+<p><a href="https://qgis.org/de/site/forusers/commercial_support.html" class="styled-link" style="font-weight: bolder;">https://qgis.org/de/site/forusers/commercial_support.html<img src="assets/cursor.png" alt="cursor" class="cursor" style="margin-bottom: 20px;"></a></p>
 
-#### <span class="bold">Eine von QGIS anerkannte Organisation</span>
+            </section>
+    
 
-<a href="https://qgis.org/de/site/forusers/commercial_support.html" class="styled-link" style="font-weight: bolder;">https://qgis.org/de/site/forusers/commercial_support.html<img src="assets/cursor.png" alt="cursor" class="cursor" style="margin-bottom: 20px;"></a>
 
----
 
-# LET'S
-# START! 🚀</span>
-
+    
+        <section >
+            
+            <h1>LET’S</h1>
+<h1>START! 🚀</span></h1>
 <video controls="controls">
 <source src="assets/maya_intro.mp4" type="video/mp4" class="styled-video">
 </video>
+            </section>
+    
 
-          </textarea>
-        </section>
-      </div>
+
     </div>
 
-    <script src="./dist/reveal.js"></script>
 
-    <script src="./mermaid/dist/mermaid.min.js"></script>
+  </div>
 
-    <script src="./plugin/markdown/markdown.js"></script>
-    <script src="./plugin/highlight/highlight.js"></script>
-    <script src="./plugin/zoom/zoom.js"></script>
-    <script src="./plugin/notes/notes.js"></script>
-    <script src="./plugin/math/math.js"></script>
-    <script>
-      function extend() {
-        var target = {};
-        for (var i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-              target[key] = source[key];
-            }
-          }
-        }
-        return target;
+  <div class="line top"></div>
+  <div class="line bottom"></div>
+  <div class="line left"></div>
+  <div class="line right"></div>
+
+  <script src="libs/reveal.js/4.3.1/reveal.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/fullscreen/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/svg.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/Chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/d3.v3.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3.patch.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/queue.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/topojson.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/function-plot.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/customcontrols/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/embed-tweet/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/verticator/verticator.js"></script>
+
+<script src="libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/search/search.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/menu/menu.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chalkboard/plugin.js"></script>
+
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/plugin.js"></script>  -->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/recorder.js"></script>-->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/RecordRTC.js"></script>-->
+
+  
+
+<script>
+  const printPlugins = [
+      RevealNotes,
+      RevealHighlight,
+      RevealMath.MathJax3,
+      RevealAnimate,
+      RevealChalkboard, 
+			RevealEmbedTweet,
+			RevealChart,
+		];
+
+		const plugins =  [...printPlugins,
+		RevealZoom, 
+		RevealSearch, 
+				RevealMarkdown, 
+				RevealMenu, 
+				RevealFullscreen,
+				RevealAnything,
+				//RevealAudioSlideshow,
+				//RevealAudioRecorder,
+				RevealCustomControls, 
+				// poll
+				// question
+				// seminar
+				Verticator 
+				 ]
+
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+      controlsTutorial: true,
+      controlsLayout: 'bottom-right',
+      controlsBackArrows: 'faded',
+      progress: true,
+      slideNumber: false,
+      //#showSlideNumber "all" "print" "speaker"
+      hash: true, //# hash: false,
+      //# respondToHashChanges: true,
+      //# history: false,
+      keyboard: true,
+      //#keyboardCondition: null,
+      overview: true,
+      center: true,
+      touch: true,
+      loop: false,
+      rtl: false,
+      //#navigationMode: 'default', linear grid
+      shuffle: false,
+      fragments: true,
+      fragmentInURL: false,
+      embedded: false,
+      help: true,
+      //#pause: true
+      showNotes: false,
+      autoPlayMedia: false, // TODO fix this to a nullable value
+      //#preloadIframes: null. true false
+      //#autoAnimate: true
+      //#autoAnimateMatcher: null,
+      //#autoAnimateEasing: 'ease',
+      //autoAnimateDuration: 1.0,
+      //#autoAnimateUnmatched: true
+      //#autoAnimateStyles: []
+      autoSlide: 0, // TODO fix this to a falseable value
+      autoSlideStoppable: true,
+      autoSlideMethod: '0',
+      defaultTiming: 120,
+      mouseWheel: false,
+      //#previewLinks: false
+      //#postMessage: true, // TODO : this can cause issues with the vscode api ???
+      //#postMessageEvents: false,
+      //#focusBodyOnPageVisibilityChange: true,
+      transition: 'none',
+      transitionSpeed: 'default',
+      backgroundTransition: 'default',
+      //#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+      //#pdfSeparateFragments: true,
+      //#pdfPageHeightOffset: -1,
+      viewDistance: 3,
+      //#mobileViewDistance: 2,
+      display: 'block',
+      //#hideInactiveCursor: true,
+      //#hideCursorTime: 5000
+
+      // Parallax Background
+      parallaxBackgroundImage: '',
+      parallaxBackgroundSize: '',
+      parallaxBackgroundHorizontal: 0,
+      parallaxBackgroundVertical: 0,
+
+      //Presentation Size
+      width: 960,
+			height: 700,
+			margin: 0.04,
+      minScale: 0.2,
+      maxScale: 2,
+      disableLayout: false,
+
+      audio: {
+        prefix: 'audio/', // audio files are stored in the "audio" folder
+        suffix: '.ogg', // audio files have the ".ogg" ending
+        textToSpeechURL: null, // the URL to the text to speech converter
+        defaultNotes: false, // use slide notes as default for the text to speech converter
+        defaultText: false, // use slide text as default for the text to speech converter
+        advance: 0, // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+        autoplay: false, // automatically start slideshow
+        defaultDuration: 5, // default duration in seconds if no audio is available
+        defaultAudios: true, // try to play audios with names such as audio/1.2.ogg
+        playerOpacity: 0.05, // opacity value of audio player if unfocused
+        playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+        startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+      },
+      
+      chalkboard: { // font-awesome.min.css must be available
+        //src: "chalkboard/chalkboard.json",
+        storage: "chalkboard-demo",
+      },
+      
+			customcontrols: {
+					controls: [
+      						{
+						  id: 'toggle-overview',
+						  title: 'Toggle overview (O)',
+						  icon: '<i class="fa fa-th"></i>',
+						  action: 'Reveal.toggleOverview();'
+						}
+						,
+      {
+        icon: '<i class="fa fa-pen-square"></i>',
+        title: 'Toggle chalkboard (B)',
+        action: 'RevealChalkboard.toggleChalkboard();'
+      },
+      {
+        icon: '<i class="fa fa-pen"></i>',
+        title: 'Toggle notes canvas (C)',
+        action: 'RevealChalkboard.toggleNotesCanvas();'
       }
+      
+				]
+			},
+			chart: {
+					defaults: { 
+						color: 'lightgray', // color of labels
+						scale: { 
+							beginAtZero: true, 
+							ticks: { stepSize: 1 },
+							grid: { color: "lightgray" } , // color of grid lines
+						},
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+			},
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				anything: [ 
+				{
+		className: "plot",
+		defaults: {width:500, height: 500, grid:true},
+		initialize: (function(container, options){ options.target = "#"+container.id; functionPlot(options) })
+	 },
+	 {
+		className: "chart",  
+		initialize: (function(container, options){ container.chart = new Chart(container.getContext("2d"), options);  })
+	 },
+	 {
+		className: "anything",
+		initialize: (function(container, options){ if (options && options.initialize) { options.initialize(container)} })
+	 },
+					],
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins ) 
+		});
+			
 
-      // default options to init reveal.js
-      var defaultOptions = {
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        slideNumber: true,
-        highlight: {
-          highlightOnLoad: false
-        },
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealZoom,
-          RevealNotes,
-          RevealMath
-        ]
-      };
 
-      // options from URL query string
-      var queryOptions = Reveal().getQueryHash() || {};
+	    // Change chalkboard theme : 
+		function changeTheme(input) {
+			var config = {};
+			config.theme = input.value;
+			Reveal.getPlugin("RevealChalkboard").configure(config);
+			input.blur();
+		}
 
-      var options = extend(defaultOptions, {"transition":"none","slideNumber":false,"overview":true,"autoPlayMedia":true,"_":["slides/"],"static":"web","static-dirs":"slides/assets","staticDirs":"slides/assets","listing-template":"../globals/index/index.html","listingTemplate":"../globals/index/index.html","title":"Qgis Basic Course"}, queryOptions);
-    </script>
+		// // Handle the message inside the webview
+        // window.addEventListener('message', event => {
 
+        //     const message = event.data; // The JSON data our extension sent
 
-    <script>
-      Reveal.initialize(options);
-      Reveal.addEventListener('ready', function (event) {
-        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
-        const hlp = Reveal.getPlugin('highlight');
-        blocks.forEach(hlp.highlightBlock);
-      });
-    </script>
+        //     switch (message.command) {
+        //         case 'refactor':
+        //             Reveal.toggleHelp();
+        //     }
+        // });
 
-    <script>
-      const mermaidOptions = extend({ startOnLoad: false }, {});
-      mermaid.startOnLoad = false;
-      mermaid.initialize(mermaidOptions);
-      const cb = function (event) {
-        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
-        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
-      }
-      Reveal.addEventListener('ready', cb);
-      Reveal.addEventListener('slidetransitionend', cb);
-    </script>
-  </body>
+		if (window.location.search.match(/print-pdf-now/gi)) {
+      		setTimeout(() => {
+				window.print();
+			  }, 2500);
+			
+    }
+</script>
+
+</body>
+
 </html>

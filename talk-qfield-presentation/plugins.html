@@ -1,28 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>Qfield Presentation</title>
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="./dist/reset.css" />
-    <link rel="stylesheet" href="./dist/reveal.css" />
-    <link rel="stylesheet" href="./_assets/stylesheets/main-style.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+<head>
+  <meta charset="utf-8">
 
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="--v--">
-          <textarea data-template>
+  <title>QField Plugin Framework</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- highlight Theme -->
+  
+  <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/monokai.min.css">
+  
+	
+		
+	<link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
+	
+	
+	
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/customcontrols/style.css">
+  
+	
+
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/stylesheets/main-style.css.css" id="theme">
+  
+  
+
+  <link rel="stylesheet" href="libs/styles/tasklist.css">
+	<link rel="stylesheet" href="libs/styles/iota.css">
+	<link rel="stylesheet" href="libs/styles/layout.css">
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="stylesheets/main-style.css">
+  
+
+   <!-- css list -->
+	
+
+   
+
+</head>
+
+<body>
+
+   
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      
+
+
+    
+        <section class="stack">
             
-
-<!-- .slide: class="stack" -->
-
+            <!-- .slide: class="stack" -->
 <link rel="stylesheet" href="./stylesheets/main-style.css">
-
 <style>
 .reveal .slides::after {
   content: "";
@@ -52,227 +104,491 @@ b {
   font-weight: 450;
 }
 </style>
-
-# QFIELD<br><span class="green">PLUGIN FRAMEWORK</span> 🚀
-
-## Exploring the possibilities 
-
+<h1>QFIELD<br><span class="green">PLUGIN FRAMEWORK</span> 🚀</h1>
+<h2>Exploring the possibilities</h2>
 <img src="assets/logo_opengisch_open-source-geoninjas.png" class="styled-logo">
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# THE <span class="green">ISSUE</span> 🤔
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1>THE <span class="green">ISSUE</span> 🤔</h1>
+<ul>
+<li>QField has nearly 400,000 active devices on Android alone, not every functionality justifies rolling out to all users</li>
+<li>QField’s commitment to delivering a lean UI also means certain UXs are not a good fit by default</li>
+</ul>
 
-- QField has nearly 400,000 active devices on Android alone, not every functionality justifies rolling out to all users
-- QField’s commitment to delivering a lean UI also means certain UXs are not a good fit by default
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# THE <span class="green">ANSWER</span>: PLUGINS 🧩
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1>THE <span class="green">ANSWER</span>: PLUGINS 🧩</h1>
+<ul>
+<li>A plugin framework to fulfill those niche needs by the growing number of QField users</li>
+<li>Aligns with a core value promoted by <a href="http://OPENGIS.ch">OPENGIS.ch</a> and the QField project: <b>freedom</b></li>
+<li>Plugin development and release not bound to cadence of QField releases</li>
+</ul>
 
-- A plugin framework to fulfill those niche needs by the growing number of QField users 
-- Aligns with a core value promoted by OPENGIS.ch and the QField project: <b>freedom</b>
-- Plugin development and release not bound to cadence of QField releases
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# <span class="green">TYPES</span> OF QFIELD PLUGINS 🔠
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1><span class="green">TYPES</span> OF QFIELD PLUGINS 🔠</h1>
+<ul>
+<li>The QField framework offers two types of plugins:
+<ul>
+<li><b>App-wide plugins</b>, activated upon app launch until exit</li>
+<li><b>Project plugins</b>, enabled while a given project is being consumed</li>
+</ul>
+</li>
+</ul>
 
-- The QField framework offers two types of plugins:
-    - <b>App-wide plugins</b>, activated upon app launch until exit
-    - <b>Project plugins</b>, enabled while a given project is being consumed
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# QFIELD <span class="green">VS.</span> QGIS PLUGINS 🔍
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1>QFIELD <span class="green">VS.</span> QGIS PLUGINS 🔍</h1>
+<ul>
+<li><b>Python powers</b> QGIS’s plugins with <b>Qt widgets</b> for the GUI</li>
+<li><b>QML &amp; Javascript</b> powers QField’s plugins with <b>QtQuick items</b> for the GUI</li>
+<li>QField’s project plugins can be understood as QGIS project macros</li>
+</ul>
 
-- <b>Python powers</b> QGIS’s plugins with <b>Qt widgets</b> for the GUI
-- <b>QML & Javascript</b> powers QField’s plugins with <b>QtQuick items</b> for the GUI
-- QField's project plugins can be understood as QGIS project macros
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# <span class="green">APP-WIDE</span> PLUGINS ✨
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1><span class="green">APP-WIDE</span> PLUGINS ✨</h1>
+<ul>
+<li>Installed via the plugin manager by providing a URL pointing to a zipped plugin content</li>
+<li>The plugin manager provides a quick way to enable/disable/configure plugins</li>
+<li>Permission will be asked prior to activating a plugin</li>
+</ul>
 
-- Installed via the plugin manager by providing a URL pointing to a zipped plugin content
-- The plugin manager provides a quick way to enable/disable/configure plugins
-- Permission will be asked prior to activating a plugin
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# <span class="green">PROJECT</span> PLUGINS 🗃️
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1><span class="green">PROJECT</span> PLUGINS 🗃️</h1>
+<ul>
+<li>Served as a sidecar file to the QGIS project file</li>
+<li>Often the easiest way to deploy plugins to users as they are bundled with projects and do not require additional steps to obtain</li>
+<li>Permission will also be asked prior to activating a plugin</li>
+<li><i>Pro-tip: rely on QFieldCloud to conduct remote distribution and update of project plugins to a fleet of QField devices</i></li>
+</ul>
 
-- Served as a sidecar file to the QGIS project file
-- Often the easiest way to deploy plugins to users as they are bundled with projects and do not require additional steps to obtain
-- Permission will also be asked prior to activating a plugin
-- <i>Pro-tip: rely on QFieldCloud to conduct remote distribution and update of project plugins to a fleet of QField devices</i>
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# <span class="green">WEATHER</span> PLUGIN ☀️
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1><span class="green">WEATHER</span> PLUGIN ☀️</h1>
+<ul>
+<li>Leveraging <b>positioning context</b> to provide relevant information</li>
+<li><b>XMLHttpRequest support</b> unlocks a wide range of web services</li>
+<li><a href="https://github.com/opengisch/qfield-weather-forecast/blob/main/main.qml">https://github.com/opengisch/qfield-weather-forecast/blob/main/main.qml</a></li>
+</ul>
 
-- Leveraging <b>positioning context</b> to provide relevant information
-- <b>XMLHttpRequest support</b> unlocks a wide range of web services
-- https://github.com/opengisch/qfield-weather-forecast/blob/main/main.qml 
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# OSRM <span class="green">ROUTING</span> PLUGIN 🚗
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1>OSRM <span class="green">ROUTING</span> PLUGIN 🚗</h1>
+<ul>
+<li>Rely on QField items to <b>overlay georeferenced geometries&lt;/b. on top of the map canvas</li>
+<li>Did we mention XMLHttpRequest yet?</li>
+<li><a href="https://github.com/opengisch/qfield-osrm">https://github.com/opengisch/qfield-osrm</a></li>
+</ul>
 
-- Rely on QField items to <b>overlay georeferenced geometries</b. on top of the map canvas
-- Did we mention XMLHttpRequest yet?
-- https://github.com/opengisch/qfield-osrm 
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# <span class="green">SEARCH BAR</span> PLUGINS 🧐
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1><span class="green">SEARCH BAR</span> PLUGINS 🧐</h1>
+<ul>
+<li>The plugin framework enables <b>integration with QField’s search bar</b></li>
+<li>Under the hood, QGIS’ locator classes power the functionality</li>
+<li><a href="https://github.com/opengisch/qfield-nominatim-locator">https://github.com/opengisch/qfield-nominatim-locator</a></li>
+<li><a href="https://github.com/opengisch/qfield-geomapfish-locator">https://github.com/opengisch/qfield-geomapfish-locator</a></li>
+</ul>
 
-- The plugin framework enables <b>integration with QField's search bar</b>
-- Under the hood, QGIS' locator classes power the functionality
-- https://github.com/opengisch/qfield-nominatim-locator 
-- https://github.com/opengisch/qfield-geomapfish-locator  
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# <span class="green">VOCAL</span> POINT PLUGIN 🗣️
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1><span class="green">VOCAL</span> POINT PLUGIN 🗣️</h1>
+<ul>
+<li><b>Leverage smartphone capabilities</b> into exciting new UX to digitize features</li>
+<li>Fantastic way to do <b>quick prototyping</b></li>
+<li><a href="https://github.com/SeqLaz/vocalpoint-qfield-plugin">https://github.com/SeqLaz/vocalpoint-qfield-plugin</a></li>
+</ul>
 
-- <b>Leverage smartphone capabilities</b> into exciting new UX to digitize features
-- Fantastic way to do <b>quick prototyping</b>
-- https://github.com/SeqLaz/vocalpoint-qfield-plugin 
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# <span class="green">TIPS</span> FOR DEVELOPERS ⚡
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1><span class="green">TIPS</span> FOR DEVELOPERS ⚡</h1>
+<ul>
+<li>Qt documentation: <a href="https://doc.qt.io/qt-6/qml-tutorial.html">https://doc.qt.io/qt-6/qml-tutorial.html</a></li>
+<li>QField documentation: <a href="https://docs.qfield.org/reference/plugins/">https://docs.qfield.org/reference/plugins/</a></li>
+<li>Developing on Windows/Linux using QField by adding/changing files in the plugins directory</li>
+</ul>
 
-- Qt documentation: https://doc.qt.io/qt-6/qml-tutorial.html 
-- QField documentation: https://docs.qfield.org/reference/plugins/
-- Developing on Windows/Linux using QField by adding/changing files in the plugins directory
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# WARNING ⚠️
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1>WARNING ⚠️</h1>
+<ul>
+<li>Documentation remains a work in progress, and at the moment developers will need to go through less than ideal means to identify available items, objects, properties and invokable functions</li>
+</ul>
 
-- Documentation remains a work in progress, and at the moment developers will need to go through less than ideal means to identify available items, objects, properties and invokable functions
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# AVAILABLE <span class="green">QML MODULES</span> 📦
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1>AVAILABLE <span class="green">QML MODULES</span> 📦</h1>
+<ul>
+<li>WebSocket</li>
+<li>Quick3D</li>
+<li>Charts</li>
+<li>Sensors</li>
+</ul>
 
-- WebSocket
-- Quick3D
-- Charts
-- Sensors
+            </section>
+    
 
----
 
-<!-- .slide: class="stack" -->
 
-# LAST WORDS & THANKS 🙏
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1>LAST WORDS &amp; THANKS 🙏</h1>
+<ul>
+<li>For now, GitHub’s topics page offers an overview of most available plugins: <a href="https://github.com/topics/qfield-plugin">https://github.com/topics/qfield-plugin</a></li>
+<li>If you are developing a plugin of your own, use the <b>#qfield-plugin</b> topic and let us know!</li>
+<li>What to know more? Contact us: <a href="mailto:info@opengis.ch">info@opengis.ch</a></li>
+</ul>
 
-- For now, GitHub’s topics page offers an overview of most available plugins: https://github.com/topics/qfield-plugin
-- If you are developing a plugin of your own, use the <b>#qfield-plugin</b> topic and let us know!
-- What to know more? Contact us: info@opengis.ch
+            </section>
+    
 
-          </textarea>
-        </section>
-      </div>
+
     </div>
 
-    <script src="./dist/reveal.js"></script>
 
-    <script src="./mermaid/dist/mermaid.min.js"></script>
+  </div>
 
-    <script src="./plugin/markdown/markdown.js"></script>
-    <script src="./plugin/highlight/highlight.js"></script>
-    <script src="./plugin/zoom/zoom.js"></script>
-    <script src="./plugin/notes/notes.js"></script>
-    <script src="./plugin/math/math.js"></script>
-    <script>
-      function extend() {
-        var target = {};
-        for (var i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-              target[key] = source[key];
-            }
-          }
-        }
-        return target;
+  <div class="line top"></div>
+  <div class="line bottom"></div>
+  <div class="line left"></div>
+  <div class="line right"></div>
+
+  <script src="libs/reveal.js/4.3.1/reveal.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/fullscreen/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/svg.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/Chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/d3.v3.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3.patch.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/queue.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/topojson.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/function-plot.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/customcontrols/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/embed-tweet/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/verticator/verticator.js"></script>
+
+<script src="libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/search/search.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/menu/menu.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chalkboard/plugin.js"></script>
+
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/plugin.js"></script>  -->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/recorder.js"></script>-->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/RecordRTC.js"></script>-->
+
+  
+
+<script>
+  const printPlugins = [
+      RevealNotes,
+      RevealHighlight,
+      RevealMath.MathJax3,
+      RevealAnimate,
+      RevealChalkboard, 
+			RevealEmbedTweet,
+			RevealChart,
+		];
+
+		const plugins =  [...printPlugins,
+		RevealZoom, 
+		RevealSearch, 
+				RevealMarkdown, 
+				RevealMenu, 
+				RevealFullscreen,
+				RevealAnything,
+				//RevealAudioSlideshow,
+				//RevealAudioRecorder,
+				RevealCustomControls, 
+				// poll
+				// question
+				// seminar
+				Verticator 
+				 ]
+
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+      controlsTutorial: true,
+      controlsLayout: 'bottom-right',
+      controlsBackArrows: 'faded',
+      progress: true,
+      slideNumber: false,
+      //#showSlideNumber "all" "print" "speaker"
+      hash: true, //# hash: false,
+      //# respondToHashChanges: true,
+      //# history: false,
+      keyboard: true,
+      //#keyboardCondition: null,
+      overview: true,
+      center: true,
+      touch: true,
+      loop: false,
+      rtl: false,
+      //#navigationMode: 'default', linear grid
+      shuffle: false,
+      fragments: true,
+      fragmentInURL: false,
+      embedded: false,
+      help: true,
+      //#pause: true
+      showNotes: false,
+      autoPlayMedia: false, // TODO fix this to a nullable value
+      //#preloadIframes: null. true false
+      //#autoAnimate: true
+      //#autoAnimateMatcher: null,
+      //#autoAnimateEasing: 'ease',
+      //autoAnimateDuration: 1.0,
+      //#autoAnimateUnmatched: true
+      //#autoAnimateStyles: []
+      autoSlide: 0, // TODO fix this to a falseable value
+      autoSlideStoppable: true,
+      autoSlideMethod: '0',
+      defaultTiming: 120,
+      mouseWheel: false,
+      //#previewLinks: false
+      //#postMessage: true, // TODO : this can cause issues with the vscode api ???
+      //#postMessageEvents: false,
+      //#focusBodyOnPageVisibilityChange: true,
+      transition: 'none',
+      transitionSpeed: 'default',
+      backgroundTransition: 'default',
+      //#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+      //#pdfSeparateFragments: true,
+      //#pdfPageHeightOffset: -1,
+      viewDistance: 3,
+      //#mobileViewDistance: 2,
+      display: 'block',
+      //#hideInactiveCursor: true,
+      //#hideCursorTime: 5000
+
+      // Parallax Background
+      parallaxBackgroundImage: '',
+      parallaxBackgroundSize: '',
+      parallaxBackgroundHorizontal: 0,
+      parallaxBackgroundVertical: 0,
+
+      //Presentation Size
+      width: 960,
+			height: 700,
+			margin: 0.04,
+      minScale: 0.2,
+      maxScale: 2,
+      disableLayout: false,
+
+      audio: {
+        prefix: 'audio/', // audio files are stored in the "audio" folder
+        suffix: '.ogg', // audio files have the ".ogg" ending
+        textToSpeechURL: null, // the URL to the text to speech converter
+        defaultNotes: false, // use slide notes as default for the text to speech converter
+        defaultText: false, // use slide text as default for the text to speech converter
+        advance: 0, // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+        autoplay: false, // automatically start slideshow
+        defaultDuration: 5, // default duration in seconds if no audio is available
+        defaultAudios: true, // try to play audios with names such as audio/1.2.ogg
+        playerOpacity: 0.05, // opacity value of audio player if unfocused
+        playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+        startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+      },
+      
+      chalkboard: { // font-awesome.min.css must be available
+        //src: "chalkboard/chalkboard.json",
+        storage: "chalkboard-demo",
+      },
+      
+			customcontrols: {
+					controls: [
+      						{
+						  id: 'toggle-overview',
+						  title: 'Toggle overview (O)',
+						  icon: '<i class="fa fa-th"></i>',
+						  action: 'Reveal.toggleOverview();'
+						}
+						,
+      {
+        icon: '<i class="fa fa-pen-square"></i>',
+        title: 'Toggle chalkboard (B)',
+        action: 'RevealChalkboard.toggleChalkboard();'
+      },
+      {
+        icon: '<i class="fa fa-pen"></i>',
+        title: 'Toggle notes canvas (C)',
+        action: 'RevealChalkboard.toggleNotesCanvas();'
       }
+      
+				]
+			},
+			chart: {
+					defaults: { 
+						color: 'lightgray', // color of labels
+						scale: { 
+							beginAtZero: true, 
+							ticks: { stepSize: 1 },
+							grid: { color: "lightgray" } , // color of grid lines
+						},
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+			},
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				anything: [ 
+				{
+		className: "plot",
+		defaults: {width:500, height: 500, grid:true},
+		initialize: (function(container, options){ options.target = "#"+container.id; functionPlot(options) })
+	 },
+	 {
+		className: "chart",  
+		initialize: (function(container, options){ container.chart = new Chart(container.getContext("2d"), options);  })
+	 },
+	 {
+		className: "anything",
+		initialize: (function(container, options){ if (options && options.initialize) { options.initialize(container)} })
+	 },
+					],
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins ) 
+		});
+			
 
-      // default options to init reveal.js
-      var defaultOptions = {
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        slideNumber: true,
-        highlight: {
-          highlightOnLoad: false
-        },
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealZoom,
-          RevealNotes,
-          RevealMath
-        ]
-      };
 
-      // options from URL query string
-      var queryOptions = Reveal().getQueryHash() || {};
+	    // Change chalkboard theme : 
+		function changeTheme(input) {
+			var config = {};
+			config.theme = input.value;
+			Reveal.getPlugin("RevealChalkboard").configure(config);
+			input.blur();
+		}
 
-      var options = extend(defaultOptions, {"transition":"none","slideNumber":false,"overview":true,"autoPlayMedia":true,"_":["slides/"],"static":"web","static-dirs":"slides/assets","staticDirs":"slides/assets","listing-template":"../globals/index/index.html","listingTemplate":"../globals/index/index.html","title":"Qfield Presentation"}, queryOptions);
-    </script>
+		// // Handle the message inside the webview
+        // window.addEventListener('message', event => {
 
+        //     const message = event.data; // The JSON data our extension sent
 
-    <script>
-      Reveal.initialize(options);
-      Reveal.addEventListener('ready', function (event) {
-        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
-        const hlp = Reveal.getPlugin('highlight');
-        blocks.forEach(hlp.highlightBlock);
-      });
-    </script>
+        //     switch (message.command) {
+        //         case 'refactor':
+        //             Reveal.toggleHelp();
+        //     }
+        // });
 
-    <script>
-      const mermaidOptions = extend({ startOnLoad: false }, {});
-      mermaid.startOnLoad = false;
-      mermaid.initialize(mermaidOptions);
-      const cb = function (event) {
-        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
-        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
-      }
-      Reveal.addEventListener('ready', cb);
-      Reveal.addEventListener('slidetransitionend', cb);
-    </script>
-  </body>
+		if (window.location.search.match(/print-pdf-now/gi)) {
+      		setTimeout(() => {
+				window.print();
+			  }, 2500);
+			
+    }
+</script>
+
+</body>
+
 </html>

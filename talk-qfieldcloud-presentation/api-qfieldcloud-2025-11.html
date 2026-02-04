@@ -1,580 +1,875 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>Qfieldcloud Presentation</title>
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="./dist/reset.css" />
-    <link rel="stylesheet" href="./dist/reveal.css" />
-    <link rel="stylesheet" href="./_assets/stylesheets/qf-style.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+<head>
+  <meta charset="utf-8">
 
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="--v--">
-          <textarea data-template>
+  <title>QFieldCloud APIs 2025-11</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- highlight Theme -->
+  
+  <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/monokai.min.css">
+  
+	
+		
+	<link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
+	
+	
+	
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/customcontrols/style.css">
+  
+	
+
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/stylesheets/qf-style.css.css" id="theme">
+  
+  
+
+  <link rel="stylesheet" href="libs/styles/tasklist.css">
+	<link rel="stylesheet" href="libs/styles/iota.css">
+	<link rel="stylesheet" href="libs/styles/layout.css">
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="stylesheets/qf-style.css">
+  
+
+   <!-- css list -->
+	
+
+   
+
+</head>
+
+<body>
+
+   
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      
+
+
+    
+        <section >
             
+            <h2>Manage your fieldwork directly from your app with QFieldCloud API integration</h2>
+<p><img src="./assets/logo_sidetext.svg" alt=""></p>
+<h3>Ivan Ivanov, <a href="http://OPENGIS.ch">OPENGIS.ch</a></h3>
 
-## Manage your fieldwork directly from your app with QFieldCloud API integration
-
-![](./assets/logo_sidetext.svg)
-
-### Ivan Ivanov, OPENGIS.ch
+            </section>
+    
 
 
----
 
-<!-- .slide: class="stack" -->
-# OPEN SOURCE<br><span class="green">GEONINJAS</span><br>MADE IN<br>SWITZERLAND
-
-### we l[i|o]ve open source.
-
+    
+        <section class="stack">
+            
+            <!-- .slide: class="stack" -->
+<h1>OPEN SOURCE<br><span class="green">GEONINJAS</span><br>MADE IN<br>SWITZERLAND</h1>
+<h3>we l[i|o]ve open source.</h3>
 <img src="assets/logo_opengisch_open-source-geoninjas.png" class="styled-logo">
+            </section>
+    
 
 
----
 
-## What is QFieldCloud?
-## Your tool for seamless fieldwork!
-
-☁️ Centralized project, data and settings management for QGIS/QField projects.
-
+    
+        <section >
+            
+            <h2>What is QFieldCloud?</h2>
+<h2>Your tool for seamless fieldwork!</h2>
+<p>☁️ Centralized project, data and settings management for QGIS/QField projects.</p>
 <br>
-
-🤝 Collaboration - users, organizations, teams.
-
+<p>🤝 Collaboration - users, organizations, teams.</p>
 <br>
-
-✏️ Data versioning.
-
+<p>✏️ Data versioning.</p>
 <br>
-
-🧑‍💻 API integrations.
-
+<p>🧑‍💻 API integrations.</p>
 <br>
-
 <img src="./assets/qfc_rapid_mapping.png">
+            </section>
+    
 
----
 
-## Use [app.qfield.cloud](https://app.qfield.cloud)
-## the OPENGIS.ch hosted solution
 
-QFieldCloud is hosted **in Switzerland**!
-
+    
+        <section >
+            
+            <h2>Use <a href="https://app.qfield.cloud">app.qfield.cloud</a></h2>
+<h2>the <a href="http://OPENGIS.ch">OPENGIS.ch</a> hosted solution</h2>
+<p>QFieldCloud is hosted <strong>in Switzerland</strong>!</p>
 <img src="assets/suisse.png" height="300px" style="display: block; margin: 0 auto;">
-
----
-
-## Use dedicated/on-premises QFieldCloud
-## your own QFieldCloud
-
-QFieldCloud is hosted **in your organization**!
+            </section>
+    
 
 
+
+    
+        <section >
+            
+            <h2>Use dedicated/on-premises QFieldCloud</h2>
+<h2>your own QFieldCloud</h2>
+<p>QFieldCloud is hosted <strong>in your organization</strong>!</p>
 <div style="text-align: center; font-size: 5rem; margin-top: 5rem;">
 🌎🌍🌏
 </div>
+            </section>
+    
 
----
 
-## Use QFieldCloud
-## hosted by yourself
 
-```
-$ git clone git@github.com:opengisch/QFieldCloud.git
-```
+    
+        <section >
+            
+            <h2>Use QFieldCloud</h2>
+<h2>hosted by yourself</h2>
+<pre><code>$ git clone git@github.com:opengisch/QFieldCloud.git
+</code></pre>
 
----
+            </section>
+    
 
-## 2025
-## in review
 
-![Release 25.1](./assets/qfc_release_25_1.png)
 
----
+    
+        <section >
+            
+            <h2>2025</h2>
+<h2>in review</h2>
+<p><img src="./assets/qfc_release_25_1.png" alt="Release 25.1"></p>
 
-## 800 code changes
-## 35 released versions
+            </section>
+    
 
+
+
+    
+        <section >
+            
+            <h2>800 code changes</h2>
+<h2>35 released versions</h2>
 <img src="./assets/qfc_commits_25.png" height="400px">
+            </section>
+    
 
 
----
 
-## 9000
-## unique active monthly users
-## on app.qfield.cloud
-
+    
+        <section >
+            
+            <h2>9000</h2>
+<h2>unique active monthly users</h2>
+<h2>on app.qfield.cloud</h2>
 <div style="font-size: 2rem">
 👩🏽‍💻👨🏿‍🔬👩🏼‍🏫🧑🏾‍🚀👨🏻‍💻👩🏿‍🚒🧑🏽‍🎨👨🏼‍⚖️👩🏾‍⚕️🧑🏻‍🎤👨🏿‍🍳👩🏽‍🔧🧑🏼‍🎓👨🏾‍✈️👩🏻‍🌾🧑🏿‍🏭👨🏽‍💼👩🏼‍🔬🧑🏾‍💻👨🏻‍🏫👩🏿‍🚀🧑🏽‍💻👨🏼‍🚒👩🏾‍🎨🧑🏻‍⚖️👨🏿‍⚕️👩🏽‍🎤🧑🏼‍🍳👨🏾‍🔧👩🏻‍🎓🧑🏿‍✈️👨🏽‍🌾👩🏼‍🏭🧑🏾‍💼👨🏻‍🔬👩🏿‍💻🧑🏽‍🏫👨🏼‍🚀👩🏾‍💻🧑🏻‍🚒👨🏿‍🎨👩🏽‍⚖️🧑🏼‍⚕️👨🏾‍🎤👩🏻‍🍳🧑🏿‍🔧👨🏽‍🎓👩🏼‍✈️🧑🏾‍🌾👨🏻‍🏭👩🏿‍💼🧑🏽‍🔬👨🏼‍💻👩🏾‍🏫🧑🏻‍🚀👨🏿‍💻👩🏽‍🚒🧑🏼‍🎨👨🏾‍⚖️👩🏻‍⚕️🧑🏿‍🎤👨🏽‍🍳👩🏼‍🔧🧑🏾‍🎓👨🏻‍✈️👩🏿‍🌾🧑🏽‍🏭👨🏼‍💼👩🏾‍🔬🧑🏻‍💻👨🏿‍🏫👩🏽‍🚀🧑🏼‍💻👨🏾‍🚒👩🏻‍🎨🧑🏿‍⚖️👨🏽‍⚕️👩🏼‍🎤🧑🏾‍🍳👨🏻‍🔧👩🏿‍🎓🧑🏽‍✈️👨🏼‍🌾👩🏾‍🏭🧑🏻‍💼👨🏿‍🔬👩🏽‍💻🧑🏼‍🏫👨🏾‍🚀👩🏻‍💻🧑🏿‍🚒👨🏽‍🎨👩🏼‍⚖️🧑🏾‍⚕️👨🏻‍🎤👩🏿‍🍳🧑🏽‍🔧👨🏼‍🎓👩🏾‍✈️🧑🏻‍🌾👨🏿‍🏭👩🏽‍💼🧑🏼‍🔬👨🏾‍💻👩🏻‍🏫🧑🏿‍🚀👨🏽‍💻👩🏼‍🚒🧑🏾‍🎨👨🏻‍⚖️👩🏿‍⚕️🧑🏽‍🎤👨🏼‍🍳👩🏾‍🔧🧑🏻‍🎓👨🏿‍✈️👩🏽‍🌾🧑🏼‍🏭👨🏾‍💼👩🏻‍🔬🧑🏿‍💻👩🏽‍🏫👨🏼‍🚀👩🏾‍💻🧑🏻‍🚒👨🏿‍🎨👩🏽‍⚖️🧑🏼‍⚕️👨🏾‍🎤👩🏻‍🍳🧑🏿‍🔧👨🏽‍🎓👩🏼‍✈️🧑🏾‍🌾👨🏻‍🏭👩🏿‍💼🧑🏽‍🔬👨🏼‍💻👩🏾‍🏫🧑🏻‍🚀👨🏿‍💻👩🏽‍🚒🧑🏼‍🎨👨🏾‍⚖️👩🏻‍⚕️🧑🏿‍🎤👨🏽‍🍳👩🏼‍🔧🧑🏾‍🎓👨🏻‍✈️👩🏿‍🌾🧑🏽‍🏭👨🏼‍💼👩🏾‍🔬🧑🏻‍💻👨🏿‍🏫👩🏽‍🚀🧑🏼‍💻👨🏾‍🚒👩🏻‍🎨🧑🏿‍⚖️👨🏽‍⚕️👩🏼‍🎤🧑🏾‍🍳👨🏻‍🔧👩🏿‍🎓🧑🏽‍✈️👨🏼‍🌾👩🏾‍🏭🧑🏻‍💼👨🏿‍🔬👩🏽‍💻🧑🏼‍🏫👨🏾‍🚀👩🏻‍💻🧑🏿‍🚒👨🏽‍🎨👩🏼‍⚖️🧑🏾‍⚕️👨🏻‍🎤👩🏿‍🍳🧑🏽‍🔧👨🏼‍🎓👩🏾‍✈️🧑🏻‍🌾👨🏿‍🏭👩🏽‍💼🧑🏼‍🔬👨🏾‍💻👩🏻‍🏫🧑🏿‍🚀👨🏽‍💻👩🏼‍🚒🧑🏾‍🎨👨🏻‍⚖️👩🏿‍⚕️🧑🏽‍🎤👨🏼‍🍳👩🏾‍🔧🧑🏻‍🎓👨🏿‍✈️👩🏽‍🌾🧑🏼‍🏭👨🏾‍💼👩🏻‍🔬🧑🏿‍💻👩🏽‍🏫👨🏼‍🚀👩🏾‍💻🧑🏻‍🚒👨🏿‍🎨👩🏽‍⚖️🧑🏼‍⚕️👨🏾‍🎤👩🏻‍🍳🧑🏿‍🔧👨🏽‍🎓👩🏼‍✈️🧑🏾‍🌾👨🏻‍🏭👩🏿‍💼🧑🏽‍🔬👨🏼‍💻👩🏾‍🏫🧑🏻‍🚀👨🏿‍💻👩🏽‍🚒🧑🏼‍🎨👨🏾‍⚖️👩🏻‍⚕️🧑🏿‍🎤👨🏽‍🍳👩🏼‍🔧🧑🏾‍🎓👨🏻‍✈️👩🏿‍🌾🧑🏽‍🏭👨🏼‍💼👩🏾‍🔬🧑🏻‍💻👨🏿‍🏫👩🏽‍🚀🧑🏼‍💻👨🏾‍🚒👩🏻‍🎨🧑🏿‍⚖️👨🏽‍⚕️👩🏼‍🎤🧑🏾‍🍳👨🏻‍🔧👩🏿‍🎓🧑🏽‍✈️👨🏼‍🌾👩🏾‍🏭🧑🏻‍💼👨🏿‍🔬👩🏽‍💻🧑🏼‍🏫👨🏾‍🚀👩🏻‍💻🧑🏿‍🚒👨🏽‍🎨👩🏼‍⚖️🧑🏾‍⚕️👨🏻‍🎤👩🏿‍🍳🧑🏽‍🔧👨🏼‍🎓👩🏾‍✈️🧑🏻‍🌾👨🏿‍🏭👩🏽‍💼🧑🏼‍🔬👨🏾‍💻👩🏻‍🏫🧑🏿‍🚀👨🏽‍💻👩🏼‍🚒🧑🏾‍🎨👨🏻‍⚖️👩🏿‍⚕️🧑🏽‍🎤👨🏼‍🍳👩🏾‍🔧🧑🏻‍🎓👨🏿‍✈️👩🏽‍🌾🧑🏼‍🏭👨🏾‍💼👩🏻‍🔬🧑🏿‍💻👩🏽‍🏫👨🏼‍🚀👩🏾‍💻🧑🏻‍🚒👨🏿‍🎨👩🏽‍⚖️🧑🏼‍⚕️👨🏾‍🎤👩🏻‍🍳🧑🏿‍🔧👨🏽‍🎓👩🏼‍✈️🧑🏾‍🌾👨🏻‍🏭👩🏿‍💼🧑🏽‍🔬👨🏼‍💻👩🏾‍🏫🧑🏻‍🚀👨🏿‍💻👩🏽‍🚒🧑🏼‍🎨👨🏾‍⚖️👩🏻‍⚕️🧑🏿‍🎤👨🏽‍🍳👩🏼‍🔧🧑🏾‍🎓👨🏻‍✈️👩🏿‍🌾🧑🏽‍🏭👨🏼‍💼👩🏾‍🔬🧑🏻‍💻👨🏿‍🏫👩🏽‍🚀🧑🏼‍💻👨🏾‍🚒👩🏻‍🎨🧑🏿‍⚖️👨🏽‍⚕️👩🏼‍🎤🧑🏾‍🍳👨🏻‍🔧👩🏿‍🎓🧑🏽‍✈️👨🏼‍🌾👩🏾‍🏭🧑🏻‍💼👨🏿‍🔬👩🏽‍💻🧑🏼‍🏫👨🏾‍🚀👩🏻‍💻🧑🏿‍🚒👨🏽‍🎨👩🏼‍⚖️🧑🏾‍⚕️👨🏻‍🎤👩🏿‍🍳🧑🏽‍🔧
 🧑🏼‍🎨👨🏾‍⚖️👩🏻‍⚕️🧑🏿‍🎤👨🏽‍🍳👩🏼‍🔧🧑🏾‍🎓
 </div>
+            </section>
+    
 
 
----
+
+    
+        <section >
+            
+            <h2>Notable 2025 features</h2>
+<ul>
+<li><strong>Speed</strong> - make file handling equally fast for both small and large projects.</li>
+<li><strong>Shared datasets</strong> - upload your basemaps once, use it within all projects in your organization.</li>
+<li><strong>Organization and user level secrets</strong> - having to declare the same secrets for each individual project was tiring.</li>
+<li><strong>Single sign-on (SSO) support</strong> - sign in via Google OIDC.</li>
+</ul>
+
+            </section>
+    
 
 
-## Notable 2025 features
 
-
-- **Speed** - make file handling equally fast for both small and large projects.
-- **Shared datasets** - upload your basemaps once, use it within all projects in your organization.
-- **Organization and user level secrets** - having to declare the same secrets for each individual project was tiring.
-- **Single sign-on (SSO) support** - sign in via Google OIDC.
-
----
-
-## And more, thanks to you,
-## our users and supporters!
-
+    
+        <section >
+            
+            <h2>And more, thanks to you,</h2>
+<h2>our users and supporters!</h2>
 <div style="text-align: center; font-size: 15rem; margin-top: 5rem;">🫶</div>
+            </section>
+    
 
 
----
 
-## Integrate QFieldCloud in your workflow
-
-
-😎 **Stable APIs** - integrate with QFieldCloud using the RESTful API documented with OpenAPI/Swagger.
-
+    
+        <section >
+            
+            <h2>Integrate QFieldCloud in your workflow</h2>
+<p>😎 <strong>Stable APIs</strong> - integrate with QFieldCloud using the RESTful API documented with OpenAPI/Swagger.</p>
 <br>
-
-💻 **Use the CLI** - `pip install qfieldlcoud-sdk` and use `qfieldcloud-cli` in your shell.
-
+<p>💻 <strong>Use the CLI</strong> - <code>pip install qfieldlcoud-sdk</code> and use <code>qfieldcloud-cli</code> in your shell.</p>
 <br>
-
-🐍 **Use the SDK** - `pip install qfieldcloud-sdk` and `import qfieldcloud_sdk` in Python.
-
+<p>🐍 <strong>Use the SDK</strong> - <code>pip install qfieldcloud-sdk</code> and <code>import qfieldcloud_sdk</code> in Python.</p>
 <br>
+<p>☁️ <strong>Extend QFieldCloud</strong> - build an app on top of QFieldCloud.</p>
 
-☁️ **Extend QFieldCloud** - build an app on top of QFieldCloud.
-
----
-
-## QFieldCloud API
-## [app.qfield.cloud/swagger](https://app.qfield.cloud/swagger)
+            </section>
+    
 
 
-![alt text](assets/qfc_swagger.png)
+
+    
+        <section >
+            
+            <h2>QFieldCloud API</h2>
+<h2><a href="https://app.qfield.cloud/swagger">app.qfield.cloud/swagger</a></h2>
+<p><img src="assets/qfc_swagger.png" alt="alt text"></p>
+
+            </section>
+    
 
 
----
 
-## Example with our beloved `curl`
-
-IN:
-
-```
-curl -X 'POST' \
+    
+        <section >
+            
+            <h2>Example with our beloved <code>curl</code></h2>
+<p>IN:</p>
+<pre><code>curl -X 'POST' \
   'https://app.qfield.cloud/api/v1/auth/login/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
-  -d 'username=foss4g2025&email=&password=kiaorakoprivshtitsa'
-```
-
-OUT:
-
-```json
-{
-  "token": "o4OahKpKw7N16BTdD8uqsNxHbNHuYIFeCxVGPIei2KQaRPue8wOaDU7B4ZnanDwPIQFG3ZAoDZy3odkQJSBK8jV8p0GKMfNAjaFN",
-  "expires_at": "2025-12-19T00:14:10.956438+01:00",
-  "username": "foss4g2025",
-  "type": "1",
-  "email": "ivan+foss4g2025@opengis.ch",
-  "avatar_url": "https://app.qfield.cloud/api/v1/files/avatars/foss4g2025/avatar..png",
-  "first_name": "Kia",
-  "last_name": "Ora",
-  "full_name": "Kia Ora"
+  -d 'username=foss4g2025&amp;email=&amp;password=kiaorakoprivshtitsa'
+</code></pre>
+<p>OUT:</p>
+<pre><code class="language-json">{
+  &quot;token&quot;: &quot;o4OahKpKw7N16BTdD8uqsNxHbNHuYIFeCxVGPIei2KQaRPue8wOaDU7B4ZnanDwPIQFG3ZAoDZy3odkQJSBK8jV8p0GKMfNAjaFN&quot;,
+  &quot;expires_at&quot;: &quot;2025-12-19T00:14:10.956438+01:00&quot;,
+  &quot;username&quot;: &quot;foss4g2025&quot;,
+  &quot;type&quot;: &quot;1&quot;,
+  &quot;email&quot;: &quot;ivan+foss4g2025@opengis.ch&quot;,
+  &quot;avatar_url&quot;: &quot;https://app.qfield.cloud/api/v1/files/avatars/foss4g2025/avatar..png&quot;,
+  &quot;first_name&quot;: &quot;Kia&quot;,
+  &quot;last_name&quot;: &quot;Ora&quot;,
+  &quot;full_name&quot;: &quot;Kia Ora&quot;
 }
-```
+</code></pre>
 
----
+            </section>
+    
 
-## Use `qfieldcloud-sdk-python`
 
+
+    
+        <section >
+            
+            <h2>Use <code>qfieldcloud-sdk-python</code></h2>
 <br>
 <br>
 <br>
-
-### Check repo
-### [github.com/opengisch/qfieldcloud-sdk-python](https://github.com/opengisch/qfieldcloud-sdk-python)
-
+<h3>Check repo</h3>
+<h3><a href="https://github.com/opengisch/qfieldcloud-sdk-python">github.com/opengisch/qfieldcloud-sdk-python</a></h3>
 <br>
 <br>
+<h3>Install</h3>
+<pre><code>$ pip install qfieldcloud-sdk
+</code></pre>
+<h3>Usage</h3>
+<pre><code>$ qfieldcloud-cli --help
+</code></pre>
 
-### Install
+            </section>
+    
 
-```
-$ pip install qfieldcloud-sdk
-```
 
-### Usage
-```
-$ qfieldcloud-cli --help
-```
 
----
-
-## Login
-
-IN:
-
-```shell
-$ qfieldcloud-cli login foss4g2025 kiaorakoprivshtitsa
-```
-
-OUT:
-
-```shell
-Log in foss4g2025…
+    
+        <section >
+            
+            <h2>Login</h2>
+<p>IN:</p>
+<pre><code class="language-shell">$ qfieldcloud-cli login foss4g2025 kiaorakoprivshtitsa
+</code></pre>
+<p>OUT:</p>
+<pre><code class="language-shell">Log in foss4g2025…
 Welcome to QFieldCloud, foss4g2025.
 QFieldCloud has generated a secret token to identify you. Put the token in your in the environment using the following code, so you do not need to write your username and password again:
-export QFIELDCLOUD_TOKEN="LnNOo4vRtXCb3RBi9mRhi4yl8x3VeLD75ofWTzWrcGAUll8TS0JP0Ko0tNAv7PFZ6nQDtodM2gpzI2M7NXBIBcp6Li44ldWoYnwd"
+export QFIELDCLOUD_TOKEN=&quot;LnNOo4vRtXCb3RBi9mRhi4yl8x3VeLD75ofWTzWrcGAUll8TS0JP0Ko0tNAv7PFZ6nQDtodM2gpzI2M7NXBIBcp6Li44ldWoYnwd&quot;
 
-```
+</code></pre>
+<p>Alternatively, you can:</p>
+<pre><code class="language-shell">$ qfieldcloud-cli --username foss4g2025 --password kiaorakoprivshtitsa list-projects
+</code></pre>
+
+            </section>
+    
 
 
-Alternatively, you can:
 
-```shell
-$ qfieldcloud-cli --username foss4g2025 --password kiaorakoprivshtitsa list-projects
-```
-
----
-
-## List projects
-
-IN:
-
-```shell
-$ qfieldcloud-cli list-projects
-```
-
-OUT:
-
-```shell
-Listing projects…
+    
+        <section >
+            
+            <h2>List projects</h2>
+<p>IN:</p>
+<pre><code class="language-shell">$ qfieldcloud-cli list-projects
+</code></pre>
+<p>OUT:</p>
+<pre><code class="language-shell">Listing projects…
 User does not have any projects yet.
-```
+</code></pre>
 
----
+            </section>
+    
 
-## Create project
 
-IN:
 
-```shell
-qfieldcloud-cli create-project --description 'Daily work project' --is-private 'Tree_Survey'
-```
-
-OUT:
-
-```shell
-$ qfieldcloud-cli create-project --description 'Daily work project' --is-private 'Tree_Survey'
+    
+        <section >
+            
+            <h2>Create project</h2>
+<p>IN:</p>
+<pre><code class="language-shell">qfieldcloud-cli create-project --description 'Daily work project' --is-private 'Tree_Survey'
+</code></pre>
+<p>OUT:</p>
+<pre><code class="language-shell">$ qfieldcloud-cli create-project --description 'Daily work project' --is-private 'Tree_Survey'
 Creating project Tree_Survey…
 Created project:
 | ID                                   | OWNER/NAME             | IS PUBLIC | DESCRIPTION        |
 --------------------------------------------------------------------------------------------------
 | e22f9c7f-5ee3-4950-8f6d-b39d493fd536 | foss4g2025/Tree_Survey | 0         | Daily work project |
-```
+</code></pre>
 
----
+            </section>
+    
 
-## List projects (as JSON)
 
-IN:
 
-```shell
-$ qfieldcloud-cli --json list-projects
-```
-
-OUT:
-
-```json
-[
+    
+        <section >
+            
+            <h2>List projects (as JSON)</h2>
+<p>IN:</p>
+<pre><code class="language-shell">$ qfieldcloud-cli --json list-projects
+</code></pre>
+<p>OUT:</p>
+<pre><code class="language-json">[
   {
-    "can_repackage": true,
-    "created_at": "2025-11-19T00:49:14.928258+01:00",
-    "data_last_packaged_at": null,
-    "data_last_updated_at": null,
-    "description": "Daily work project",
-    "id": "e22f9c7f-5ee3-4950-8f6d-b39d493fd536",
-    "is_attachment_download_on_demand": false,
-    "is_featured": false,
-    "is_public": false,
-    "is_shared_datasets_project": false,
-    "name": "Tree_Survey",
-    "needs_repackaging": true,
-    "owner": "foss4g2025",
-    "private": true,
-    "shared_datasets_project_id": null,
-    "status": "failed",
-    "updated_at": "2025-11-19T00:49:14.928281+01:00",
-    "user_role": "admin",
-    "user_role_origin": "project_owner"
+    &quot;can_repackage&quot;: true,
+    &quot;created_at&quot;: &quot;2025-11-19T00:49:14.928258+01:00&quot;,
+    &quot;data_last_packaged_at&quot;: null,
+    &quot;data_last_updated_at&quot;: null,
+    &quot;description&quot;: &quot;Daily work project&quot;,
+    &quot;id&quot;: &quot;e22f9c7f-5ee3-4950-8f6d-b39d493fd536&quot;,
+    &quot;is_attachment_download_on_demand&quot;: false,
+    &quot;is_featured&quot;: false,
+    &quot;is_public&quot;: false,
+    &quot;is_shared_datasets_project&quot;: false,
+    &quot;name&quot;: &quot;Tree_Survey&quot;,
+    &quot;needs_repackaging&quot;: true,
+    &quot;owner&quot;: &quot;foss4g2025&quot;,
+    &quot;private&quot;: true,
+    &quot;shared_datasets_project_id&quot;: null,
+    &quot;status&quot;: &quot;failed&quot;,
+    &quot;updated_at&quot;: &quot;2025-11-19T00:49:14.928281+01:00&quot;,
+    &quot;user_role&quot;: &quot;admin&quot;,
+    &quot;user_role_origin&quot;: &quot;project_owner&quot;
   }
 ]
 
-```
+</code></pre>
 
----
+            </section>
+    
 
-## Upload files to a project
 
-IN:
 
-```shell
-$ qfieldcloud-cli upload-files e22f9c7f-5ee3-4950-8f6d-b39d493fd536 .
-```
-
-OUT:
-
-```json
-Uploading "datasets/bees.gpkg"...: 164kB [00:01, 107kB/s]
-Uploading "DCIM/lavender.jpg"...: 72.7kB [00:00, 118kB/s]
-Uploading "DCIM/grass.jpg"...: 75.8kB [00:00, 82.4kB/s]
-Uploading "DCIM/1.jpg"...: 162kB [00:01, 158kB/s]
-Uploading "DCIM/weed.jpg"...: 127kB [00:00, 137kB/s]
-Uploading "DCIM/colza.jpg"...: 113kB [00:00, 123kB/s]
-Uploading "DCIM/LICENSE"...: 836B [00:00, 1.37kB/s]
-Uploading "DCIM/4.jpg"...: 146kB [00:01, 118kB/s]
-Uploading "DCIM/2.jpg"...: 78.6kB [00:00, 85.4kB/s]
-Uploading "DCIM/taraxacum.jpg"...: 79.8kB [00:00, 86.6kB/s]
-Uploading "DCIM/3.jpg"...: 75.0kB [00:00, 81.5kB/s]
-Uploading "basemaps/laax.gpkg"...: 1.93MB [00:03, 496kB/s]
-Uploading "bees.qgz"...: 122kB [00:00, 199kB/s]
-Uploading files "e22f9c7f-5ee3-4950-8f6d-b39d493fd536" from .…
+    
+        <section >
+            
+            <h2>Upload files to a project</h2>
+<p>IN:</p>
+<pre><code class="language-shell">$ qfieldcloud-cli upload-files e22f9c7f-5ee3-4950-8f6d-b39d493fd536 .
+</code></pre>
+<p>OUT:</p>
+<pre><code class="language-json">Uploading &quot;datasets/bees.gpkg&quot;...: 164kB [00:01, 107kB/s]
+Uploading &quot;DCIM/lavender.jpg&quot;...: 72.7kB [00:00, 118kB/s]
+Uploading &quot;DCIM/grass.jpg&quot;...: 75.8kB [00:00, 82.4kB/s]
+Uploading &quot;DCIM/1.jpg&quot;...: 162kB [00:01, 158kB/s]
+Uploading &quot;DCIM/weed.jpg&quot;...: 127kB [00:00, 137kB/s]
+Uploading &quot;DCIM/colza.jpg&quot;...: 113kB [00:00, 123kB/s]
+Uploading &quot;DCIM/LICENSE&quot;...: 836B [00:00, 1.37kB/s]
+Uploading &quot;DCIM/4.jpg&quot;...: 146kB [00:01, 118kB/s]
+Uploading &quot;DCIM/2.jpg&quot;...: 78.6kB [00:00, 85.4kB/s]
+Uploading &quot;DCIM/taraxacum.jpg&quot;...: 79.8kB [00:00, 86.6kB/s]
+Uploading &quot;DCIM/3.jpg&quot;...: 75.0kB [00:00, 81.5kB/s]
+Uploading &quot;basemaps/laax.gpkg&quot;...: 1.93MB [00:03, 496kB/s]
+Uploading &quot;bees.qgz&quot;...: 122kB [00:00, 199kB/s]
+Uploading files &quot;e22f9c7f-5ee3-4950-8f6d-b39d493fd536&quot; from .…
 Upload finished after uploading 13.
 
-```
+</code></pre>
 
----
+            </section>
+    
 
-## Python SDK you said too!
 
-```python
-from qfieldcloud_sdk import sdk
+
+    
+        <section >
+            
+            <h2>Python SDK you said too!</h2>
+<pre><code class="language-python">from qfieldcloud_sdk import sdk
 
 client = sdk.Client()
 
-resp = client.login("foss4g2025", "kiaorakoprivshtitsa")
-resp["token"]
-```
+resp = client.login(&quot;foss4g2025&quot;, &quot;kiaorakoprivshtitsa&quot;)
+resp[&quot;token&quot;]
+</code></pre>
+<p>OUT:</p>
+<pre><code class="language-shell">'gNCU0LvKR4NiEUwhk5ytx7D2kTBWcGpU03yJH9WxElQJyNC9rzbmeMoTbgZCI15PqorbiJt3yVvDggDzdqwGZxFBCKgz1aU69LaJ'
+</code></pre>
 
-OUT:
-```shell
-'gNCU0LvKR4NiEUwhk5ytx7D2kTBWcGpU03yJH9WxElQJyNC9rzbmeMoTbgZCI15PqorbiJt3yVvDggDzdqwGZxFBCKgz1aU69LaJ'
-```
+            </section>
+    
 
 
----
 
-## List projects files
-
-IN:
-
-```python
-client.list_remote_files("e22f9c7f-5ee3-4950-8f6d-b39d493fd536")
-```
-
-OUT:
-
-```json
-[
+    
+        <section >
+            
+            <h2>List projects files</h2>
+<p>IN:</p>
+<pre><code class="language-python">client.list_remote_files(&quot;e22f9c7f-5ee3-4950-8f6d-b39d493fd536&quot;)
+</code></pre>
+<p>OUT:</p>
+<pre><code class="language-json">[
   {
-    "etag": "4ab247c77cc1d17307dfb772954b7eab",
-    "is_attachment": false,
-    "last_modified": "18.11.2025 23:57:06 UTC",
-    "md5sum": "4ab247c77cc1d17307dfb772954b7eab",
-    "name": "basemaps/laax.gpkg",
-    "sha256": "4601ba41fe33143e5f9957faa5c55ea066f8e5c668e3c0c173400992c039c117",
-    "size": 1929216,
-    "uploaded_at": "2025-11-19T00:57:06.392814+01:00",
-    "versions": [
+    &quot;etag&quot;: &quot;4ab247c77cc1d17307dfb772954b7eab&quot;,
+    &quot;is_attachment&quot;: false,
+    &quot;last_modified&quot;: &quot;18.11.2025 23:57:06 UTC&quot;,
+    &quot;md5sum&quot;: &quot;4ab247c77cc1d17307dfb772954b7eab&quot;,
+    &quot;name&quot;: &quot;basemaps/laax.gpkg&quot;,
+    &quot;sha256&quot;: &quot;4601ba41fe33143e5f9957faa5c55ea066f8e5c668e3c0c173400992c039c117&quot;,
+    &quot;size&quot;: 1929216,
+    &quot;uploaded_at&quot;: &quot;2025-11-19T00:57:06.392814+01:00&quot;,
+    &quot;versions&quot;: [
       {
-        "display": "v20251118235706",
-        "is_latest": true,
-        "last_modified": "18.11.2025 23:57:06 UTC",
-        "md5sum": "4ab247c77cc1d17307dfb772954b7eab",
-        "sha256": "4601ba41fe33143e5f9957faa5c55ea066f8e5c668e3c0c173400992c039c117",
-        "size": 1929216,
-        "uploaded_at": "2025-11-19T00:57:06.392814+01:00",
-        "version_id": "88916c41-d492-4f56-b63e-7f55f73a89f7"
+        &quot;display&quot;: &quot;v20251118235706&quot;,
+        &quot;is_latest&quot;: true,
+        &quot;last_modified&quot;: &quot;18.11.2025 23:57:06 UTC&quot;,
+        &quot;md5sum&quot;: &quot;4ab247c77cc1d17307dfb772954b7eab&quot;,
+        &quot;sha256&quot;: &quot;4601ba41fe33143e5f9957faa5c55ea066f8e5c668e3c0c173400992c039c117&quot;,
+        &quot;size&quot;: 1929216,
+        &quot;uploaded_at&quot;: &quot;2025-11-19T00:57:06.392814+01:00&quot;,
+        &quot;version_id&quot;: &quot;88916c41-d492-4f56-b63e-7f55f73a89f7&quot;
       }
     ]
   },
   // ...
 ]
-```
+</code></pre>
 
----
-
-## Useful tricks
-
-
-Make backup of all images at 08:47:
-
-```shell
-47 8 * * * mkdir -p /tmp/foss4g2025 && qfieldcloud-cli download-files --filter '**/*.jpg' e22f9c7f-5ee3-4950-8f6d-b39d493fd536 /tmp/foss4g2025
-```
-
----
-
-## Check docs
-## [opengisch.github.io/qfieldcloud-sdk-python](https://opengisch.github.io/qfieldcloud-sdk-python)
+            </section>
+    
 
 
 
-![alt text](assets/qfc_sdk_docs.png)
+    
+        <section >
+            
+            <h2>Useful tricks</h2>
+<p>Make backup of all images at 08:47:</p>
+<pre><code class="language-shell">47 8 * * * mkdir -p /tmp/foss4g2025 &amp;&amp; qfieldcloud-cli download-files --filter '**/*.jpg' e22f9c7f-5ee3-4950-8f6d-b39d493fd536 /tmp/foss4g2025
+</code></pre>
 
----
+            </section>
+    
 
 
-# Success stories
+
+    
+        <section >
+            
+            <h2>Check docs</h2>
+<h2><a href="https://opengisch.github.io/qfieldcloud-sdk-python">opengisch.github.io/qfieldcloud-sdk-python</a></h2>
+<p><img src="assets/qfc_sdk_docs.png" alt="alt text"></p>
+
+            </section>
+    
 
 
----
 
-### TONGA
-### MAFF
+    
+        <section >
+            
+            <h1>Success stories</h1>
 
-- Photo capture as <span style="font-weight: bolder;">attachments</span> to referenced geometries.
+            </section>
+    
 
-- QFC API / SDK allowed for custom application integration.
 
-- QFC API documentation allowed for easy writing of a R module to <span style="font-weight: bolder;">communicate with QFC server/project data</span>
 
+    
+        <section >
+            
+            <h3>TONGA</h3>
+<h3>MAFF</h3>
+<ul>
+<li>
+<p>Photo capture as <span style="font-weight: bolder;">attachments</span> to referenced geometries.</p>
+</li>
+<li>
+<p>QFC API / SDK allowed for custom application integration.</p>
+</li>
+</ul>
+<p>- QFC API documentation allowed for easy writing of a R module to <span style="font-weight: bolder;">communicate with QFC server/project data</span></p>
 <br>
 <br>
+<p><img src="assets/tonga-maff.png" alt=""></p>
 
-![](assets/tonga-maff.png)
+            </section>
+    
 
----
 
 
-### FUTURA SISTEMI
-### City trees management
-
-- Integration with 3rd party WebGIS management system through QFC API.
-
-- Leveraging QField/QFC offline work capability.
-
+    
+        <section >
+            
+            <h3>FUTURA SISTEMI</h3>
+<h3>City trees management</h3>
+<ul>
+<li>
+<p>Integration with 3rd party WebGIS management system through QFC API.</p>
+</li>
+<li>
+<p>Leveraging QField/QFC offline work capability.</p>
+</li>
+</ul>
 <img src="./assets/futura-sistemi.png">
+            </section>
+    
 
 
----
+
+    
+        <section >
+            
+            <h2>Yeah, I am almost convinced, but…</h2>
+<ul>
+<li>I have no idea if QFieldCloud is going to work for us…</li>
+<li>I am almost convinced, but I need a clarification about…</li>
+<li>I am fully convinced QFieldCloud is great, but we will need some training…</li>
+<li>Where do we even get started with all these features…</li>
+<li>If only it were possible to customize this for us by adding…</li>
+<li>It looks nice, but I’m missing the one feature that is preventing us from using it…</li>
+<li>We have a much more complex system, and we need more information on how to integrate it…</li>
+</ul>
+<h2><strong>Drop us an email at <a href="sales@qfield.cloud">sales@qfield.cloud</a></strong></h2>
+<h2><strong>or ask the community at <a href="https://community.qfield.org/">community.qfield.org</a></strong></h2>
+<h2><strong>or find us around during the event.</strong></h2>
+
+            </section>
+    
 
 
-## Yeah, I am almost convinced, but...
 
-- I have no idea if QFieldCloud is going to work for us...
-- I am almost convinced, but I need a clarification about...
-- I am fully convinced QFieldCloud is great, but we will need some training...
-- Where do we even get started with all these features...
-- If only it were possible to customize this for us by adding...
-- It looks nice, but I'm missing the one feature that is preventing us from using it...
-- We have a much more complex system, and we need more information on how to integrate it...
-
-
-## **Drop us an email at [sales@qfield.cloud](sales@qfield.cloud)**
-## **or ask the community at [community.qfield.org](https://community.qfield.org/)**
-## **or find us around during the event.**
-
----
-
-# Friday, 10:00 AM
-
+    
+        <section >
+            
+            <h1>Friday, 10:00 AM</h1>
 <img src="assets/foss4g_qfield_talk.png" height="500px">
-
----
-
-## Thank you!
-
-@suricactus
+            </section>
+    
 
 
----
 
-https://basemaps.linz.govt.nz/v1/tiles/topo-raster-gridded/WebMercatorQuad/%7Bz%7D/%7Bx%7D/%7By%7D.webp?api=d01egend5fa9ztrj72ffh6a7gx3
-          </textarea>
-        </section>
-      </div>
+    
+        <section >
+            
+            <h2>Thank you!</h2>
+<p>@suricactus</p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <p><a href="https://basemaps.linz.govt.nz/v1/tiles/topo-raster-gridded/WebMercatorQuad/%7Bz%7D/%7Bx%7D/%7By%7D.webp?api=d01egend5fa9ztrj72ffh6a7gx3">https://basemaps.linz.govt.nz/v1/tiles/topo-raster-gridded/WebMercatorQuad/{z}/{x}/{y}.webp?api=d01egend5fa9ztrj72ffh6a7gx3</a></p>
+
+            </section>
+    
+
+
     </div>
 
-    <script src="./dist/reveal.js"></script>
 
-    <script src="./mermaid/dist/mermaid.min.js"></script>
+  </div>
 
-    <script src="./plugin/markdown/markdown.js"></script>
-    <script src="./plugin/highlight/highlight.js"></script>
-    <script src="./plugin/zoom/zoom.js"></script>
-    <script src="./plugin/notes/notes.js"></script>
-    <script src="./plugin/math/math.js"></script>
-    <script>
-      function extend() {
-        var target = {};
-        for (var i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-              target[key] = source[key];
-            }
-          }
-        }
-        return target;
+  <div class="line top"></div>
+  <div class="line bottom"></div>
+  <div class="line left"></div>
+  <div class="line right"></div>
+
+  <script src="libs/reveal.js/4.3.1/reveal.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/fullscreen/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/svg.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/Chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/d3.v3.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3.patch.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/queue.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/topojson.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/function-plot.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/customcontrols/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/embed-tweet/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/verticator/verticator.js"></script>
+
+<script src="libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/search/search.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/menu/menu.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chalkboard/plugin.js"></script>
+
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/plugin.js"></script>  -->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/recorder.js"></script>-->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/RecordRTC.js"></script>-->
+
+  
+
+<script>
+  const printPlugins = [
+      RevealNotes,
+      RevealHighlight,
+      RevealMath.MathJax3,
+      RevealAnimate,
+      RevealChalkboard, 
+			RevealEmbedTweet,
+			RevealChart,
+		];
+
+		const plugins =  [...printPlugins,
+		RevealZoom, 
+		RevealSearch, 
+				RevealMarkdown, 
+				RevealMenu, 
+				RevealFullscreen,
+				RevealAnything,
+				//RevealAudioSlideshow,
+				//RevealAudioRecorder,
+				RevealCustomControls, 
+				// poll
+				// question
+				// seminar
+				Verticator 
+				 ]
+
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+      controlsTutorial: true,
+      controlsLayout: 'bottom-right',
+      controlsBackArrows: 'faded',
+      progress: true,
+      slideNumber: false,
+      //#showSlideNumber "all" "print" "speaker"
+      hash: true, //# hash: false,
+      //# respondToHashChanges: true,
+      //# history: false,
+      keyboard: true,
+      //#keyboardCondition: null,
+      overview: true,
+      center: true,
+      touch: true,
+      loop: false,
+      rtl: false,
+      //#navigationMode: 'default', linear grid
+      shuffle: false,
+      fragments: true,
+      fragmentInURL: false,
+      embedded: false,
+      help: true,
+      //#pause: true
+      showNotes: false,
+      autoPlayMedia: false, // TODO fix this to a nullable value
+      //#preloadIframes: null. true false
+      //#autoAnimate: true
+      //#autoAnimateMatcher: null,
+      //#autoAnimateEasing: 'ease',
+      //autoAnimateDuration: 1.0,
+      //#autoAnimateUnmatched: true
+      //#autoAnimateStyles: []
+      autoSlide: 0, // TODO fix this to a falseable value
+      autoSlideStoppable: true,
+      autoSlideMethod: '0',
+      defaultTiming: 120,
+      mouseWheel: false,
+      //#previewLinks: false
+      //#postMessage: true, // TODO : this can cause issues with the vscode api ???
+      //#postMessageEvents: false,
+      //#focusBodyOnPageVisibilityChange: true,
+      transition: 'none',
+      transitionSpeed: 'default',
+      backgroundTransition: 'default',
+      //#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+      //#pdfSeparateFragments: true,
+      //#pdfPageHeightOffset: -1,
+      viewDistance: 3,
+      //#mobileViewDistance: 2,
+      display: 'block',
+      //#hideInactiveCursor: true,
+      //#hideCursorTime: 5000
+
+      // Parallax Background
+      parallaxBackgroundImage: '',
+      parallaxBackgroundSize: '',
+      parallaxBackgroundHorizontal: 0,
+      parallaxBackgroundVertical: 0,
+
+      //Presentation Size
+      width: 960,
+			height: 700,
+			margin: 0.04,
+      minScale: 0.2,
+      maxScale: 2,
+      disableLayout: false,
+
+      audio: {
+        prefix: 'audio/', // audio files are stored in the "audio" folder
+        suffix: '.ogg', // audio files have the ".ogg" ending
+        textToSpeechURL: null, // the URL to the text to speech converter
+        defaultNotes: false, // use slide notes as default for the text to speech converter
+        defaultText: false, // use slide text as default for the text to speech converter
+        advance: 0, // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+        autoplay: false, // automatically start slideshow
+        defaultDuration: 5, // default duration in seconds if no audio is available
+        defaultAudios: true, // try to play audios with names such as audio/1.2.ogg
+        playerOpacity: 0.05, // opacity value of audio player if unfocused
+        playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+        startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+      },
+      
+      chalkboard: { // font-awesome.min.css must be available
+        //src: "chalkboard/chalkboard.json",
+        storage: "chalkboard-demo",
+      },
+      
+			customcontrols: {
+					controls: [
+      						{
+						  id: 'toggle-overview',
+						  title: 'Toggle overview (O)',
+						  icon: '<i class="fa fa-th"></i>',
+						  action: 'Reveal.toggleOverview();'
+						}
+						,
+      {
+        icon: '<i class="fa fa-pen-square"></i>',
+        title: 'Toggle chalkboard (B)',
+        action: 'RevealChalkboard.toggleChalkboard();'
+      },
+      {
+        icon: '<i class="fa fa-pen"></i>',
+        title: 'Toggle notes canvas (C)',
+        action: 'RevealChalkboard.toggleNotesCanvas();'
       }
+      
+				]
+			},
+			chart: {
+					defaults: { 
+						color: 'lightgray', // color of labels
+						scale: { 
+							beginAtZero: true, 
+							ticks: { stepSize: 1 },
+							grid: { color: "lightgray" } , // color of grid lines
+						},
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+			},
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				anything: [ 
+				{
+		className: "plot",
+		defaults: {width:500, height: 500, grid:true},
+		initialize: (function(container, options){ options.target = "#"+container.id; functionPlot(options) })
+	 },
+	 {
+		className: "chart",  
+		initialize: (function(container, options){ container.chart = new Chart(container.getContext("2d"), options);  })
+	 },
+	 {
+		className: "anything",
+		initialize: (function(container, options){ if (options && options.initialize) { options.initialize(container)} })
+	 },
+					],
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins ) 
+		});
+			
 
-      // default options to init reveal.js
-      var defaultOptions = {
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        slideNumber: true,
-        highlight: {
-          highlightOnLoad: false
-        },
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealZoom,
-          RevealNotes,
-          RevealMath
-        ]
-      };
 
-      // options from URL query string
-      var queryOptions = Reveal().getQueryHash() || {};
+	    // Change chalkboard theme : 
+		function changeTheme(input) {
+			var config = {};
+			config.theme = input.value;
+			Reveal.getPlugin("RevealChalkboard").configure(config);
+			input.blur();
+		}
 
-      var options = extend(defaultOptions, {"transition":"none","slideNumber":false,"overview":true,"autoPlayMedia":true,"_":["slides/"],"static":"web","static-dirs":"slides/assets","staticDirs":"slides/assets","listing-template":"../globals/index/index.html","listingTemplate":"../globals/index/index.html","title":"Qfieldcloud Presentation"}, queryOptions);
-    </script>
+		// // Handle the message inside the webview
+        // window.addEventListener('message', event => {
 
+        //     const message = event.data; // The JSON data our extension sent
 
-    <script>
-      Reveal.initialize(options);
-      Reveal.addEventListener('ready', function (event) {
-        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
-        const hlp = Reveal.getPlugin('highlight');
-        blocks.forEach(hlp.highlightBlock);
-      });
-    </script>
+        //     switch (message.command) {
+        //         case 'refactor':
+        //             Reveal.toggleHelp();
+        //     }
+        // });
 
-    <script>
-      const mermaidOptions = extend({ startOnLoad: false }, {});
-      mermaid.startOnLoad = false;
-      mermaid.initialize(mermaidOptions);
-      const cb = function (event) {
-        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
-        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
-      }
-      Reveal.addEventListener('ready', cb);
-      Reveal.addEventListener('slidetransitionend', cb);
-    </script>
-  </body>
+		if (window.location.search.match(/print-pdf-now/gi)) {
+      		setTimeout(() => {
+				window.print();
+			  }, 2500);
+			
+    }
+</script>
+
+</body>
+
 </html>
