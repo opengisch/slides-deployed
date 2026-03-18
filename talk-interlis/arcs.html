@@ -73,12 +73,12 @@
     
         <section >
             
-            <h1>Kreisbogen in QGIS &amp; Co</h1>
+            <h1>Circular arcs for QGIS &amp; co</h1>
 <br />
 <br />
 <br />
 <br />
-<p>Marco Bernasocchi</p>
+<h3>Marco Bernasocchi</h3>
 <p>Founder <a href="https://opengis.ch">OPENGIS.ch</a> · Creator <a href="https://qfield.org">QField.org</a> · Chair <a href="https://qgis.org">QGIS.org</a> · VP <a href="https://osgeo.org">OSGEO.org</a></p>
 
             </section>
@@ -90,12 +90,22 @@
         <section >
             
             <h2>Arcs?</h2>
+<p><img src="assets/arcs/be.png" alt=""></p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>Arcs?</h2>
 <ul>
-<li>why we need it</li>
 <li>maths instead of many little segments</li>
-<li>today in fossgis</li>
 <li>segmentation leads to diverse datasets</li>
 </ul>
+<p><img src="assets/arcs/pb-sol.png" alt=""></p>
 
             </section>
     
@@ -106,7 +116,8 @@
         <section >
             
             <h2>10 y ago</h2>
-<p>QGIS HF already discussions</p>
+<p>QGIS HF and <a href="http://QGIS.ch">QGIS.ch</a> already a subject</p>
+<p><img src="assets/arcs/past.png" alt=""></p>
 
             </section>
     
@@ -116,11 +127,12 @@
     
         <section >
             
-            <h2>no start at 0</h2>
+            <h2>did not start from scratch</h2>
 <ul>
 <li>PG, GeoPackage, GDAL can store/understan arcs</li>
 <li>QGIS can edit arcs</li>
 </ul>
+<p><img src="assets/arcs/qgis.png" alt=""></p>
 
             </section>
     
@@ -130,9 +142,10 @@
     
         <section >
             
-            <h2>BUT</h2>
-<p>no geom operations!</p>
-
+            <h2>BUT no geometric operations!</h2>
+<video alt="arcs" class="styled-video" controls="controls;" autoplay="autoplay" loop="loop">
+<source src="assets/arcs/arcs.mp4" type="video/mp4"/>
+</video>
             </section>
     
 
@@ -143,8 +156,9 @@
             
             <h2>so where do we fix this</h2>
 <ul>
-<li>we did a plugin years ago -&gt; terrible idea as only partially fixes the issue and at the higest level</li>
+<li>we did a plugin years ago</li>
 </ul>
+<p><img src="assets/arcs/autocurve.gif" alt=""></p>
 
             </section>
     
@@ -157,9 +171,10 @@
             <h2>how does OSS work</h2>
 <ul>
 <li>specialised libraries that do one thing well and are reusable</li>
-<li>dont do all in a plugin/extention, try to bring things upstream as good contributors do</li>
-<li>GEOS</li>
+<li>dont do all in a plugin/extention/integration</li>
+<li>good contributors try to bring/fund things upstream</li>
 </ul>
+<p><img src="assets/arcs/dependency.png" alt="" class="vertical"></p>
 
             </section>
     
@@ -169,10 +184,22 @@
     
         <section >
             
-            <h2>what did we do 1</h2>
+            <h2>Solution?</h2>
+<h3>Fix it in GEOS</h3>
+<p><img src="assets/arcs/geos.webp" alt=""></p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>what did we do 2024</h2>
 <ul>
 <li>Crowfunding 25K</li>
-<li>vorprojekt -&gt; make geos understand arcs (QGIS did the segmentation before sending to geos)</li>
+<li>pilot project -&gt; make geos understand arcs</li>
 <li>geos community showed acceptance for the subject, project was merged</li>
 </ul>
 
@@ -184,7 +211,7 @@
     
         <section >
             
-            <h2>what did we do 2</h2>
+            <h2>what did we do 2025-2026</h2>
 <ul>
 <li>crowdfunding 125K</li>
 <li>Implementation in GEOS</li>
@@ -199,11 +226,34 @@
         <section >
             
             <h2>First of all thanks!</h2>
-<p>list from MK <a href="https://chat.google.com/dm/1Mgf7gAAAAE/9CD839QJctc/9CD839QJctc?cls=10">https://chat.google.com/dm/1Mgf7gAAAAE/9CD839QJctc/9CD839QJctc?cls=10</a></p>
+<div class="container">
+<div class="col">
 <ul>
-<li><a href="http://QGIS.de">QGIS.de</a></li>
-<li>Kt ZUG</li>
+<li>Bundesamt für Landestopografie swisstopo</li>
+<li>Verein AV-QGIS</li>
+<li>Kanton Schaffhausen</li>
+<li>Grundbuch- und Vermessungsamt Basel-Stadt</li>
+<li>Stierli + Ruggli  Ingenieure + Raumplaner AG</li>
+<li>Kantonale Verwaltung  Appenzell Innerrhoden</li>
+<li>Amt für Grundbuch und Geoinformation des Kantons Zug</li>
+<li>Ville de Morges</li>
+<li>Amt für Informatik des Kantons Thurgau</li>
 </ul>
+</div>
+<div class="col">
+<ul>
+<li>Kantonale Verwaltung  Appenzell Innerrhoden</li>
+<li>Kanton Basel-Landschaft</li>
+<li>Amt für Geoinformation des Kantons Bern</li>
+<li>QGIS Anwendergruppe Schweiz</li>
+<li>Kanton Glarus - Bau und Umwelt</li>
+<li>Metron Raumentwicklung AG</li>
+<li>Trigonet AG</li>
+<li>QGIS Deutschland</li>
+<li>Kanton ZUG</li>
+</ul>
+</div>
+</div>
 
             </section>
     
@@ -214,9 +264,16 @@
         <section >
             
             <h2>where are we at 2024-2025</h2>
-<p>2024: Add representation for curved geometry types to GEOS, input/output using WKT and WKB
-2025: Low-level algorithms for curves: get intersection point(s) and arc(s) of two curves.
-Compute all intersection points between two geometries</p>
+<h3>2024</h3>
+<ul>
+<li>Add representation for curved geometry types to GEOS</li>
+<li>input/output using WKT and WKB</li>
+</ul>
+<h3>2025</h3>
+<ul>
+<li>Low-level algorithms for curves: get intersection point(s) and arc(s) of two curves.</li>
+<li>Compute all intersection points between two geometries</li>
+</ul>
 
             </section>
     
@@ -227,16 +284,16 @@ Compute all intersection points between two geometries</p>
         <section >
             
             <h2>where are we at 2026</h2>
-<p>Add functions to convert between curved geometries and linear approximations</p>
-<pre><code>The purpose of implementing these routines in GEOS is so we can accept curved inputs for all GEOS C API functions, and then incrementally add true curve support without clients needing to change their
-code. 
-Functionality is similar to QGIS, with the addition of a &quot;maximum arc angle&quot;
-in line-to-curve conversion, as described in https://github.com/qgis/QGIS/pull/35875#issuecomment-627300302
-Work-in-progress PR: https://github.com/libgeos/geos/pull/1382
-
-Adding true curve support for some C API functions where linearization really
-makes no sense: GEOSBoundary, GEOSNormalize, perhaps GEOSDensify.
-</code></pre>
+<ul>
+<li>Added functions to convert between curved geometries and linear approximations</li>
+<li>accept curved inputs for all GEOS C API functions</li>
+<li>incrementally add true curve support without clients needing to change their code.</li>
+<li>Functionality is similar to QGIS, with the addition of a “maximum arc angle”
+in line-to-curve conversion</li>
+<li>Work-in-progress PR: <a href="https://github.com/libgeos/geos/pull/1382">https://github.com/libgeos/geos/pull/1382</a></li>
+<li>Adding true curve support for some C API functions where linearization really
+makes no sense: GEOSBoundary, GEOSNormalize, perhaps GEOSDensify.</li>
+</ul>
 
             </section>
     
@@ -247,9 +304,11 @@ makes no sense: GEOSBoundary, GEOSNormalize, perhaps GEOSDensify.
         <section >
             
             <h2>what is next</h2>
-<p>2026 April - ?:</p>
-<p>Adding true curve support to Overlay engine. (GEOSIntersection, GEOSDifference, etc.)
-Expected done by end of 2026, assuming current rate of funding.</p>
+<h3>2026 April - ?</h3>
+<ul>
+<li>Adding true curve support to Overlay engine. (GEOSIntersection, GEOSDifference, etc.)</li>
+<li>Expected done by end of 2026, assuming current rate of funding.</li>
+</ul>
 
             </section>
     
@@ -262,7 +321,8 @@ Expected done by end of 2026, assuming current rate of funding.</p>
             <h2>Challenges</h2>
 <ul>
 <li>tollerance in java ili2db hardcoded based on the LV95 and educated guessing, not possible for geos since it works on all CRS precisions</li>
-<li>mantain arcs that belong to the same circle over multiple calculation steps -&gt; see arcs defined by 3 points vs arcs with center + radius</li>
+<li>mantain arcs that belong to the same circle over multiple calculation steps
+-&gt; see arcs defined by 3 points vs arcs with center + radius</li>
 <li>Robustness issues: Open source GIS libraries have 25 years of experience and accumulated
 test cases for robustness of operations on linear geometries. This is lacking for curved
 types. It’s expected that issues will come up once the curve algorithms encounter
@@ -279,8 +339,8 @@ geometries from the wild.</li>
             
             <h2>Roadmap</h2>
 <ul>
-<li>vorprojekt integriert in geos 3.13 (Sepember 2024)</li>
-<li>Q3 2026 finished in GEOS</li>
+<li>Pilot project integrated in geos 3.13 (Sepember 2024)</li>
+<li>Q3 2026 finished implementation in GEOS</li>
 <li>Q4 Stabilisation</li>
 <li>Target QGIS ~4.6</li>
 </ul>
@@ -293,13 +353,13 @@ geometries from the wild.</li>
     
         <section >
             
-            <h2>und wieso das ganze</h2>
+            <h2>And why this?</h2>
 <ul>
-<li>in ch we have AV that requires arcs</li>
+<li>in CH we have AV that requires arcs</li>
 <li>datasets building on it z.b Nutzungsplanung</li>
 <li>difficult to work properly with OS GIS</li>
-<li>AV-QGIS</li>
-<li>QGIS as the tool for this area</li>
+<li>AV-QGIS is coming</li>
+<li>QGIS to become THE tool for this use cases</li>
 </ul>
 
             </section>
@@ -310,7 +370,32 @@ geometries from the wild.</li>
     
         <section >
             
-            <h2>see you in the alps -&gt; QGIS conf</h2>
+            <h2>Want to know more?</h2>
+<h3>QGIS User conference and contributor meeting 2026</h3>
+<ul>
+<li>4-9 October 2026</li>
+<li>Laax, Switzerland</li>
+<li><a href="http://conference.qgis.org">conference.qgis.org</a></li>
+</ul>
+<p><img src="assets/arcs/qgis-uc.jpg" alt=""></p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h1>Thank you 🙏 Questions?</h1>
+<br/>
+<br/>
+<br/>
+<p><a href="https://slides.opengis.ch/talk-interlis/arcs">slides.opengis.ch/talk-interlis/arcs</a>
+<br/>
+<br/>
+<br/></p>
+<p><a href="https://linkedin.com/mbernasocchi">@mbernasocchi</a> · <a href="https://opengis.ch">OPENGIS.ch</a> · <a href="https://qfield.org">QField.org</a> · <a href="https://berna.io">berna.io</a></p>
 
             </section>
     
