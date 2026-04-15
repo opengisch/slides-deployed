@@ -84,12 +84,15 @@
 
 
     
+    <section>
         <section >
-            
             <p>Let’s start …</p>
 <h1>Was machen wir heute?</h1>
-<p>–v–</p>
-<h1 style="-webkit-text-stroke: 2px var(--opengisch-light) !important; color: steelblue !important;">Dave Signer</h1>
+
+            </section>
+        
+            <section >
+                <h1 style="-webkit-text-stroke: 2px var(--opengisch-light) !important; color: steelblue !important;">Dave Signer</h1>
 <h2>BSc in IT(SE) @ ZHAW</h2>
 <h3>Software Engineer and Architect</h3>
 <h3 style=" color: lightgrey !important;">Teacher and Storyteller</h1>
@@ -106,8 +109,11 @@
 </li>
 </ul>
 </aside>
-<p>–v–</p>
-<h1 style="-webkit-text-stroke: 2px var(--opengisch-light) !important; color: steelblue !important;">Wer seid ihr?</h1>
+
+            </section>
+        
+            <section >
+                <h1 style="-webkit-text-stroke: 2px var(--opengisch-light) !important; color: steelblue !important;">Wer seid ihr?</h1>
 <ul>
 <li>Woher bin ich?</li>
 <li>Was arbeite ich hauptsächlich?</li>
@@ -119,15 +125,21 @@
 </ul>
 </li>
 </ul>
-<p>–v–</p>
-<h3>Ziele des Workshops</h3>
+
+            </section>
+        
+            <section >
+                <h3>Ziele des Workshops</h3>
 <ul>
 <li>INTERLIS Modelle in der Datenbank abbilden und Daten importieren / exportieren / validieren</li>
 <li>In QGIS mit Behältern und OIDs arbeiten können</li>
 <li>Wissen was Metaattribute und Vererbungsstrategien etc. sind</li>
 </ul>
-<p>–v–</p>
-<h3>Programm (1)</h3>
+
+            </section>
+        
+            <section >
+                <h3>Programm (1)</h3>
 <table>
 <thead>
 <tr>
@@ -162,8 +174,11 @@
 </tr>
 </tbody>
 </table>
-<p>–v–</p>
-<h3>Programm (2)</h3>
+
+            </section>
+        
+            <section >
+                <h3>Programm (2)</h3>
 <table>
 <thead>
 <tr>
@@ -198,20 +213,32 @@
 </tr>
 </tbody>
 </table>
-<p>–v–</p>
-<p>Kurze Einführung…</p>
+
+            </section>
+        
+            <section >
+                <p>Kurze Einführung…</p>
 <h1>Was ist Model Baker?</h1>
-<p>–v–</p>
-<h2>Ein QGIS Projektgenerator</h2>
+
+            </section>
+        
+            <section >
+                <h2>Ein QGIS Projektgenerator</h2>
 <p>Schnelles <strong>Erstellen eines QGIS-Projekts</strong> aus einem physischen Datenmodell.</p>
 <p>Analysiert die vorhandene Struktur und konfiguriert ein QGIS-Projekt mit allen verfügbaren Informationen.</p>
-<p>–v–</p>
-<h2>Ein für <em>INTERLIS</em> optimierter QGIS Projektgenerator</h2>
+
+            </section>
+        
+            <section >
+                <h2>Ein für <em>INTERLIS</em> optimierter QGIS Projektgenerator</h2>
 <p>In INTERLIS definierte Modelle bieten <strong>zusätzliche Metainformationen</strong> wie Domänen, Einheiten von Attributen oder objektorientierte Definitionen von Tabellen.</p>
 <p>Diese können genutzt werden, um die Projektkonfiguration weiter zu optimieren.</p>
 <!-- Model Baker kann die Meta-Informationen nutzen, um den Layertree, Feld-Widgets mit Bedingungen, Formular-Layouts, Relationen und vieles mehr zu konfigurieren.-->
-<p>–v–</p>
-<h2>Eine ili2db Kontrollstation</h2>
+
+            </section>
+        
+            <section >
+                <h2>Eine ili2db Kontrollstation</h2>
 <pre><code>java -jar /home/dave/dev/opengisch/QgisModelBaker/QgisModelBaker/libili2db/bin/ili2pg-4.6.1/ili2pg-4.6.1.jar --schemaimport --dbhost localhost --dbport 5432 
 --dbusr postgres --dbpwd ****** --dbdatabase bakery --dbschema adsfdsaf2 --setupPgExt --coalesceCatalogueRef --createEnumTabs --createNumChecks --createUnique 
 --createFk --createFkIdx --coalesceMultiSurface --coalesceMultiLine --coalesceMultiPoint --coalesceArray --beautifyEnumDispName --createGeomIdx --createMetaInfo 
@@ -221,8 +248,11 @@
 <!-- Es stellt dem Benutzer nur die notwendigen Einstellungen zur Verfügung, um Parameter an die ili2db zu übergeben.
 Erzeugt das Kommando für ili2db.
 -->
-<p>–v–</p>
-<h2>Und es ist eine Library</h2>
+
+            </section>
+        
+            <section >
+                <h2>Und es ist eine Library</h2>
 <p>Kann als Framework genutzt werden. So wie <a href="https://github.com/SwissTierrasColombia/Asistente-LADM-COL">Asistente LADM-COL</a> es tut.</p>
 <!--erstellt für die [Kolumbianische Implementierung des Land Administration Domain Model (LADM)](https://www.proadmintierra.info/) -->
 <p>… und ist auch als Python Package verfügbar:</p>
@@ -230,22 +260,31 @@ Erzeugt das Kommando für ili2db.
 </code></pre>
 
             </section>
+        
+
+    </section>
     
 
 
 
     
+    <section>
         <section >
-            
             <h1>Wo finde ich was?</h1>
-<p>–v–</p>
-<h2>Code Repositories</h2>
+
+            </section>
+        
+            <section >
+                <h2>Code Repositories</h2>
 <p><strong>QGIS Plugin</strong></p>
 <p><a href="https://github.com/opengisch/QgisModelBaker">https://github.com/opengisch/QgisModelBaker</a></p>
 <p><strong>Code Repository Backend Library</strong></p>
 <p><a href="https://github.com/opengisch/QgisModelBakerLibrary">https://github.com/opengisch/QgisModelBakerLibrary</a></p>
-<p>–v–</p>
-<h2>Bug Reports und Feature Requests</h2>
+
+            </section>
+        
+            <section >
+                <h2>Bug Reports und Feature Requests</h2>
 <p><a href="https://github.com/opengisch/QgisModelBaker/issues">https://github.com/opengisch/QgisModelBaker/issues</a></p>
 <ul>
 <li>Nachschauen</li>
@@ -263,36 +302,50 @@ Erzeugt das Kommando für ili2db.
   - Beschreibung des Problems - wenn möglich in Englisch, Deutsch geht aber auch
   - Zusätzliche Infos - Mit Printscreens oder Bildschirmaufzeichnung als GIF dokumentieren und falls möglich Beispieldaten
 -->
-<p>–v–</p>
-<h2>Dokumentation</h2>
+            </section>
+        
+            <section >
+                <h2>Dokumentation</h2>
 <p><img src="./assets/qr-docu.png" alt="qr-docu"></p>
 <h4><a href="https://modelbaker.ch">modelbaker.ch</a></h4>
 <h4><a href="https://opengisch.github.io/QgisModelBaker">opengisch.github.io/QgisModelBaker</a></h4>
 
             </section>
+        
+
+    </section>
     
 
 
 
     
+    <section>
         <section >
-            
             <p>Was wir alles brauchen…</p>
 <h1>Umgebung</h1>
-<p>–v–</p>
-<h2>INTERNET 🛜</h2>
+
+            </section>
+        
+            <section >
+                <h2>INTERNET 🛜</h2>
 <h4>Name:</h4>
 <h4>Code: SDS1570</h4>
 <h4>Pad: <a href="https://pad.opengis.ch">https://pad.opengis.ch</a></h4>
-<p>–v–</p>
-<h2>QGIS und Datenbanken</h2>
+
+            </section>
+        
+            <section >
+                <h2>QGIS und Datenbanken</h2>
 <ul>
 <li>QGIS 3.34 oder höher</li>
 <li>PostgreSQL + PostGIS</li>
 <li>Geopackage möglich</li>
 </ul>
-<p>–v–</p>
-<h3>Extensions mit PgAdmin</h3>
+
+            </section>
+        
+            <section >
+                <h3>Extensions mit PgAdmin</h3>
 <ul>
 <li>Extension hinzufügen:
 <ul>
@@ -303,8 +356,11 @@ Erzeugt das Kommando für ili2db.
 </ul>
 <p><img src="./assets/pg-extensions.png" alt="extensions"></p>
 <!-- + Datenbank erstellen -->
-<p>–v–</p>
-<h3>Extensions mit PSQL-Client</h3>
+
+            </section>
+        
+            <section >
+                <h3>Extensions mit PSQL-Client</h3>
 <pre><code class="language-none">$ psql -Upostgres -hlocalhost -dbakery
 
 postgres=# CREATE DATABASE databasename;
@@ -314,8 +370,11 @@ postgres=# \connect databasename;
 databasename=# CREATE EXTENSION postgis;
 databasename=# CREATE EXTENSION uuid-ossp;
 </code></pre>
-<p>–v–</p>
-<p>Falls es nicht schon installiert ist…</p>
+
+            </section>
+        
+            <section >
+                <p>Falls es nicht schon installiert ist…</p>
 <h3>PostGIS Installation</h3>
 <h4>Windows</h4>
 <p><a href="https://postgis.net/install/">https://postgis.net/install/</a></p>
@@ -325,8 +384,11 @@ databasename=# CREATE EXTENSION uuid-ossp;
 <h4>Linux</h4>
 <pre><code class="language-none">sudo apt install postgis
 </code></pre>
-<p>–v–</p>
-<h2><a href="http://OPENGIS.ch">OPENGIS.ch</a> PostgreSQL</h2>
+
+            </section>
+        
+            <section >
+                <h2><a href="http://OPENGIS.ch">OPENGIS.ch</a> PostgreSQL</h2>
 <!-- Falls keine PostgreSQL Instanz lokal, kann online auf eine Test-DB verbunden werden (nur heute aktiv)-->
 <table>
 <thead>
@@ -359,8 +421,11 @@ databasename=# CREATE EXTENSION uuid-ossp;
 <p>Verwende für die Schemas immer als Prefix deinen Namenskürzel:</p>
 <pre><code>sigdav_ (für David Signer)
 </code></pre>
-<p>–v–</p>
-<h2>Java</h2>
+
+            </section>
+        
+            <section >
+                <h2>Java</h2>
 <p>Habe ich Java installiert?</p>
 <pre><code class="language-none">java --version
 </code></pre>
@@ -374,11 +439,17 @@ databasename=# CREATE EXTENSION uuid-ossp;
 <p>or</p>
 <pre><code>sudo apt install default-jre
 </code></pre>
-<p>–v–</p>
-<h2>Demodaten Download</h2>
+
+            </section>
+        
+            <section >
+                <h2>Demodaten Download</h2>
 <h3>Link: <a href="http://urli.info/WjWu">urli.info/WjWu</a></h3>
-<p>–v–</p>
-<h2>Nutzdaten</h2>
+
+            </section>
+        
+            <section >
+                <h2>Nutzdaten</h2>
 <h3><a href="https://geodienste.ch/">https://geodienste.ch/</a></h3>
 <ul>
 <li><strong>Kataster der belasteten Standorte</strong></li>
@@ -387,53 +458,83 @@ databasename=# CREATE EXTENSION uuid-ossp;
 <li>AtomFeed + OpenSearch Download-Dienst</li>
 <li>Download von <strong>SH</strong> und <strong>TG</strong></li>
 </ul>
-<p>–v–</p>
-<h2>QGIS Model Baker</h2>
+
+            </section>
+        
+            <section >
+                <h2>QGIS Model Baker</h2>
 <ul>
 <li>Installiere Model Baker</li>
 <li>Installiere Swiss Locator</li>
 </ul>
-<p>–v–</p>
-<h2>Ready to go 🚀</h2>
+
+            </section>
+        
+            <section >
+                <h2>Ready to go 🚀</h2>
 <p>Lasst uns beginnen…</p>
 
             </section>
+        
+
+    </section>
     
 
 
 
     
+    <section>
         <section >
-            
             <h1>Exkurse</h1>
 <p>… lasst uns abschweifen</p>
-<p>–v–</p>
-<h2>Exkurs 1: Metaattribute</h2>
-<p>–v–</p>
-<h3>Was sind Metaattribute?</h3>
+
+            </section>
+        
+            <section >
+                <h2>Exkurs 1: Metaattribute</h2>
+
+            </section>
+        
+            <section >
+                <h3>Was sind Metaattribute?</h3>
 <p>Metaattribute erlauben eine Ergänzung der INTERLIS-Modelle mit <strong>zusätzlichen Angaben</strong>, die in der aktuellen Spezifikation von INTERLIS <strong>nicht vorgesehen</strong> sind.</p>
 <p><em>Siehe <a href="https://ech.ch/de/ech/ech-0117/1.0">eCH-0117 Meta-Attribute für INTERLIS-Modelle</a></em></p>
 <!-- Es handelt sich dabei um eine spezielle Form eines Zeilenkommentars, der, an bestimmten Stellen im Datenmodell angebracht, zusätzliche Metainformationen zum Modell mitliefert.-->
-<p>–v–</p>
-<h3>Beispiel mit Model Baker (1)</h3>
+
+            </section>
+        
+            <section >
+                <h3>Beispiel mit Model Baker (1)</h3>
 <p>Spezifische Display Expression für die Tabelle der Klasse <code>ZustaendigkeitsKataster</code>.</p>
 <p><img src="./assets/metaattr-dispexp.png" alt="metaattr-dispexp"></p>
-<p>–v–</p>
-<h3>Syntax im INTERLIS Modell</h3>
+
+            </section>
+        
+            <section >
+                <h3>Syntax im INTERLIS Modell</h3>
 <pre><code class="language-none">!!@&lt;name&gt;=&lt;value&gt;
 </code></pre>
 <p>Gefolgt vom referenzierten Element (MODEL, TOPIC, CLASS etc.)</p>
-<p>–v–</p>
-<h3>Metaattribute vs. Kommentar</h3>
+
+            </section>
+        
+            <section >
+                <h3>Metaattribute vs. Kommentar</h3>
 <p>Ein Kommentar startet mit <code>!!</code> und endet mit einem Zeilenende.</p>
 <p>Ein Metaattribut startet ebenso mit <code>!!</code> aber gefolgt von <code>@</code></p>
-<p>–v–</p>
-<h3>Beispiel mit Model Baker (2)</h3>
+
+            </section>
+        
+            <section >
+                <h3>Beispiel mit Model Baker (2)</h3>
 <p>Model Baker spezifisches Metaattribut:</p>
 <pre><code class="language-none">!!@qgis.modelbaker.dispExpression='&lt;QGIS Expression&gt;'
 </code></pre>
-<p>–v–</p>
-<h3>Beispiel mit Model Baker (3)</h3>
+
+            </section>
+        
+            <section >
+                <h3>Beispiel mit Model Baker (3)</h3>
 <p>Definition in Modell <strong>KbS_V1_5</strong></p>
 <pre><code class="plaintext" data-line-numbers="5|5,6">MODEL KbS_V1_5 (de) =
 
@@ -444,8 +545,11 @@ databasename=# CREATE EXTENSION uuid-ossp;
       [...]
 </pre></code>
 <p><img src="./assets/metaattr-dispexp.png" alt="metaattr-dispexp"></p>
-<p>–v–</p>
-<h3>Listen von Metaattributen</h3>
+
+            </section>
+        
+            <section >
+                <h3>Listen von Metaattributen</h3>
 <ul>
 <li><a href="https://github.com/claeis/ili2c/blob/master/doc/ili2c.rst#interlis-metaattribute">INTERLIS Compiler (ili2c) </a></li>
 <li><a href="https://github.com/claeis/ili2db/blob/master/docs/ili2db.rst#interlis-metaattribute">ili2db </a></li>
@@ -454,25 +558,37 @@ databasename=# CREATE EXTENSION uuid-ossp;
 <li><a href="https://opengisch.github.io/QgisModelBaker/background_info/meta_attributes/">QGIS Model Baker </a></li>
 </ul>
 <p><em>(unvollständig) Siehe auch <a href="https://interlis.discourse.group/t/uebersicht-interlis-meta-attribute/70">https://interlis.discourse.group/t/uebersicht-interlis-meta-attribute/70</a></em></p>
-<p>–v–</p>
-<h3>Metaattribute im Modell sind toll</h3>
+
+            </section>
+        
+            <section >
+                <h3>Metaattribute im Modell sind toll</h3>
 <p>Aber wir können doch nicht einfach am Modell rumbasteln!</p>
-<p>–v–</p>
-<h3>Extra Meta Attribute File</h3>
+
+            </section>
+        
+            <section >
+                <h3>Extra Meta Attribute File</h3>
 <p>… a.k.a. “Konfigfile”, “Metaattributefile”, “INI-File”, “TOML-File”…</p>
 <!-- Meistens kann man das Modell selbst nicht anpassen -->
 <p><em><strong>Eigentlich im Format INI aber wird meistens als <code>.toml</code> gespeichert.</strong></em></p>
 <p>Nicht zu verwechseln mit <em><strong>Meta-Konfigurationsdatei</strong></em> um ili2db zu “steuern” (auch im Zusammenhang mit UsabILIty Hub).</p>
-<p>–v–</p>
-<h4>Beispiel mit Model Baker</h4>
+
+            </section>
+        
+            <section >
+                <h4>Beispiel mit Model Baker</h4>
 <p>Definition in Konfigurationsdatei für <strong>KbS_V1_5</strong></p>
 <pre><code class="language-INI">[&quot;KbS_V1_5.Belastete_Standorte.ZustaendigketKataster&quot;]
 
 qgis.modelbaker.dispExpression = &quot;'Nr: '|| uid ||' / '||katastername&quot;
 </code></pre>
 <p><img src="./assets/metaattr-dispexp.png" alt="metaattr_dispexp"></p>
-<p>–v–</p>
-<h3>Validierungen steuern mit Metaattributen</h3>
+
+            </section>
+        
+            <section >
+                <h3>Validierungen steuern mit Metaattributen</h3>
 <p>Nur zur Info…</p>
 <pre><code class="language-ini">[&quot;KbS_V1_5.Standorte.Belasteter_Standort.Nr&quot;]
 # disable mandatory constraint of Katasternummer
@@ -481,8 +597,11 @@ multiplicity=&quot;off&quot;
 [&quot;KbS_V1_5.Standorte.Belasteter_Standort.Constraint1&quot;]
 msg = &quot;Mind. eine Untersuchungsmassnahme erfassen.&quot;
 </code></pre>
-<p>–v–</p>
-<h3>Was brauchen wir für KbS_V1_5?</h3>
+
+            </section>
+        
+            <section >
+                <h3>Was brauchen wir für KbS_V1_5?</h3>
 <ul>
 <li>
 <p>Multigeometrie konstruiert aus <code>STRUCTURE MultiPolygon</code></p>
@@ -491,8 +610,11 @@ msg = &quot;Mind. eine Untersuchungsmassnahme erfassen.&quot;
 <p>“Plattgewalzte Mehrsprachigkeit” auf <code>STRUCTURE MultilingualUri</code></p>
 </li>
 </ul>
-<p>–v–</p>
-<h4>Das Mapping-Attribut</h4>
+
+            </section>
+        
+            <section >
+                <h4>Das Mapping-Attribut</h4>
 <p><code>ili2db.mapping</code></p>
 <ul>
 <li>
@@ -505,8 +627,11 @@ msg = &quot;Mind. eine Untersuchungsmassnahme erfassen.&quot;
 </li>
 </ul>
 <!-- Zeige was wir haben. -->
-<p>–v–</p>
-<h4>Definition im INTERLIS Modell</h4>
+
+            </section>
+        
+            <section >
+                <h4>Definition im INTERLIS Modell</h4>
 <pre><code class="plaintext" data-line-numbers="1-4|6-10">!!@ili2db.mapping=MultiSurface
 STRUCTURE MultiPolygon =
   Polygones: BAG {1..*} OF PolygonStructure;
@@ -518,26 +643,44 @@ STRUCTURE MultilingualUri =
   UNIQUE (LOCAL) LocalisedText: Language;
     END MultilingualUri;
 </pre></code>
-<p>–v–</p>
-<h4>Definition im Extra Meta Attribute File</h4>
+
+            </section>
+        
+            <section >
+                <h4>Definition im Extra Meta Attribute File</h4>
 <pre><code class="language-INI">[KbS_V1_5.Belastete_Standorte.MultiPolygon]
 ili2db.mapping = &quot;MultiSurface&quot;
 
 [KbS_V1_5.Belastete_Standorte.MultilingualUri]
 ili2db.mapping = &quot;Multilingual&quot;
 </code></pre>
-<p>–v–</p>
-<h2>Ready für Übung 1 🚀</h2>
-<p>–v–</p>
-<h2>Exkurs 2.1: Vererbungen in INTERLIS</h2>
-<p>–v–</p>
-<h3>Use Case: Arbeiten mit KbS_V1_5</h3>
+
+            </section>
+        
+            <section >
+                <h2>Ready für Übung 1 🚀</h2>
+
+            </section>
+        
+            <section >
+                <h2>Exkurs 2.1: Vererbungen in INTERLIS</h2>
+
+            </section>
+        
+            <section >
+                <h3>Use Case: Arbeiten mit KbS_V1_5</h3>
 <pre style="all:unset;"><div><img class="mermaid" src="https://kroki.io/mermaid/svg/eNqVULtqw1AM3fMVZzEegikZuphgcLHTIU2XQNYgx7Ijch_ptdIl5N974xYK9ZJqkjg6DylJruJEc1xTPbLlNEfaUjiluOGWJLOBPy7sDlwJ9YHsDLHOFFQOcianKEEDXi6unSD1HVnHzrsRe_fKMNwpfIcyR8VddOagYHFYNqHYxNmS4QGv7LOKlB02vmVjIvpUrJvtfrfYP49qJbKimNc5emn0ZwufPvxaBemPo1dc2pK1bBTfmmKx8sGSRoKbSk_YOzLSjkkf4tf3aFm88E24e5j19z3_MP0C3wiPCw==" /></div></pre>
-<p>–v–</p>
-<h3>Use Case: Arbeiten mit Erweiterung</h3>
+
+            </section>
+        
+            <section >
+                <h3>Use Case: Arbeiten mit Erweiterung</h3>
 <pre style="all:unset;"><div><img class="mermaid" src="https://kroki.io/mermaid/svg/eNqNkM1Kw1AQhfd9itmELCSICzdBApFEkVo3lW7DJJkkg_en3kxctPRtfBNfzNu0YiUgmdUdzsz5zp0g2LNhiWEfSkeawhjCGt1bCAc4BMGip_eBTEUZY-tQL8DXFp1wxVs0AilgD_eDqSdKflSW_mXNqL1YIVDUCNgG0hgyajyZnACxgbvSJSvfa1TUwyPZKEMhAytbk1JevU6W5brY3BS3o1sKUZJc5TG0XMp5Cj6s-0U5bruRlV-yzpOaBXZD__UpO8VV50FPprFOo7A1ZE681-IPcuK6Rq1JCZySsoaH0cHHmGmwQcX1GGuuRX78duSv98zU_Ls4AV-cfgb3Z_0bF7uvUg==" /></div></pre>
-<p>–v–</p>
-<h3>Einfacheres Beispiel <code>Gebaeudeinventar_V1</code></h3>
+
+            </section>
+        
+            <section >
+                <h3>Einfacheres Beispiel <code>Gebaeudeinventar_V1</code></h3>
 <pre><code class="plaintext" data-line-numbers="1-25|1|6|8-11|13-21|8-11">MODEL Gebaeudeinventar_V1 (de)
 AT "mailto:signedav@localhost"
 VERSION "2023-01-19" =
@@ -564,20 +707,32 @@ VERSION "2023-01-19" =
 
 END Gebaeudeinventar_V1.
 </code></pre>
-<p>–v–</p>
-<h3>Wir brauchen “mehr”</h3>
+
+            </section>
+        
+            <section >
+                <h3>Wir brauchen “mehr”</h3>
 <p>Müssen für ein Öko-Projekt ein weiteres Attribut verwenden: <code>EntsprichtStandard</code></p>
 <p>Möchten aber dennoch die Daten als <code>Gebaeudeinventar_V1</code> zurückliefern.</p>
-<p>–v–</p>
-<h3>Use Case: Öko-Projekt</h3>
+
+            </section>
+        
+            <section >
+                <h3>Use Case: Öko-Projekt</h3>
 <pre style="all:unset;"><div><img class="mermaid" src="https://kroki.io/mermaid/svg/eNqdkc1Kw1AQhfd9itmELKSI2yCBSGNx4Q8I3cokmaZj7k-8mVukpa_hE_gmfTFvUkRtVNBZn_nOmTNRtGXDksA2lhVpihOIK3RNDDvYRdGkoydPpqQZY-1QTyBMi0645BaNQAbYwVUgMKrW2UdqZKTJe83-pbHTu0-KGysEipYCdglZAnOqqSBDHVzbipQ6L9xpOqcCPVXEZk1G0D0szoblDKZpepInYLxsyMAFdtzpYe8D7rheDfSgm9Ey3EkuaA940Cyw8d3-VTaKy3A7ZCKOCy-D8y01tncnP3Yf0e9Ra1IGZijBgDVcWqdRYG3N32ELVFwdov6Hl_fVTEOh-XNrwxO-gn5t9fgl70nkxyDfkd4AxY_J1g==" /></div></pre>
-<p>–v–</p>
-<h3>Wie “vererben” wir?</h3>
+
+            </section>
+        
+            <section >
+                <h3>Wie “vererben” wir?</h3>
 <p><strong>Erweitern</strong> einer Klasse (Basisklasse) in eine “verbesserte” Ableitung.</p>
 <p>Eine erweiterte Klasse (Ableitung) hat <strong>alle Eigenschaften</strong> der Basisklasse <strong>+ “mehr”</strong>.</p>
 <p><strong>“mehr”</strong> heisst zusätzliche <strong>Attribute</strong> und <strong>Beschränkungen</strong>.</p>
-<p>–v–</p>
-<h3>Aus <code>Gebaeude</code> wird ein besseres <code>Gebaeude</code></h3>
+
+            </section>
+        
+            <section >
+                <h3>Aus <code>Gebaeude</code> wird ein besseres <code>Gebaeude</code></h3>
 <!-- Darstellung kacke:
 ```mermaid
 %%{init: {'theme': 'dark' } }%%
@@ -596,8 +751,11 @@ erDiagram
 -->
 <p><img src="assets/inherit-base-class.png" alt="inherit-base"></p>
 <!-- Siehe https://excalidraw.com/#json=MqzGNX2n1TRK8hONq2eF0,yitcCXCkDaRX6eMINxU_xw-->
-<p>–v–</p>
-<h4>Die Ableitung in INTERLIS (1)</h4>
+
+            </section>
+        
+            <section >
+                <h4>Die Ableitung in INTERLIS (1)</h4>
 <p>…mit <code>EXTENDED</code></p>
 <pre><code class="plaintext" data-line-numbers="1-4">CLASS Gebaeude =
   EGID : MANDATORY TEXT*16;
@@ -609,13 +767,22 @@ END Gebaeude;
   EntsprichtStandard: BOOLEAN;
 END Gebaeude;
 </code></pre>
-<p>–v–</p>
-<h3>Und schon haben wir es!</h3>
+
+            </section>
+        
+            <section >
+                <h3>Und schon haben wir es!</h3>
 <pre style="all:unset;"><div><img class="mermaid" src="https://kroki.io/mermaid/svg/eNqdkc1Kw1AQhfd9itmELKSI2yCBSGNx4Q8I3cokmaZj7k-8mVukpa_hE_gmfTFvUkRtVNBZn_nOmTNRtGXDksA2lhVpihOIK3RNDDvYRdGkoydPpqQZY-1QTyBMi0645BaNQAbYwVUgMKrW2UdqZKTJe83-pbHTu0-KGysEipYCdglZAnOqqSBDHVzbipQ6L9xpOqcCPVXEZk1G0D0szoblDKZpepInYLxsyMAFdtzpYe8D7rheDfSgm9Ey3EkuaA940Cyw8d3-VTaKy3A7ZCKOCy-D8y01tncnP3Yf0e9Ra1IGZijBgDVcWqdRYG3N32ELVFwdov6Hl_fVTEOh-XNrwxO-gn5t9fgl70nkxyDfkd4AxY_J1g==" /></div></pre>
-<p>–v–</p>
-<h3>Check it out!</h3>
-<p>–v–</p>
-<h3>Doch es gibt aber noch mehr</h3>
+
+            </section>
+        
+            <section >
+                <h3>Check it out!</h3>
+
+            </section>
+        
+            <section >
+                <h3>Doch es gibt aber noch mehr</h3>
 <p>Wollen wir nun mehrere Arten von Gebäude erfassen:</p>
 <ul>
 <li>Wohngebäude (mit <code>Anzahl_Wohnungen</code>)</li>
@@ -623,8 +790,11 @@ END Gebaeude;
 <li>Öffentliche Gewerbegebäude (mit <code>Anzahl_Firmen</code> und <code>Zweck</code>)</li>
 </ul>
 <p>… und dennoch alle schlussendlich als <code>Gebaeude</code> zurückliefern.</p>
-<p>–v–</p>
-<h4>Die Ableitung in INTERLIS (Teil 2)</h4>
+
+            </section>
+        
+            <section >
+                <h4>Die Ableitung in INTERLIS (Teil 2)</h4>
 <p>…mit <code>EXTENDS</code></p>
 <pre><code class="plaintext" data-line-numbers="1-4">CLASS Gebaeude =
   EGID : MANDATORY TEXT*16;
@@ -637,12 +807,18 @@ EXTENDS Gebaeude =
   Anzahl_Firmen : MANDATORY 1 .. 100;
 END Gewerbegebaeude;
 </code></pre>
-<p>–v–</p>
-<h3>Beispielmodell <code>MultiGebaeudeinventar_V1</code></h3>
+
+            </section>
+        
+            <section >
+                <h3>Beispielmodell <code>MultiGebaeudeinventar_V1</code></h3>
 <!-- https://excalidraw.com/#json=ICaNWw5qf7qzFMfPxvYZU,ooU5hP8itSR2aPfzPiOoZQ -->
 <img src="./assets/inherit-erm-sample-model.png" height="100%">
-<p>–v–</p>
-<h4>Die Klassen in INTERLIS</h4>
+
+            </section>
+        
+            <section >
+                <h4>Die Klassen in INTERLIS</h4>
 <pre><code class="plaintext" data-line-numbers="1|5-8|10-18|24|29-33|35-39|41-45">MODEL Gebaeudeinventar_V1 (de) =
 
   TOPIC Gebaeude = 
@@ -692,28 +868,43 @@ MODEL MultiGebaeudeinventar_V1 (de) =
 
 END MultiGebaeudeinventar_V1.
 </code></pre>
-<p>–v–</p>
-<h2>Ready für Übung 2 🚀</h2>
-<p>–v–</p>
-<h2>Exkurs 2.2: Physische Abbildung von Vererbungen</h2>
+
+            </section>
+        
+            <section >
+                <h2>Ready für Übung 2 🚀</h2>
+
+            </section>
+        
+            <section >
+                <h2>Exkurs 2.2: Physische Abbildung von Vererbungen</h2>
 <!-- Wie können Vererbungen physisch umgesetzt werden damit die Referentielle Integrität immer respektiert wird?-->
-<p>–v–</p>
-<h3>Mal vornweg</h3>
+
+            </section>
+        
+            <section >
+                <h3>Mal vornweg</h3>
 <blockquote>
 <p>Versuchs mal mit Smart2 und wenns nicht gut aussieht mit Smart1.</p>
 <p><em><strong>Zitat: Romedi Filli - 2022</strong></em></p>
 </blockquote>
 <!-- und alle, die in den nächsten paar Minuten abhängen, erinnert euch an diese Zitat.-->
-<p>–v–</p>
-<h3>Vererbungsmapping Strategien</h3>
+
+            </section>
+        
+            <section >
+                <h3>Vererbungsmapping Strategien</h3>
 <ul>
 <li>New Class</li>
 <li>Super Class</li>
 <li>Sub Class</li>
 <li>New+Sub Class</li>
 </ul>
-<p>–v–</p>
-<h4>Beispielmodell</h4>
+
+            </section>
+        
+            <section >
+                <h4>Beispielmodell</h4>
 <!-- Darstellung kacke:
 ```mermaid
 %%{init: {'theme': 'dark' } }%%
@@ -744,8 +935,11 @@ classDiagram
 ```
 -->
 <p><img src="./assets/inherit-erm-sample-model.png" alt="sample-model"></p>
-<p>–v–</p>
-<h4>New Class</h4>
+
+            </section>
+        
+            <section >
+                <h4>New Class</h4>
 <div class="container">
 <div class="col">
 <pre><code class="language-none">Gebaeude.t_type: (
@@ -767,11 +961,17 @@ classDiagram
 <!--Siehe https://excalidraw.com/#json=HxHdS7H0r9l_PYLpkI9AD,IcoI6zePdRml20qWR25LWA -->
 </div>
 </div>
-<p>–v–</p>
-<h4>Beispielmodell</h4>
+
+            </section>
+        
+            <section >
+                <h4>Beispielmodell</h4>
 <p><img src="./assets/inherit-erm-sample-model.png" alt="sample-model"></p>
-<p>–v–</p>
-<h4>Super Class</h4>
+
+            </section>
+        
+            <section >
+                <h4>Super Class</h4>
 <div class="container">
 <div class="col">
 <pre><code class="language-none">Gebaeude.t_type: (
@@ -792,11 +992,17 @@ classDiagram
 <!-- https://excalidraw.com/#json=7rPQ5AqAXGwbhCBN7IgVM,PmQqY2DcXxxEq2xTxBO8rg -->
 </div>
 </div>
-<p>–v–</p>
-<h4>Beispielmodell</h4>
+
+            </section>
+        
+            <section >
+                <h4>Beispielmodell</h4>
 <p><img src="./assets/inherit-erm-sample-model.png" alt="sample-model"></p>
-<p>–v–</p>
-<h4>Sub Class</h4>
+
+            </section>
+        
+            <section >
+                <h4>Sub Class</h4>
 <div class="container">
 <div class="col">
 <pre><code class="language-none">Oeffentliches_
@@ -816,11 +1022,17 @@ Gewerbegebaeude.t_type: (
 <!-- https://excalidraw.com/#json=v9MmA9GwnqKVTcVeU5GPt,YdmkYmnelEJWrE9WV6-Y-g -->
 </div>
 </div>
-<p>–v–</p>
-<h4>Beispielmodell</h4>
+
+            </section>
+        
+            <section >
+                <h4>Beispielmodell</h4>
 <p><img src="./assets/inherit-erm-sample-model.png" alt="sample-model"></p>
-<p>–v–</p>
-<h4>New + Sub Class</h4>
+
+            </section>
+        
+            <section >
+                <h4>New + Sub Class</h4>
 <div class="container">
 <div class="col">
 <ul>
@@ -835,15 +1047,24 @@ Gewerbegebaeude.t_type: (
 <!-- https://excalidraw.com/#json=TftYYPKxn6tWr96QllZlw,xySVQa_rQa1RPWioTaCiSw -->
 </div>
 </div>
-<p>–v–</p>
-<h3>Smart Mapping in ili2db</h3>
-<p>–v–</p>
-<h4>noSmartMapping</h4>
+
+            </section>
+        
+            <section >
+                <h3>Smart Mapping in ili2db</h3>
+
+            </section>
+        
+            <section >
+                <h4>noSmartMapping</h4>
 <ul>
 <li>Alle Klassen werden mit der <em>New Class</em> Strategie gemappt.</li>
 </ul>
-<p>–v–</p>
-<h4>noSmartMapping</h4>
+
+            </section>
+        
+            <section >
+                <h4>noSmartMapping</h4>
 <div class="container">
 <div class="col">
 <p>Resultiert in was wir sehen in der <em>New Class</em> Grafik.</p>
@@ -853,16 +1074,22 @@ Gewerbegebaeude.t_type: (
 <p><img src="./assets/inherit-new-class.png" alt="new-class-model"></p>
 </div>
 </div>
-<p>–v–</p>
-<h4>smart1Inheritance</h4>
+
+            </section>
+        
+            <section >
+                <h4>smart1Inheritance</h4>
 <ul>
 <li>Abstrakte Klassen ohne Beziehungen -&gt; <em>Sub Class</em> Strategie</li>
 <li>Abstrakte Klassen mit Beziehungen und keiner konkreten Super Klasse -&gt; <em>New Class</em> Strategie</li>
 <li>Konkrete Klassen mit keiner konkreten Super Klasse -&gt; <em>New Class</em> Strategie</li>
 <li>Alle anderen Klassen -&gt; <em>Super Class</em> Strategie</li>
 </ul>
-<p>–v–</p>
-<h4>smart1Inheritance</h4>
+
+            </section>
+        
+            <section >
+                <h4>smart1Inheritance</h4>
 <div class="container">
 <div class="col">
 <p>Heisst also <code>Gebaeude</code> nutzt <em>New Class</em> und alle andern <em>Super Class</em> Strategie.</p>
@@ -873,14 +1100,20 @@ Gewerbegebaeude.t_type: (
 <p><img src="./assets/inherit-super-class.png" alt="super-class"></p>
 </div>
 </div>
-<p>–v–</p>
-<h4>smart2Inheritance</h4>
+
+            </section>
+        
+            <section >
+                <h4>smart2Inheritance</h4>
 <ul>
 <li>Abstrakte Klassen -&gt; <em>Sub Class</em> Strategie</li>
 <li>Alle konkreten Klassen  -&gt; <em>New + Sub Class</em> Strategie</li>
 </ul>
-<p>–v–</p>
-<h4>smart2Inheritance</h4>
+
+            </section>
+        
+            <section >
+                <h4>smart2Inheritance</h4>
 <div class="container">
 <div class="col">
 <p>Heisst also alle nutzen <em>New+Sub Class</em> Strategie.</p>
@@ -891,29 +1124,50 @@ Gewerbegebaeude.t_type: (
 <p><img src="./assets/inherit-new-sub-class.png" alt="new-sub-class"></p>
 </div>
 </div>
-<p>–v–</p>
-<h4>Zusammengefasst</h4>
+
+            </section>
+        
+            <section >
+                <h4>Zusammengefasst</h4>
 <ul>
 <li>smart 1 ↗️</li>
 <li>smart 2 ↘️</li>
 </ul>
-<p>–v–</p>
-<h2>Zeit für Übung 2.1? 🚀</h2>
-<p>–v–</p>
-<h2>Exkurs 2.3: Projektoptimierung mit Smart2</h2>
-<p>–v–</p>
-<h3>Erstellen wir ein Projekt ohne Optimierung</h3>
+
+            </section>
+        
+            <section >
+                <h2>Zeit für Übung 2.1? 🚀</h2>
+
+            </section>
+        
+            <section >
+                <h2>Exkurs 2.3: Projektoptimierung mit Smart2</h2>
+
+            </section>
+        
+            <section >
+                <h3>Erstellen wir ein Projekt ohne Optimierung</h3>
 <p><img src="assets/no-optimization.png" alt="no-opt"></p>
 <p>…probieren wirs aus mit <code>OekoGebaeudeinventar_V1</code> (oder auch <code>ZG_Nutzungsplanung_V1_1</code>)</p>
-<p>–v–</p>
-<h3>Problematik</h3>
+
+            </section>
+        
+            <section >
+                <h3>Problematik</h3>
 <p>Wenn ein Modell bzw. Topic erweiterte Klassen enthält, werden die inklusive Basisklassen in der physischen Datenbank implementiert…</p>
 <p>… und folglich Layer in QGIS erstellt.</p>
-<p>–v–</p>
-<h3>Können wir Basisklassen einfach ignorieren?</h3>
+
+            </section>
+        
+            <section >
+                <h3>Können wir Basisklassen einfach ignorieren?</h3>
 <!-- Nein. Manche wollen wir sehen...-->
-<p>–v–</p>
-<h3>Aber welche Layer wollen wir denn sehen?</h3>
+
+            </section>
+        
+            <section >
+                <h3>Aber welche Layer wollen wir denn sehen?</h3>
 <ul>
 <li>Basisklassen mit gleichnamigen Erweiterungen sind <em><strong>irrelevant</strong></em></li>
 </ul>
@@ -926,63 +1180,114 @@ Gewerbegebaeude.t_type: (
 <li>Ausser wenn die Erweiterung im gleichen Modell ist, sind sie nicht nicht <em><strong>irrelevant</strong></em></li>
 </ul>
 <!-- denn sonst hättest du die Basisklasse ABSTRACT gemacht -->
-<p>–v–</p>
-<h3>Strategien</h3>
+
+            </section>
+        
+            <section >
+                <h3>Strategien</h3>
 <ul>
 <li>Verstecke irrelevante Basisklassen</li>
 <li>Gruppiere irrelevante Basisklassen</li>
 <li>Keine: Layer werden so umbenannt, dass sie eindeutig sind</li>
 </ul>
-<p>–v–</p>
-<h3>Check it out!</h3>
-<p>–v–</p>
-<h2>Ready for Zmittag 🍲</h2>
-<p>–v–</p>
-<h2>Exkurs 3: Behälter und Datasets</h2>
-<p>–v–</p>
-<h3>Datasets</h3>
+
+            </section>
+        
+            <section >
+                <h3>Check it out!</h3>
+
+            </section>
+        
+            <section >
+                <h2>Ready for Zmittag 🍲</h2>
+
+            </section>
+        
+            <section >
+                <h2>Exkurs 3: Behälter und Datasets</h2>
+
+            </section>
+        
+            <section >
+                <h3>Datasets</h3>
 <ul>
 <li>Datensätze eines bestimmten <strong>räumlichen oder thematischen</strong> Bereichs</li>
 <li><strong>Unabhängig</strong> des Modells (im Gegensatz zum Topic)</li>
 <li>Die Daten eines Datasets können unabhängig von den anderen Daten <strong>verwaltet, validiert und exportiert</strong> werden.</li>
 </ul>
-<p>–v–</p>
-<h3>Baskets (Behälter)</h3>
+
+            </section>
+        
+            <section >
+                <h3>Baskets (Behälter)</h3>
 <ul>
 <li>Eine kleinere Instanz</li>
 <li>Währenddem die Datasets meist das ganze Modell umfassen, sind die Behälter meist Teil eines Topics</li>
 <li>Meistens sind sie die Schnittmenge von Topic und Dataset</li>
 </ul>
-<p>–v–</p>
-<p><img src="./assets/baskets-datasets-nodatasets.png" alt="baskets-datasets-nodatasets"></p>
-<p>–v–</p>
-<p><img src="./assets/baskets-datasets-sh.png" alt="baskets-datasets"></p>
-<p>–v–</p>
-<p><img src="./assets/baskets-datasets-tg.png" alt="baskets-datasets"></p>
-<p>–v–</p>
-<p><img src="./assets/baskets-datasets-cat.png" alt="baskets-datasets"></p>
-<p>–v–</p>
-<p><img src="./assets/baskets-datasets-baskets.png" alt="baskets-datasets"></p>
-<p>–v–</p>
-<p><img src="./assets/baskets-datasets-final.png" alt="baskets-datasets"></p>
-<p>–v–</p>
-<h2>Ready to go 🚀</h2>
-<p>–v–</p>
-<h2>Exkurs 4: Was sind OIDs?</h2>
-<p>–v–</p>
-<h3>OIDs</h3>
+
+            </section>
+        
+            <section >
+                <p><img src="./assets/baskets-datasets-nodatasets.png" alt="baskets-datasets-nodatasets"></p>
+
+            </section>
+        
+            <section >
+                <p><img src="./assets/baskets-datasets-sh.png" alt="baskets-datasets"></p>
+
+            </section>
+        
+            <section >
+                <p><img src="./assets/baskets-datasets-tg.png" alt="baskets-datasets"></p>
+
+            </section>
+        
+            <section >
+                <p><img src="./assets/baskets-datasets-cat.png" alt="baskets-datasets"></p>
+
+            </section>
+        
+            <section >
+                <p><img src="./assets/baskets-datasets-baskets.png" alt="baskets-datasets"></p>
+
+            </section>
+        
+            <section >
+                <p><img src="./assets/baskets-datasets-final.png" alt="baskets-datasets"></p>
+
+            </section>
+        
+            <section >
+                <h2>Ready to go 🚀</h2>
+
+            </section>
+        
+            <section >
+                <h2>Exkurs 4: Was sind OIDs?</h2>
+
+            </section>
+        
+            <section >
+                <h3>OIDs</h3>
 <p>Objekt-IDs (OID) sind <strong>systemübergreifend eindeutige</strong> Zeichenketten, die ein INTERLIS Objekt identifizieren.</p>
 <p>Um Objekte <strong>konfiliktlos</strong> über verschiedene Stellen <strong>austauschen</strong> und <strong>updaten</strong>.</p>
-<p>–v–</p>
-<h3>TIDs</h3>
+
+            </section>
+        
+            <section >
+                <h3>TIDs</h3>
 <p>In der Transferdatei ist die OID unter TID einsehbar.</p>
 <pre><code class="language-xml">&lt;City_V1.Constructions.Buildings TID=&quot;chMBAKER00000100&quot;&gt;
   &lt;Street&gt;Rue des Fleures&lt;/Street&gt;&lt;Number&gt;1&lt;/Number&gt;
 &lt;/City_V1.Constructions.Buildings&gt;
 </code></pre>
 <!-- Check mal deine Transfer-Datei -->
-<p>–v–</p>
-<h3>Weshalb TID und nicht OID?</h3>
+
+            </section>
+        
+            <section >
+                <h3>Weshalb TID und nicht OID?</h3>
 <ul>
 <li>
 <p>Eine OID ist im XTF eine TID</p>
@@ -994,30 +1299,45 @@ Gewerbegebaeude.t_type: (
 </li>
 </ul>
 <!--Die XTF Datei benutzt dann IDs, die zwar innerhalb der Datei konsistent sind, aber keine systemübergreifende Stabilität garantieren.-->
-<p>–v–</p>
-<h3>Und im physischen Datenbankschema?</h3>
+
+            </section>
+        
+            <section >
+                <h3>Und im physischen Datenbankschema?</h3>
 <p><img src="assets/oid-physicaltable.png" alt="phyiscal"></p>
 <!-- Check mal einen Record-->
-<p>–v–</p>
-<h4>t_id vs. t_ili_tid</h4>
+
+            </section>
+        
+            <section >
+                <h4>t_id vs. t_ili_tid</h4>
 <ul>
 <li>Die <code>t_ili_tid</code> entspricht der <strong>TID</strong> im XTF und somit der OID (sofern OIDs verwendet werden)</li>
 <li>Die <code>t_id</code> ist nur eine <strong>systeminterne</strong> Sequenz-Nummer</li>
 </ul>
 <!-- Sie startet bei 1 und wird hochgezählt für alle Objekte in dem spezifischen Schema. Diese t_id wird auch als Fremdschlüssel verwendet. -->
-<p>–v–</p>
-<h4>Wann wird die t_id zur TID und die TID zur t_ili_tid?</h4>
+
+            </section>
+        
+            <section >
+                <h4>Wann wird die t_id zur TID und die TID zur t_ili_tid?</h4>
 <!-- Falls keine OIDs verwendet werden, und so bei der Erfassung...-->
 <ul>
 <li>die <code>t_ili_tid</code> leer bleibt, dann wird bei einem <strong>Export</strong> die <code>t_id</code> in die TID geschrieben.</li>
 <li>beim <strong>Import</strong> wird dann die TID in die <code>t_ili_tid</code> geschrieben.</li>
 </ul>
 <!-- somit wird eigentlich beim fehlen einer t_ili_tid die t_id von da an als TID verwendet.-->
-<p>–v–</p>
-<p><img src="assets/tid-to-tilitid.png" alt="tid-to-tilitid"></p>
+
+            </section>
+        
+            <section >
+                <p><img src="assets/tid-to-tilitid.png" alt="tid-to-tilitid"></p>
 <!-- https://excalidraw.com/#json=fviwNAn-5hOgFpDiz9Uwu,vQl1ONi8BgihfCA1FvMu3g -->
-<p>–v–</p>
-<h3>Wann muss/soll ich OIDs verwenden?</h3>
+
+            </section>
+        
+            <section >
+                <h3>Wann muss/soll ich OIDs verwenden?</h3>
 <ul>
 <li>Sobald mehr als eine Stelle Daten sammelt und verwaltet</li>
 <li>Wenn es das Modell voraussetzt:<pre><code>[...]
@@ -1029,8 +1349,11 @@ TOPIC Constructions =
 </li>
 </ul>
 <p>💡 <strong>Tipp:</strong> <em>OIDS immer verwenden: kein Mehraufwand, kann bei  Datenverlust helfen und erleichtert die Nachvollziehbarkeit von Änderungen.</em></p>
-<p>–v–</p>
-<h3>Arten von OIDs</h3>
+
+            </section>
+        
+            <section >
+                <h3>Arten von OIDs</h3>
 <ul>
 <li>UUIDOID</li>
 <li>I32OID</li>
@@ -1038,8 +1361,11 @@ TOPIC Constructions =
 <li>ANYOID</li>
 <li>Benutzerdefinierte OID</li>
 </ul>
-<p>–v–</p>
-<h4>UUIDOID</h4>
+
+            </section>
+        
+            <section >
+                <h4>UUIDOID</h4>
 <ul>
 <li><code>OID TEXT*36</code></li>
 <li>Universally Unique IDentifier</li>
@@ -1048,8 +1374,11 @@ TOPIC Constructions =
 <h5>Standardwert Model Baker</h5>
 <pre><code>uuid('WithoutBraces')
 </code></pre>
-<p>–v–</p>
-<h4>I32OID</h4>
+
+            </section>
+        
+            <section >
+                <h4>I32OID</h4>
 <ul>
 <li><code>OID 0 ... 2147483647</code></li>
 </ul>
@@ -1057,8 +1386,11 @@ TOPIC Constructions =
 <h5>Standardwert Model Baker</h5>
 <pre><code>t_id
 </code></pre>
-<p>–v–</p>
-<h4>STANDARDOID</h4>
+
+            </section>
+        
+            <section >
+                <h4>STANDARDOID</h4>
 <ul>
 <li>
 <p><code>OID TEXT*16</code></p>
@@ -1077,11 +1409,17 @@ TOPIC Constructions =
 <h5>Standardwert Model Baker</h5>
 <pre><code>'%change%' || lpad( T_Id, 8, 0 )
 </code></pre>
-<p>–v–</p>
-<h4>ANYOID</h4>
+
+            </section>
+        
+            <section >
+                <h4>ANYOID</h4>
 <p>Definiert kein Format für die OID, sondern nur, dass eine OID in allen erweiterten Modellen definiert werden muss.</p>
-<p>–v–</p>
-<h4>Nicht definierte OIDs</h4>
+
+            </section>
+        
+            <section >
+                <h4>Nicht definierte OIDs</h4>
 <!-- Wenn es keine Definition mit OID AS gibt, geht ili2db von text aus-->
 <p>Es gelten Regeln des <strong>XML-ID-Typs</strong> (<a href="http://www.w3.org/TR/REC-xml">www.w3.org/TR/REC-xml</a>)</p>
 <ul>
@@ -1100,16 +1438,28 @@ Deshalb und auch v.a. wegen den Prefix in Standard OID:
 Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 
 -->
-<p>–v–</p>
-<h3>OID Manager</h3>
+
+            </section>
+        
+            <section >
+                <h3>OID Manager</h3>
 <p><em>Datenbank &gt; Model Baker &gt; OID Manager</em></p>
 <p><img src="assets/oid-manager.png" alt="oidmanager"></p>
-<p>–v–</p>
-<h3>Check it out!</h3>
-<p>–v–</p>
-<h2>Exkurs 5: UsabILIty Hub</h2>
-<p>–v–</p>
-<h3>Wofür ist UsabILIty Hub?</h3>
+
+            </section>
+        
+            <section >
+                <h3>Check it out!</h3>
+
+            </section>
+        
+            <section >
+                <h2>Exkurs 5: UsabILIty Hub</h2>
+
+            </section>
+        
+            <section >
+                <h3>Wofür ist UsabILIty Hub?</h3>
 <ul>
 <li>
 <p>Erhalten von Zusatzinformationen zu <strong>INTERLIS Modellen</strong> und ihre <strong>(QGIS) Projekte</strong> automatisch übers Web.</p>
@@ -1119,10 +1469,16 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 </li>
 </ul>
 <!-- Symbolisierung, Hindergrundkarten etc...-->
-<p>–v–</p>
-<h3>Wie funktioniert UsabILIty Hub?</h3>
-<p>–v–</p>
-<h4>1. Anwender:in wählt <strong>Modell</strong></h4>
+
+            </section>
+        
+            <section >
+                <h3>Wie funktioniert UsabILIty Hub?</h3>
+
+            </section>
+        
+            <section >
+                <h4>1. Anwender:in wählt <strong>Modell</strong></h4>
 <ul>
 <li>
 <p>Repositorien-übergreifende Suche nach <strong>Metakonfigurationsfiles</strong>.</p>
@@ -1132,8 +1488,11 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 </li>
 </ul>
 <!-- Genauso wie wir INTERLIS Modelle über ein ilimodels.xml anhand von http://models.interlis.ch emfangen können.-->
-<p>–v–</p>
-<h4>2. Metakonfigurationsfile wird geparst</h4>
+
+            </section>
+        
+            <section >
+                <h4>2. Metakonfigurationsfile wird geparst</h4>
 <p>Dort sind <strong>Konfigurationen</strong> für ili2db, Model Baker und andere Tools definiert.</p>
 <p>Ebenso auch <strong>Links</strong> (Ids) zu:</p>
 <ul>
@@ -1141,13 +1500,19 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 <li>Extra Meta Attribute File</li>
 <li>Toppingfiles</li>
 </ul>
-<p>–v–</p>
-<h4>3. Konfigurationen werden gesetzt</h4>
+
+            </section>
+        
+            <section >
+                <h4>3. Konfigurationen werden gesetzt</h4>
 <ul>
 <li>ili2db: Smart-Mapping, Basket-Handling etc.</li>
 </ul>
-<p>–v–</p>
-<h4>4. Links werden aufgelöst</h4>
+
+            </section>
+        
+            <section >
+                <h4>4. Links werden aufgelöst</h4>
 <ul>
 <li>
 <p>Repositorien-übergreifende Suche der <strong>Kataloge, Extra Meta Attribut File und Toppingfiles</strong></p>
@@ -1160,59 +1525,95 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 </ul>
 </li>
 </ul>
-<p>–v–</p>
-<h4>5. Nutzen der Informationen</h4>
+
+            </section>
+        
+            <section >
+                <h4>5. Nutzen der Informationen</h4>
 <ul>
 <li>Führe ili2db aus anhand der Konfigurationen und Extra Meta Attribut File</li>
 <li>Importiere die gefundenen Kataloge</li>
 <li>Generiere das Projekt anhand der Toppingfiles</li>
 </ul>
-<p>–v–</p>
-<h3>Ablauf</h3>
+
+            </section>
+        
+            <section >
+                <h3>Ablauf</h3>
 <p><img src="./assets/usabilityhub-model.png" alt="uml"></p>
-<p>–v–</p>
-<h3>Dokumentation</h3>
+
+            </section>
+        
+            <section >
+                <h3>Dokumentation</h3>
 <p>Siehe <a href="https://usabilityhub.opengis.ch/">https://usabilityhub.opengis.ch/</a></p>
 <p>Oder die <a href="https://opengisch.github.io/QgisModelBaker/background_info/usabilityhub/modelbaker_integration/">Model Baker Dokumentation</a></p>
-<p>–v–</p>
-<h2>Ready to go 🚀</h2>
-<p>–v–</p>
-<h2>Exkurs 6: Übersetzungsmodelle</h2>
-<p>–v–</p>
-<h3>Was sind Übersetzungsmodelle?</h3>
+
+            </section>
+        
+            <section >
+                <h2>Ready to go 🚀</h2>
+
+            </section>
+        
+            <section >
+                <h2>Exkurs 6: Übersetzungsmodelle</h2>
+
+            </section>
+        
+            <section >
+                <h3>Was sind Übersetzungsmodelle?</h3>
 <p>Übersetzungsmodelle sind <em><strong>übersetzte Modelle</strong></em>, die sich von der Struktur her vom Originalmodell <em><strong>nicht</strong></em> unterscheiden.</p>
-<p>–v–</p>
-<h3>Beispiel Gebaeudeinventar_V1</h3>
+
+            </section>
+        
+            <section >
+                <h3>Beispiel Gebaeudeinventar_V1</h3>
 <p><img src="assets/translation-compare.png" alt="compare"></p>
-<p>–v–</p>
-<h2>Ready to go 🚀</h2>
+
+            </section>
+        
+            <section >
+                <h2>Ready to go 🚀</h2>
 <h3>Beispiel Plans d’affectation</h3>
 <p>Fr:
 <a href="https://models.geo.admin.ch/ARE/PlansDAffectation_V1_2.ili">https://models.geo.admin.ch/ARE/PlansDAffectation_V1_2.ili</a></p>
 <p>De:
 <a href="https://models.geo.admin.ch/ARE/Nutzungsplanung_V1_2.ili">https://models.geo.admin.ch/ARE/Nutzungsplanung_V1_2.ili</a></p>
-<p>–v–</p>
-<h2>Ready to go 🚀</h2>
 
             </section>
+        
+            <section >
+                <h2>Ready to go 🚀</h2>
+
+            </section>
+        
+
+    </section>
     
 
 
 
     
+    <section>
         <section >
-            
             <h1>Übungen</h1>
 <p>… machen Meister:innen</p>
-<p>–v–</p>
-<h2>Übung 1: Erstellen eines benutzbaren Projektes</h2>
+
+            </section>
+        
+            <section >
+                <h2>Übung 1: Erstellen eines benutzbaren Projektes</h2>
 <ul>
 <li>Erstellt ein Projekt für <code>KbS_V1_5</code> inklusive Extra Meta Attribut File</li>
 <li>Fügt eine Hintergrundkarte hinzu</li>
 <li>Speichert das Projekt ab.</li>
 </ul>
-<p>–v–</p>
-<h2>Übung 2: Smart Inheritance Mapping</h2>
+
+            </section>
+        
+            <section >
+                <h2>Übung 2: Smart Inheritance Mapping</h2>
 <ul>
 <li>Importiere das Modell <code>MultiGebaeudeinventar_V1</code> mit <strong>Smart1Inheritance</strong></li>
 <li>Umbenennen der Layer zu <code>&lt;layername&gt;_Smart1</code></li>
@@ -1221,8 +1622,11 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 <p>Nutze dabei keine Optimierung:
 <img src="assets/no-optimization.png" alt="no-opt"></p>
 <!-- Was ist der Unterschied?-->
-<p>–v–</p>
-<h2>Übung 2.1: Optimierung des Projekts</h2>
+
+            </section>
+        
+            <section >
+                <h2>Übung 2.1: Optimierung des Projekts</h2>
 <ul>
 <li>Importiere das Modell <code>OekoGebaeudeinventar_V1</code> mit <strong>Smart2Inheritance</strong></li>
 <li>Importiere das Modell <code>ZG_Nutzungsplanung_V1_1</code> mit <strong>Smart2Inheritance</strong></li>
@@ -1230,8 +1634,11 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 <p>Nutze dabei keine Optimierung:
 <img src="assets/no-optimization.png" alt="no-opt"></p>
 <!-- Was ist das Problem?-->
-<p>–v–</p>
-<h2>Übung 3: Erfassen in Datasets</h2>
+
+            </section>
+        
+            <section >
+                <h2>Übung 3: Erfassen in Datasets</h2>
 <ul>
 <li>Erstelle das Projekt mit Datasets für TG und SH (sofern noch nicht gemacht)</li>
 <li>Füge ein Gebiet in Stein am Rhein TG zu.</li>
@@ -1239,8 +1646,11 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 <li>Erstelle ein neuer Dataset für ZH</li>
 <li>Erfasse ein Gebiet in ZH</li>
 </ul>
-<p>–v–</p>
-<h2>Übung 4: Export</h2>
+
+            </section>
+        
+            <section >
+                <h2>Übung 4: Export</h2>
 <ul>
 <li>Exportiere alle Daten in eine Transferdatei (inkl. Codelists)</li>
 <li>Exportiere nur die Nutzdaten von SH in eine Transferdatei</li>
@@ -1252,8 +1662,11 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 <li>Erfasse ein Objekt</li>
 <li>Exportiere für <code>OekoGebaeudeinventar_V1</code> und für <code>Gebaeudeinventar_V1</code></li>
 </ul>
-<p>–v–</p>
-<h2>Übung 5: UsabILItyHub</h2>
+
+            </section>
+        
+            <section >
+                <h2>Übung 5: UsabILItyHub</h2>
 <ul>
 <li>Konfiguriere ein beliebiges Projekt</li>
 <li>Exportiere die Toppings</li>
@@ -1261,6 +1674,9 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 </ul>
 
             </section>
+        
+
+    </section>
     
 
 
@@ -1276,12 +1692,15 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 
 
     
+    <section>
         <section >
-            
             <p>Eine Gruppe verschiedener Interessenten…</p>
 <h1>Model Baker Group</h1>
-<p>–v–</p>
-<h2>Projektteam</h2>
+
+            </section>
+        
+            <section >
+                <h2>Projektteam</h2>
 <p><em>in Order of Appearance</em></p>
 <ul>
 <li>Romedi Filli, Kanton SH (Leitung)</li>
@@ -1291,10 +1710,16 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 <li>Marleen Schulze, Kanton SZ</li>
 <li>Adrian Weber, Kanton SO</li>
 </ul>
-<p>–v–</p>
-<h2>Finanzierung</h2>
-<p>–v–</p>
-<h2>Jährlicher Beitrag mit Abstufungen</h2>
+
+            </section>
+        
+            <section >
+                <h2>Finanzierung</h2>
+
+            </section>
+        
+            <section >
+                <h2>Jährlicher Beitrag mit Abstufungen</h2>
 <p>(ab Förderer mit Supportstunden inklusive):</p>
 <ul>
 <li>Visionär</li>
@@ -1302,11 +1727,17 @@ Benutzer:innen müssen die Standartwerte u.U. anpassen können.
 <li>Unterstützer</li>
 <li>Gönner</li>
 </ul>
-<p>–v–</p>
-<h2>Projektbezogen</h2>
+
+            </section>
+        
+            <section >
+                <h2>Projektbezogen</h2>
 <p><img src="./assets/projektbezogene-finanzierung.png" alt="projektbezogen"></p>
 
             </section>
+        
+
+    </section>
     
 
 
