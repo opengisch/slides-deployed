@@ -50,6 +50,9 @@ section.present ul li {
   font-size: 15pt;
   font-weight: lighter;
 }
+section.present ul li.no-disk, section.present.no-disk ul li{
+  list-style: none !important;
+}
 
 p {
   line-height: 1.5rem;
