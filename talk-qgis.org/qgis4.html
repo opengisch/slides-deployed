@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>QGIS 4 - What Changes for Users?</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- highlight Theme -->
+  
+  <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/monokai.min.css">
+  
+	
+		
+	<link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
+	
+	
+	
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/customcontrols/style.css">
+  
+	
+
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/stylesheets/qf-style.css.css" id="theme">
+  
+  
+
+  <link rel="stylesheet" href="libs/styles/tasklist.css">
+	<link rel="stylesheet" href="libs/styles/iota.css">
+	<link rel="stylesheet" href="libs/styles/layout.css">
+
+
+  <!-- Revealjs Theme -->
+  
+  <link rel="stylesheet" href="stylesheets/qf-style.css">
+  
+
+   <!-- css list -->
+	
+
+   
+
+</head>
+
+<body>
+
+   
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      
+
+
+    
+        <section class="styled-logo">
+            
+            <!-- SLIDE 1: Title + Introduction (1 min) -->
+<h1>QGIS 4</h1>
+<h2>What Changes for Users?</h2>
+<h4>Release overview and practical implications</h4>
+<!-- .slide: class="styled-logo" -->
+<p><img src="assets/logo_opengisch_open-source-geoninjas.png" alt="logo"></p>
+<aside class="notes">
+Today we're looking at QGIS 4 and what it means for your daily work.
+Not a deep technical dive – but: What do you need to know and do as a user right now?
+20 minutes: We focus on benefits, risks, and concrete next steps.
+</aside>
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <!-- SLIDE 2: Why QGIS 4? Why now? (1.5 min) -->
+<h2>Why QGIS 4?</h2>
+<h2>Why now?</h2>
+<ul>
+<li><strong>Qt5 End-of-Life</strong>: May 2025: security and stability risk</li>
+<li><strong>Qt6 brings</strong>: modernization, bug fixes, future-proof architecture</li>
+<li><strong>Goal</strong>: long-term maintainability and stability for QGIS</li>
+</ul>
+<aside class="notes">
+Qt is the technical foundation of QGIS. Qt5 is no longer maintained.
+This means: QGIS 3 becomes technically unsecure after mid-2025.
+Qt6 is not just "faster" – it's more stable, modern, maintainable.
+This is a necessary technical step, not hype.
+</aside>
+            </section>
+    
+
+
+
+    
+        <section class="custom-center-pic">
+            
+            <!-- SLIDE 3: Visible Improvements (2 min) -->
+<h2>Visible Change</h2>
+<h2>New Start Screen</h2>
+<!-- .slide: class="custom-center-pic" -->
+<img src="assets/qgis4-start-screen.png" style="width: 90%; height: auto; display: block;" alt="start screen">
+<h4>More intuitive first steps</h4>
+
+            </section>
+    
+
+
+
+    
+        <section class="custom-center-pic">
+            
+            <h2>3D</h2>
+<h2>Billboard annotations</h2>
+<!-- .slide: class="custom-center-pic" -->
+<img src="assets/3d-billboard.png" style="width: 80%; height: auto; display: block;" alt="3d billboard">
+<h4>More to be presented by Martin Dobias later</h4>
+
+            </section>
+    
+
+
+
+    
+        <section class="custom-center-pic">
+            
+            <h2>Layout</h2>
+<h2>Pie Chart Plot Type</h2>
+<!-- .slide: class="custom-center-pic" -->
+<img src="assets/pie-chart-plot.png" style="width: 80%; height: auto; display: block;" alt="pie chart plot">
+            </section>
+    
+
+
+
+    
+        <section class="custom-center-pic">
+            
+            <h2>Elevation Profile</h2>
+<h2>SwissLocator / SwissALTI3D</h2>
+<!-- .slide: class="custom-center-pic" -->
+<img src="assets/elevation-profile.png" style="width: 50%; height: auto; display: block;" alt="elevation profile">
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>… and much</h2>
+<h2>more</h2>
+<ul>
+<li><strong>Processing</strong>: Flow execution, non blocking modeller</li>
+<li><strong>Data Analysis</strong>: PyQGIS no offers <code>as_geopandas()</code> method</li>
+<li><strong>3D Calculations</strong>: SFCGAL integration</li>
+<li>…</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>Plugins</h2>
+<h2>in QGIS 4</h2>
+<ul>
+<li><strong>Already &gt;800 QGIS-4-compatible plugins (of 3500)</strong> available</li>
+<li><strong>Test your plugins and help get them ported</strong></li>
+<li><strong>Some old plugins might not get an update</strong></li>
+<li><strong>Old workarounds obsolete</strong>: stable XML by default (hello git 👋)</li>
+<li><strong>Themes as Plugins</strong>: new flexibility for UI customization</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>Migrating</h2>
+<h2>Plugins</h2>
+<ul>
+<li><strong>QGIS ships with a helper tool to migrate plugins</strong> <code>pyqt5topyqt6</code></li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>Migrating Projects and Profiles</h2>
+<h2>What Just Works</h2>
+<ul>
+<li>✅ QGIS 3 projects can be opened in QGIS 4</li>
+<li>✅ QGIS 3 user profiles will be updated to QGIS 4 profiles</li>
+</ul>
+<aside class="notes">
+This is the reassuring message first.
+QGIS 4 is not "everything must be redone".
+Your QGIS 3 files are not suddenly broken.
+</aside>
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>Migrating Projects</h2>
+<h2>What Doesn’t Just Work</h2>
+<ul>
+<li>❌ Backward compatibility: QGIS 4 projects do not open properly in QGIS 3</li>
+<li>❌ Backward compatibility: QGIS 4 user profiles are not compatible with QGIS 3</li>
+<li>❌ Python customizations: macros, actions, custom scripts, processing scripts often need updates</li>
+</ul>
+<aside class="notes">
+This is the critical point. It's not about the projects themselves.
+It's about your custom automations.
+If you have Python macros or automated workflows,
+you need to test them and potentially update them.
+</aside>
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>The HTML story</h2>
+<h2>Browser changes</h2>
+<ul>
+<li><strong>QtWebKit is no longer supported</strong></li>
+<li><strong>QtWebEngine</strong>: is the new technology</li>
+<li><strong>HTML print layouts</strong>: will not just work, especially text, updates are still ongoing and may only land in QGIS 4.4</li>
+<li><strong>Plugins</strong>: which use QtWebKit need to be adjusted</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>Practical</h2>
+<h2>Migration Strategy</h2>
+<ul>
+<li>🔄 <strong>Separate project files and profiles</strong>: maintain QGIS 3 and QGIS 4 versions in parallel</li>
+<li>🔧 <strong>Server before desktop</strong>: QGIS 4 projects may not render properly in QGIS 3 servers</li>
+<li>🧪 <strong>QFieldCloud Roadmap</strong>: full QGIS 4 compatibility planned for mid-July 2026</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>Test</h2>
+<h2>And Give Feedback</h2>
+<ul>
+<li>🧪 <strong>Test Now!</strong>: We need you!</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section class="styled-img">
+            
+            <h2>Roadmap</h2>
+<h2>QGIS 4.2 becomes LTR</h2>
+<!-- .slide: class="styled-img" -->
+<p><img src="assets/qgis_2026_roadmap.png" alt="LTR Roadmap"></p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h1>We made it 😉🫡</h1>
+<p><img src="assets/bundesrat.jpg" alt="bundesrat"></p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <!-- SLIDE: QGIS.org Hiring -->
+<h2><a href="http://QGIS.org">QGIS.org</a> is Hiring</h2>
+<ul>
+<li>New paid position for administration, office, …</li>
+<li>More capacity for community support, events, compliance, …</li>
+</ul>
+<p><img src="assets/hiring.png" alt="TODO: QGIS.org job posting or team photo"></p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <!-- SLIDE: Localized Feed -->
+<h2>QGIS News Feed</h2>
+<h2>Now Localized</h2>
+<p><img src="assets/feed.png" alt="TODO: screenshot of localized QGIS feed in start screen"></p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <!-- SLIDE: QGIS Website Translations -->
+<h2>QGIS Website</h2>
+<h2>Translatable Again</h2>
+<p><img src="assets/translation.jpg" alt="TODO: qgis.org shown in Italian"></p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <!-- SLIDE: Attribute Table Future Work -->
+<h2>Attribute Table</h2>
+<h2>Quo vadis?</h2>
+<ul>
+<li>60K Budget aside</li>
+<li>Major rework planned for QGIS 4.8 (possibly 4.6)</li>
+<li>Long-standing pain point finally being addressed</li>
+</ul>
+<p><img src="assets/attributetable.jpg" alt="TODO: mockup or screenshot of new attribute table"></p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <!-- SLIDE: QField Update -->
+<h2>QField, From Laax with 💚</h2>
+<h2>On-the-fly projects, COGO, NTRIP, &amp; 3D</h2>
+<p><img src="assets/splash42.webp" alt="TODO: QField app screenshot on mobile"></p>
+<ul>
+<li>Ongoing features and bugfixes</li>
+<li>QGIS 4 preparation underway in the background</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <!-- SLIDE: QGIS User Conference Laax -->
+<h2>QGIS User Conference</h2>
+<h2>Laax 5-6.10.2026</h2>
+<ul>
+<li><strong>Tickets running out</strong> — register now!</li>
+<li>Talks, workshops, contributors meeting and outdoor activities</li>
+</ul>
+<p><img src="assets/laax.jpg" alt="TODO: photo of Laax venue or conference banner"></p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>Thank you 🙏</h2>
+<h2>Questions?</h2>
+<br/>
+<br/>
+<br/>
+<p><a href="https://slides.opengis.ch/talk-qgis.org/qgis4">https://slides.opengis.ch/talk-qgis.org/qgis4</a>
+<br/>
+<br/>
+<br/></p>
+<p><a href="https://linkedin.com/mbernasocchi">@mbernasocchi</a> · <a href="https://www.linkedin.com/in/kuhnmatthias/">@kuhnmatthias</a></p>
+<br/>
+<br/>
+<br/>
+<p><a href="https://opengis.ch">OPENGIS.ch</a> · <a href="https://qfield.org">QField.org</a></p>
+
+            </section>
+    
+
+
+    </div>
+
+
+  </div>
+
+  <div class="line top"></div>
+  <div class="line bottom"></div>
+  <div class="line left"></div>
+  <div class="line right"></div>
+
+  <script src="libs/reveal.js/4.3.1/reveal.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/fullscreen/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/animate/svg.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/Chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/d3.v3.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3.patch.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/queue.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/d3/topojson.v1.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/anything/function-plot.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/customcontrols/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/embed-tweet/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/chart.min.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chart/plugin.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/verticator/verticator.js"></script>
+
+<script src="libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/search/search.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/menu/menu.js"></script>
+<script src="libs/reveal.js/4.3.1/plugin/chalkboard/plugin.js"></script>
+
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/plugin.js"></script>  -->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/recorder.js"></script>-->
+<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/RecordRTC.js"></script>-->
+
+  
+
+<script>
+  const printPlugins = [
+      RevealNotes,
+      RevealHighlight,
+      RevealMath.MathJax3,
+      RevealAnimate,
+      RevealChalkboard, 
+			RevealEmbedTweet,
+			RevealChart,
+		];
+
+		const plugins =  [...printPlugins,
+		RevealZoom, 
+		RevealSearch, 
+				RevealMarkdown, 
+				RevealMenu, 
+				RevealFullscreen,
+				RevealAnything,
+				//RevealAudioSlideshow,
+				//RevealAudioRecorder,
+				RevealCustomControls, 
+				// poll
+				// question
+				// seminar
+				Verticator 
+				 ]
+
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+      controlsTutorial: true,
+      controlsLayout: 'bottom-right',
+      controlsBackArrows: 'faded',
+      progress: true,
+      slideNumber: false,
+      //#showSlideNumber "all" "print" "speaker"
+      hash: true, //# hash: false,
+      //# respondToHashChanges: true,
+      //# history: false,
+      keyboard: true,
+      //#keyboardCondition: null,
+      overview: true,
+      center: true,
+      touch: true,
+      loop: false,
+      rtl: false,
+      //#navigationMode: 'default', linear grid
+      shuffle: false,
+      fragments: true,
+      fragmentInURL: false,
+      embedded: false,
+      help: true,
+      //#pause: true
+      showNotes: false,
+      autoPlayMedia: false, // TODO fix this to a nullable value
+      //#preloadIframes: null. true false
+      //#autoAnimate: true
+      //#autoAnimateMatcher: null,
+      //#autoAnimateEasing: 'ease',
+      //autoAnimateDuration: 1.0,
+      //#autoAnimateUnmatched: true
+      //#autoAnimateStyles: []
+      autoSlide: 0, // TODO fix this to a falseable value
+      autoSlideStoppable: true,
+      autoSlideMethod: '0',
+      defaultTiming: 120,
+      mouseWheel: false,
+      //#previewLinks: false
+      //#postMessage: true, // TODO : this can cause issues with the vscode api ???
+      //#postMessageEvents: false,
+      //#focusBodyOnPageVisibilityChange: true,
+      transition: 'none',
+      transitionSpeed: 'default',
+      backgroundTransition: 'default',
+      //#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+      //#pdfSeparateFragments: true,
+      //#pdfPageHeightOffset: -1,
+      viewDistance: 3,
+      //#mobileViewDistance: 2,
+      display: 'block',
+      //#hideInactiveCursor: true,
+      //#hideCursorTime: 5000
+
+      // Parallax Background
+      parallaxBackgroundImage: '',
+      parallaxBackgroundSize: '',
+      parallaxBackgroundHorizontal: 0,
+      parallaxBackgroundVertical: 0,
+
+      //Presentation Size
+      width: 960,
+			height: 700,
+			margin: 0.04,
+      minScale: 0.2,
+      maxScale: 2,
+      disableLayout: false,
+
+      audio: {
+        prefix: 'audio/', // audio files are stored in the "audio" folder
+        suffix: '.ogg', // audio files have the ".ogg" ending
+        textToSpeechURL: null, // the URL to the text to speech converter
+        defaultNotes: false, // use slide notes as default for the text to speech converter
+        defaultText: false, // use slide text as default for the text to speech converter
+        advance: 0, // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+        autoplay: false, // automatically start slideshow
+        defaultDuration: 5, // default duration in seconds if no audio is available
+        defaultAudios: true, // try to play audios with names such as audio/1.2.ogg
+        playerOpacity: 0.05, // opacity value of audio player if unfocused
+        playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+        startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+      },
+      
+      chalkboard: { // font-awesome.min.css must be available
+        //src: "chalkboard/chalkboard.json",
+        storage: "chalkboard-demo",
+      },
+      
+			customcontrols: {
+					controls: [
+      						{
+						  id: 'toggle-overview',
+						  title: 'Toggle overview (O)',
+						  icon: '<i class="fa fa-th"></i>',
+						  action: 'Reveal.toggleOverview();'
+						}
+						,
+      {
+        icon: '<i class="fa fa-pen-square"></i>',
+        title: 'Toggle chalkboard (B)',
+        action: 'RevealChalkboard.toggleChalkboard();'
+      },
+      {
+        icon: '<i class="fa fa-pen"></i>',
+        title: 'Toggle notes canvas (C)',
+        action: 'RevealChalkboard.toggleNotesCanvas();'
+      }
+      
+				]
+			},
+			chart: {
+					defaults: { 
+						color: 'lightgray', // color of labels
+						scale: { 
+							beginAtZero: true, 
+							ticks: { stepSize: 1 },
+							grid: { color: "lightgray" } , // color of grid lines
+						},
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+			},
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				anything: [ 
+				{
+		className: "plot",
+		defaults: {width:500, height: 500, grid:true},
+		initialize: (function(container, options){ options.target = "#"+container.id; functionPlot(options) })
+	 },
+	 {
+		className: "chart",  
+		initialize: (function(container, options){ container.chart = new Chart(container.getContext("2d"), options);  })
+	 },
+	 {
+		className: "anything",
+		initialize: (function(container, options){ if (options && options.initialize) { options.initialize(container)} })
+	 },
+					],
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins ) 
+		});
+			
+
+
+	    // Change chalkboard theme : 
+		function changeTheme(input) {
+			var config = {};
+			config.theme = input.value;
+			Reveal.getPlugin("RevealChalkboard").configure(config);
+			input.blur();
+		}
+
+		// // Handle the message inside the webview
+        // window.addEventListener('message', event => {
+
+        //     const message = event.data; // The JSON data our extension sent
+
+        //     switch (message.command) {
+        //         case 'refactor':
+        //             Reveal.toggleHelp();
+        //     }
+        // });
+
+		if (window.location.search.match(/print-pdf-now/gi)) {
+      		setTimeout(() => {
+				window.print();
+			  }, 2500);
+			
+    }
+</script>
+
+</body>
+
+</html>
