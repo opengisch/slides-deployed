@@ -25,6 +25,7 @@ body {
 
 img.vertical{
   max-width: 90% !important;
+  max-height: 540px !important; /* slide design height is 700px; top:100px offset leaves 600px available */
   position: absolute;
   right: 40px;
   top: 100px;

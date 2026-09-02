@@ -146,6 +146,7 @@ section.present img {
   border: 0.5px;
   box-shadow: none;
   max-width: 900px;
+  max-height: 420px; /* slide design height is 700px (see vscode-reveal config); leaves room for title/subtitle */
 }
 
 /* LOGO */
