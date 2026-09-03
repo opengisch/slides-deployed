@@ -1,0 +1,76 @@
+@import 'qf-main-style.css';
+@import url("https://use.typekit.net/cbd7kad.css");
+
+:root {
+  --r-background-color: var(--opengisch-white);
+}
+
+#qf-logo { /* left corner qfield logo*/
+  position: fixed;
+  top: 500px;
+  z-index: 1000;
+}
+
+.slide-background-content{
+  background-image: url(https://qfield.org/images/qf_carousel/qf-bg-sync.jpg);
+}
+
+.reveal .slides::after {
+  background:none !important;
+}
+
+body {
+  font-family: "bio-sans", sans-serif !important;
+}
+
+img.vertical{
+  max-width: 90% !important;
+  max-height: 540px !important; /* slide design height is 700px; top:100px offset leaves 600px available */
+  position: absolute;
+  right: 40px;
+  top: 100px;
+}
+
+li{
+  background:none !important;
+}
+
+p {
+  line-height: 1.5rem;
+  font-size: 15pt;
+  font-weight: lighter;
+}
+
+section.present ul li {
+  background: none !important;
+  list-style: initial;
+  padding: initial !important;
+  margin-left: 30px;
+  margin-top: 15pt;
+  line-height: 1.5rem;
+  font-size: 15pt;
+  font-weight: lighter;
+}
+section.present ul li.no-disk, section.present.no-disk ul li{
+  list-style: none !important;
+}
+
+p {
+  line-height: 1.5rem;
+  font-size: 15pt;
+  font-weight: lighter;
+}
+
+strong {
+  font-weight: bold;
+  color: var(--opengisch-green);
+}
+
+code {
+  font-family: "Fira Code", monospace;
+  background-color: lightgray;
+}
+
+pre {
+  text-align: left;
+}
