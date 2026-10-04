@@ -71,12 +71,25 @@
 
 
     
+        <section data-background="./assets/29062024.jpg">
+            
+            <h1 style="color: rgb(250, 245, 235); text-align: left; transform: translateY(500px);">29 June 2024 </h1>
+<!-- .slide: data-background="./assets/29062024.jpg" -->
+<aside class="notes">
+Cold open, no title slide. Walk on, say nothing for a few seconds. Ticino block: 3:00 in total across the eight slides. First six slides about 12 seconds each, one line per slide.
+“29 June 2024. I was far from home, about to go surfing.” Light, almost a holiday picture. Let it sit.</aside>
+
+            </section>
+    
+
+
+
+    
         <section data-background="./assets/rapidmapper/1a.jpg">
             
             <!-- .slide: data-background="./assets/rapidmapper/1a.jpg" -->
 <aside class="notes">
-Cold open, no title slide. Walk on, say nothing for a few seconds. Ticino block: 3:00 in total across the seven slides. First five slides about 12 seconds each, one line per slide.
-“Summer 2024. I was away from home, and my phone started filling up with pictures.” CHECK: looks like the A13 in the Misox, confirm before naming it.</aside>
+“That same day, my phone started filling up with pictures.” CHECK: looks like the A13 in the Misox, confirm before naming it.</aside>
 
             </section>
     
@@ -185,7 +198,7 @@ Cold open, no title slide. Walk on, say nothing for a few seconds. Ticino block:
     
         <section >
             
-            <img src="./assets/history.png">
+            <img src="./assets/qfield-timeline-2026.png">
 <aside class="notes">
 0:30. Growing up. Google Summer of Code, first QField commit, then the four majors: 1.0 (2019) it works, 2.0 Arctic Fox (2022) it works together with QFieldCloud, 3.0 Amazonia (Qt6) rebuilt for the future, 4.0 Aare (Dec 2025) anyone can start. Don’t read the image, just say the arc. TODO: this timeline stops at 2024; extend it to 4.x before the talk.</aside>
 
@@ -211,7 +224,7 @@ Cold open, no title slide. Walk on, say nothing for a few seconds. Ticino block:
     
         <section >
             
-            <h2>WE KNEW WHAT TO DO IN TICINO</h2>
+            <h2>WHY DID WE KNOW WHAT TO DO IN TICINO?</h2>
 <h4>because we had seen it what QField is used for in many other places</h4>
 <aside class="notes">
 0:15. CHAPTER 2, LETTING IT GO OUT INTO THE WORLD. Back to the opening. “Let me take you to a few of those places.”</aside>
@@ -285,7 +298,7 @@ Cold open, no title slide. Walk on, say nothing for a few seconds. Ticino block:
 <h4>Everything offline</h4>
 <img src="./assets/nepal.jpg">
 <aside class="notes">
-1:00. Last story, and unfortunately it’s Ticino all over again: floods, this time in Nepal, last month. And this time we knew even more. A totally offline QField project: OSM data as offline vector tiles you can still identify features on, 60 cm Vantor imagery from 24 hours earlier, and a 3D view with the 30 m SRTM DEM as offline elevation. Mathieu shared it in HOTOSM’s #disaster-mapping Slack channel, a little over 2,000 people from the private sector and non-profits. On the screenshot, left to right: the 3D view on the map, the 3D view on imagery, tapping an OSM building offline, and the QFieldCloud project page with its QR code to join. Created 28 August at 10:16, last updated 11:40 the same morning.</aside>
+1:00. Last story, and unfortunately it’s Ticino all over again: floods, this time in Nepal, last month. And this time we knew even more. A totally offline QField project: OSM data as offline vector tiles you can still identify features on, 60 cm Vantor imagery from 24 hours earlier, and full 3D with the 30 m SRTM DEM as offline elevation. Say “3D, offline” out loud: it’s new since 4.1. Mathieu shared it in HOTOSM’s #disaster-mapping Slack channel, a little over 2,000 people from the private sector and non-profits. On the screenshot, left to right: the 3D view on the map, the 3D view on imagery, tapping an OSM building offline, and the QFieldCloud project page with its QR code to join. Created 28 August at 10:16, last updated 11:40 the same morning.</aside>
 
             </section>
     
@@ -334,10 +347,81 @@ Cold open, no title slide. Walk on, say nothing for a few seconds. Ticino block:
     
         <section >
             
+            <h2>ZERO TO FIELD-READY</h2>
+<h2>IN SECONDS</h2>
+<img src="./assets/2026/wizard.png">
+<aside class="notes">
+0:15. CHAPTER 4, WHERE WE GO TOGETHER. “The last year alone”, at full speed, one line per slide. 4.0: create a project on the fly, right in QField. Pick a basemap, notes, tracking, backup to QFieldCloud. Done.</aside>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>COGO</h2>
+<h2>ON YOUR DEVICE</h2>
+<img src="./assets/2026/cogo.webp">
+<aside class="notes">
+0:15. 4.1: coordinate geometry straight in the field. XYZ entry, distance and angle from a point, circle intersections. Inputs can come from GNSS, existing features or the cursor.</aside>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>3D</h2>
+<h2>IN YOUR POCKET</h2>
+<p><video autoplay muted loop controls src="./assets/3d.webm"></video></p>
+<aside class="notes">
+0:15. 4.1: a 3D view of your project, right on the device. Terrain from any DEM, draped with your basemap, live GNSS position on top. Works offline, as you saw in Nepal.</aside>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>NTRIP</h2>
+<h2>CENTIMETRE ACCURACY</h2>
+<img src="./assets/2026/ntrip.webp">
+<aside class="notes">
+0:15. 4.2: NTRIP corrections built in. Connect your RTK receiver over Bluetooth, BLE or TCP, no third-party app. That screenshot: 8 mm horizontal, Fixed RTK.</aside>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h2>19 QFIELD SESSIONS</h2>
+<h2>+ A FULL QFIELD DAY</h2>
+<h4>Go and discover what people do with QField</h4>
+<img src="./assets/uc26app.png">
+<aside class="notes">
+0:30. End on them: “There are 19 sessions and a full QField Day at this conference. Go to those talks and discover how people use QField, and the amazing things they do with it.” Done. Total about 20:00, no air. Trim 15 to 30 seconds before the talk.</aside>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
             <h2>10.01.2034</h2>
 <img src="./assets/vision/2034.png">
 <aside class="notes">
-1:00. CHAPTER 4, WHERE WE GO TOGETHER. The headlines we want to read in 2034.</aside>
+1:00. “And where we want to be”: the headlines we want to read in 2034.</aside>
 
             </section>
     
@@ -364,21 +448,6 @@ Cold open, no title slide. Walk on, say nothing for a few seconds. Ticino block:
 <img src="./assets/sdgs/qgis-team.jpg">
 <aside class="notes">
 2:30. CHAPTER 5, WITH LOVE. Thank everyone who gave money, time and ideas: users who funded features, contributors, testers, translators, the QGIS team. None of these stories happen without them. And it flows back: QField sits on QGIS, and what QField earns goes back into QGIS core, which everyone here uses. Say it plainly, with one or two concrete examples of core work it paid for. No QFieldCloud pitch.</aside>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h2>19 QFIELD SESSIONS</h2>
-<h2>+ A FULL QFIELD DAY</h2>
-<h4>Go and discover what people do with QField</h4>
-<img src="./assets/uc26app.png">
-<aside class="notes">
-0:30. End on them: “There are 19 sessions and a full QField Day at this conference. Go to those talks and discover how people use QField, and the amazing things they do with it.” Done. Total about 19:15, 45 seconds of air.</aside>
 
             </section>
     
