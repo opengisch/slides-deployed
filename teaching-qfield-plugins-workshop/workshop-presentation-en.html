@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>QField Plugins Workshop</title>
+  <title>Introduction to QField Plugins Authoring</title>
 
   <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
   <meta name="author" content="Hakim El Hattab">
@@ -74,7 +74,7 @@
         <section >
             
             <h1>QField Plugins workshop</h1>
-<h3>QGIS User Conference 2025 - Norrköping, Sweden</h3>
+<h3>Introduction to QField Plugins Authoring</h3>
 <img src="assets/qfield_logo.png" style="width:150px">
             </section>
     
@@ -82,87 +82,17 @@
 
 
     
-    <section>
         <section >
-            <h3>Who we are</h3>
-<p><img src="assets/opengis.jpg" alt="alt text"></p>
-
-            </section>
-        
-            <section >
-                <h3>Who you are</h3>
-<p><img src="assets/norrkoeping.png" alt="alt text"></p>
-
-            </section>
-        
-            <section >
-                <h3>AGENDA</h3>
+            
+            <h3>AGENDA</h3>
 <ol>
-<li>Why plugins for QField?</li>
-<li>Types of QField plugins</li>
 <li>Intro to QML</li>
 <li>Developing QField plugins</li>
+<li>Implementing a simple button plugin!</li>
 <li>Implementing the Weather Forecast plugin!</li>
-<li>Plugin showcase</li>
-<li>Resources</li>
+<li>Dialogs and Layouts</li>
 </ol>
 
-            </section>
-        
-
-    </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3>Why plugins for QField?</h3>
-<ul>
-<li>Address clients specific needs</li>
-<li>Keeping the UX simple</li>
-<li>QField is <em>your</em> tool</li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h3>Types of QField Plugins</h3>
-<table>
-<thead>
-<tr>
-<th>PROJECT PLUGINS</th>
-<th>APPLICATION PLUGINS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Shared alongside QField project</td>
-<td>Shared via URL (ZIP file)</td>
-</tr>
-<tr>
-<td>Single plugin</td>
-<td>Multiple plugins</td>
-</tr>
-<tr>
-<td>Installation not required</td>
-<td>Required installation</td>
-</tr>
-<tr>
-<td>Lasts project session</td>
-<td>Lasts QField session</td>
-</tr>
-</tbody>
-</table>
-<aside class="notes">
-<p>Project plugins don’t need any knowhow to load and can be distributet over the cloud.</p>
-</aside>
             </section>
     
 
@@ -188,6 +118,22 @@
 <aside class="notes">
 We thought about what language? Python? But QField is delivering a great experience through QML.
 </aside>
+
+            </section>
+        
+            <section >
+                <h3>../Imports</h3>
+<p><code>import QtQuick, import org.qfield, import org.qgis ...</code></p>
+<hr>
+<pre><code class="language-qml">import QtQuick
+
+Item {
+
+  [...]
+
+
+}
+</code></pre>
 
             </section>
         
@@ -521,7 +467,7 @@ Those follow the signal-slot technic. But we can do signal-slots also ourself.
 <pre><code class="language-qml">Rectangle {
   color: &quot;green&quot;
       
-  signal colorChanged(info: string)
+  signal colorChanged(var info)
 
   MouseArea {
 
@@ -533,23 +479,17 @@ Those follow the signal-slot technic. But we can do signal-slots also ourself.
     }
   }
 
+  Text {
+    id: textFeedback
+    anchors.fill: parent
+  }
+
   onColorChanged: {
-    console.log(&quot;Color changed to:&quot;, parent.color, &quot; info:&quot;, info)
+    textFeedback.text = &quot;Color changed to:&quot; + parent.color + &quot; info:&quot; + info;
   }
 }
 </code></pre>
 </span>
-
-            </section>
-        
-            <section >
-                <h2>Resources</h2>
-<ul>
-<li>QML Docu <a href="https://doc.qt.io/qt-6/qtquick-index.html">https://doc.qt.io/qt-6/qtquick-index.html</a></li>
-<li>QML Reference: <a href="https://doc.qt.io/qt-6/qmlreference.html">https://doc.qt.io/qt-6/qmlreference.html</a></li>
-<li>QML Tutorial: <a href="https://doc.qt.io/qt-6/qml-tutorial.html">https://doc.qt.io/qt-6/qml-tutorial.html</a></li>
-<li>Introduction to Qt/QML, by KDAB: <a href="https://www.youtube.com/watch?v=JxyTkXLbcV4&amp;list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc&amp;index=2">YouTube Playlist</a></li>
-</ul>
 
             </section>
         
@@ -669,7 +609,7 @@ clipboardManager
 
 </code></pre>
 <hr>
-<p><small><em>See <a href="https://github.com/opengisch/QField/blob/master/src/core/qgismobileapp.cpp#L574-L591">qgismobileapp.cpp</a> for details.</em></small></p>
+<p><small><em>See <a href="https://api.qfield.org/">QField API</a> for class documentation for details on which classes are exposed.</em></small></p>
 
             </section>
         
@@ -681,6 +621,8 @@ clipboardManager
 
 iface.mapCanvas()
 
+iface.positioning()
+
 iface.findItemByObjectName(&quot;...&quot;)
 
 iface.logMessage(&quot;...&quot;)
@@ -691,7 +633,7 @@ iface.addItemToCanvasActionsToolbar()
 
 </code></pre>
 <hr>
-<p><small><em>See <a href="https://github.com/opengisch/QField/blob/master/src/core/appinterface.h">appinterface.h</a> for details.</em></small></p>
+<p><small><em>See <a href="https://api.qfield.org/QField/classQfAppInterface/">QfAppInterface API documentation</a> for details.</em></small></p>
 
             </section>
         
@@ -699,21 +641,21 @@ iface.addItemToCanvasActionsToolbar()
                 <h3>../QField API</h3>
 <h4><span style="font-size:0.8em;">Root objects | iface | <span style="color:orange">Theme</span> | QField GUI types | QGIS | Utils</span></h4>
 <hr>
-<pre><code class="language-qml">Theme.mainColor  // #80cc28
+<pre><code class="language-qml">QfTheme.mainColor  // #80cc28
 
-Theme.mainTextColor
+QfTheme.mainTextColor
 
-Theme.mainBackgroundColor
+QfTheme.mainBackgroundColor
 
-Theme.darkGray
+QfTheme.darkGray
 
-Theme.defaultFont
+QfTheme.defaultFont
 
-Theme.getThemeVectorIcon(&quot;...&quot;)
+QfTheme.getThemeVectorIcon(&quot;...&quot;)
 
 </code></pre>
 <hr>
-<p><small><em>See <a href="https://github.com/opengisch/QField/blob/master/src/qml/imports/Theme/Theme.qml">Theme.qml</a> for details.</em></small></p>
+<p><small><em>See <a href="https://api.qfield.org/QField/classQfTheme/">QfTheme API documentation</a> for details.</em></small></p>
 
             </section>
         
@@ -721,7 +663,9 @@ Theme.getThemeVectorIcon(&quot;...&quot;)
                 <h3>../QField API</h3>
 <h4><span style="font-size:0.8em;">Root objects | iface | Theme | <span style="color:orange">QField GUI types</span> | QGIS | Utils</span></h4>
 <hr>
-<pre><code>QfButton
+<pre><code>import org.qfield.gui
+...
+QfButton
 
 QfToolButton
 
@@ -735,13 +679,13 @@ QfComboBox
 
 </code></pre>
 <hr>
-<p><small><em>See <a href="https://github.com/opengisch/QField/blob/master/src/qml/imports/Theme/Theme.qml">src/qml/imports/Theme/*</a> for details.</em></small></p>
+<p><small><em>See <a href="https://api.qfield.org/QField/group__qml__gui/">QML GUI Items</a> for details.</em></small></p>
 
             </section>
         
             <section >
                 <h3>../QField API</h3>
-<h4><span style="font-size:0.8em;">Root objects | iface |  Theme | QField GUI types | <span style="color:orange">QGIS</span> | QGIS | Utils</span></h4>
+<h4><span style="font-size:0.8em;">Root objects | iface |  Theme | QField GUI types | <span style="color:orange">QGIS</span> | Utils</span></h4>
 <hr>
 <pre><code>QgsFeature
 
@@ -757,29 +701,31 @@ QgsField
 
 </code></pre>
 <hr>
-<p><small><em>See <a href="https://github.com/opengisch/QField/blob/master/src/core/qgismobileapp.cpp#L381-L407">qgismobileapp.cpp::initDeclarative</a> for details.</em></small></p>
+<p><small><em>See <a href="https://api.qgis.org/">QGIS API documentation</a> for class documentation.</em></small></p>
 
             </section>
         
             <section >
                 <h3>../QField API</h3>
-<h4><span style="font-size:0.8em;">Root objects | iface | Theme | QField GUI types | <span style="color:orange">Utils</span></span></h4>
+<h4><span style="font-size:0.8em;">Root objects | iface | Theme | QField GUI types | QGIS | <span style="color:orange">Utils</span></span></h4>
 <hr>
-<pre><code>LayerUtils
+<pre><code>import org.qfield.core
+...
+QfLayerUtils
 
-GeometryUtils
+QfGeometryUtils
 
-FeatureUtils
+QfFeatureUtils
 
-CoordinateReferenceSystemUtils
+QfCoordinateReferenceSystemUtils
 
-SnappingUtils
+QfSnappingUtils
 
 ...
 
 </code></pre>
 <hr>
-<p><small><em>See <a href="https://github.com/opengisch/QField/tree/master/src/core/utils">src/core/utils/*</a> for details.</em></small></p>
+<p><small><em>See <a href="https://api.qfield.org/QField/group__core/">C++ core classes</a> for details.</em></small></p>
 
             </section>
         
@@ -817,35 +763,11 @@ SnappingUtils
             </section>
         
             <section >
-                <h3>../Install “First Demo”</h3>
-<ul>
-<li>Get the link on the Schedule…</li>
-<li>Install  “First Demo” via <em>QField Settings &gt; Manage Plugins</em>
-<img src="assets/plugin-loc0.png" alt="alt text"></li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h3>../Install “First Demo”</h3>
-<p>Check out the <code>main.qml</code> in the plugin directory.</p>
-<pre><code class="language-qml">import QtQuick
-
-Item {
-  Component.onCompleted: {
-    iface.mainWindow().displayToast('First demo!')
-  }
-}
-</code></pre>
-
-            </section>
-        
-            <section >
                 <h3>../Debugging</h3>
 <ul>
 <li>
 <p>Popup on application display</p>
-<p><code>mainWindow.displayToast(&quot;&quot;)</code></p>
+<p><code>iface.mainWindow.displayToast(&quot;&quot;)</code></p>
 </li>
 <li>
 <p>Log message in the log panel</p>
@@ -918,7 +840,7 @@ Item {
                 <h3>../What we do</h3>
 <ul>
 <li>Check out <a href="http://open-meteo.com">open-meteo.com</a></li>
-<li>Get snippets at <a href="http://pad.opengis.ch">pad.opengis.ch</a> (or the slides below)</li>
+<li>Get code snippet on the slide below</li>
 <li>We test the Java Script at <a href="https://runjs.app/play">https://runjs.app/play</a></li>
 <li>We map the weather code to description and image</li>
 <li>We integrate it into our template plugin</li>
@@ -929,15 +851,15 @@ Item {
             <section >
                 <h3>../API Request snippet</h3>
 <p>The Java Script for using <code>XmlHttpRequest</code></p>
-<pre><code class="language-JavaScript">//Norrköping
-lat = 58.5833;
-lon = 16.1833;
+<pre><code class="language-JavaScript">//Laax
+const lat = 46.8053;
+const lon = 9.2572;
 
 let request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
   if (request.readyState === XMLHttpRequest.DONE) {
-    console.log(request.response)
+    iface.logMessage(request.responseText)
   }
 }
 
@@ -1013,13 +935,14 @@ request.send();
         <section >
             
             <h3>Resources</h3>
-<p>QML Docu <a href="https://doc.qt.io/qt-6/qtquick-index.html">https://doc.qt.io/qt-6/qtquick-index.html</a></p>
+<p>QML Documentation <a href="https://doc.qt.io/qt-6/qtquick-index.html">https://doc.qt.io/qt-6/qtquick-index.html</a></p>
 <p>QML Reference: <a href="https://doc.qt.io/qt-6/qmlreference.html">https://doc.qt.io/qt-6/qmlreference.html</a></p>
 <p>QML Tutorial: <a href="https://doc.qt.io/qt-6/qml-tutorial.html">https://doc.qt.io/qt-6/qml-tutorial.html</a></p>
 <p>Introduction to Qt/QML, by KDAB (<a href="https://www.youtube.com/watch?v=JxyTkXLbcV4&amp;list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc&amp;index=2">YouTube Playlist</a>)</p>
 <p>QML online editor: <a href="https://qmlweb.github.io">https://qmlweb.github.io</a></p>
 <p>QML advanced online editor: <a href="https://patrickelectric.work/qmlonline/">https://patrickelectric.work/qmlonline/</a></p>
 <p>QField plugins: <a href="https://github.com/topics/qfield-plugin">https://github.com/topics/qfield-plugin</a></p>
+<p>QField documentation: <a href="https://api.qfield.org/">https://api.qfield.org/</a></p>
 <p>Plugin icons: <a href="https://fonts.google.com/icons">https://fonts.google.com/icons</a></p>
 <p>JavaScript online editor: <a href="https://runjs.app/play">https://runjs.app/play</a></p>
 
